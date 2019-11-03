@@ -14,7 +14,6 @@ For example, given the input of S = "abppplee" and D = {"able", "ale", "apple", 
 """
 
 import collections
-import sys
 from typing import Set, Optional
 
 

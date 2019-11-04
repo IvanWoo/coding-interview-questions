@@ -1,6 +1,6 @@
 # https://techdevguide.withgoogle.com/paths/foundational/hangman-challenge-archetypal/#!
 import random
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 def get_look(word, guesses):
@@ -23,23 +23,22 @@ def get_random_word():
 @dataclass
 class HangMan:
     word: str
-    guesses: list
-    counter: int
-    is_success: bool
+    guesses: list = field(default_factory=list)
+    counter: int = 0
+    max_counter: int = 8
+    is_success: bool = False
 
 
 def main():
-    hm = HangMan(
-        word=get_random_word().upper(), guesses=[], counter=0, is_success=False
-    )
-    while hm.counter <= 10:
+    hm = HangMan(word=get_random_word().upper())
+    while hm.counter <= hm.max_counter:
         print("Welcom to Hangman!")
         look = get_look(hm.word, hm.guesses)
         print(f"The word now looks like this: {look}")
         if look == hm.word:
             hm.is_success = True
             break
-        print(f"You have {10 - hm.counter} guesses left.")
+        print(f"You have {hm.max_counter - hm.counter} guesses left.")
         g = input("Your guess: ").upper()
         print(g)
         hm.guesses.append(g)

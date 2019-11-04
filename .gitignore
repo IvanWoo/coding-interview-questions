@@ -42,6 +42,5 @@ docs/_build/*
 cover/*
 MANIFEST
 
-data
 .pytest_cache/
 .ipynb_checkpoints/

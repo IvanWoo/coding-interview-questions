@@ -1,21 +1,22 @@
 # https://techdevguide.withgoogle.com/paths/foundational/hangman-challenge-archetypal/#!
 import random
 from dataclasses import dataclass, field
+from typing import List
 
 
-def get_look(word, guesses):
+def get_look(word: str, guesses: List[str]) -> str:
     result = ""
     for c in word:
         result += c if c in guesses else "-"
     return result
 
 
-def load_words():
+def load_words() -> list:
     with open("puzzles/data/words_alpha.txt", "r") as f:
         return [line.rstrip() for line in f]
 
 
-def get_random_word():
+def get_random_word() -> str:
     words = load_words()
     return words[random.randint(0, len(words))]
 

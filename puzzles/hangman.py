@@ -3,6 +3,9 @@ import random
 from dataclasses import dataclass, field
 from typing import List
 
+from functools import lru_cache
+from collections import Counter
+
 
 def get_look(word: str, guesses: List[str]) -> str:
     result = ""
@@ -11,6 +14,7 @@ def get_look(word: str, guesses: List[str]) -> str:
     return result
 
 
+@lru_cache(maxsize=1)
 def load_words() -> list:
     with open("puzzles/data/words_alpha.txt", "r") as f:
         return [line.rstrip() for line in f]
@@ -19,6 +23,20 @@ def load_words() -> list:
 def get_random_word() -> str:
     words = load_words()
     return words[random.randint(0, len(words))]
+
+
+def search_word(word_len: int, guesses: list) -> str:
+    guesses = [g.lower() for g in guesses]
+    words = load_words()
+    cs = [Counter(word) for word in words if len(word) == word_len]
+    for c in cs:
+        for char in guesses:
+            c[char] = 0
+    return (
+        Counter("".join([c.most_common(1)[0][0] for c in cs]))
+        .most_common(1)[0][0]
+        .upper()
+    )
 
 
 @dataclass
@@ -39,6 +57,9 @@ def main():
         if look == hm.word:
             hm.is_success = True
             break
+
+        print(f"The most possible guessing is: {search_word(len(hm.word), hm.guesses)}")
+
         print(f"You have {hm.max_counter - hm.counter} guesses left.")
         g = input("Your guess: ").upper()
         print(g)

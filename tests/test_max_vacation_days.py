@@ -29,9 +29,8 @@ def test_max_vacation_days_stay_in_0():
 
 
 def test_max_vacation_days_random():
-    for i in range(3):
-        inputs = get_inputs(
-            np.random.randint(2, size=(7, 7)).tolist(),
-            np.random.randint(8, size=(7, 7)).tolist(),
-        )
-        assert max_vacation_days(**inputs) == max_vacation_days_dp(**inputs)
+    inputs = get_inputs(
+        np.random.randint(2, size=(7, 7)).tolist(),
+        np.random.randint(8, size=(7, 7)).tolist(),
+    )
+    assert max_vacation_days(**inputs) == max_vacation_days_dp(**inputs)

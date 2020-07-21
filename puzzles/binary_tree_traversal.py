@@ -3,13 +3,13 @@ from typing import List
 from collections import deque
 
 
-def it(cur, ans):
+def it(cur, res):
     "it stands for inorder traversal"
     if not cur:
         return
-    it(cur.left, ans)
-    ans.append(cur.val)
-    it(cur.right, ans)
+    it(cur.left, res)
+    res.append(cur.val)
+    it(cur.right, res)
 
 
 def inorder_traversal(root: TreeNode) -> List[int]:

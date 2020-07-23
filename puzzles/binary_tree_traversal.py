@@ -1,4 +1,4 @@
-from utils import TreeNode
+from puzzles.utils import TreeNode
 from typing import List
 from collections import deque
 
@@ -95,3 +95,13 @@ def postorder_traversal(root: TreeNode) -> List[int]:
                 stack.append((cur.left, False))
     return res
 
+
+def is_same_tree(p: TreeNode, q: TreeNode) -> bool:
+    if (not p) and (not q):
+        return True
+    if (not p) or (not q):
+        return False
+    if p.val != q.val:
+        return False
+
+    return is_same_tree(p.left, q.left) and is_same_tree(p.right, q.right)

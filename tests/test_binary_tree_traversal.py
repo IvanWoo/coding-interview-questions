@@ -3,8 +3,9 @@ from puzzles.binary_tree_traversal import (
     inorder_traversal,
     preorder_traversal,
     postorder_traversal,
+    is_same_tree,
 )
-from utils import TreeNode
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture
@@ -47,3 +48,10 @@ def test_postorder_traversal_13(tree_13):
 
 def test_postorder_traversal_15(tree_15):
     assert postorder_traversal(tree_15[1]) == [4, 5, 2, 3, 1]
+
+
+def test_is_same_tree(tree_13, tree_15):
+    assert is_same_tree(tree_13[1], tree_13[1]) == True
+    assert is_same_tree(tree_15[1], tree_15[1]) == True
+    assert is_same_tree(tree_13[1], tree_15[1]) == False
+    assert is_same_tree(tree_15[1], tree_15[2]) == False

@@ -7,6 +7,7 @@ verify_ssl = true
 pytest = "*"
 black = "*"
 ipython = "*"
+coding-interview-questions = {editable = true, path = "."}
 
 [packages]
 numpy = "*"

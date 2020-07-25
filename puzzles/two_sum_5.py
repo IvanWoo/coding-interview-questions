@@ -30,6 +30,7 @@
 
 from puzzles.utils import TreeNode
 from collections import deque
+from typing import List
 
 
 def find_target(root: TreeNode, k: int) -> bool:
@@ -52,4 +53,15 @@ def find_target(root: TreeNode, k: int) -> bool:
     return False
 
 
+def find_target(root: TreeNode, k: int) -> bool:
+    q = []
 
+    def find(root: TreeNode, k: int, q) -> bool:
+        if not root:
+            return False
+        if (k - root.val) in q:
+            return True
+        q.append(root.val)
+        return find(root.left, k, q) or find(root.right, k, q)
+
+    return find(root, k, q)

@@ -10,6 +10,14 @@ class TreeNode:
     right: TreeNode = None
 
 
+@dataclass
+class Node:
+    val: int
+    left: Node = None
+    right: Node = None
+    next: Node = None
+
+
 if __name__ == "__main__":
     tns = {}
     for i in range(3):

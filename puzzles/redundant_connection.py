@@ -47,7 +47,7 @@ def find_redundant_connection(edges: List[List[int]]) -> List[int]:
     return []
 
 
-# disjoint set
+# disjoint set union
 class DSU:
     def __init__(self, edges):
         self.parent = [0] * (len(edges) + 1)

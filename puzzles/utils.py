@@ -4,6 +4,12 @@ from dataclasses import dataclass
 
 
 @dataclass
+class ListNode:
+    val: int = 0
+    next: ListNode = None
+
+
+@dataclass
 class TreeNode:
     val: int
     left: TreeNode = None

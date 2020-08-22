@@ -37,4 +37,3 @@ def next_greater_elements(nums: List[int]) -> List[int]:
             res[i] = stack[-1]
         stack.append(nums[i])
     return res
-

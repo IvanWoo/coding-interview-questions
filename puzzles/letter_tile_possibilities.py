@@ -30,4 +30,3 @@ def num_tile_possibilities(tiles: str) -> int:
 
     backtrack(tiles, "")
     return len(poss)
-

@@ -59,4 +59,3 @@ def length_of_LIS(nums: List[int]) -> int:
         else:
             sub[i] = num
     return len(sub)
-

@@ -51,4 +51,3 @@ def flip_match_voyage(root: TreeNode, voyage: List[int]) -> List[int]:
         return dfs(root.left) and dfs(root.right)
 
     return res if dfs(root) else [-1]
-

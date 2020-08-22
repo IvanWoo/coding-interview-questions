@@ -33,4 +33,3 @@ def combine(n: int, k: int) -> List[List[int]]:
 
     backtrack([])
     return ans
-

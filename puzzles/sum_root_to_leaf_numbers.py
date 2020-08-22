@@ -55,4 +55,3 @@ def sum_numbers(root: TreeNode) -> int:
 
     dfs(root, 0)
     return ans[0]
-

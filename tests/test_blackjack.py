@@ -8,4 +8,3 @@ def test_blackjack():
     assert blackjack(19, 22) == 19
     assert blackjack(1, 22) == 1
     assert blackjack(22, 23) == 0
-

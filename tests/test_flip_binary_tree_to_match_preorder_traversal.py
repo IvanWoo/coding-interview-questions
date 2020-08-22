@@ -21,4 +21,3 @@ def test_flip_match_voyage_2(tree):
 
 def test_flip_match_voyage_3(tree):
     assert flip_match_voyage(tree[1], [3, 1, 2]) == [-1]
-

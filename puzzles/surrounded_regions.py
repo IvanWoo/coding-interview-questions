@@ -59,4 +59,3 @@ def solve(board: List[List[str]]) -> None:
                 board[r][c] = "O"
 
     return
-

@@ -48,4 +48,3 @@ def shortest_way_to_form_string(source: str, target: str) -> int:
         else:
             lower_boundary = index_list[i] + 1
     return res + 1
-

@@ -10,4 +10,4 @@ def test_parser():
     assert (
         parser("1[1[1[1[1[1[1[1[1[1[1[1[1[1[1[1[1[1[1[1[xx]]]]]]]]]]]]]]]]]]]]") == "xx"
     )
-    assert(parser("a[]b") == "ab")
+    assert parser("a[]b") == "ab"

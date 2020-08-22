@@ -8,4 +8,3 @@ def test_num_teams():
     assert num_teams([1, 2, 3, 4]) == 4
     assert num_teams([1, 2]) == 0
     assert num_teams([]) == 0
-

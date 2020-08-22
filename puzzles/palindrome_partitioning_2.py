@@ -42,4 +42,3 @@ def min_cut(s: str) -> int:
 
 if __name__ == "__main__":
     print(min_cut("aab"))
-

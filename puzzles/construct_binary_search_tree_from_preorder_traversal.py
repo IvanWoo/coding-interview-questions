@@ -44,4 +44,3 @@ def bst_from_preorder(preorder: List[int]) -> TreeNode:
     else:
         root.left = bst_from_preorder(preorder[1:])
     return root
-

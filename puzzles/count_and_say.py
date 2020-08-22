@@ -50,4 +50,3 @@ def count_and_say(n: int) -> str:
     for i in range(n - 1):
         ans = encode(ans)
     return ans
-

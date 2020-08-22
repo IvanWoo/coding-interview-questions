@@ -73,4 +73,3 @@ def find_redundant_connection(edges: List[List[int]]) -> List[int]:
         if not dsu.union(u, v):
             return [u, v]
     return
-

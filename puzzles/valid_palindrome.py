@@ -22,4 +22,3 @@ def valid_palindrome(s: str) -> bool:
         left += 1
         right -= 1
     return True
-

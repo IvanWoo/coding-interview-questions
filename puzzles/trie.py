@@ -88,4 +88,3 @@ if __name__ == "__main__":
     obj.insert(word)
     print(f"{obj.search(word)=}")
     print(f"{obj.startsWith(prefix)=}")
-

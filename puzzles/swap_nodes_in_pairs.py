@@ -38,4 +38,3 @@ def swap_pairs(head: ListNode) -> ListNode:
             break
 
     return dummy.next
-

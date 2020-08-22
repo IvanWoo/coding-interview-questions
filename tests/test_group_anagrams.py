@@ -13,4 +13,3 @@ def test_group_anagrams():
     )
     for k, v in enumerate(results):
         case.assertCountEqual(v, exprected_results[k])
-

@@ -46,4 +46,3 @@ def num_teams(rating: List[int]) -> int:
                 great[int(j < i)] += 1
         ans += less[0] * great[1] + less[1] * great[0]
     return ans
-

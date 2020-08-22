@@ -58,4 +58,3 @@ class FindModes:
             self.modes = [node.val]
         self.prev = node.val
         self.traversal(node.right)
-

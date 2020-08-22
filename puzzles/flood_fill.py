@@ -52,4 +52,3 @@ def flood_fill(
                         nxt.append((pr, pc))
         stack = nxt
     return image
-

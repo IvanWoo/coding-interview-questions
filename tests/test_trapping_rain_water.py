@@ -9,4 +9,3 @@ def test_trap():
     assert trap([0] * 10) == 0
     assert trap(list(range(10))) == 0
     assert trap(list(range(10, 0, -1))) == 0
-

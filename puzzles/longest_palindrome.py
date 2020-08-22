@@ -40,4 +40,3 @@ def longest_palindrome(s: str) -> str:
         if len(sub_s) > len(longest):
             longest = sub_s
     return longest
-

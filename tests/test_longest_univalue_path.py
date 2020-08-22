@@ -19,4 +19,3 @@ def tree():
 
 def test_longest_univalue_path1(tree):
     assert longest_univalue_path(tree[1]) == 2
-

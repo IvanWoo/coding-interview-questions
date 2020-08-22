@@ -53,4 +53,3 @@ def unique_paths(m: int, n: int) -> int:
 # combinations
 def unique_paths(m: int, n: int) -> int:
     return factorial(m + n - 2) // (factorial(m - 1) * factorial(n - 1))
-

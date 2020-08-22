@@ -25,4 +25,3 @@ def ans():
 
 def test_add_two_numbers(ls, ans):
     assert add_two_numbers(*ls) == ans
-

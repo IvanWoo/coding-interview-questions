@@ -45,4 +45,3 @@ def level_order(root: TreeNode) -> List[List[int]]:
             temp.extend([node.left, node.right])
         level = [leaf for leaf in temp if leaf]
     return ans
-

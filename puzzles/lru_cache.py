@@ -80,4 +80,3 @@ class LRUCache:
         nxt = self.head.next
         self.head.next, node.prev = node, self.head
         node.next, nxt.prev = nxt, node
-

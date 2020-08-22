@@ -80,4 +80,3 @@ def width_of_binary_tree(root: TreeNode) -> int:
         ans = max(ans, (width["right"] - width["left"] + 1))
         stack = temp
     return ans
-

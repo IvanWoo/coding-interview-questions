@@ -29,4 +29,3 @@ def test_bst_from_preorder(tree):
 
 def test_bst_from_preorder_42(tree42):
     assert bst_from_preorder([4, 2]) == tree42[4]
-

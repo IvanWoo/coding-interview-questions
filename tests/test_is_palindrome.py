@@ -8,4 +8,3 @@ def test_is_palindrome():
     assert is_palindrome("a") == True
     assert is_palindrome("aba") == True
     assert is_palindrome("bba") == False
-

@@ -15,4 +15,3 @@ def tree():
 
 def test_right_side_view(tree):
     assert list(right_side_view(tree[1])) == [1, 3, 4]
-

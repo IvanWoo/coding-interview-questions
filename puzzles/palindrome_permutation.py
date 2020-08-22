@@ -39,4 +39,3 @@ def palindrome_permutation(s: str) -> Optional[List[str]]:
 
     unique_perm = set(["".join(x) for x in permutations(perm_list)])
     return sorted([mirror(x, center) for x in unique_perm])
-

@@ -57,4 +57,3 @@ def count_pairs(root: TreeNode, distance: int) -> int:
 
     dfs(root)
     return ans[0]
-

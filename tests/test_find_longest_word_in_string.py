@@ -16,4 +16,3 @@ def test_find_longest_word_in_string():
         )
         == "ppplee"
     )
-

@@ -27,4 +27,3 @@ def tree_ans():
 
 def test_remove_leaf_nodes(tree_input, tree_ans):
     assert remove_leaf_nodes(tree_input[1], 2) == tree_ans[1]
-

@@ -7,4 +7,3 @@ def test_longest_word():
     assert (
         longest_word(["a", "banana", "app", "appl", "ap", "apply", "apple"]) == "apple"
     )
-

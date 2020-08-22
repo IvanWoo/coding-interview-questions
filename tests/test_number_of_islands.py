@@ -25,4 +25,3 @@ def test_num_islands():
         )
         == 1
     )
-

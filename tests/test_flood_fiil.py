@@ -17,4 +17,3 @@ def test_flood_fill_1():
     sc = 1
     newColor = 1
     assert flood_fill(image, sr, sc, newColor) == [[0, 0, 0], [0, 1, 1]]
-

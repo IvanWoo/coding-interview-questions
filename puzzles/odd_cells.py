@@ -16,4 +16,3 @@ def odd_cells(n: int, m: int, indices: List[List[int]]) -> int:
             x = rows[row] + cols[col]
             ans += x % 2
     return ans
-

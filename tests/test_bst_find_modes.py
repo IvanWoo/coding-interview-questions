@@ -17,4 +17,3 @@ def test_find_modes():
     n2.left = n12
     fm2 = FindModes()
     assert fm2.find_modes(n2) == [1, 2]
-

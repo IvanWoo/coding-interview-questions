@@ -31,4 +31,3 @@ def three_sum_closest(nums: List[int], target: int) -> int:
             else:
                 return res
     return res
-

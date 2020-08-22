@@ -51,4 +51,3 @@ def min_time(n: int, edges: List[List[int]], hasApple: List[bool]) -> int:
             return 0
 
     return dfs(edges[0][0]) - 2
-

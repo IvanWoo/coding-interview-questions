@@ -84,4 +84,3 @@ def dfs(board, node, r, c, path, res):
     for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
         dfs(board, node, r + i, c + j, path + temp, res)
     board[r][c] = temp
-

@@ -50,4 +50,3 @@ def merge_sort(nums):
 
     sort(0, n)
     return copy
-

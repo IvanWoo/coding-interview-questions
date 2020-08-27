@@ -53,4 +53,3 @@ def reverse_only_letters(S: str) -> str:
             i += 1
             j -= 1
     return "".join(S)
-

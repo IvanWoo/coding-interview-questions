@@ -20,4 +20,11 @@ def test_min_time():
         == 0
     )
 
-    assert min_time(4, [[0, 2], [0, 3], [1, 2]], [False, True, False, False],) == 4
+    assert (
+        min_time(
+            4,
+            [[0, 2], [0, 3], [1, 2]],
+            [False, True, False, False],
+        )
+        == 4
+    )

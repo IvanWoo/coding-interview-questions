@@ -34,4 +34,3 @@ def find_disappeared_numbers(nums: List[int]) -> List[int]:
         if num > 0:
             ans.append(i + 1)
     return list(ans)
-

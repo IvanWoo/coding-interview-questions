@@ -41,9 +41,9 @@ def decomp_string(
 
 def partition(s: str) -> List[List[str]]:
     """
-    time: 
+    time:
         O(n * 2 ^ n)
-    space: 
+    space:
         O(n)
     """
     valid_decompositions: List[List[str]] = []

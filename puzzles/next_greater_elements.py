@@ -28,12 +28,12 @@ def next_greater_elements(nums: List[int]) -> List[int]:
 # stack: O(n)
 def next_greater_elements(nums: List[int]) -> List[int]:
     n = len(nums)
-    res = [-1] * n
-    stack = nums[::-1]
-    for i in range(n - 1, -1, -1):
+    res = [0] * n
+    stack = []
+    for i in reversed(range(2 * n)):
+        i %= n
         while stack and stack[-1] <= nums[i]:
             stack.pop()
-        if stack:
-            res[i] = stack[-1]
+        res[i] = stack[-1] if stack else -1
         stack.append(nums[i])
     return res

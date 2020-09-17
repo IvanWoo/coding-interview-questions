@@ -17,7 +17,7 @@ from typing import List
 
 
 def reconstruct_queue(people: List[List[int]]) -> List[List[int]]:
-    people = sorted(people, key=lambda (h, k): (-h, k))
+    people = sorted(people, key=lambda x: (-x[0], x[1]))
     res = []
     for p in people:
         res.insert(p[1], p)

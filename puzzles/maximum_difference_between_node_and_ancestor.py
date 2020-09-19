@@ -27,16 +27,16 @@ from puzzles.utils import TreeNode
 def max_ancestor_diff(root: TreeNode) -> int:
     ans = 0
 
-    def traverse(node, max_val, min_val):
+    def traverse(node, lo, hi):
         nonlocal ans
         if not node:
             return
-        if max_val is None and min_val is None:
-            max_val = min_val = node.val
-        ans = max(ans, max(abs(max_val - node.val), abs(min_val - node.val)))
-        max_val, min_val = max(max_val, node.val), min(min_val, node.val)
-        traverse(node.left, max_val, min_val)
-        traverse(node.right, max_val, min_val)
+        if hi is None and lo is None:
+            hi = lo = node.val
+        ans = max(ans, max(hi - node.val, node.val - lo))
+        lo, hi = min(lo, node.val), max(hi, node.val)
+        traverse(node.left, lo, hi)
+        traverse(node.right, lo, hi)
 
     traverse(root, None, None)
     return ans

@@ -26,3 +26,23 @@ def merge(intervals: List[List[int]]) -> List[List[int]]:
         else:
             ans[-1][1] = max(ans[-1][1], e)
     return ans
+
+
+from collections import deque
+
+
+def merge(intervals: List[List[int]]) -> List[List[int]]:
+    if len(intervals) == 0:
+        return []
+    sorted_intervals = deque(sorted(intervals))
+    ans = []
+    prev = sorted_intervals[0]
+    while sorted_intervals:
+        cur = sorted_intervals.popleft()
+        if prev[1] >= cur[0]:
+            prev = [prev[0], max(prev[1], cur[1])]
+        else:
+            ans.append(prev)
+            prev = cur
+    ans.append(prev)
+    return ans

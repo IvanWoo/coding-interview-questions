@@ -25,7 +25,7 @@ def next_greater_elements(nums: List[int]) -> List[int]:
     return res
 
 
-# stack: O(n)
+# monotonic stack: O(n)
 def next_greater_elements(nums: List[int]) -> List[int]:
     n = len(nums)
     res = [0] * n

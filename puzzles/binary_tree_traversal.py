@@ -3,16 +3,15 @@ from typing import List
 from collections import deque
 
 
-def it(cur, res):
-    "it stands for inorder traversal"
-    if not cur:
-        return
-    it(cur.left, res)
-    res.append(cur.val)
-    it(cur.right, res)
-
-
 def inorder_traversal(root: TreeNode) -> List[int]:
+    def it(cur, res):
+        "it stands for inorder traversal"
+        if not cur:
+            return
+        it(cur.left, res)
+        res.append(cur.val)
+        it(cur.right, res)
+
     if not root:
         return []
     res = []
@@ -34,15 +33,14 @@ def inorder_traversal(root: TreeNode) -> List[int]:
     return res
 
 
-def prt(cur, res):
-    if not cur:
-        return
-    res.append(cur.val)
-    prt(cur.left, res)
-    prt(cur.right, res)
-
-
 def preorder_traversal(root: TreeNode) -> List[int]:
+    def prt(cur, res):
+        if not cur:
+            return
+        res.append(cur.val)
+        prt(cur.left, res)
+        prt(cur.right, res)
+
     if not root:
         return []
     res = []
@@ -64,15 +62,28 @@ def preorder_traversal(root: TreeNode) -> List[int]:
     return res
 
 
-def pot(cur, res):
-    if not cur:
-        return
-    pot(cur.left, res)
-    pot(cur.right, res)
-    res.append(cur.val)
+def preorder_traversal(root: TreeNode) -> List[int]:
+    res = []
+    stack = []
+    cur = root
+    while cur or stack:
+        while cur:
+            stack.append(cur)
+            res.append(cur.val)
+            cur = cur.left
+        cur = stack.pop()
+        cur = cur.right
+    return res
 
 
 def postorder_traversal(root: TreeNode) -> List[int]:
+    def pot(cur, res):
+        if not cur:
+            return
+        pot(cur.left, res)
+        pot(cur.right, res)
+        res.append(cur.val)
+
     if not root:
         return []
     res = []

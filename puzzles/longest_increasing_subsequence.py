@@ -13,7 +13,7 @@ There may be more than one LIS combination, it is only necessary for you to retu
 Your algorithm should run in O(n2) complexity.
 Follow up: Could you improve it to O(n log n) time complexity?
 """
-
+from bisect import bisect_left
 from typing import List
 
 
@@ -33,29 +33,49 @@ def length_of_LIS(nums: List[int]) -> int:
     return ans + 1
 
 
-def binary_search(sub, num):
-    lo, hi = 0, len(sub) - 1
-    while lo <= hi:
-        mid = (lo + hi) // 2
-        if sub[mid] < num:
-            lo = mid + 1
-        elif sub[mid] > num:
-            hi = mid - 1
-        elif sub[mid] == num:
-            hi = mid - 1
-    return lo
-
-
+# O(n*logn)
 def length_of_LIS(nums: List[int]) -> int:
+    # bisect_left implementation
+    def binary_search(sub, num):
+        lo, hi = 0, len(sub) - 1
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            if sub[mid] < num:
+                lo = mid + 1
+            elif sub[mid] > num:
+                hi = mid - 1
+            elif sub[mid] == num:
+                hi = mid - 1
+        return lo
+
     if not nums:
         return 0
 
     sub = []
 
     for num in nums:
-        i = binary_search(sub, num)
+        i = bisect_left(sub, num)
         if i == len(sub):
             sub.append(num)
         else:
             sub[i] = num
     return len(sub)
+
+
+# dp: O(n^2)
+def length_of_LIS(nums: List[int]) -> int:
+    if not nums:
+        return 0
+    n = len(nums)
+    dp = [1] * n
+
+    for i in range(1, n):
+        candidates = [v for k, v in enumerate(dp[:i]) if nums[k] < nums[i]]
+        if candidates:
+            dp[i] = max(candidates) + 1
+
+    return max(dp)
+
+
+if __name__ == "__main__":
+    length_of_LIS([7, 7, 7, 7, 7, 7, 7])

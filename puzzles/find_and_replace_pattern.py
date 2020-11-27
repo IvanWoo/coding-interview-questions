@@ -57,4 +57,4 @@ def find_and_replace_pattern(words: List[str], pattern: str) -> List[str]:
                 return False
         return True
 
-    return filter(match, words)
+    return list(filter(match, words))

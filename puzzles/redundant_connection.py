@@ -53,10 +53,9 @@ class DSU:
         self.parent = [0] * (len(edges) + 1)
 
     def find(self, x):
-        if self.parent[x] == 0:
-            return x
-        self.parent[x] = self.find(self.parent[x])
-        return self.parent[x]
+        while self.parent[x] != 0:
+            x = self.parent[x]
+        return x
 
     def union(self, u, v):
         root_u = self.find(u)

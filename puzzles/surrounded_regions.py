@@ -23,6 +23,7 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on the
 
 from collections import deque
 from typing import List
+from puzzles.union_find import UF
 
 
 def on_border(board, r, c):
@@ -58,4 +59,39 @@ def solve(board: List[List[str]]) -> None:
             elif board[r][c] == "D":
                 board[r][c] = "O"
 
+    return
+
+
+def solve(board: List[List[str]]) -> None:
+    if not board:
+        return
+    m, n = len(board), len(board[0])
+    uf = UF(m * n + 1)
+    dummy = m * n
+
+    for i in range(m):
+        if board[i][0] == "O":
+            uf.union(i * n, dummy)
+        if board[i][n - 1] == "O":
+            uf.union(i * n + n - 1, dummy)
+
+    for j in range(n):
+        if board[0][j] == "O":
+            uf.union(j, dummy)
+        if board[m - 1][j] == "O":
+            uf.union(n * (m - 1) + j, dummy)
+
+    for i in range(1, m - 1):
+        for j in range(1, n - 1):
+            if board[i][j] == "O":
+                for di, dj in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                    x = i + di
+                    y = j + dj
+                    if board[x][y] == "O":
+                        uf.union(x * n + y, i * n + j)
+
+    for i in range(1, m - 1):
+        for j in range(1, n - 1):
+            if not uf.connected(dummy, i * n + j):
+                board[i][j] = "X"
     return

@@ -13,13 +13,14 @@ Output: "bb"
 """
 
 # brute force O(n^3)
-def longest_palindrome_bf(s: str) -> str:
+def longest_palindrome(s: str) -> str:
+    n = len(s)
     longest = ""
-    for i in range(len(s)):
-        for j in range(i + 1, len(s) + 1):
-            sub_s = s[i:j]
-            if sub_s == sub_s[::-1]:
-                longest = sub_s if len(sub_s) > len(longest) else longest
+    for i in range(n):
+        for j in range(i, n):
+            sub_s = s[i : j + 1]
+            if len(sub_s) > len(longest) and sub_s == sub_s[::-1]:
+                longest = sub_s
     return longest
 
 
@@ -35,8 +36,11 @@ def longest_palindrome(s: str) -> str:
     for i in range(len(s)):
         s1 = expand_around_center(s, i, i)
         s2 = expand_around_center(s, i, i + 1)
-        print(s1, s2)
         sub_s = s1 if len(s1) > len(s2) else s2
         if len(sub_s) > len(longest):
             longest = sub_s
     return longest
+
+
+if __name__ == "__main__":
+    longest_palindrome("babad")

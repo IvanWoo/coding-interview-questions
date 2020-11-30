@@ -48,3 +48,7 @@ def min_distance(word1: str, word2: str) -> int:
             )
 
     return dp[-1][-1]
+
+
+if __name__ == "__main__":
+    min_distance("sea", "eat")

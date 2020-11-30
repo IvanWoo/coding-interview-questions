@@ -50,12 +50,7 @@ def add_operators(num: str, target: int) -> List[str]:
     @lru_cache(None)
     def cal(i, expression):
         if i == len(num):
-            if not expression:
-                return []
-            if eval(expression) == target:
-                return [expression]
-            else:
-                return []
+            return [expression] if eval(expression) == target else []
 
         plus, minus, mul, null = [], [], [], []
         if expression == "" or get_prefix(expression) != "0":

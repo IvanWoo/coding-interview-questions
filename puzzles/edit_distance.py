@@ -26,8 +26,23 @@ enention -> exention (replace 'n' with 'x')
 exention -> exection (replace 'n' with 'c')
 exection -> execution (insert 'u')
 """
+from functools import lru_cache
+
+# recursion
+def min_distance(word1: str, word2: str) -> int:
+    @lru_cache(None)
+    def helper(w1, w2):
+        n1, n2 = len(w1), len(w2)
+        if n1 == 0 or n2 == 0:
+            return max(n1, n2)
+        if w1[0] == w2[0]:
+            return helper(w1[1:], w2[1:])
+        return min(helper(w1[1:], w2), helper(w1, w2[1:]), helper(w1[1:], w2[1:])) + 1
+
+    return helper(word1, word2)
 
 
+# dp
 def min_distance(word1: str, word2: str) -> int:
     n1, n2 = len(word1) + 1, len(word2) + 1
     dp = [[0] * n1 for _ in range(n2)]

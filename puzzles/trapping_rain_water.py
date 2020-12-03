@@ -25,23 +25,17 @@ def trap(height: List[int]) -> int:
 def trap(height: List[int]) -> int:
     if height == []:
         return 0
+
     max_left, max_right = [0] * len(height), [0] * len(height)
 
     max_left[0] = height[0]
     for i in range(1, len(height)):
         max_left[i] = max(height[i], max_left[i - 1])
-    # for k, v in enumerate(height):
-    #     if k == 0:
-    #         max_left[k] = v
-    #     max_left[k] = max(v, max_left[k - 1])
 
     max_right[len(height) - 1] = height[-1]
     for i in range(len(height) - 2, -1, -1):
         max_right[i] = max(height[i], max_right[i + 1])
-    # for k, v in enumerate(height[::-1]):
-    #     if k == 0:
-    #         max_right[k] = v
-    #     max_right[len(height) - 2 - k] = max(v, max_right[len(height) - 1 - k])
+
     ans = 0
     for k, v in enumerate(height):
         ans += min(max_left[k], max_right[k]) - v
@@ -51,19 +45,19 @@ def trap(height: List[int]) -> int:
 # two pointers
 def trap(height: List[int]) -> int:
     left, right = 0, len(height) - 1
-    left_max, right_max = 0, 0
+    l_max, r_max = 0, 0
     ans = 0
-    while left < right:
-        if height[left] < height[right]:
-            if height[left] >= left_max:
-                left_max = height[left]
-            else:
-                ans += left_max - height[left]
+    while left <= right:
+        l_max = max(l_max, height[left])
+        r_max = max(r_max, height[right])
+        if l_max < r_max:
+            ans += l_max - height[left]
             left += 1
         else:
-            if height[right] >= right_max:
-                right_max = height[right]
-            else:
-                ans += right_max - height[right]
+            ans += r_max - height[right]
             right -= 1
     return ans
+
+
+if __name__ == "__main__":
+    trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])

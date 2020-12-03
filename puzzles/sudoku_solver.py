@@ -13,8 +13,6 @@ The given board contain only digits 1-9 and the character '.'.
 You may assume that the given Sudoku puzzle will have a single unique solution.
 The given board size is always 9x9.
 """
-
-
 from typing import List
 import copy
 
@@ -23,7 +21,6 @@ def solve_sudoku(board: List[List[str]]) -> None:
     """
     Do not return anything, modify board in-place instead.
     """
-    res = []
 
     def get_bucket(n):
         if n < 3:
@@ -60,10 +57,11 @@ def solve_sudoku(board: List[List[str]]) -> None:
         return True
 
     def backtrack(board, row, col):
+        nonlocal res
         if res:
             return True
         if row >= 9:
-            res.append(copy.deepcopy(board))
+            res = copy.deepcopy(board)
             return True
         elif col >= 9:
             return backtrack(board, row + 1, 0)
@@ -76,9 +74,9 @@ def solve_sudoku(board: List[List[str]]) -> None:
             if backtrack(board, row, col + 1):
                 return True
             board[row][col] = "."
-
         return False
 
+    res = []
     backtrack(board, 0, 0)
     for r in range(9):
         for c in range(9):

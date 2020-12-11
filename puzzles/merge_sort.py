@@ -50,3 +50,7 @@ def merge_sort(nums):
 
     sort(0, n)
     return copy
+
+
+if __name__ == "__main__":
+    sort([5, 1, 1, 2, 0, 0])

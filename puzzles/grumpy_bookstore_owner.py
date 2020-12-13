@@ -36,7 +36,7 @@ def max_satisfied(customers: List[int], grumpy: List[int], X: int) -> int:
     return res
 
 
-# sliding window: O(n + m ) ~= O(n)
+# sliding window: O(n + m) ~= O(n)
 def max_satisfied(customers: List[int], grumpy: List[int], X: int) -> int:
     n = len(customers)
     lo, hi = 0, X - 1

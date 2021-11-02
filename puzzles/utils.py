@@ -31,4 +31,3 @@ if __name__ == "__main__":
     tns[0].left = tns[1]
     tns[0].right = tns[2]
     print(tns[1])
-

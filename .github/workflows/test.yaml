@@ -5,27 +5,22 @@ on:
   pull_request:
     branches:
       - master
-      - dev
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10"]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v1
-        with:
-          python-version: ${{ matrix.python-version }}
+      - uses: actions/checkout@v3
 
       - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1
+        run: pipx install pipenv
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          cache: "pipenv"
 
       - name: Install dependencies
         run: pipenv install --dev

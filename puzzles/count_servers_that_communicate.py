@@ -32,7 +32,7 @@ from typing import List
 from collections import Counter
 from puzzles.union_find import UF
 
-
+# union find
 def count_servers(grid: List[List[int]]) -> int:
     rows, cols = len(grid), len(grid[0])
     uf = UF(rows * cols)
@@ -60,3 +60,24 @@ def count_servers(grid: List[List[int]]) -> int:
     parent = uf.parent
     count = Counter(parent)
     return sum(v for v in count.values() if v > 1)
+
+
+# matrix
+def count_servers(grid: List[List[int]]) -> int:
+    rows, cols = len(grid), len(grid[0])
+    res = [[0] * cols for _ in range(rows)]
+    for r in range(rows):
+        if sum(grid[r]) <= 1:
+            continue
+        for c in range(cols):
+            if grid[r][c]:
+                res[r][c] = 1
+
+    for c in range(cols):
+        if sum(grid[r][c] for r in range(rows)) <= 1:
+            continue
+        for r in range(rows):
+            if grid[r][c]:
+                res[r][c] = 1
+
+    return sum(sum(row) for row in res)

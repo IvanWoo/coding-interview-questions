@@ -37,6 +37,14 @@ def last_stone_weight_ii(stones: list[int]) -> int:
     def knapsack(stones, capacity):
         n = len(stones)
         dp = [[0] * (capacity + 1) for _ in range(n)]
+
+        # init
+        # b/c the weights and values are identical in this case
+        # we can safely ignore this part
+        for j in range(capacity + 1):
+            if stones[0] <= j:
+                dp[0][j] = stones[0]
+
         for i, stone in enumerate(stones):
             for j in range(capacity + 1):
                 if j < stone:

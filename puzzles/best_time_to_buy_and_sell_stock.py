@@ -36,13 +36,25 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
-from typing import List
 
 
-def max_profit(prices: List[int]) -> int:
+def max_profit(prices: list[int]) -> int:
     profit = 0
     min_p = prices[0]
     for p in prices:
         min_p = min(min_p, p)
         profit = max(profit, p - min_p)
     return profit
+
+
+def max_profit(prices: list[int]) -> int:
+    n = len(prices)
+    dp = [[0] * 2 for _ in range(n)]
+    for i in range(n):
+        if i - 1 == -1:
+            dp[i][0] = 0
+            dp[i][1] = -prices[i]
+            continue
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+        dp[i][1] = max(dp[i - 1][1], -prices[i])
+    return dp[-1][0]

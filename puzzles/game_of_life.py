@@ -29,39 +29,33 @@ Follow up:
 Could you solve it in-place? Remember that the board needs to be updated at the same time: You cannot update some cells first and then use their updated values to update other cells.
 In this question, we represent the board using a 2D array. In principle, the board is infinite, which would cause problems when the active area encroaches the border of the array. How would you address these problems?
 """
-from typing import List
 
 
-def is_valid(board, r, c):
-    row, col = len(board), len(board[0])
-    return 0 <= r < row and 0 <= c < col
+def neighbors(board, r, c):
+    rows, cols = len(board), len(board[0])
+    for i in [-1, 0, 1]:
+        for j in [-1, 0, 1]:
+            if i == 0 and j == 0:
+                continue
+            rr, cc = r + i, c + j
+            if 0 <= rr < rows and 0 <= cc < cols:
+                yield rr, cc
 
 
-def is_alive(board, r, c):
-    count = 0
-    for i, j in [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]:
-        if is_valid(board, r + i, c + j):
-            count += board[r + i][c + j]
-    if board[r][c]:
-        return count in [2, 3]
-    else:
-        return count == 3
-
-
-def game_of_life(board: List[List[int]]) -> None:
+def game_of_life(board: list[list[int]]) -> None:
     """
     Do not return anything, modify board in-place instead.
     """
-    row, col = len(board), len(board[0])
-    pos = []
-    for r in range(row):
-        for c in range(col):
-            if is_alive(board, r, c):
-                if board[r][c] == 0:
-                    pos.append((r, c))
+    nxt_ops = []
+    rows, cols = len(board), len(board[0])
+    for r in range(rows):
+        for c in range(cols):
+            total = sum([board[rr][cc] for rr, cc in neighbors(board, r, c)])
+            if board[r][c] == 1:
+                if total < 2 or total > 3:
+                    nxt_ops.append((r, c, 0))
             else:
-                if board[r][c] == 1:
-                    pos.append((r, c))
-
-    for r, c in pos:
-        board[r][c] = 0 if board[r][c] else 1
+                if total == 3:
+                    nxt_ops.append((r, c, 1))
+    for r, c, v in nxt_ops:
+        board[r][c] = v

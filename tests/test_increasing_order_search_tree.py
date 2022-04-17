@@ -1,4 +1,3 @@
-from tkinter.tix import Tree
 import pytest
 from puzzles.utils import TreeNode
 from puzzles.increasing_order_search_tree import increasing_BST

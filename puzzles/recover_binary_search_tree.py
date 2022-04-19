@@ -49,24 +49,28 @@ def recover_tree(root: TreeNode) -> None:
     """
     Do not return anything, modify root in-place instead.
     """
-    state = {"first": None, "second": None, "pre": TreeNode(float("-inf"))}
 
-    def traverse(node, state):
+    def traverse(node):
+        nonlocal first, second, pre
         if not node:
             return
-        traverse(node.left, state)
-        if not state["first"] and node.val < state["pre"].val:
-            state["first"] = state["pre"]
-        if state["first"] and node.val < state["pre"].val:
-            state["second"] = node
-        state["pre"] = node
-        traverse(node.right, state)
+        traverse(node.left)
+        if not first and node.val < pre.val:
+            first = pre
+        if first and node.val < pre.val:
+            second = node
+        pre = node
+        traverse(node.right)
 
-    traverse(root, state)
+    first, second, pre = None, None, TreeNode(float("-inf"))
+    traverse(root)
 
     # swap
-    state["first"].val, state["second"].val = (
-        state["second"].val,
-        state["first"].val,
-    )
+    first.val, second.val = second.val, first.val
     return
+
+
+if __name__ == "__main__":
+    root = TreeNode(1, TreeNode(3, None, TreeNode(2)), None)
+    recover_tree(root)
+    print(root)

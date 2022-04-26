@@ -40,7 +40,7 @@ from puzzles.union_find import UF
 
 # TLE: O(n ^ 3)
 def min_cost_connect_points(points: List[List[int]]) -> int:
-    def get_distance(p1, p2):
+    def dist(p1, p2):
         return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
 
     if not points:
@@ -52,7 +52,7 @@ def min_cost_connect_points(points: List[List[int]]) -> int:
         for j in range(n):
             if i == j:
                 continue
-            weights[i][j] = get_distance(points[i], points[j])
+            weights[i][j] = dist(points[i], points[j])
 
     uf = UF(n)
     res = 0
@@ -76,8 +76,10 @@ def min_cost_connect_points(points: List[List[int]]) -> int:
 
 # Min Spanning Tree, Prim's Algorithm: O(n ^ 2)
 def min_cost_connect_points(points: List[List[int]]) -> int:
-    def get_distance(p1, p2):
-        return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+    def dist(i, j):
+        x1, y1 = points[i]
+        x2, y2 = points[j]
+        return abs(x1 - x2) + abs(y1 - y2)
 
     if not points:
         return 0
@@ -86,18 +88,18 @@ def min_cost_connect_points(points: List[List[int]]) -> int:
     res = 0
     # init edges with first point
     visited = set([0])
-    edges = [(get_distance(points[0], points[i]), 0, i) for i in range(1, n)]
+    edges = [(dist(0, i), 0, i) for i in range(1, n)]
     heapq.heapify(edges)
 
     while edges:
-        cost, frm, to = heapq.heappop(edges)
+        cost, _, to = heapq.heappop(edges)
         if to in visited:
             continue
         visited.add(to)
         res += cost
         for i in range(n):
             if i not in visited:
-                heapq.heappush(edges, (get_distance(points[to], points[i]), to, i))
+                heapq.heappush(edges, (dist(to, i), to, i))
     return res
 
 

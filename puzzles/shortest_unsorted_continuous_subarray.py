@@ -14,10 +14,8 @@ Then length of the input array is in range [1, 10,000].
 The input array may contain duplicates, so ascending order here means <=.
 """
 
-from typing import List
-
 # O(nlogn), O(n)
-def find_unsorted_subarray(nums: List[int]) -> int:
+def find_unsorted_subarray(nums: list[int]) -> int:
     sorted_nums = sorted(nums)
     start, end = len(nums), 0
     for i in range(len(nums)):
@@ -28,7 +26,7 @@ def find_unsorted_subarray(nums: List[int]) -> int:
 
 
 # O(n), O(n)
-def find_unsorted_subarray(nums: List[int]) -> int:
+def find_unsorted_subarray(nums: list[int]) -> int:
     n = len(nums)
     stack = []
     start, end = n, 0
@@ -46,7 +44,7 @@ def find_unsorted_subarray(nums: List[int]) -> int:
 
 
 # O(n), O(1)
-def find_unsorted_subarray(nums: List[int]) -> int:
+def find_unsorted_subarray(nums: list[int]) -> int:
     n = len(nums)
     min_val, max_val = float("inf"), float("-inf")
     flag = False
@@ -76,7 +74,7 @@ def find_unsorted_subarray(nums: List[int]) -> int:
 
 
 # O(n), O(1)
-def find_unsorted_subarray(nums: List[int]) -> int:
+def find_unsorted_subarray(nums: list[int]) -> int:
     n = len(nums)
     start, end = n, 0
     prev_hi, prev_lo = n - 1, 0

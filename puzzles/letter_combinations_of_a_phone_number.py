@@ -49,3 +49,35 @@ def letter_combinations(digits: str) -> list[str]:
     helper(digits, "")
 
     return res
+
+
+def letter_combinations(digits: str) -> list[str]:
+    int_to_letters = {
+        2: "abc",
+        3: "def",
+        4: "ghi",
+        5: "jkl",
+        6: "mno",
+        7: "pqrs",
+        8: "tuv",
+        9: "wxyz",
+    }
+
+    n = len(digits)
+    res = []
+    path = []
+
+    def backtrack(idx: int):
+        nonlocal res
+        if idx == n:
+            if path:
+                res.append("".join(path))
+            return
+        for nxt in int_to_letters[int(digits[idx])]:
+            path.append(nxt)
+            backtrack(idx + 1)
+            path.pop()
+
+    backtrack(0)
+
+    return res

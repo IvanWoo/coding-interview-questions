@@ -51,3 +51,36 @@ def count_vowel_strings(n: int) -> int:
         return sum(func(n - 1, kk) for kk in range(1, k + 1))
 
     return func(n, 5)
+
+
+# dp
+def count_vowel_strings(n: int) -> int:
+    dp = [[0] * 5 for _ in range(n)]
+
+    for i in range(5):
+        dp[0][i] = 1
+
+    for row in range(1, n):
+        for col in range(5):
+            for pre_col in range(col + 1):
+                dp[row][col] += dp[row - 1][pre_col]
+
+    return sum(dp[n - 1])
+
+
+# dp with space optimization
+def count_vowel_strings(n: int) -> int:
+    dp = [1] * 5
+
+    for _ in range(1, n):
+        new_dp = [0] * 5
+        for col in range(5):
+            for pre_col in range(col + 1):
+                new_dp[col] += dp[pre_col]
+        dp = new_dp[:]
+
+    return sum(dp)
+
+
+def count_vowel_strings(n: int) -> int:
+    return (n + 4) * (n + 3) * (n + 2) * (n + 1) // 24

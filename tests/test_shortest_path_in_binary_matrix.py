@@ -19,6 +19,7 @@ from puzzles.shortest_path_in_binary_matrix import shortest_path_binary_matrix
             ],
             14,
         ),
+        ([[0, 0, 0], [1, 1, 0], [1, 1, 1]], -1),
     ],
 )
 def test(grid, expected):

@@ -26,10 +26,8 @@ There are two ways to reach the bottom-right corner:
 """
 
 
-from typing import List
-
 # backtrack: TLE
-def unique_paths_with_obstacles(obstacleGrid: List[List[int]]) -> int:
+def unique_paths_with_obstacles(obstacleGrid: list[list[int]]) -> int:
     if obstacleGrid[0][0] == 1:
         return 0
     row, col = len(obstacleGrid), len(obstacleGrid[0])
@@ -50,27 +48,28 @@ def unique_paths_with_obstacles(obstacleGrid: List[List[int]]) -> int:
 
 
 # dp
-def unique_paths_with_obstacles(obstacleGrid: List[List[int]]) -> int:
-    if obstacleGrid[0][0] == 1:
-        return 0
+def unique_paths_with_obstacles(obstacleGrid: list[list[int]]) -> int:
+    def is_obs(r, c):
+        return obstacleGrid[r][c] == 1
+
     row, col = len(obstacleGrid), len(obstacleGrid[0])
     dp = [[0] * col for _ in range(row)]
 
     # first row
     for i in range(col):
-        if obstacleGrid[0][i] == 1:
+        if is_obs(0, i):
             break
         dp[0][i] = 1
 
     # first col
     for i in range(row):
-        if obstacleGrid[i][0] == 1:
+        if is_obs(i, 0):
             break
         dp[i][0] = 1
 
     for r in range(1, row):
         for c in range(1, col):
-            if obstacleGrid[r][c] == 0:
+            if not is_obs(r, c):
                 dp[r][c] = dp[r - 1][c] + dp[r][c - 1]
 
     return dp[-1][-1]

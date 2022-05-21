@@ -25,11 +25,11 @@ Constraints:
 1 <= coins[i] <= 231 - 1
 0 <= amount <= 104
 """
-from functools import lru_cache
+from functools import cache
 
 
 def coin_change(coins: list[int], amount: int) -> int:
-    @lru_cache(None)
+    @cache
     def helper(coins, amount):
         if amount == 0:
             return 0
@@ -58,3 +58,20 @@ def coin_change(coins: list[int], amount: int) -> int:
                 continue
             dp[i] = min(dp[i], dp[i - coin] + 1)
     return dp[-1] if dp[-1] != n else -1
+
+
+# top to bottom
+def coin_change(coins: list[int], amount: int) -> int:
+    @cache
+    def helper(amount):
+        if amount < 0:
+            return float("inf")
+        if amount == 0:
+            return 0
+
+        return 1 + min([helper(amount - c) for c in coins])
+
+    res = helper(amount)
+    if res == float("inf"):
+        return -1
+    return res

@@ -46,11 +46,10 @@ def count_substrings(s: str) -> int:
 
     res = 0
     n = len(s)
-    # odd
     for i in range(n):
+        # odd
         count(i, i)
-    # even
-    for i in range(n):
+        # even
         count(i, i + 1)
 
     return res

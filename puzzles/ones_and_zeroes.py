@@ -24,12 +24,11 @@ Constraints:
 strs[i] consists only of digits '0' and '1'.
 1 <= m, n <= 100
 """
-from typing import List
 from collections import Counter
-from functools import lru_cache
+from functools import cache
 
 # brute force: O(2^n)
-def find_max_form(strs: List[str], m: int, n: int) -> int:
+def find_max_form(strs: list[str], m: int, n: int) -> int:
     def helper(path, choices, m, n):
         nonlocal res
         res = max(res, len(path))
@@ -54,15 +53,21 @@ def find_max_form(strs: List[str], m: int, n: int) -> int:
 
 
 # recursive + memo
-def find_max_form(strs: List[str], m: int, n: int) -> int:
-    @lru_cache(None)
+def find_max_form(strs: list[str], m: int, n: int) -> int:
+    def count(s):
+        c = Counter(s)
+        return c["0"], c["1"]
+
+    @cache
     def helper(i, m, n):
         if i == -1 or (m == 0 and n == 0):
             return 0
-        c = Counter(strs[i])
-        if c["0"] <= m and c["1"] <= n:
+        z, o = count(strs[i])
+        if z <= m and o <= n:
+            # not include
             result_0 = helper(i - 1, m, n)
-            result_1 = helper(i - 1, m - c["0"], n - c["1"]) + 1
+            # include
+            result_1 = helper(i - 1, m - z, n - o) + 1
             result = max(result_0, result_1)
         else:
             result = helper(i - 1, m, n)
@@ -72,7 +77,7 @@ def find_max_form(strs: List[str], m: int, n: int) -> int:
 
 
 # dp
-def find_max_form(strs: List[str], m: int, n: int) -> int:
+def find_max_form(strs: list[str], m: int, n: int) -> int:
     dp = [[0] * (n + 1) for _ in range(m + 1)]
 
     def count(s):
@@ -85,6 +90,30 @@ def find_max_form(strs: List[str], m: int, n: int) -> int:
                 if x >= z and y >= o:
                     dp[x][y] = max(1 + dp[x - z][y - o], dp[x][y])
     return dp[m][n]
+
+
+# knapsack problem
+def find_max_form(strs: list[str], m: int, n: int) -> int:
+    def count(s):
+        c = Counter(s)
+        return c["0"], c["1"]
+
+    max_size = len(strs)
+    # dp[size][most "0"][most "1"]
+    dp = [[[0] * (n + 1) for _ in range(m + 1)] for _ in range(max_size + 1)]
+
+    for size in range(1, max_size + 1):
+        z, o = count(strs[size - 1])
+        for max_z in range(m + 1):
+            for max_o in range(n + 1):
+                if z > max_z or o > max_o:
+                    dp[size][max_z][max_o] = dp[size - 1][max_z][max_o]
+                else:
+                    dp[size][max_z][max_o] = max(
+                        dp[size - 1][max_z][max_o],
+                        dp[size - 1][max_z - z][max_o - o] + 1,
+                    )
+    return dp[max_size][m][n]
 
 
 if __name__ == "__main__":

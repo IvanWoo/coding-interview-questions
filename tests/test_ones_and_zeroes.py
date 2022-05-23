@@ -1,12 +1,14 @@
+import pytest
 from puzzles.ones_and_zeroes import find_max_form
 
 
-def test_find_max_form():
-    assert find_max_form(strs=["10", "0001", "111001", "1", "0"], m=5, n=3) == 4
-    assert find_max_form(strs=["10", "0", "1"], m=1, n=1) == 2
-    assert (
-        find_max_form(
-            strs=[
+@pytest.mark.parametrize(
+    "strs, m, n, expected",
+    [
+        (["10", "0001", "111001", "1", "0"], 5, 3, 4),
+        (["10", "0", "1"], 1, 1, 2),
+        (
+            [
                 "0",
                 "1101",
                 "01",
@@ -20,8 +22,11 @@ def test_find_max_form():
                 "11",
                 "0011",
             ],
-            m=63,
-            n=36,
-        )
-        == 12
-    )
+            63,
+            36,
+            12,
+        ),
+    ],
+)
+def test_find_max_form(strs, m, n, expected):
+    assert find_max_form(strs, m, n) == expected

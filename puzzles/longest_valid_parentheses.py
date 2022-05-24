@@ -35,28 +35,29 @@ def longest_valid_parentheses(s: str) -> int:
 # two pass
 # space O(1)
 def longest_valid_parentheses(s: str) -> int:
+    def count(i, l, r):
+        if s[i] == "(":
+            l += 1
+        elif s[i] == ")":
+            r += 1
+        return l, r
+
     n = len(s)
     ans = 0
     # left to right
     l = r = 0
     for i in range(n):
-        if s[i] == "(":
-            l += 1
-        elif s[i] == ")":
-            r += 1
+        l, r = count(i, l, r)
 
         if l == r:
-            ans = max(ans, 2 * r)
+            ans = max(ans, 2 * l)
         elif r > l:
             l = r = 0
 
     # right to left
     l = r = 0
     for i in reversed(range(n)):
-        if s[i] == "(":
-            l += 1
-        elif s[i] == ")":
-            r += 1
+        l, r = count(i, l, r)
 
         if l == r:
             ans = max(ans, 2 * l)
@@ -64,3 +65,7 @@ def longest_valid_parentheses(s: str) -> int:
             l = r = 0
 
     return ans
+
+
+if __name__ == "__main__":
+    longest_valid_parentheses(")()())")

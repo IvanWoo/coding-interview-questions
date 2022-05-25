@@ -14,10 +14,9 @@ Your algorithm should run in O(n2) complexity.
 Follow up: Could you improve it to O(n log n) time complexity?
 """
 from bisect import bisect_left
-from typing import List
 
 
-def length_of_LIS(nums: List[int]) -> int:
+def length_of_LIS(nums: list[int]) -> int:
     if not nums:
         return 0
     ans = 0
@@ -33,8 +32,9 @@ def length_of_LIS(nums: List[int]) -> int:
     return ans + 1
 
 
+# patience sorting
 # O(n*logn)
-def length_of_LIS(nums: List[int]) -> int:
+def length_of_LIS(nums: list[int]) -> int:
     # bisect_left implementation
     def binary_search(sub, num):
         lo, hi = 0, len(sub) - 1
@@ -51,6 +51,7 @@ def length_of_LIS(nums: List[int]) -> int:
     if not nums:
         return 0
 
+    # sub[i]: the smallest ending number of a subsequence that has length i + 1
     sub = []
 
     for num in nums:
@@ -63,7 +64,7 @@ def length_of_LIS(nums: List[int]) -> int:
 
 
 # dp: O(n^2)
-def length_of_LIS(nums: List[int]) -> int:
+def length_of_LIS(nums: list[int]) -> int:
     if not nums:
         return 0
     n = len(nums)

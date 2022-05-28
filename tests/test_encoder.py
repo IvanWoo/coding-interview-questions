@@ -2,7 +2,13 @@ import pytest
 from puzzles.encoder import encoder
 
 
-def test_encoder():
-    assert encoder(["a"], ["1", "2", "3", "4"]) == ["1"]
-    assert encoder(["a", "b"], ["1", "2", "3", "4"]) == ["1", "2"]
-    assert encoder(["a", "b", "a"], ["1", "2", "3", "4"]) == ["1", "2", "1"]
+@pytest.mark.parametrize(
+    "row, code_word, expected",
+    [
+        (["a"], ["1", "2", "3", "4"], ["1"]),
+        (["a", "b"], ["1", "2", "3", "4"], ["1", "2"]),
+        (["a", "b", "a"], ["1", "2", "3", "4"], ["1", "2", "1"]),
+    ],
+)
+def test_encoder(row, code_word, expected):
+    assert encoder(row, code_word) == expected

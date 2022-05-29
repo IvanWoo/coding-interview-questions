@@ -23,15 +23,19 @@ Constraints:
 0 <= words[i].length <= 10^3
 words[i] consists only of lowercase English letters.
 """
+from collections import defaultdict
 
-from typing import List
-
-
-def max_product(words: List[str]) -> int:
-    d = {}
+# bit manipulation
+def max_product(words: list[str]) -> int:
+    d = defaultdict(int)
     for w in words:
         mask = 0
         for c in set(w):
             mask |= 1 << (ord(c) - ord("a"))
-        d[mask] = max(d.get(mask, 0), len(w))
-    return max([d[x] * d[y] for x in d for y in d if not x & y] or [0])
+        d[mask] = max(d[mask], len(w))
+    res = 0
+    for x in d:
+        for y in d:
+            if x & y == 0:
+                res = max(res, d[x] * d[y])
+    return res

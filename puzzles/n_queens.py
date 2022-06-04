@@ -22,15 +22,15 @@ Output: [
 ]
 Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above.
 """
-from typing import List
 
 
-def solve_n_queens(n: int) -> List[List[str]]:
+def solve_n_queens(n: int) -> list[list[str]]:
     res = []
     board = [["."] * n for _ in range(n)]
 
     def is_valid(board, row, col):
-        for i in range(n):
+        # above upper
+        for i in range(row):
             if board[i][col] == "Q":
                 return False
         # right upper
@@ -62,3 +62,89 @@ def solve_n_queens(n: int) -> List[List[str]]:
 
     backtrack(board, 0)
     return res
+
+
+def solve_n_queens(n: int) -> list[list[str]]:
+    def serialize(board: list[list[int]]) -> list[list[str]]:
+        val = ["".join("Q" if c else "." for c in r) for r in board]
+        return val
+
+    def is_valid(board, row, col):
+        # above upper
+        for i in range(row):
+            if board[i][col]:
+                return False
+        # right upper
+        i, j = row - 1, col + 1
+        while i >= 0 and j < n:
+            if board[i][j]:
+                return False
+            i -= 1
+            j += 1
+        # left upper
+        i, j = row - 1, col - 1
+        while i >= 0 and j >= 0:
+            if board[i][j]:
+                return False
+            i -= 1
+            j -= 1
+        return True
+
+    def backtrack(board, row):
+        nonlocal res
+        if row == n:
+            res.append(serialize(board))
+            return
+        for col in range(n):
+            if not is_valid(board, row, col):
+                continue
+            board[row][col] = 1
+            backtrack(board, row + 1)
+            board[row][col] = 0
+
+    res = []
+    board = [[0] * n for _ in range(n)]
+    backtrack(board, 0)
+    return res
+
+
+# generator
+def solve_n_queens(n: int) -> list[list[str]]:
+    def serialize(board: list[list[int]]) -> list[list[str]]:
+        val = ["".join("Q" if c else "." for c in r) for r in board]
+        return val
+
+    def is_valid(board, row, col):
+        # above upper
+        for i in range(row):
+            if board[i][col]:
+                return False
+        # right upper
+        i, j = row - 1, col + 1
+        while i >= 0 and j < n:
+            if board[i][j]:
+                return False
+            i -= 1
+            j += 1
+        # left upper
+        i, j = row - 1, col - 1
+        while i >= 0 and j >= 0:
+            if board[i][j]:
+                return False
+            i -= 1
+            j -= 1
+        return True
+
+    def backtrack(board, row):
+        if row == n:
+            yield serialize(board)
+            return
+        for col in range(n):
+            if not is_valid(board, row, col):
+                continue
+            board[row][col] = 1
+            yield from backtrack(board, row + 1)
+            board[row][col] = 0
+
+    board = [[0] * n for _ in range(n)]
+    return list(backtrack(board, 0))

@@ -7,6 +7,10 @@ PUZZLES_DIR = ROOT_DIR / "puzzles"
 TESTS_DIR = ROOT_DIR / "tests"
 
 
+def _normalize_name(name):
+    return name.lower().replace(" ", "_").replace("-", "_")
+
+
 def _create_new_puzzle(name):
     file_path = PUZZLES_DIR / f"{name}.py"
     if file_path.exists():
@@ -28,6 +32,7 @@ def _create_new_test(name):
 
 
 def create(name):
+    name = _normalize_name(name)
     _create_new_puzzle(name)
     _create_new_test(name)
 
@@ -37,8 +42,7 @@ def main():
     parser.add_argument("name", help="The name of the new puzzle")
     args = parser.parse_args()
 
-    name = args.name.lower().replace(" ", "_")
-    create(name)
+    create(args.name)
 
 
 if __name__ == "__main__":

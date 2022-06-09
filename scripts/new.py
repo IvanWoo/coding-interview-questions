@@ -8,7 +8,7 @@ TESTS_DIR = ROOT_DIR / "tests"
 
 
 def _normalize_name(name):
-    return name.lower().replace(" ", "_").replace("-", "_")
+    return name.strip().lower().replace(" ", "_").replace("-", "_")
 
 
 def _create_new_puzzle(name):

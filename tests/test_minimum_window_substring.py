@@ -1,6 +1,14 @@
+import pytest
 from puzzles.minimum_window_substring import min_window
 
 
-def test_min_window():
-    assert min_window("ADOBECODEBANC", "ABC") == "BANC"
-    assert min_window("a", "a") == "a"
+@pytest.mark.parametrize(
+    "s, t, expected",
+    [
+        ("ADOBECODEBANC", "ABC", "BANC"),
+        ("a", "a", "a"),
+        ("", "", ""),
+    ],
+)
+def test_min_window(s, t, expected):
+    assert min_window(s, t) == expected

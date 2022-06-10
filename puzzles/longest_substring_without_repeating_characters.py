@@ -30,18 +30,35 @@ s consists of English letters, digits, symbols and spaces.
 """
 from collections import defaultdict
 
-
+# sliding window: O(n)
 def length_of_longest_substring(s: str) -> int:
     lo, hi = 0, 0
     window = defaultdict(int)
     res = 0
     while hi < len(s):
         c1 = s[hi]
-        window[c1] += 1
         hi += 1
+        window[c1] += 1
         while window[c1] > 1:
             c2 = s[lo]
-            window[c2] -= 1
             lo += 1
+            window[c2] -= 1
         res = max(res, hi - lo)
+    return res
+
+
+# brute force: O(n^2)
+def length_of_longest_substring(s: str) -> int:
+    n = len(s)
+    res = min(1, n)
+    for i in range(n):
+        counter = set([s[i]])
+        for j in range(i + 1, n):
+            char = s[j]
+            if char in counter:
+                res = max(res, len(counter))
+                counter = set()
+                break
+            counter.add(char)
+        res = max(res, len(counter))
     return res

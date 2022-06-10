@@ -34,24 +34,24 @@ def min_window(s: str, t: str) -> str:
 
     match = 0
 
-    while lo <= hi < n:
+    while hi < n:
         c1 = s[hi]
+        hi += 1
         if c1 in target.keys():
             window[c1] += 1
             if window[c1] == target[c1]:
                 match += 1
-        hi += 1
 
         while match == len(target):
             if hi - lo < min_len:
                 start = lo
                 min_len = hi - lo
             c2 = s[lo]
+            lo += 1
             if c2 in target.keys():
                 window[c2] -= 1
                 if window[c2] < target[c2]:
                     match -= 1
-            lo += 1
     return s[start : start + min_len] if min_len != float("inf") else ""
 
 

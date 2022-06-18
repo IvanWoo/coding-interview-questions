@@ -28,7 +28,6 @@ You may assume that all inputs are consist of lowercase letters a-z.
 All inputs are guaranteed to be non-empty strings.
 """
 from __future__ import annotations
-from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, Optional, Any
 

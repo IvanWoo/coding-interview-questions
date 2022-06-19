@@ -38,21 +38,21 @@ All characters of products[i] are lower-case English letters.
 1 <= searchWord.length <= 1000
 All characters of searchWord are lower-case English letters.
 """
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Any, Dict, Optional, List
 
 
 @dataclass
 class TrieNode:
-    children: Dict[str, "TrieNode"] = field(default_factory=dict)
-    value: Optional[Any] = field(default_factory=list)
+    children: dict[str, TrieNode] = field(default_factory=dict)
+    value: list[str] = field(default_factory=list)
 
 
 class ProductDictionary:
     def __init__(self) -> None:
         self.root = TrieNode()
 
-    def add(self, product: str) -> None:
+    def insert(self, product: str) -> None:
         node = self.root
         for char in product:
             if char not in node.children:
@@ -61,20 +61,20 @@ class ProductDictionary:
             node.value.append(product)
         return
 
-    def search(self, word: str) -> List[str]:
+    def search(self, word: str) -> list[str]:
         node = self.root
         for char in word:
-            if char in node.children:
-                node = node.children[char]
-            else:
+            if char not in node.children:
                 return []
-        return sorted(node.value)[:3]
+            node = node.children[char]
+        return node.value[:3]
 
 
-def suggested_products(products: List[str], searchWord: str) -> List[List[str]]:
+def suggested_products(products: list[str], searchWord: str) -> list[list[str]]:
+    products.sort()
     pd = ProductDictionary()
     for product in products:
-        pd.add(product)
+        pd.insert(product)
 
     ans = []
     n = len(searchWord)
@@ -86,7 +86,7 @@ def suggested_products(products: List[str], searchWord: str) -> List[List[str]]:
 from bisect import bisect_left
 
 
-def suggested_products(products: List[str], searchWord: str) -> List[List[str]]:
+def suggested_products(products: list[str], searchWord: str) -> list[list[str]]:
     products.sort()
     ans, prefix, i = [], "", 0
     for char in searchWord:

@@ -21,3 +21,4 @@ allow_prereleases = true
 [scripts]
 test = "python -m pytest"
 new = "python scripts/new.py"
+count = "bash scripts/count.sh"

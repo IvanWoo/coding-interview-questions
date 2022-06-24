@@ -1,9 +1,15 @@
 ## tasks
 
-create a new puzzle
+### create a new puzzle
 
 ```sh
 pipenv run new <puzzle name>
+```
+
+### count puzzles
+
+```sh
+pipenv run count
 ```
 
 ## References

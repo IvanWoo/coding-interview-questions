@@ -13,12 +13,32 @@ Output:
 [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
 """
 
-from typing import List
 
-
-def reconstruct_queue(people: List[List[int]]) -> List[List[int]]:
+def reconstruct_queue(people: list[list[int]]) -> list[list[int]]:
     people = sorted(people, key=lambda x: (-x[0], x[1]))
     res = []
     for p in people:
         res.insert(p[1], p)
     return res
+
+
+# O(n^2)
+def reconstruct_queue(people: list[list[int]]) -> list[list[int]]:
+    n = len(people)
+    people = sorted(people)
+    ans = [None] * n
+
+    for h, k in people:
+        count = 0
+        for i in range(n):
+            if ans[i] and ans[i][0] < h:
+                continue
+            if count == k:
+                ans[i] = [h, k]
+                break
+            count += 1
+    return ans
+
+
+if __name__ == "__main__":
+    reconstruct_queue([[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]])

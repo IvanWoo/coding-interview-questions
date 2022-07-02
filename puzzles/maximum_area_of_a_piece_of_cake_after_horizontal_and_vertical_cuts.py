@@ -34,18 +34,17 @@ All the elements in verticalCuts are distinct.
 def max_area(
     h: int, w: int, horizontal_cuts: list[int], vertical_cuts: list[int]
 ) -> int:
-    def max_dist(total: int, cuts: list[int]):
+    def max_dist(cuts: list[int]):
         prev_cut = 0
         ans = 0
         for cut in cuts:
             ans = max(ans, cut - prev_cut)
             prev_cut = cut
-        ans = max(ans, total - prev_cut)
         return ans
 
     MOD = int(1e9 + 7)
-    max_h = max_dist(h, sorted(horizontal_cuts))
-    max_w = max_dist(w, sorted(vertical_cuts))
+    max_h = max_dist(sorted(horizontal_cuts) + [h])
+    max_w = max_dist(sorted(vertical_cuts) + [w])
     ans = max_h * max_w
 
     return ans % MOD

@@ -68,6 +68,36 @@ def wiggle_max_length(nums: List[int]) -> int:
     return max(dp[-1])
 
 
+# o(n^2)
+def wiggle_max_length(nums: List[int]) -> int:
+    def diff_sign(n1, n2):
+        if not n1 or not n2:
+            return False
+        if n1 > 0:
+            return n2 < 0
+        else:
+            return n2 > 0
+
+    n = len(nums)
+    if n <= 1:
+        return n
+    diff = [0] * (n - 1)
+    for i in range(1, n):
+        diff[i - 1] = nums[i] - nums[i - 1]
+
+    ans = 0
+    for i in range(n - 1):
+        prev = diff[i]
+        count = 2 if prev else 1
+        for j in range(i, n - 1):
+            if diff_sign(prev, diff[j]):
+                prev = diff[j]
+                count += 1
+        ans = max(ans, count)
+
+    return ans
+
+
 # linear dp: O(n)
 def wiggle_max_length(nums: List[int]) -> int:
     if not nums:

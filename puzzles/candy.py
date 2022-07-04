@@ -20,10 +20,9 @@ Output: 4
 Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
              The third child gets 1 candy because it satisfies the above two conditions.
 """
-from typing import List
 
 
-def candy(ratings: List[int]) -> int:
+def candy(ratings: list[int]) -> int:
     n = len(ratings)
     res = [1] * n
 
@@ -31,7 +30,7 @@ def candy(ratings: List[int]) -> int:
         if ratings[i] > ratings[i - 1]:
             res[i] = res[i - 1] + 1
 
-    for j in range(n - 2, -1, -1):
+    for j in reversed(range(n - 1)):
         if ratings[j] > ratings[j + 1]:
             res[j] = max(res[j], res[j + 1] + 1)
     return sum(res)

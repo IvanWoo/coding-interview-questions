@@ -62,11 +62,11 @@ def longest_consecutive(nums: List[int]) -> int:
     v2i = dict()
 
     for i, num in enumerate(nums):
-        if num in v2i.keys():
+        if num in v2i:
             continue
-        if num + 1 in v2i.keys():
+        if num + 1 in v2i:
             uf.union(i, v2i[num + 1])
-        if num - 1 in v2i.keys():
+        if num - 1 in v2i:
             uf.union(i, v2i[num - 1])
 
         v2i[num] = i

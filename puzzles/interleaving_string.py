@@ -20,7 +20,7 @@ Constraints:
 s1, s2, and s3 consist of lower-case English letters.
 """
 
-from functools import lru_cache
+from functools import cache
 
 
 def is_interleave(s1: str, s2: str, s3: str) -> bool:
@@ -28,7 +28,7 @@ def is_interleave(s1: str, s2: str, s3: str) -> bool:
     if n1 + n2 != n3:
         return False
 
-    @lru_cache
+    @cache
     def helper(i1, i2, i3):
         if (i1, i2, i3) == (n1, n2, n3):
             return True
@@ -98,3 +98,27 @@ def is_interleave(s1: str, s2: str, s3: str) -> bool:
                 )
 
     return dp[-1]
+
+
+def is_interleave(s1: str, s2: str, s3: str) -> bool:
+    n1, n2, n3 = len(s1), len(s2), len(s3)
+    if n1 + n2 != n3:
+        return False
+
+    @cache
+    def helper(p1: int, p2: int, p3: int) -> bool:
+        if p3 == n3:
+            return True
+        c3 = s3[p3]
+        ans = []
+        if p1 < n1 and s1[p1] == c3:
+            ans.append(helper(p1 + 1, p2, p3 + 1))
+        if p2 < n2 and s2[p2] == c3:
+            ans.append(helper(p1, p2 + 1, p3 + 1))
+        return any(ans)
+
+    return helper(0, 0, 0)
+
+
+if __name__ == "__main__":
+    is_interleave("aabcc", "dbbca", "aadbbcbcac")

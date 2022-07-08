@@ -22,3 +22,4 @@ allow_prereleases = true
 test = "pytest"
 new = "python scripts/new.py"
 count = "bash scripts/count.sh"
+commit = "bash scripts/commit.sh"

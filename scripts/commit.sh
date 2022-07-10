@@ -8,7 +8,7 @@ main() {
         exit 1
     fi
     git commit -m "feat: add ${PUZZLE_NAME}"
-    git log --oneline | head -n 1
+    git whatchanged -1 --format=oneline
 }
 
 main

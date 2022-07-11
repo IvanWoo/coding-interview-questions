@@ -1,22 +1,31 @@
 #!/bin/sh
 set -euo pipefail
 
-grep_file() {
-    local grep_str="$1"
-    local commit_prefix="$2"
-    TARGET="$(git status | grep $grep_str | wc -l)"
-    if [ "$TARGET" -ge 1 ]; then
-        PUZZLE_NAME="$(git status | grep $grep_str | awk -F "puzzles/" '{print $2}' | awk -F "." '{print $1}' | sed -n '/./{p;q;}')"
-        git commit -m "$commit_prefix ${PUZZLE_NAME}"
-    fi
-}
-
 commit_new_file() {
-    grep_file "new file" "feat: add"
+    PUZZLE_NAME="$(git status | grep "new file" | awk -F "puzzles/" '{print $2}' | awk -F "." '{print $1}' | sed -n '/./{p;q;}')"
+    if [ -z "${PUZZLE_NAME}" ]; then
+        echo "No puzzle name found."
+        exit 1
+    fi
+    git commit -m "feat: add ${PUZZLE_NAME}"
+    git whatchanged -1 --format=oneline
 }
 
 commit_modified_file() {
-    grep_file "modified" "refactor: revisit"
+    PUZZLE_NAME="$(git status | grep "modified" | awk -F "puzzles/" '{print $2}' | awk -F "." '{print $1}' | sed -n '/./{p;q;}')"
+    if [ -z "${PUZZLE_NAME}" ]; then
+        echo "No puzzle name found."
+        exit 1
+    fi
+    git commit -m "refactor: revisit ${PUZZLE_NAME}"
+    git whatchanged -1 --format=oneline
+}
+
+usage() {
+    echo "Usage: $0 [new|modified]"
+    echo "  new: commit new files"
+    echo "  modified: commit modified files"
+    exit 1
 }
 
 main() {
@@ -29,7 +38,7 @@ main() {
         commit_modified_file
         ;;
     *)
-        echo "Usage: $0 {new|modified}"
+        usage
         exit 1
         ;;
     esac
@@ -37,4 +46,9 @@ main() {
     git whatchanged -1 --format=oneline
 }
 
-main
+if [ $# -eq 0 ]; then
+    usage
+    exit 1
+fi
+
+main "$@"

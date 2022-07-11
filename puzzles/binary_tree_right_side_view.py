@@ -15,10 +15,9 @@
 
 from collections import defaultdict
 from puzzles.utils import TreeNode
-from typing import List
 
 
-def right_side_view(root: TreeNode) -> List[int]:
+def right_side_view(root: TreeNode) -> list[int]:
     ans = defaultdict(int)
 
     def traverse(node, lv, ans):
@@ -30,3 +29,19 @@ def right_side_view(root: TreeNode) -> List[int]:
 
     traverse(root, 0, ans)
     return ans.values()
+
+
+def right_side_view(root: TreeNode) -> list[int]:
+    def traverse(node, lvl):
+        if not node:
+            return
+        if lvl not in visited:
+            ans.append(node.val)
+            visited.add(lvl)
+        traverse(node.right, lvl + 1)
+        traverse(node.left, lvl + 1)
+
+    ans = []
+    visited = set()
+    traverse(root, 0)
+    return ans

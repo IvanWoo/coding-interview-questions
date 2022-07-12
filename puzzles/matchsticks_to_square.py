@@ -20,11 +20,10 @@ Note:
 The length sum of the given matchsticks is in the range of 0 to 10^9.
 The length of the given matchstick array will not exceed 15.
 """
-from typing import List
 
 
 # dfs: O(4^n)
-def makesquare(nums: List[int]) -> bool:
+def makesquare(nums: list[int]) -> bool:
     if not nums:
         return False
     total = sum(nums)
@@ -47,7 +46,7 @@ def makesquare(nums: List[int]) -> bool:
 
 
 # dfs: O(4^n)
-def makesquare(nums: List[int]) -> bool:
+def makesquare(nums: list[int]) -> bool:
     if not nums:
         return False
     total = sum(nums)
@@ -79,7 +78,7 @@ def makesquare(nums: List[int]) -> bool:
     return helper(0, lens)
 
 
-def makesquare(nums: List[int]) -> bool:
+def makesquare(nums: list[int]) -> bool:
     def dfs(nums, pos, target, temp_sum, group_id, visited):
         if group_id == 4:
             return True
@@ -108,3 +107,34 @@ def makesquare(nums: List[int]) -> bool:
     visited = [False] * n
     nums.sort()
     return dfs(nums, 0, target_len, 0, 1, visited)
+
+
+def makesquare(matchsticks: list[int]) -> bool:
+    def backtrack(visited, acc):
+        nonlocal can, n, target
+        if can:
+            return
+        if acc > target:
+            return
+        if acc == target:
+            acc = 0
+        if len(visited) == n:
+            can = True
+            return
+        for i in range(n):
+            if i in visited:
+                continue
+            val = matchsticks[i]
+            visited.add(i)
+            backtrack(visited, acc + val)
+            visited.remove(i)
+
+    total = sum(matchsticks)
+    target = total // 4
+    if total / 4 != target:
+        return False
+    n = len(matchsticks)
+    can = False
+
+    backtrack(set(), 0)
+    return can

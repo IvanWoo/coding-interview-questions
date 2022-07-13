@@ -16,11 +16,10 @@
 # ]
 
 from puzzles.utils import TreeNode
-from typing import List
 from collections import defaultdict, deque
 
 
-def level_order(root: TreeNode) -> List[List[int]]:
+def level_order(root: TreeNode) -> list[list[int]]:
     ans = defaultdict(deque)
 
     def traverse(node, lv, ans):
@@ -34,7 +33,7 @@ def level_order(root: TreeNode) -> List[List[int]]:
     return [list(x) for x in ans.values()]
 
 
-def level_order(root: TreeNode) -> List[List[int]]:
+def level_order(root: TreeNode) -> list[list[int]]:
     if not root:
         return []
     ans, level = [], [root]

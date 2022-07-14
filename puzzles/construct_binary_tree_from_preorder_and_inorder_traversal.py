@@ -16,34 +16,21 @@
 #     /  \
 #    15   7
 
-from typing import List
 from puzzles.utils import TreeNode
 
 
-def build_tree(preorder: List[int], inorder: List[int]) -> TreeNode:
+def build_tree(preorder: list[int], inorder: list[int]) -> TreeNode:
     if (not preorder) or (not inorder) or (len(preorder) != len(inorder)):
         return
 
-    def helper(
-        preorder: List[int], inorder: List[int], pre_st: int, in_st: int, in_end: int
-    ) -> TreeNode:
+    def helper(pre_st: int, in_st: int, in_end: int) -> TreeNode:
         if pre_st > len(preorder) or in_st > in_end:
             return
-        root = TreeNode(preorder[pre_st])
-        ind = inorder.index(preorder[pre_st])
-        root.left = helper(preorder, inorder, pre_st + 1, in_st, ind - 1)
-        root.right = helper(
-            preorder, inorder, pre_st + 1 + (ind - in_st), ind + 1, in_end
-        )
+        root_val = preorder[pre_st]
+        root = TreeNode(root_val)
+        pivot = inorder.index(root_val)
+        root.left = helper(pre_st + 1, in_st, pivot - 1)
+        root.right = helper(pre_st + 1 + (pivot - in_st), pivot + 1, in_end)
         return root
 
-    return helper(preorder, inorder, 0, 0, len(inorder) - 1)
-
-
-# def build_tree(preorder: List[int], inorder: List[int]) -> TreeNode:
-#     if inorder:
-#         ind = inorder.index(preorder.pop(0))
-#         root = TreeNode(inorder[ind])
-#         root.left = build_tree(preorder, inorder[0:ind])
-#         root.right = build_tree(preorder, inorder[ind + 1 :])
-#         return root
+    return helper(0, 0, len(inorder) - 1)

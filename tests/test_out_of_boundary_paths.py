@@ -1,7 +1,14 @@
+import pytest
 from puzzles.out_of_boundary_paths import find_paths
 
 
-def test_find_paths():
-    assert find_paths(m=2, n=2, N=2, i=0, j=0) == 6
-    assert find_paths(m=1, n=3, N=3, i=0, j=1) == 12
-    assert find_paths(m=2, n=1, N=2, i=0, j=0) == 6
+@pytest.mark.parametrize(
+    "m, n, N, i, j, expected",
+    [
+        (2, 2, 2, 0, 0, 6),
+        (1, 3, 3, 0, 1, 12),
+        (2, 1, 2, 0, 0, 6),
+    ],
+)
+def test_find_paths(m, n, N, i, j, expected):
+    assert find_paths(m, n, N, i, j) == expected

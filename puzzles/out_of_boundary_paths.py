@@ -17,7 +17,7 @@ Once you move the ball out of boundary, you cannot move it back.
 The length and height of the grid is in range [1,50].
 N is in range [0,50].
 """
-from functools import lru_cache
+from functools import cache
 
 # TLE
 def find_paths(m: int, n: int, N: int, i: int, j: int) -> int:
@@ -35,11 +35,11 @@ def find_paths(m: int, n: int, N: int, i: int, j: int) -> int:
 
     visited = set()
     backtrack(i, j, N, [(i, j)])
-    return int(len(visited) % (10 ** 9 + 7))
+    return int(len(visited) % (10**9 + 7))
 
 
 def find_paths(m: int, n: int, N: int, i: int, j: int) -> int:
-    @lru_cache(None)
+    @cache
     def helper(x, y, left):
         if 0 <= x < m and 0 <= y < n:
             if left == 0:
@@ -52,7 +52,28 @@ def find_paths(m: int, n: int, N: int, i: int, j: int) -> int:
         else:
             return 1
 
-    return int(helper(i, j, N) % (10 ** 9 + 7))
+    return int(helper(i, j, N) % (10**9 + 7))
+
+
+def find_paths(m: int, n: int, max_move: int, start_row: int, start_column: int) -> int:
+    @cache
+    def helper(i, j, move):
+        ans = 0
+        if move > max_move:
+            return 0
+        if 0 <= i < m and 0 <= j < n:
+            for di, dj in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                ni, nj = i + di, j + dj
+                ans += helper(ni, nj, move + 1)
+        else:
+            ans += 1
+        return ans
+
+    MOD = 10**9 + 7
+
+    ans = 0
+    ans = helper(start_row, start_column, 0)
+    return ans % MOD
 
 
 if __name__ == "__main__":

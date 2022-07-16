@@ -44,6 +44,17 @@ def make_tree(vals: list[Optional[int]]) -> TreeNode:
     return root
 
 
+def make_linked_list(vals: list[Optional[int]]) -> ListNode:
+    if not vals:
+        return None
+    head = ListNode(vals[0])
+    cur = head
+    for i in range(1, len(vals)):
+        cur.next = ListNode(vals[i])
+        cur = cur.next
+    return head
+
+
 if __name__ == "__main__":
     tns = {}
     for i in range(3):

@@ -8,7 +8,6 @@ commit_new_file() {
         exit 1
     fi
     git commit -m "feat: add ${PUZZLE_NAME}"
-    git whatchanged -1 --format=oneline
 }
 
 commit_modified_file() {
@@ -18,7 +17,6 @@ commit_modified_file() {
         exit 1
     fi
     git commit -m "refactor: revisit ${PUZZLE_NAME}"
-    git whatchanged -1 --format=oneline
 }
 
 usage() {

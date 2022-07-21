@@ -1,29 +1,19 @@
 import pytest
-from puzzles.utils import ListNode
+from puzzles.utils import make_linked_list
 from puzzles.reverse_linked_list_ii import reverse_between
 
 
-@pytest.fixture
-def ls():
-    lns = {x: ListNode(x) for x in range(1, 6)}
-    lns[1].next = lns[2]
-    lns[2].next = lns[3]
-    lns[3].next = lns[4]
-    lns[4].next = lns[5]
-
-    return lns[1]
-
-
-@pytest.fixture
-def ans():
-    lns = {x: ListNode(x) for x in range(1, 6)}
-    lns[1].next = lns[4]
-    lns[4].next = lns[3]
-    lns[3].next = lns[2]
-    lns[2].next = lns[5]
-
-    return lns[1]
-
-
-def test_reverse_between(ls, ans):
-    assert reverse_between(ls, 2, 4) == ans
+@pytest.mark.parametrize(
+    "head, m, n, ans",
+    [
+        (
+            make_linked_list([1, 2, 3, 4, 5]),
+            2,
+            4,
+            make_linked_list([1, 4, 3, 2, 5]),
+        ),
+        (make_linked_list([5]), 1, 1, make_linked_list([5])),
+    ],
+)
+def test_reverse_between(head, m, n, ans):
+    assert reverse_between(head, m, n) == ans

@@ -47,24 +47,21 @@ def reverse_between(head: ListNode, m: int, n: int) -> ListNode:
     return head
 
 
-def reverse_n_wrapper(head: ListNode, n: int) -> ListNode:
-    successor = [None]
+def reverse_between(head: ListNode, m: int, n: int) -> ListNode:
+    successor = None
 
     def reverse_n(head: ListNode, n: int) -> ListNode:
+        nonlocal successor
         if n == 1:
-            successor[0] = head.next
+            successor = head.next
             return head
         last = reverse_n(head.next, n - 1)
 
         head.next.next = head
-        head.next = successor[0]
+        head.next = successor
         return last
 
-    return reverse_n(head, n)
-
-
-def reverse_between(head: ListNode, m: int, n: int) -> ListNode:
     if m == 1:
-        return reverse_n_wrapper(head, n)
+        return reverse_n(head, n)
     head.next = reverse_between(head.next, m - 1, n - 1)
     return head

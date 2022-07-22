@@ -54,10 +54,13 @@ def partition(head: Optional[ListNode], x: int) -> Optional[ListNode]:
         if fast.next.val >= x:
             fast = fast.next
         else:
+            # delete target after fast
             target = fast.next
             fast.next = target.next
+            # insert target after cur
             target.next = cur.next
             cur.next = target
+
             cur = cur.next
     return dummy.next
 

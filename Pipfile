@@ -11,6 +11,7 @@ coding-interview-questions = {editable = true, path = "."}
 
 [packages]
 numpy = "*"
+sortedcontainers = "*"
 
 [requires]
 python_version = "3.10"

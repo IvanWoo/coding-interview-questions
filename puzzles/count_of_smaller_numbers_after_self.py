@@ -17,11 +17,25 @@ Constraints:
 -10^4 <= nums[i] <= 10^4
 """
 
-from typing import List
 from collections import deque
+from bisect import bisect_left
+
+from sortedcontainers import SortedList
+
+# brute force: O(n^2)
+def count_smaller(nums: list[int]) -> list[int]:
+    n = len(nums)
+    ans = [0] * n
+    for i in range(n):
+        c = 0
+        for j in range(i + 1, n):
+            if nums[j] < nums[i]:
+                c += 1
+        ans[i] = c
+    return ans
 
 
-def count_smaller(nums: List[int]) -> List[int]:
+def count_smaller(nums: list[int]) -> list[int]:
     n = len(nums)
     res = [0] * n
 
@@ -51,3 +65,31 @@ def count_smaller(nums: List[int]) -> List[int]:
 
     sort(list(enumerate(nums)))
     return res
+
+
+def count_smaller(nums: list[int]) -> list[int]:
+    n = len(nums)
+    ans = [0] * n
+    sorted_list = deque()
+    for i in reversed(range(n)):
+        val = nums[i]
+        j = bisect_left(sorted_list, val)
+        ans[i] = j
+        sorted_list.insert(j, val)
+    return ans
+
+
+def count_smaller(nums: list[int]) -> list[int]:
+    n = len(nums)
+    ans = [0] * n
+    sorted_list = SortedList()
+    for i in reversed(range(n)):
+        val = nums[i]
+        j = sorted_list.bisect_left(val)
+        ans[i] = j
+        sorted_list.add(val)
+    return ans
+
+
+if __name__ == "__main__":
+    count_smaller([5, 2, 6, 1])

@@ -44,6 +44,19 @@ def make_tree(vals: list[Optional[int]]) -> TreeNode:
     return root
 
 
+def find_tree(root: TreeNode, target: int) -> TreeNode:
+    def traverse(node):
+        if not node:
+            return
+        if node.val == target:
+            return node
+        left = traverse(node.left)
+        right = traverse(node.right)
+        return left or right
+
+    return traverse(root)
+
+
 def make_linked_list(vals: list[Optional[int]]) -> ListNode:
     if not vals:
         return None

@@ -1,15 +1,18 @@
-import unittest
 import pytest
+from puzzles.utils import deep_sort
 from puzzles.group_anagrams import group_anagrams
 
 
-def test_group_anagrams():
-    case = unittest.TestCase()
-    results = sorted(
-        group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]), key=len
-    )
-    exprected_results = sorted(
-        [["ate", "eat", "tea"], ["nat", "tan"], ["bat"]], key=len
-    )
-    for k, v in enumerate(results):
-        case.assertCountEqual(v, exprected_results[k])
+@pytest.mark.parametrize(
+    "strs, expected",
+    [
+        (
+            ["eat", "tea", "tan", "ate", "nat", "bat"],
+            [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]],
+        ),
+        (["a", "b", "c"], [["a"], ["b"], ["c"]]),
+        (["a", "b", "c", "d"], [["a"], ["b"], ["c"], ["d"]]),
+    ],
+)
+def test_group_anagrams(strs, expected):
+    assert deep_sort(group_anagrams(strs)) == deep_sort(expected)

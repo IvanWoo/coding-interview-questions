@@ -68,6 +68,10 @@ def make_linked_list(vals: list[Optional[int]]) -> ListNode:
     return head
 
 
+def deep_sort(x: list[list[str]]) -> list[list[str]]:
+    return sorted(sorted(x) for x in x)
+
+
 if __name__ == "__main__":
     tns = {}
     for i in range(3):

@@ -1,7 +1,13 @@
+import pytest
 from puzzles.find_and_replace_pattern import find_and_replace_pattern
 
 
-def test_find_and_replace_pattern():
-    assert find_and_replace_pattern(
-        ["abc", "deq", "mee", "aqq", "dkd", "ccc"], "abb"
-    ) == ["mee", "aqq"]
+@pytest.mark.parametrize(
+    "words, pattern, expected",
+    [
+        (["abc", "deq", "mee", "aqq", "dkd", "ccc"], "abb", ["mee", "aqq"]),
+        (["a", "b", "c"], "a", ["a", "b", "c"]),
+    ],
+)
+def test_find_and_replace_pattern(words, pattern, expected):
+    assert find_and_replace_pattern(words, pattern) == expected

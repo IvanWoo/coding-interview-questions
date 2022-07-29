@@ -23,11 +23,10 @@ Note:
 1 <= words.length <= 50
 1 <= pattern.length = words[i].length <= 20
 """
-from typing import List
 from collections import defaultdict
 
 
-def find_and_replace_pattern(words: List[str], pattern: str) -> List[str]:
+def find_and_replace_pattern(words: list[str], pattern: str) -> list[str]:
     def translate(word):
         dic = defaultdict(int)
         # random big number to hold tokens
@@ -45,7 +44,7 @@ def find_and_replace_pattern(words: List[str], pattern: str) -> List[str]:
     return [w for w in words if translate(w) == translate(pattern)]
 
 
-def find_and_replace_pattern(words: List[str], pattern: str) -> List[str]:
+def find_and_replace_pattern(words: list[str], pattern: str) -> list[str]:
     def match(word):
         m1, m2 = {}, {}
         for w, p in zip(word, pattern):

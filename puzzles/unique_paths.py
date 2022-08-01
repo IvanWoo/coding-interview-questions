@@ -25,7 +25,7 @@ Output: 28
 
 """
 from functools import lru_cache
-from math import factorial
+from math import factorial, comb
 
 
 @lru_cache()
@@ -53,3 +53,21 @@ def unique_paths(m: int, n: int) -> int:
 # combinations
 def unique_paths(m: int, n: int) -> int:
     return factorial(m + n - 2) // (factorial(m - 1) * factorial(n - 1))
+
+
+def unique_paths(m: int, n: int) -> int:
+    total = m + n - 2
+    return comb(total, m - 1)
+
+
+def unique_paths(m: int, n: int) -> int:
+    dp = [[0] * n for _ in range(m)]
+    for c in range(n):
+        dp[0][c] = 1
+    for r in range(m):
+        dp[r][0] = 1
+
+    for r in range(1, m):
+        for c in range(1, n):
+            dp[r][c] = dp[r - 1][c] + dp[r][c - 1]
+    return dp[-1][-1]

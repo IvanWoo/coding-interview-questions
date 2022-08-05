@@ -25,10 +25,10 @@ What if negative numbers are allowed in the given array?
 How does it change the problem?
 What limitation we need to add to the question to allow negative numbers?
 """
-from typing import List
+from functools import cache
 
 # backtrack: TLE
-def combination_sum_4(nums: List[int], target: int) -> int:
+def combination_sum_4(nums: list[int], target: int) -> int:
     def backtrack(path, total):
         nonlocal res, visited
         if total > target:
@@ -51,15 +51,27 @@ def combination_sum_4(nums: List[int], target: int) -> int:
 
 
 # dp
-def combination_sum_4(nums: List[int], target: int) -> int:
-    nums = sorted(nums)
-    dp = [1] + [0] * target
+def combination_sum_4(nums: list[int], target: int) -> int:
+    dp = [0] * (target + 1)
+    dp[0] = 1
     for i in range(target + 1):
         for num in nums:
-            if num > i:
-                break
-            dp[i] += dp[i - num]
+            if num <= i:
+                dp[i] += dp[i - num]
     return dp[target]
+
+
+def combination_sum_4(nums: list[int], target: int) -> int:
+    @cache
+    def helper(target):
+        if target == 0:
+            return 1
+        elif target < 0:
+            return 0
+        else:
+            return sum([helper(target - num) for num in nums])
+
+    return helper(target)
 
 
 if __name__ == "__main__":

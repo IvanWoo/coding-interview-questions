@@ -28,10 +28,9 @@ words[i] consists of lower-case English letters.
 """
 
 from collections import Counter
-from typing import List
 
 
-def find_substring(s: str, words: List[str]) -> List[int]:
+def find_substring(s: str, words: list[str]) -> list[int]:
     l = len(words[0])
     c = Counter(words)
     n = sum([len(word) for word in words])
@@ -42,3 +41,27 @@ def find_substring(s: str, words: List[str]) -> List[int]:
         if temp_c == c:
             ans.append(i)
     return ans
+
+
+def find_substring(s: str, words: list[str]) -> list[int]:
+    word_len = len(words[0])
+    window = word_len * len(words)
+
+    def count(sub_s: str):
+        temp = []
+        for i in range(0, window, word_len):
+            temp.append(sub_s[i : i + word_len])
+        return Counter(temp)
+
+    target = Counter(words)
+    n = len(s)
+    ans = []
+    for i in range(n - window + 1):
+        if count(s[i : i + window]) == target:
+            ans.append(i)
+
+    return ans
+
+
+if __name__ == "__main__":
+    find_substring("barfoothefoobarman", ["foo", "bar"])

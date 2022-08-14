@@ -35,14 +35,16 @@ Output: []
 Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
 """
 import string
-from typing import List
+from math import inf
 from collections import defaultdict
 
 # TLE
-def find_ladders(beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
-    if endWord not in wordList:
+def find_ladders(
+    begin_word: str, end_word: str, word_list: list[str]
+) -> list[list[str]]:
+    if end_word not in word_list:
         return []
-    word_set = set(wordList + [beginWord])
+    word_set = set(word_list + [begin_word])
     graph = defaultdict(set)
     for w in word_set:
         for i in range(len(w)):
@@ -53,18 +55,18 @@ def find_ladders(beginWord: str, endWord: str, wordList: List[str]) -> List[List
                 if new_w in word_set:
                     graph[w].add(new_w)
 
-    shortest = float("inf")
-    res = []
+    shortest = inf
+    ans = []
 
-    def helper(w, path):
-        nonlocal res, shortest
+    def backtrack(w, path):
+        nonlocal ans, shortest
         if len(path) > shortest:
             return
-        if w == endWord:
+        if w == end_word:
             if len(path) == shortest:
-                res.append(path[:])
+                ans.append(path[:])
             elif len(path) < shortest:
-                res = [path[:]]
+                ans = [path[:]]
                 shortest = len(path)
             return
 
@@ -72,19 +74,15 @@ def find_ladders(beginWord: str, endWord: str, wordList: List[str]) -> List[List
             if neighbor in path:
                 continue
             path.append(neighbor)
-            helper(neighbor, path)
+            backtrack(neighbor, path)
             path.pop()
 
-    helper(beginWord, [beginWord])
-    return res
+    backtrack(begin_word, [begin_word])
+    return ans
 
 
 if __name__ == "__main__":
-    find_ladders(
-        beginWord="hit",
-        endWord="cog",
-        wordList=["hot", "dot", "dog", "lot", "log", "cog"],
-    ) == [
+    find_ladders("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"],) == [
         ["hit", "hot", "dot", "dog", "cog"],
         ["hit", "hot", "lot", "log", "cog"],
     ]

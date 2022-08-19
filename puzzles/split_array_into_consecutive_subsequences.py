@@ -26,12 +26,12 @@ Output: False
 Constraints:
 1 <= nums.length <= 10000
 """
-from typing import List
 from collections import Counter, defaultdict
+from heapq import heappop, heappush
 
 
 # TLE: O(N^2)
-def is_possible(nums: List[int]) -> bool:
+def is_possible(nums: list[int]) -> bool:
     n = len(nums)
     res = [None] * (n // 3 + 1)
     counter = 0
@@ -61,7 +61,7 @@ def is_possible(nums: List[int]) -> bool:
 
 
 # O(N)
-def is_possible(nums: List[int]) -> bool:
+def is_possible(nums: list[int]) -> bool:
     left = Counter(nums)
     end = defaultdict(int)
     for val in nums:
@@ -78,6 +78,18 @@ def is_possible(nums: List[int]) -> bool:
         else:
             return False
     return True
+
+
+def is_possible(nums: list[int]) -> bool:
+    tails = defaultdict(list)
+
+    for num in nums:
+        if tails[num - 1]:
+            heappush(tails[num], heappop(tails[num - 1]) + 1)
+        else:
+            heappush(tails[num], 1)
+
+    return all(l >= 3 for tail in tails.values() for l in tail)
 
 
 if __name__ == "__main__":

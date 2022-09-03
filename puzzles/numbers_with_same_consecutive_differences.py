@@ -25,18 +25,19 @@ def nums_same_consec_diff(n: int, k: int) -> list[int]:
     def combine(sequence: list[int]) -> int:
         return int("".join([str(x) for x in sequence]))
 
-    def backtrack(sequence):
+    def backtrack(sequence: list[int]) -> None:
         nonlocal ans
         if len(sequence) == n:
-            if sequence[0] != 0:
-                ans.append(combine(sequence))
+            ans.append(combine(sequence))
             return
         for i in range(10):
-            if abs(sequence[0] - i) == k:
-                backtrack([i] + sequence)
+            if abs(sequence[-1] - i) == k:
+                sequence.append(i)
+                backtrack(sequence)
+                sequence.pop()
 
     ans = []
 
-    for i in range(10):
+    for i in range(1, 10):
         backtrack([i])
     return ans

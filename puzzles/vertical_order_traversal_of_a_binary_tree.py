@@ -36,12 +36,10 @@ Each node's value will be between 0 and 1000.
 """
 
 from collections import defaultdict, deque
-from heapq import heappop, heappush
-from puzzles.utils import TreeNode
-from typing import List
+from puzzles.utils import TreeNode, make_tree
 
 
-def vertical_traversal(root: TreeNode) -> List[List[int]]:
+def vertical_traversal(root: TreeNode) -> list[list[int]]:
     ans = defaultdict(list)
     stack = deque([(0, 0, root)])
     while stack:
@@ -63,22 +61,29 @@ def vertical_traversal(root: TreeNode) -> List[List[int]]:
     return res
 
 
+def vertical_traversal(root: TreeNode) -> list[list[int]]:
+    def traverse(node: TreeNode, r: int, c: int):
+        nonlocal vals
+        if not node:
+            return
+        vals[(r, c)].append(node.val)
+        traverse(node.left, r + 1, c - 1)
+        traverse(node.right, r + 1, c + 1)
+
+    vals = defaultdict(list)
+    traverse(root, 0, 0)
+    cols = defaultdict(list)
+    for pos, vs in vals.items():
+        r, c = pos
+        for v in vs:
+            cols[c].append((r, v))
+    ans = []
+    for _, col in sorted(cols.items()):
+        ans.append([v for _, v in sorted(col)])
+
+    return ans
+
+
 if __name__ == "__main__":
-    ts = {x: TreeNode(x) for x in range(12)}
-    ts[0].left = ts[2]
-    ts[0].right = ts[1]
-
-    ts[2].left = ts[3]
-
-    ts[3].left = ts[4]
-    ts[3].right = ts[5]
-
-    ts[4].right = ts[7]
-    ts[7].left = ts[10]
-    ts[7].right = ts[8]
-
-    ts[5].left = ts[6]
-    ts[6].left = ts[11]
-    ts[6].right = ts[9]
-
-    vertical_traversal(ts[0])
+    root = make_tree([1, 2, 3, 4, 5, 6, 7])
+    vertical_traversal(root)

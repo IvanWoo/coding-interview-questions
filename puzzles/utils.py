@@ -1,6 +1,7 @@
 # https://stackoverflow.com/questions/41135033/type-hinting-within-a-class/52631754#52631754
 from __future__ import annotations
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from collections import deque
 from typing import Optional
 
 
@@ -23,6 +24,12 @@ class Node:
     left: Node = None
     right: Node = None
     next: Node = None
+
+
+@dataclass
+class NaryNode:
+    val: int = None
+    children: list[NaryNode] = field(default_factory=list)
 
 
 def make_tree(vals: list[Optional[int]]) -> TreeNode:
@@ -66,6 +73,26 @@ def make_linked_list(vals: list[Optional[int]]) -> ListNode:
         cur.next = ListNode(vals[i])
         cur = cur.next
     return head
+
+
+def make_nary_node(vals: list[Optional[int]]) -> Optional[NaryNode]:
+    if not vals:
+        return
+    root = NaryNode(vals[0])
+    queue = deque([root])
+    i = 2
+    while queue:
+        node = queue.popleft()
+        children = []
+        while i < len(vals) and vals[i] is not None:
+            new_node = NaryNode(vals[i])
+            queue.append(new_node)
+            children.append(new_node)
+            i += 1
+        # use None to split every levels
+        i += 1
+        node.children = children
+    return root
 
 
 def deep_sort(x: list[list[str]]) -> list[list[str]]:

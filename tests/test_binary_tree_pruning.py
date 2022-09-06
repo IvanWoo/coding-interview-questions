@@ -1,24 +1,16 @@
 import pytest
-from puzzles.utils import TreeNode
+from puzzles.utils import make_tree
 from puzzles.binary_tree_pruning import prune_tree
 
 
-@pytest.fixture
-def tree_input():
-    ts = {k: TreeNode(v) for k, v in [("11", 1), ("12", 1), ("01", 0), ("02", 0)]}
-    ts["11"].left = ts["01"]
-    ts["01"].left = ts["02"]
-    ts["01"].right = ts["12"]
-    return ts
-
-
-@pytest.fixture
-def tree_ans():
-    ts = {k: TreeNode(v) for k, v in [("11", 1), ("12", 1), ("01", 0), ("02", 0)]}
-    ts["11"].left = ts["01"]
-    ts["01"].right = ts["12"]
-    return ts
-
-
-def test_prune_tree(tree_input, tree_ans):
-    assert prune_tree(tree_input["11"]) == tree_ans["11"]
+@pytest.mark.parametrize(
+    "root, expected",
+    [
+        (make_tree([1, None, 0, 0, 1]), make_tree([1, None, 0, None, 1])),
+        (make_tree([1, 0, 1, 0, 0, 0, 1]), make_tree([1, None, 1, None, 1])),
+        (make_tree([1, 1, 0, 1, 1, 0, 1, 0]), make_tree([1, 1, 0, 1, 1, None, 1])),
+        (make_tree([0]), None),
+    ],
+)
+def test_prune_tree(root, expected):
+    assert prune_tree(root) == expected

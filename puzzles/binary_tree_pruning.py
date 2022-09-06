@@ -60,3 +60,16 @@ def prune_tree(root: TreeNode) -> TreeNode:
     if not root.left and not root.right and root.val == 0:
         return None
     return root
+
+
+def prune_tree(root: TreeNode) -> TreeNode:
+    if not root:
+        return
+    ans = TreeNode(
+        root.val,
+        prune_tree(root.left),
+        prune_tree(root.right),
+    )
+    if not ans.val and not ans.left and not ans.right:
+        return None
+    return ans

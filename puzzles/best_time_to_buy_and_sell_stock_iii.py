@@ -32,11 +32,10 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 105
 """
-from typing import List
-
+from math import inf
 
 # O(n^2): TLE
-def max_profit(prices: List[int]) -> int:
+def max_profit(prices: list[int]) -> int:
     def max_profit_one(prices):
         res = 0
         min_price = float("inf")
@@ -54,7 +53,7 @@ def max_profit(prices: List[int]) -> int:
 
 
 # dp
-def max_profit(prices: List[int]) -> int:
+def max_profit(prices: list[int]) -> int:
     n = len(prices)
     if n < 2:
         return 0
@@ -78,6 +77,23 @@ def max_profit(prices: List[int]) -> int:
         p2[i] = res
 
     return max(p1[i] + p2[i] for i in range(n))
+
+
+def max_profit(prices: list[int]) -> int:
+    k = 2
+    n = len(prices)
+    dp = [[[0] * 2 for _ in range(k + 1)] for _ in range(n + 1)]
+
+    for i in range(n + 1):
+        dp[i][0][1] = -inf
+    for j in range(k + 1):
+        dp[0][j][1] = -inf
+
+    for i in range(1, n + 1):
+        for j in range(1, k + 1):
+            dp[i][j][0] = max(dp[i - 1][j][0], dp[i - 1][j][1] + prices[i - 1])
+            dp[i][j][1] = max(dp[i - 1][j][1], dp[i - 1][j - 1][0] - prices[i - 1])
+    return dp[n][k][0]
 
 
 if __name__ == "__main__":

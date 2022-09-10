@@ -36,6 +36,7 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
+from math import inf
 
 
 def max_profit(prices: list[int]) -> int:
@@ -58,3 +59,38 @@ def max_profit(prices: list[int]) -> int:
         dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
         dp[i][1] = max(dp[i - 1][1], -prices[i])
     return dp[-1][0]
+
+
+# based on the template
+def max_profit(prices: list[int]) -> int:
+    n = len(prices)
+    k = 1
+    dp = [[[0] * 2 for _ in range(k + 1)] for _ in range(n + 1)]
+
+    # don't allow any txn, so no profit
+    for i in range(n + 1):
+        dp[i][0][1] = -inf
+    # not start yet, cannot hold stock
+    for j in range(k + 1):
+        dp[0][j][1] = -inf
+
+    for i in range(1, n + 1):
+        for j in range(1, k + 1):
+            dp[i][j][0] = max(dp[i - 1][j][0], dp[i - 1][j][1] + prices[i - 1])
+            dp[i][j][1] = max(dp[i - 1][j][1], dp[i - 1][j - 1][0] - prices[i - 1])
+    return dp[n][k][0]
+
+
+# states compaction
+def max_profit(prices: list[int]) -> int:
+    n = len(prices)
+    dp = [[0] * 2 for _ in range(n + 1)]
+
+    # don't allow any txn, so no profit
+    for i in range(n + 1):
+        dp[i][1] = -inf
+
+    for i in range(1, n + 1):
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i - 1])
+        dp[i][1] = max(dp[i - 1][1], -prices[i - 1])
+    return dp[n][0]

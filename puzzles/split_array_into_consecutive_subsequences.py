@@ -81,6 +81,7 @@ def is_possible(nums: list[int]) -> bool:
 
 
 def is_possible(nums: list[int]) -> bool:
+    # all of the sequence length at ending value i, it's a list b/c we can have multiple seq at the same tail
     tails = defaultdict(list)
 
     for num in nums:

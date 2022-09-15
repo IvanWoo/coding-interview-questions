@@ -8,6 +8,7 @@ pytest = "*"
 black = "*"
 ipython = "*"
 coding-interview-questions = {editable = true, path = "."}
+pytest-randomly = "*"
 
 [packages]
 numpy = "*"

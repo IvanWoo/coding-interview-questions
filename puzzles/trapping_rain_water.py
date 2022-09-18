@@ -8,10 +8,9 @@ Given an array of positive integers representing 2-D bar heights, design an algo
 
 Example: Given [1,3,2,4,1,3,1,4,5,2,2,1,4,2,2], return 15 (3 bodies of water with volumes of 1,7,7 yields total volume of 15)
 """
-from typing import List
 
 # brute force
-def trap(height: List[int]) -> int:
+def trap(height: list[int]) -> int:
     ans = 0
     for i, h in enumerate(height):
         if i >= 1 and i <= len(height):
@@ -21,29 +20,8 @@ def trap(height: List[int]) -> int:
     return ans
 
 
-# dynamic programming
-def trap(height: List[int]) -> int:
-    if height == []:
-        return 0
-
-    max_left, max_right = [0] * len(height), [0] * len(height)
-
-    max_left[0] = height[0]
-    for i in range(1, len(height)):
-        max_left[i] = max(height[i], max_left[i - 1])
-
-    max_right[len(height) - 1] = height[-1]
-    for i in range(len(height) - 2, -1, -1):
-        max_right[i] = max(height[i], max_right[i + 1])
-
-    ans = 0
-    for k, v in enumerate(height):
-        ans += min(max_left[k], max_right[k]) - v
-    return ans
-
-
 # two pointers
-def trap(height: List[int]) -> int:
+def trap(height: list[int]) -> int:
     left, right = 0, len(height) - 1
     l_max, r_max = 0, 0
     ans = 0
@@ -56,6 +34,21 @@ def trap(height: List[int]) -> int:
         else:
             ans += r_max - height[right]
             right -= 1
+    return ans
+
+
+# dynamic programming
+def trap(height: list[int]) -> int:
+    n = len(height)
+    left, right = [height[0]] * n, [height[-1]] * n
+    for i in range(1, n):
+        left[i] = max(left[i - 1], height[i])
+    for i in reversed(range(n - 1)):
+        right[i] = max(right[i + 1], height[i])
+
+    ans = 0
+    for i in range(n):
+        ans += min(left[i], right[i]) - height[i]
     return ans
 
 

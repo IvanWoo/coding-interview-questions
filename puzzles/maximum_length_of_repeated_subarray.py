@@ -14,10 +14,9 @@ Note:
 1 <= len(A), len(B) <= 1000
 0 <= A[i], B[i] < 100
 """
-from typing import List
 
 
-def find_length(A: List[int], B: List[int]) -> int:
+def find_length(A: list[int], B: list[int]) -> int:
     row, col = len(A), len(B)
     dp = [[0] * (col + 1) for _ in range(row + 1)]
     for r in reversed(range(row)):

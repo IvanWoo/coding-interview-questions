@@ -22,11 +22,10 @@ Constraints:
 arr is sorted in ascending order.
 -104 <= arr[i], x <= 104
 """
-from typing import List
 import heapq
 
 # O(NlogN)
-def find_closest_elements(arr: List[int], k: int, x: int) -> List[int]:
+def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
     pq = []
     for i, a in enumerate(arr):
         if len(pq) < k:
@@ -42,7 +41,7 @@ def find_closest_elements(arr: List[int], k: int, x: int) -> List[int]:
     return [-x[1] for x in pq]
 
 
-def find_closest_elements(arr: List[int], k: int, x: int) -> List[int]:
+def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
     lo, hi = 0, len(arr) - k
     while lo < hi:
         mid = (lo + hi) >> 1
@@ -50,7 +49,7 @@ def find_closest_elements(arr: List[int], k: int, x: int) -> List[int]:
             lo = mid + 1
         else:
             hi = mid
-    return arr[lo : hi + k]
+    return arr[lo : lo + k]
 
 
 if __name__ == "__main__":

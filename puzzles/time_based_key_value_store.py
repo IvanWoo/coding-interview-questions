@@ -34,7 +34,7 @@ All the timestamps timestamp of set are strictly increasing.
 At most 2 * 105 calls will be made to set and get.
 """
 from collections import defaultdict
-from bisect import bisect_left
+from bisect import bisect_right
 
 
 class TimeMap:
@@ -59,7 +59,27 @@ class TimeMap:
                 lo = mid + 1
             elif data[mid][0] < timestamp:
                 lo = mid + 1
-            else:
+            elif data[mid][0] > timestamp:
                 hi = mid - 1
 
         return data[hi][1]
+
+
+class TimeMap:
+    def __init__(self):
+        self.data = defaultdict(list)
+        self.ts = defaultdict(list)
+
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        self.data[key].append(value)
+        self.ts[key].append(timestamp)
+
+    def get(self, key: str, timestamp: int) -> str:
+        if key not in self.data.keys():
+            return ""
+
+        ts = self.ts[key]
+        data = self.data[key]
+        i = bisect_right(ts, timestamp)
+
+        return data[i - 1] if i else ""

@@ -20,12 +20,11 @@ Constraints:
 0 <= nums.length <= 3000
 -105 <= nums[i] <= 105
 """
-from typing import List
 from collections import Counter
 
 
-# O(n ^ 2)
-def three_sum(nums: List[int]) -> List[List[int]]:
+# O(n^2)
+def three_sum(nums: list[int]) -> list[list[int]]:
     nums = sorted(nums)
     res = []
     n = len(nums)
@@ -65,7 +64,7 @@ def two_sum(counter, target):
     return res
 
 
-def three_sum(nums: List[int]) -> List[List[int]]:
+def three_sum(nums: list[int]) -> list[list[int]]:
     counter = Counter(nums)
     res = []
     for num in nums:

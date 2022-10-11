@@ -25,6 +25,7 @@ Constraints:
 Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
 """
 from math import inf
+from bisect import bisect_left
 
 # brute force
 def increasing_triplet(nums: list[int]) -> bool:
@@ -37,6 +38,7 @@ def increasing_triplet(nums: list[int]) -> bool:
     return False
 
 
+# O(n)
 def increasing_triplet(nums: list[int]) -> bool:
     first = second = inf
     for n in nums:
@@ -45,5 +47,20 @@ def increasing_triplet(nums: list[int]) -> bool:
         elif n <= second:
             second = n
         else:
+            return True
+    return False
+
+
+# similar like https://leetcode.com/problems/longest-increasing-subsequence/
+# O(n*logn)
+def increasing_triplet(nums: list[int]) -> bool:
+    curr = []
+    for n in nums:
+        i = bisect_left(curr, n)
+        if i == len(curr):
+            curr.append(n)
+        else:
+            curr[i] = n
+        if len(curr) >= 3:
             return True
     return False

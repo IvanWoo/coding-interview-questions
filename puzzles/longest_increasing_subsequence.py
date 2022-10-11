@@ -68,12 +68,13 @@ def length_of_LIS(nums: list[int]) -> int:
     if not nums:
         return 0
     n = len(nums)
+    # dp[i] means ending at index i, what's the length of longest increasing subsequence
     dp = [1] * n
 
     for i in range(1, n):
-        candidates = [v for k, v in enumerate(dp[:i]) if nums[k] < nums[i]]
-        if candidates:
-            dp[i] = max(candidates) + 1
+        for j in range(i):
+            if nums[i] > nums[j]:
+                dp[i] = max(dp[i], 1 + dp[j])
 
     return max(dp)
 

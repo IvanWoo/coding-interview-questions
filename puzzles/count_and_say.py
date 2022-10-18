@@ -31,22 +31,21 @@ Explanation: For n = 3 the term was "21" in which we have two groups "2" and "1"
 """
 
 
-def encode(s: str):
-    ans = ""
-    prev, char = s[0], s[0]
-    c = 1
-    for char in s[1:]:
-        if prev == char:
-            c += 1
-        else:
-            ans += f"{c}{prev}"
-            prev = char
-            c = 1
-    return ans + f"{c}{char}"
-
-
 def count_and_say(n: int) -> str:
+    def encode(s: str):
+        ans = ""
+        c, prev = 1, s[0]
+        for char in s[1:]:
+            if prev == char:
+                c += 1
+            else:
+                ans += f"{c}{prev}"
+                prev = char
+                c = 1
+        ans += f"{c}{prev}"
+        return ans
+
     ans = "1"
-    for i in range(n - 1):
+    for _ in range(1, n):
         ans = encode(ans)
     return ans

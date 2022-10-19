@@ -24,19 +24,20 @@ Follow up:
 
 Try to solve it in O(n log k) time and O(n) extra space.
 """
-from typing import List
 from collections import Counter
+from heapq import nsmallest
 
 
-def top_k_frequent(words: List[str], k: int) -> List[str]:
+def top_k_frequent(words: list[str], k: int) -> list[str]:
     c = Counter(words)
-
-    res = []
-    for word, v in c.items():
-        res.append((-v, word))
-
-    res = sorted(res)
+    res = sorted([(-v, w) for w, v in c.items()])
     return [w for _, w in res[:k]]
+
+
+def top_k_frequent(words: list[str], k: int) -> list[str]:
+    c = Counter(words)
+    # nsmallest Equivalent to: sorted(iterable, key=key)[:n]
+    return nsmallest(k, c, key=lambda w: (-c[w], w))
 
 
 if __name__ == "__main__":

@@ -20,6 +20,7 @@ s and t consist of English letters.
 
 Follow up: Could you find an algorithm that runs in O(n) time?
 """
+from math import inf
 from collections import defaultdict, Counter
 
 # sliding window
@@ -30,7 +31,7 @@ def min_window(s: str, t: str) -> str:
     window = defaultdict(int)
     lo, hi = 0, 0
     start = 0
-    min_len = float("inf")
+    min_len = inf
 
     match = 0
 
@@ -52,7 +53,7 @@ def min_window(s: str, t: str) -> str:
                 window[c2] -= 1
                 if window[c2] < target[c2]:
                     match -= 1
-    return s[start : start + min_len] if min_len != float("inf") else ""
+    return s[start : start + min_len] if min_len != inf else ""
 
 
 if __name__ == "__main__":

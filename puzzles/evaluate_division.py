@@ -36,13 +36,12 @@ queries[i].length == 2
 1 <= Cj.length, Dj.length <= 5
 Ai, Bi, Cj, Dj consist of lower case English letters and digits.
 """
-from typing import List
-from collections import defaultdict
+from collections import defaultdict, deque
 
 # union find
 def calc_equation(
-    equations: List[List[str]], values: List[float], queries: List[List[str]]
-) -> List[float]:
+    equations: list[list[str]], values: list[float], queries: list[list[str]]
+) -> list[float]:
     root = {}
 
     # xr = x/parent(x), pr = parent(x)/root(x), update xr to xr*pr = x/root(x)
@@ -67,10 +66,10 @@ def calc_equation(
     return [union(x, y, 0) if x in root and y in root else -1.0 for x, y in queries]
 
 
-# dfs/bfs
+# bfs
 def calc_equation(
-    equations: List[List[str]], values: List[float], queries: List[List[str]]
-) -> List[float]:
+    equations: list[list[str]], values: list[float], queries: list[list[str]]
+) -> list[float]:
     graph = defaultdict(dict)
     for (x, y), v in zip(equations, values):
         graph[x][y] = v
@@ -79,18 +78,15 @@ def calc_equation(
     def bfs(src, dst):
         if not (src in graph and dst in graph):
             return -1
-        q, visited = [(src, 1)], set()
+        q, visited = deque([(src, 1)]), set()
         while q:
-            new_q = []
-            while q:
-                x, v = q.pop()
-                if x == dst:
-                    return v
-                visited.add(x)
-                for y in graph[x]:
-                    if y not in visited:
-                        new_q.append((y, v * graph[x][y]))
-            q = new_q[:]
+            x, v = q.popleft()
+            if x == dst:
+                return v
+            visited.add(x)
+            for y in graph[x]:
+                if y not in visited:
+                    q.append((y, v * graph[x][y]))
         return -1
 
     return [bfs(s, d) for s, d in queries]

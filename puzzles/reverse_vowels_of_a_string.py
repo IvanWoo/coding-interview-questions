@@ -29,3 +29,15 @@ def reverse_vowels(s: str) -> str:
             hi -= 1
 
     return "".join(s_l)
+
+
+def reverse_vowels(s: str) -> str:
+    ans = list(s)
+    vowel_idxs = [i for i, char in enumerate(s) if char.lower() in "aeiou"]
+    left, right = 0, len(vowel_idxs) - 1
+    while left < right:
+        i, j = vowel_idxs[left], vowel_idxs[right]
+        ans[i], ans[j] = ans[j], ans[i]
+        left += 1
+        right -= 1
+    return "".join(ans)

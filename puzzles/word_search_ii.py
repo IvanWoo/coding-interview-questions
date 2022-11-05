@@ -21,15 +21,13 @@ All inputs are consist of lowercase letters a-z.
 The values of words are distinct.
 """
 from __future__ import annotations
-from collections import defaultdict
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Any
 
 # https://docs.python.org/3/library/dataclasses.html#mutable-default-values
 @dataclass
 class TrieNode:
-    children: Dict[str, TrieNode] = field(default_factory=dict)
-    is_end: bool = False
+    children: dict[str, TrieNode] = field(default_factory=dict)
+    end: str = None
 
 
 class Trie:
@@ -42,45 +40,39 @@ class Trie:
             if char not in node.children:
                 node.children[char] = TrieNode()
             node = node.children[char]
-        node.is_end = True
-
-    def search(self, word: str) -> TrieNode:
-        node = self.root
-        for char in word:
-            node = node.children.get(char)
-            if not node:
-                return False
-        return node.is_end
+        node.end = word
 
 
 def find_words(board, words):
-    row, col = len(board), len(board[0])
-    res = []
+    def backtrack(node, r, c):
+        nonlocal res, visited
+        if not node:
+            return
+        if node.end:
+            res.add(node.end)
+
+        if r < 0 or r >= rows or c < 0 or c >= cols:
+            return
+
+        temp = board[r][c]
+        node = node.children.get(temp)
+        if (r, c) in visited:
+            return
+        visited.add((r, c))
+        for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nr, nc = r + dr, c + dc
+            backtrack(node, nr, nc)
+        visited.remove((r, c))
+
+    rows, cols = len(board), len(board[0])
+    visited = set()
+    res = set()
     trie = Trie()
     node = trie.root
     for word in words:
         trie.insert(word)
 
-    for r in range(row):
-        for c in range(col):
-            dfs(board, node, r, c, "", res)
+    for r in range(rows):
+        for c in range(cols):
+            backtrack(node, r, c)
     return res
-
-
-def dfs(board, node, r, c, path, res):
-    row, col = len(board), len(board[0])
-    if node.is_end:
-        res.append(path)
-        node.is_end = False
-
-    if r < 0 or r >= row or c < 0 or c >= col:
-        return
-
-    temp = board[r][c]
-    node = node.children.get(temp)
-    if not node:
-        return
-    board[r][c] = "#"
-    for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-        dfs(board, node, r + i, c + j, path + temp, res)
-    board[r][c] = temp

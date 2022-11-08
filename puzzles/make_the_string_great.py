@@ -49,5 +49,20 @@ def make_good(s: str) -> str:
     return "".join(stack)
 
 
+# brute force
+def make_good(s: str) -> str:
+    def do(s: str) -> str:
+        for i in range(1, len(s)):
+            if abs(ord(s[i]) - ord(s[i - 1])) == 32:
+                return s[: i - 1] + s[i + 1 :]
+        return s
+
+    while True:
+        new_s = do(s)
+        if new_s == s:
+            return new_s
+        s = new_s
+
+
 if __name__ == "__main__":
     make_good("abBAcC")

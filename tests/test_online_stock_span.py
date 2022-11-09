@@ -1,23 +1,15 @@
+import pytest
 from puzzles.online_stock_span import StockSpanner
 
 
-def test_StockSpanner_1():
+@pytest.mark.parametrize(
+    "prices, expected",
+    [
+        ([100, 80, 60, 70, 60, 75, 85], [1, 1, 1, 2, 1, 4, 6]),
+        ([31, 41, 48, 59, 79], [1, 2, 3, 4, 5]),
+    ],
+)
+def test_stock_spanner(prices, expected):
     obj = StockSpanner()
-    prices = [100, 80, 60, 70, 60, 75, 85]
-    spans = [1, 1, 1, 2, 1, 4, 6]
-    ans = [0] * len(prices)
-    for i, p in enumerate(prices):
-        ans[i] = obj.next(p)
-
-    assert ans == spans
-
-
-def test_StockSpanner_2():
-    obj = StockSpanner()
-    prices = [31, 41, 48, 59, 79]
-    spans = [1, 2, 3, 4, 5]
-    ans = [0] * len(prices)
-    for i, p in enumerate(prices):
-        ans[i] = obj.next(p)
-
-    assert ans == spans
+    ans = [obj.next(p) for p in prices]
+    assert ans == expected

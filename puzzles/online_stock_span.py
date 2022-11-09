@@ -24,7 +24,7 @@ Note that (for example) S.next(75) returned 4, because the last 4 prices
 (including today's price of 75) were less than or equal to today's price.
 """
 
-
+# monotonic stack: increasing
 class StockSpanner:
     def __init__(self):
         self.stack = []
@@ -40,6 +40,18 @@ class StockSpanner:
         else:
             ans = self.index
         self.stack.append((self.index, price))
+        return ans
+
+
+class StockSpanner:
+    def __init__(self):
+        self.stack = []
+
+    def next(self, price: int) -> int:
+        ans = 1
+        while self.stack and self.stack[-1][0] <= price:
+            ans += self.stack.pop()[1]
+        self.stack.append((price, ans))
         return ans
 
 

@@ -2,6 +2,13 @@ import pytest
 from puzzles.perfect_squares import num_squares
 
 
-def test_num_squares():
-    assert num_squares(12) == 3
-    assert num_squares(13) == 2
+@pytest.mark.parametrize(
+    "n, expected",
+    [
+        (12, 3),
+        (13, 2),
+        (7168, 4),
+    ],
+)
+def test_num_squares(n, expected):
+    assert num_squares(n) == expected

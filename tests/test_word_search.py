@@ -2,12 +2,39 @@ import pytest
 from puzzles.word_search import exist
 
 
-@pytest.fixture
-def board():
-    return [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]]
-
-
-def test_exist(board):
-    assert exist(board, "ABCCED") == True
-    assert exist(board, "SEE") == True
-    assert exist(board, "ABCB") == False
+@pytest.mark.parametrize(
+    "board, word, expected",
+    [
+        (
+            [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]],
+            "ABCCED",
+            True,
+        ),
+        (
+            [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]],
+            "SEE",
+            True,
+        ),
+        (
+            [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]],
+            "ABCB",
+            False,
+        ),
+        ([["a", "a"]], "aaa", False),
+        ([["a"]], "b", False),
+        (
+            [
+                ["A", "A", "A", "A", "A", "A"],
+                ["A", "A", "A", "A", "A", "A"],
+                ["A", "A", "A", "A", "A", "A"],
+                ["A", "A", "A", "A", "A", "A"],
+                ["A", "A", "A", "A", "A", "A"],
+                ["A", "A", "A", "A", "A", "A"],
+            ],
+            "AAAAAAAAAAAABAA",
+            False,
+        ),
+    ],
+)
+def test_exist(board, word, expected):
+    assert exist(board, word) == expected

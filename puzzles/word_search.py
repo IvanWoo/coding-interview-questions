@@ -25,34 +25,46 @@ board and word consists only of lowercase and uppercase English letters.
 1 <= board[i].length <= 200
 1 <= word.length <= 10^3
 """
-from typing import List
+from collections import Counter
+from itertools import chain
 
 
-def exist(board: List[List[str]], word: str) -> bool:
-    row, col = len(board), len(board[0])
-    visited = [[False] * col for _ in range(row)]
+def exist(board: list[list[str]], word: str) -> bool:
+    def backtrack(r, c, idx, visited):
+        if board[r][c] != word[idx]:
+            return False
+        if idx == len(word) - 1:
+            return True
+        for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nr, nc = r + dr, c + dc
+            if 0 <= nr < rows and 0 <= nc < cols and (nr, nc) not in visited:
+                visited.add((nr, nc))
+                if backtrack(nr, nc, idx + 1, visited):
+                    return True
+                visited.remove((nr, nc))
 
-    ans = [False]
+    source = Counter(list(chain(*board)))
+    target = Counter(word)
+    if not source >= target:
+        return False
+    rows, cols = len(board), len(board[0])
+    for r in range(rows):
+        for c in range(cols):
+            if backtrack(r, c, 0, set([(r, c)])):
+                return True
 
-    def backtrack(i, r, c, visited):
-        if ans[0]:
-            return
-        if i == len(word):
-            ans[0] = True
-            return
-        for r_i, c_i in [(r, c + 1), (r, c - 1), (r + 1, c), (r - 1, c)]:
-            if r_i >= row or r_i < 0 or c_i >= col or c_i < 0 or visited[r_i][c_i]:
-                continue
-            if board[r_i][c_i] == word[i]:
-                visited[r_i][c_i] = True
-                backtrack(i + 1, r_i, c_i, visited)
-                visited[r_i][c_i] = False
+    return False
 
-    for r in range(row):
-        for c in range(col):
-            if board[r][c] == word[0]:
-                visited[r][c] = True
-                backtrack(1, r, c, visited[:])
-                visited[r][c] = False
 
-    return ans[0]
+if __name__ == "__main__":
+    exist(
+        [
+            ["A", "A", "A", "A", "A", "A"],
+            ["A", "A", "A", "A", "A", "A"],
+            ["A", "A", "A", "A", "A", "A"],
+            ["A", "A", "A", "A", "A", "A"],
+            ["A", "A", "A", "A", "A", "A"],
+            ["A", "A", "A", "A", "A", "A"],
+        ],
+        "AAAAAAAAAAAABAA",
+    )

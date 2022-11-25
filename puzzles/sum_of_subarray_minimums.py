@@ -13,23 +13,25 @@ Note:
 1 <= A.length <= 30000
 1 <= A[i] <= 30000
 """
-from typing import List
-
+from math import inf
 
 # O(n^2)
-def sum_subarray_mins(A: List[int]) -> int:
+def sum_subarray_mins(A: list[int]) -> int:
+    MOD = 10**9 + 7
     n = len(A)
     ans = 0
     for i in range(n):
+        cur_min = inf
         for j in range(i, n):
-            ans += min(A[i : j + 1])
-    return ans
+            cur_min = min(cur_min, A[j])
+            ans += cur_min
+    return ans % MOD
 
 
 # monotonic stack: O(n)
-def sum_subarray_mins(A: List[int]) -> int:
+def sum_subarray_mins(A: list[int]) -> int:
     n = len(A)
-    MOD = 1e9 + 7
+    MOD = 10**9 + 7
     left, right = [0] * n, [0] * n
     s1, s2 = [], []
     for i in range(n):
@@ -47,17 +49,19 @@ def sum_subarray_mins(A: List[int]) -> int:
     return sum(a * l * r for a, l, r in zip(A, left, right)) % MOD
 
 
-def sum_subarray_mins(A: List[int]) -> int:
-    MOD = 1e9 + 7
+# monotonic stack: O(n)
+def sum_subarray_mins(A: list[int]) -> int:
+    MOD = 10**9 + 7
+    n = len(A)
     res = 0
-    s = []
-    A = [0] + A + [0]
-    for i, x in enumerate(A):
-        while s and A[s[-1]] > x:
-            j = s.pop()
-            k = s[-1]
-            res += A[j] * (i - j) * (j - k)
-        s.append(i)
+    stack = []
+    for i in range(n + 1):
+        while stack and (i == n or A[stack[-1]] >= A[i]):
+            mid = stack.pop()
+            left = -1 if not stack else stack[-1]
+            right = i
+            res += (mid - left) * (right - mid) * A[mid]
+        stack.append(i)
     return res % MOD
 
 

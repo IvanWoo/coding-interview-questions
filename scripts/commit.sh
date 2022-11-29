@@ -1,7 +1,16 @@
 #!/bin/sh
 set -euo pipefail
 
+_check_count() {
+    echo "Check count for $1"
+    if [ $(git status | grep "$1" | wc -l) -eq 0 ]; then
+        echo "Count of target files($1) is 0"
+        exit 1
+    fi
+}
+
 commit_new_file() {
+    _check_count "new file"
     PUZZLE_NAME="$(git status | grep "new file" | awk -F "puzzles/" '{print $2}' | awk -F "." '{print $1}' | sed -n '/./{p;q;}')"
     if [ -z "${PUZZLE_NAME}" ]; then
         echo "No puzzle name found."
@@ -11,6 +20,7 @@ commit_new_file() {
 }
 
 commit_modified_file() {
+    _check_count "modified"
     PUZZLE_NAME="$(git status | grep "modified" | awk -F "puzzles/" '{print $2}' | awk -F "." '{print $1}' | sed -n '/./{p;q;}')"
     if [ -z "${PUZZLE_NAME}" ]; then
         echo "No puzzle name found."

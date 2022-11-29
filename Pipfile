@@ -23,5 +23,5 @@ allow_prereleases = true
 [scripts]
 test = "pytest"
 new = "python scripts/new.py"
-count = "bash scripts/count.sh"
-commit = "bash scripts/commit.sh"
+count = "./scripts/count.sh"
+commit = "./scripts/commit.sh"

@@ -23,5 +23,5 @@ from collections import Counter
 
 def unique_occurrences(arr: list[int]) -> bool:
     c = Counter(arr)
-    vals = [v for _, v in c.items()]
+    vals = c.values()
     return len(vals) == len(set(vals))

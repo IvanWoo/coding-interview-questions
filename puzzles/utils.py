@@ -75,6 +75,14 @@ def make_linked_list(vals: list[Optional[int]]) -> ListNode:
     return head
 
 
+def linked_list_to_list(head: ListNode) -> list[int]:
+    vals = []
+    while head:
+        vals.append(head.val)
+        head = head.next
+    return vals
+
+
 def make_nary_node(vals: list[Optional[int]]) -> Optional[NaryNode]:
     if not vals:
         return

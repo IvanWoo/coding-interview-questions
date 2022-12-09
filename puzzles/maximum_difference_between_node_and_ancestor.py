@@ -40,3 +40,26 @@ def max_ancestor_diff(root: TreeNode) -> int:
 
     traverse(root, None, None)
     return ans
+
+
+def max_ancestor_diff(root: TreeNode) -> int:
+    def traverse(node):
+        nonlocal ans
+        if not node:
+            return
+        left = traverse(node.left)
+        right = traverse(node.right)
+        val = node.val
+        min_val = max_val = val
+        if left is not None:
+            min_val = min(min_val, left[0])
+            max_val = max(max_val, left[1])
+        if right is not None:
+            min_val = min(min_val, right[0])
+            max_val = max(max_val, right[1])
+        ans = max([ans, abs(val - min_val), abs(val - max_val)])
+        return min_val, max_val
+
+    ans = 0
+    traverse(root)
+    return ans

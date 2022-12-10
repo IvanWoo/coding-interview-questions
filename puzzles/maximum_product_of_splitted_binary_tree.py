@@ -34,11 +34,11 @@ def max_product(root: Optional[TreeNode]) -> int:
         left = traverse(node.left)
         right = traverse(node.right)
         curr_sum = node.val + left + right
-        all_sums.append(curr_sum)
+        all_sums.add(curr_sum)
         return curr_sum
 
     MOD = 10**9 + 7
-    all_sums = []
+    all_sums = set()
     total = traverse(root)
     res = -inf
     for s in all_sums:

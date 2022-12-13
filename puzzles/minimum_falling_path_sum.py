@@ -19,15 +19,16 @@ Constraints:
 1 <= A.length == A[0].length <= 100
 -100 <= A[i][j] <= 100
 """
-from typing import List
-from functools import lru_cache
+from collections import defaultdict
+from functools import cache
+from math import inf
 
 # TLE
-def min_falling_path_sum(A: List[List[int]]) -> int:
+def min_falling_path_sum(A: list[list[int]]) -> int:
     row, col = len(A), len(A[0])
     ans = float("inf")
 
-    @lru_cache(None)
+    @cache
     def backtrack(r, c, path_sum):
         nonlocal ans
         if r >= row:
@@ -43,7 +44,7 @@ def min_falling_path_sum(A: List[List[int]]) -> int:
 
 
 # DP
-def min_falling_path_sum(A: List[List[int]]) -> int:
+def min_falling_path_sum(A: list[list[int]]) -> int:
     row, col = len(A), len(A[0])
     dp = [[0] * col for _ in range(row)]
 
@@ -62,6 +63,22 @@ def min_falling_path_sum(A: List[List[int]]) -> int:
                 )
 
     return min(dp[row - 1])
+
+
+def min_falling_path_sum(matrix: list[list[int]]) -> int:
+    rows, cols = len(matrix), len(matrix[0])
+    dp = defaultdict(lambda: inf)
+    # init the value
+    for c in range(cols):
+        dp[(0, c)] = matrix[0][c]
+
+    for r in range(1, rows):
+        for c in range(cols):
+            dp[(r, c)] = matrix[r][c] + min(
+                [dp[(r - 1, c - 1)], dp[(r - 1, c)], dp[(r - 1, c + 1)]]
+            )
+
+    return min([dp[(rows - 1, c)] for c in range(cols)])
 
 
 if __name__ == "__main__":

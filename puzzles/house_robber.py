@@ -21,10 +21,8 @@ Constraints:
 0 <= nums[i] <= 400
 """
 
-from typing import List
 
-
-def rob(nums: List[int]) -> int:
+def rob(nums: list[int]) -> int:
     n = len(nums)
     dp = [0] * (n + 1)
     dp[1] = nums[0]

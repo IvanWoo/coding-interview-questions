@@ -31,40 +31,23 @@ Explanation:
 = 22
 """
 
-from collections import deque
-from typing import List
 
-
-def cal(operator, a, b):
-    a, b = int(a), int(b)
-    if operator == "+":
-        return a + b
-    elif operator == "-":
-        return a - b
-    elif operator == "*":
-        return a * b
-    elif operator == "/":
-        return int(float(a) / b)
-
-
-def isdigit(x):
-    return x not in set("+-*/")
-
-
-def evalRPN(tokens: List[str]) -> int:
-    stack = deque()
-
-    while stack or tokens:
-        if len(stack) >= 3 and isdigit(stack[-1]) and isdigit(stack[-2]):
-            a = stack.pop()
-            b = stack.pop()
-            operator = stack.pop()
-
-            val = cal(operator, a, b)
-            stack.append(str(val))
+def evalRPN(tokens: list[str]) -> int:
+    stack = []
+    for tk in tokens:
+        if tk in ["+", "-", "*", "/"]:
+            v2 = stack.pop()
+            v1 = stack.pop()
+            match tk:
+                case "+":
+                    res = v1 + v2
+                case "-":
+                    res = v1 - v2
+                case "*":
+                    res = v1 * v2
+                case "/":
+                    res = int(v1 / v2)
+            stack.append(res)
             continue
-        if tokens:
-            cur_token = tokens.pop()
-            stack.append(cur_token)
-        if len(stack) == 1 and isdigit(stack[0]):
-            return int(stack[0])
+        stack.append(int(tk))
+    return stack.pop()

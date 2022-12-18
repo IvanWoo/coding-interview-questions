@@ -43,33 +43,6 @@ Version strings are composed of numeric strings separated by dots . and this num
 Version strings do not start or end with dots, and they will not be two consecutive dots.
 """
 
-from typing import List
-
-
-def compare(v1: List[int], v2: List[int]) -> int:
-    if len(v1) == 0 and len(v2) == 0:
-        return 0
-    elif len(v1) == 0:
-        if v2[0] > 0:
-            return -1
-        return compare(v1[1:], v2[1:])
-    elif len(v2) == 0:
-        if v1[0] > 0:
-            return 1
-        return compare(v1[1:], v2[1:])
-    elif v1[0] > v2[0]:
-        return 1
-    elif v1[0] < v2[0]:
-        return -1
-    else:
-        return compare(v1[1:], v2[1:])
-
-
-def compare_versions(version1: str, version2: str) -> int:
-    v1 = [int(x) for x in version1.split(".")]
-    v2 = [int(x) for x in version2.split(".")]
-    return compare(v1, v2)
-
 
 from itertools import zip_longest
 
@@ -83,3 +56,15 @@ def compare_versions(version1: str, version2: str) -> int:
         elif i < j:
             return -1
     return 0
+
+
+def compare_versions(version1: str, version2: str) -> int:
+    def parse(version: str):
+        reps = list(map(int, version.split(".")))
+        while reps and reps[-1] == 0:
+            reps.pop()
+        return reps
+
+    v1 = parse(version1)
+    v2 = parse(version2)
+    return 0 if v1 == v2 else (1 if v1 > v2 else -1)

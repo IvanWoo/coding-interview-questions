@@ -21,10 +21,34 @@ Constraints:
 0 <= prices[i] <= 1000
 """
 from math import inf
+from functools import cache
+
+
+# TLE
+def max_profit(prices: list[int]) -> int:
+    @cache
+    def helper(idx, is_hold, profit):
+        if idx >= n:
+            return profit
+        cur_price = prices[idx]
+        res = []
+        if not is_hold:
+            # buy
+            res.append(helper(idx + 1, True, profit - cur_price))
+        else:
+            # sell
+            res.append(helper(idx + 2, False, profit + cur_price))
+        # rest
+        res.append(helper(idx + 1, is_hold, profit))
+        return max(res)
+
+    n = len(prices)
+    return helper(0, False, 0)
 
 
 def max_profit(prices: list[int]) -> int:
     n = len(prices)
+    # (rest, hold)
     dp = [[0] * 2 for _ in range(n + 1)]
 
     dp[0][1] = -inf

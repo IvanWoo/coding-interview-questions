@@ -18,15 +18,14 @@ Constraints:
 1 <= nums.length <= 104
 0 <= nums[i] <= 105
 """
-
-from typing import List
-from functools import lru_cache
+from collections import deque
+from functools import cache
 
 # TLE
-def jump_game(nums: List[int]) -> bool:
+def jump_game(nums: list[int]) -> bool:
     n = len(nums)
 
-    @lru_cache()
+    @cache()
     def dfs(index):
         if index >= n - 1:
             return True
@@ -35,7 +34,39 @@ def jump_game(nums: List[int]) -> bool:
     return dfs(0)
 
 
-def jump_game(nums: List[int]) -> bool:
+# TLE: bfs
+def jump_game(nums: list[int]) -> bool:
+    n = len(nums)
+    q = deque([0])
+    visited = set([0])
+    while q:
+        cur = q.popleft()
+        if cur == n - 1:
+            return True
+        for d in reversed(range(1, nums[cur] + 1)):
+            nxt = cur + d
+            if nxt < n and nxt not in visited:
+                q.append(nxt)
+                visited.add(nxt)
+    return False
+
+
+def jump_game(nums: list[int]) -> bool:
+    n = len(nums)
+    dp = [0] * n
+    dp[0] = 1
+    for i in range(n):
+        if dp[-1]:
+            return True
+        if not dp[i]:
+            return False
+        for j in range(nums[i] + 1):
+            if i + j < n:
+                dp[i + j] = 1
+    return False
+
+
+def jump_game(nums: list[int]) -> bool:
     i = 0
     n = len(nums)
     reach = 0

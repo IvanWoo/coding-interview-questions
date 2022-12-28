@@ -3,3 +3,4 @@
 - min heap
 - q[0] is the smallest element
 - heappop(q) removes the smallest element
+- heappop and heappush is O(logn)

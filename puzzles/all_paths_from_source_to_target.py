@@ -34,10 +34,8 @@ graph[i][j] != i (i.e., there will be no self-loops).
 The input graph is guaranteed to be a DAG.
 """
 
-from typing import List
 
-
-def all_paths_source_target(graph: List[List[int]]) -> List[List[int]]:
+def all_paths_source_target(graph: list[list[int]]) -> list[list[int]]:
     ans = []
     n = len(graph)
 
@@ -50,4 +48,19 @@ def all_paths_source_target(graph: List[List[int]]) -> List[List[int]]:
         return
 
     helper(0, [])
+    return ans
+
+
+def all_paths_source_target(graph: list[list[int]]) -> list[list[int]]:
+    def backtrack(cur, path):
+        nonlocal ans
+        if cur == n - 1:
+            ans.append(path[:])
+            return
+        for nxt in graph[cur]:
+            backtrack(nxt, path + [nxt])
+
+    ans = []
+    n = len(graph)
+    backtrack(0, [0])
     return ans

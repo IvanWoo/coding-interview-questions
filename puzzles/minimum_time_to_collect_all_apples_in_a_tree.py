@@ -27,27 +27,26 @@ edges[i].length == 2
 fromi < toi
 hasApple.length == n
 """
-from typing import List
 from collections import defaultdict
 
 
-def min_time(n: int, edges: List[List[int]], hasApple: List[bool]) -> int:
-    if not any(hasApple):
-        return 0
+def min_time(n: int, edges: list[list[int]], has_apple: list[bool]) -> int:
     visited = set()
-    connections = defaultdict(set)
-    for f, t in edges:
-        connections[f].add(t)
-        connections[t].add(f)
+    tree = defaultdict(set)
+    for u, v in edges:
+        tree[u].add(v)
+        tree[v].add(u)
 
     def dfs(node):
         if node in visited:
             return 0
         visited.add(node)
-        child = sum([dfs(c) for c in connections[node]])
-        if child > 0 or hasApple[node]:
-            return 2 + child
-        else:
-            return 0
+        count = int(has_apple[node]) * 2
+        if node == 0:
+            count = 0
+        count += sum([dfs(c) for c in tree[node]])
+        if count > 0 and node != 0 and not has_apple[node]:
+            count += 2
+        return count
 
-    return dfs(edges[0][0]) - 2
+    return dfs(0)

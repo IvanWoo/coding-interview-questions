@@ -28,10 +28,9 @@ Constraints:
 0 <= s.length <= 3000
 s consists of digits only.
 """
-from typing import List
 
 
-def restore_ip_addresses(s: str) -> List[str]:
+def restore_ip_addresses(s: str) -> list[str]:
     n = len(s)
     ans = []
 
@@ -55,4 +54,36 @@ def restore_ip_addresses(s: str) -> List[str]:
                     path.pop()
 
     backtrack(0, [])
+    return ans
+
+
+def restore_ip_addresses(s: str) -> list[str]:
+    def get_address(divisors):
+        ip = []
+        divisors = divisors + [len(s) - 1]
+        for i in range(1, len(divisors)):
+            a, b = divisors[i - 1], divisors[i]
+            part = s[a + 1 : b + 1]
+            ip.append(part)
+
+        for part in ip:
+            if len(part) > 1 and part.startswith("0"):
+                return ""
+            if int(part) > 255:
+                return ""
+        return ".".join(ip)
+
+    def backtrack(divisors: list[int], cur_idx):
+        n = len(divisors)
+        if n == 4:
+            print(divisors)
+            ip = get_address(divisors)
+            if ip:
+                ans.append(ip)
+            return
+        for nxt in range(cur_idx, len(s) - 1):
+            backtrack(divisors + [nxt], nxt + 1)
+
+    ans = []
+    backtrack([-1], 0)
     return ans

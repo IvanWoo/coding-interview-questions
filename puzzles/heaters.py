@@ -25,8 +25,8 @@ Output: 1
 Explanation: The two heater was placed in the position 1 and 4. We need to use radius 1 standard, then all the houses can be warmed.
 """
 
-from typing import List
 import bisect
+from typing import List
 
 
 def find_radius(houses: List[int], heaters: List[int]) -> int:

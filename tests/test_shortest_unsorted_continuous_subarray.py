@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.shortest_unsorted_continuous_subarray import find_unsorted_subarray
 
 

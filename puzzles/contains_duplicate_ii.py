@@ -22,6 +22,7 @@ Constraints:
 """
 from collections import deque
 
+
 # TLE: O(nk)
 def contains_nearby_duplicate(nums: list[int], k: int) -> bool:
     if k == 0:

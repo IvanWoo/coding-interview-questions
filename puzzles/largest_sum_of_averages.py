@@ -20,8 +20,8 @@ Note:
 1 <= K <= A.length.
 Answers within 10^-6 of the correct answer will be accepted as correct.
 """
-from typing import List
 from functools import lru_cache
+from typing import List
 
 
 def largest_sum_of_averages(A: List[int], K: int) -> float:

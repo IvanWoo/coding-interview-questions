@@ -20,8 +20,9 @@ s and t consist of English letters.
 
 Follow up: Could you find an algorithm that runs in O(n) time?
 """
+from collections import Counter, defaultdict
 from math import inf
-from collections import defaultdict, Counter
+
 
 # sliding window
 def min_window(s: str, t: str) -> str:

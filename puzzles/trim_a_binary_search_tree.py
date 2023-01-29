@@ -20,6 +20,7 @@ root is guaranteed to be a valid binary search tree.
 0 <= low <= high <= 104
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

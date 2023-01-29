@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_all_duplicates_in_an_array import find_duplicates
 
 

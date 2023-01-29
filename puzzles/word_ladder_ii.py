@@ -35,13 +35,12 @@ Output: []
 Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
 """
 import string
-from math import inf
 from collections import defaultdict
+from math import inf
+
 
 # TLE
-def find_ladders(
-    begin_word: str, end_word: str, word_list: list[str]
-) -> list[list[str]]:
+def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[list[str]]:
     if end_word not in word_list:
         return []
     word_set = set(word_list + [begin_word])

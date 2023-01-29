@@ -32,8 +32,8 @@ roads[i].length == 2
 ai != bi
 Each pair of cities has at most one road connecting them.
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def maximal_network_rank(n: int, roads: List[List[int]]) -> int:

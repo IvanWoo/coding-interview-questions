@@ -28,9 +28,11 @@ n == grid[i].length
 grid[i][j] == 0 or 1
 """
 
-from typing import List
 from collections import Counter
+from typing import List
+
 from puzzles.union_find import UF
+
 
 # union find
 def count_servers(grid: List[List[int]]) -> int:

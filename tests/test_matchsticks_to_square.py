@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.matchsticks_to_square import makesquare
 
 

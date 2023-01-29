@@ -19,6 +19,7 @@ Constraints:
 """
 from typing import List
 
+
 # brute force: O(2^n)
 def can_partition(nums: List[int]) -> bool:
     nums_sum = sum(nums)

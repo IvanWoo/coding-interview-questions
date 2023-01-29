@@ -21,9 +21,10 @@ Constraints:
 1 <= words[i].length <= 50
 s and words[i] consist of only lowercase English letters.
 """
-from functools import cache
-from collections import defaultdict
 from bisect import bisect_left
+from collections import defaultdict
+from functools import cache
+
 
 # brute force
 def num_matching_subseq(s: str, words: list[str]) -> int:

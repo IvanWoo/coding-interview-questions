@@ -35,6 +35,7 @@ equations[i][1] is either '=' or '!'
 equations[i][2] is '='
 """
 from typing import List
+
 from puzzles.union_find import UF
 
 

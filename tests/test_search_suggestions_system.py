@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.search_suggestions_system import suggested_products
 
 

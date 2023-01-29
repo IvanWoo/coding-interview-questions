@@ -39,6 +39,7 @@ Constraints:
 from functools import cache
 from heapq import heappush, heappushpop
 
+
 # brute force: TLE
 def furthest_building(heights: list[int], bricks: int, ladders: int) -> int:
     @cache

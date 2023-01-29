@@ -16,8 +16,9 @@ Input: 7
 Output: [[0,0,0,null,null,0,0,null,null,0,0],[0,0,0,null,null,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,null,null,null,null,0,0],[0,0,0,0,0,null,null,0,0]]
 """
 
-from puzzles.utils import TreeNode
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 class Solution:

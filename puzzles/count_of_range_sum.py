@@ -17,6 +17,7 @@ Constraints:
 from collections import deque
 from typing import List
 
+
 # TLE: O(n^2)
 def count_range_sum(nums: List[int], lower: int, upper: int) -> int:
     n = len(nums)

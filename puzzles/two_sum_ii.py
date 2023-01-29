@@ -34,6 +34,7 @@ The tests are generated such that there is exactly one solution.
 
 from typing import Optional
 
+
 # brute force
 def two_sum(numbers: list[int], target: int) -> list[int]:
     n = len(numbers)

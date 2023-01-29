@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.insert_interval import insert
 
 

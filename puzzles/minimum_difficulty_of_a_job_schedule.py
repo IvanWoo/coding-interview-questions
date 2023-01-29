@@ -32,8 +32,8 @@ Constraints:
 0 <= jobDifficulty[i] <= 1000
 1 <= d <= 10
 """
-from math import inf
 from functools import cache
+from math import inf
 
 
 def min_difficulty(job_difficulty: list[int], d: int) -> int:

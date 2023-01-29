@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.paint_house_iii import min_cost
 
 

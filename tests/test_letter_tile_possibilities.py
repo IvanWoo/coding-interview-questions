@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.letter_tile_possibilities import num_tile_possibilities
 
 

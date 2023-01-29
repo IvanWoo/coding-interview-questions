@@ -32,7 +32,9 @@ Constraints:
 At most 400 calls will be made to book.
 """
 from collections import defaultdict
+
 from sortedcontainers import SortedDict
+
 
 # sweep line algorithm
 class MyCalendarThree:
@@ -55,9 +57,7 @@ class MyCalendarThree:
         self.vals = defaultdict(int)
         self.lazy = defaultdict(int)
 
-    def update(
-        self, start: int, end: int, left: int = 0, right: int = 10**9, idx: int = 1
-    ) -> None:
+    def update(self, start: int, end: int, left: int = 0, right: int = 10**9, idx: int = 1) -> None:
         if start > right or end < left:
             return
 
@@ -68,9 +68,7 @@ class MyCalendarThree:
             mid = (left + right) // 2
             self.update(start, end, left, mid, idx * 2)
             self.update(start, end, mid + 1, right, idx * 2 + 1)
-            self.vals[idx] = self.lazy[idx] + max(
-                self.vals[idx * 2], self.vals[idx * 2 + 1]
-            )
+            self.vals[idx] = self.lazy[idx] + max(self.vals[idx * 2], self.vals[idx * 2 + 1])
 
     def book(self, start: int, end: int) -> int:
         self.update(start, end - 1)

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.bag_of_tokens import bag_of_tokens_score
 
 

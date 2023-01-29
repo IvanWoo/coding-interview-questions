@@ -32,6 +32,7 @@ Total number of squares = 6 + 1 = 7.
 """
 from typing import List
 
+
 # TLE
 def count_squares(matrix: List[List[int]]) -> int:
     def all_ones(matrix, r, c, w):
@@ -61,9 +62,7 @@ def count_squares(matrix: List[List[int]]) -> int:
             if not matrix[r][c]:
                 continue
             if r != 0 and c != 0:
-                matrix[r][c] += min(
-                    matrix[r - 1][c - 1], matrix[r - 1][c], matrix[r][c - 1]
-                )
+                matrix[r][c] += min(matrix[r - 1][c - 1], matrix[r - 1][c], matrix[r][c - 1])
             res += matrix[r][c]
     return res
 

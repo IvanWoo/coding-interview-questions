@@ -27,8 +27,9 @@ Follow up: Could you do that without using any extra space? (Assume that the imp
 
 """
 
-from puzzles.utils import TreeNode
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 class FindModes:

@@ -1,6 +1,4 @@
-from puzzles.partition_array_into_three_parts_with_equal_sum import (
-    can_three_parts_equal_sum,
-)
+from puzzles.partition_array_into_three_parts_with_equal_sum import can_three_parts_equal_sum
 
 
 def test_can_three_parts_equal_sum():

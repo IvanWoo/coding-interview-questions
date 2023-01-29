@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.the_number_of_weak_characters_in_the_game import number_of_weak_characters
 
 

@@ -17,6 +17,7 @@ root is guaranteed to be a valid binary search tree.
 -105 <= k <= 105
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

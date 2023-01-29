@@ -19,6 +19,7 @@ Your algorithm should run in O(n) time and uses constant extra space.
 """
 from typing import List
 
+
 # cycle sort
 def first_missing_positive(nums: List[int]) -> int:
     n = len(nums)

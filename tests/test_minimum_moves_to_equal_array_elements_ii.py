@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_moves_to_equal_array_elements_ii import min_moves_2
 
 

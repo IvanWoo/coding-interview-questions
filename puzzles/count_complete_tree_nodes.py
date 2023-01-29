@@ -24,7 +24,9 @@ The number of nodes in the tree is in the range [0, 5 * 104].
 The tree is guaranteed to be complete.
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
+
 
 # O(n)
 def count_nodes(root: Optional[TreeNode]) -> int:

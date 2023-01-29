@@ -38,7 +38,7 @@ n == board.length == board[i].length
 grid[i][j] is either -1 or in the range [1, n2].
 The squares labeled 1 and n2 do not have any ladders or snakes.
 """
-from collections import deque, defaultdict
+from collections import defaultdict, deque
 
 
 def snakes_and_ladders(board: list[list[int]]) -> int:

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.count_servers_that_communicate import count_servers
 
 

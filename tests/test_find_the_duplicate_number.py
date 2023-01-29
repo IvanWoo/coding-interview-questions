@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_the_duplicate_number import find_duplicate
 
 

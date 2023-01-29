@@ -65,6 +65,7 @@ def min_days(n: int) -> int:
 
 from functools import lru_cache
 
+
 # dp
 def min_days(n: int) -> int:
     @lru_cache(None)

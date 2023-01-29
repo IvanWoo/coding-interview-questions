@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_common_subsequence import longest_common_subsequence
 
 

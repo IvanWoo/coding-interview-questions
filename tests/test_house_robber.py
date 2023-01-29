@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.house_robber import rob
 
 

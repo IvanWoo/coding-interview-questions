@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sliding_window_maximum import max_sliding_window
 
 

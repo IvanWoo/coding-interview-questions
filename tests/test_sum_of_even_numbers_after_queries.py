@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sum_of_even_numbers_after_queries import sum_even_after_queries
 
 

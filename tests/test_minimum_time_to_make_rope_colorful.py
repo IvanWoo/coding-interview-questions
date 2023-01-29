@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_time_to_make_rope_colorful import min_cost
 
 

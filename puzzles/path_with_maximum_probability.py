@@ -30,14 +30,12 @@ a != b
 0 <= succProb[i] <= 1
 There is at most one edge between every two nodes.
 """
-from typing import List
-from collections import defaultdict
 import heapq
+from collections import defaultdict
+from typing import List
 
 
-def max_probability(
-    n: int, edges: List[List[int]], succProb: List[float], start: int, end: int
-) -> float:
+def max_probability(n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
     graph = defaultdict(dict)
     for i in range(len(edges)):
         frm, to = edges[i]

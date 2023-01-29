@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.mirror_reflection import mirror_reflection
 
 

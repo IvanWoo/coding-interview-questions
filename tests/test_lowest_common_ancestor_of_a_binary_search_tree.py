@@ -1,8 +1,7 @@
 import pytest
+
+from puzzles.lowest_common_ancestor_of_a_binary_search_tree import lowest_common_ancestor
 from puzzles.utils import make_tree
-from puzzles.lowest_common_ancestor_of_a_binary_search_tree import (
-    lowest_common_ancestor,
-)
 
 
 @pytest.mark.parametrize(
@@ -14,7 +13,4 @@ from puzzles.lowest_common_ancestor_of_a_binary_search_tree import (
     ],
 )
 def test_lowest_common_ancestor(root, p, q, expected):
-    assert (
-        lowest_common_ancestor(make_tree(root), make_tree([p]), make_tree([q])).val
-        == expected
-    )
+    assert lowest_common_ancestor(make_tree(root), make_tree([p]), make_tree([q])).val == expected

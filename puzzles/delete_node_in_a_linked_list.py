@@ -38,6 +38,7 @@ The value of each node in the list is unique.
 The node to be deleted is in the list and is not a tail node.
 """
 from typing import Optional
+
 from puzzles.utils import ListNode
 
 

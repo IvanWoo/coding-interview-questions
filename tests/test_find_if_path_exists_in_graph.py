@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_if_path_exists_in_graph import valid_path
 
 

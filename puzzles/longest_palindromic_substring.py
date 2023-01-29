@@ -17,6 +17,7 @@ s consist of only digits and English letters.
 """
 from functools import cache
 
+
 # brute force: O(n^3)
 def longest_palindrome(s: str) -> str:
     def is_palindrome(s: str) -> bool:

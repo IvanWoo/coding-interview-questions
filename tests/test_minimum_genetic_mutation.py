@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_genetic_mutation import min_mutation
 
 

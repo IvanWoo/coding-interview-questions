@@ -27,8 +27,9 @@ You can assume that
 the number of coins is less than 500
 the answer is guaranteed to fit into signed 32-bit integer
 """
-from typing import List
 from functools import lru_cache
+from typing import List
+
 
 # TLE
 def change(amount: int, coins: List[int]) -> int:

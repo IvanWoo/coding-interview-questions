@@ -27,8 +27,8 @@ Constraints:
 1 <= nums.length, k <= 105
 -104 <= nums[i] <= 104
 """
-from math import inf
 import heapq
+from math import inf
 
 
 # TLE

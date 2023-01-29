@@ -25,7 +25,7 @@ Output: 28
 
 """
 from functools import lru_cache
-from math import factorial, comb
+from math import comb, factorial
 
 
 @lru_cache()

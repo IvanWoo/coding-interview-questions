@@ -14,9 +14,9 @@ Example 3:
 Input: "aaabbb"
 Output: []
 """
-from typing import List, Optional
 from collections import Counter
 from itertools import permutations
+from typing import List, Optional
 
 
 def mirror(s: str, center: str) -> str:

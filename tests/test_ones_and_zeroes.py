@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.ones_and_zeroes import find_max_form
 
 

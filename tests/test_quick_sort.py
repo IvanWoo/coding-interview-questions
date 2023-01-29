@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.quick_sort import sort
 
 

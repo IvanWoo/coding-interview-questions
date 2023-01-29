@@ -4,9 +4,7 @@ from puzzles.path_with_maximum_gold import get_maximum_gold
 def test_get_maximum_gold():
     assert get_maximum_gold([[0, 6, 0], [5, 8, 7], [0, 9, 0]]) == 24
     assert get_maximum_gold([[0, 6, 1], [0, 0, 0], [0, 9, 0]]) == 9
-    assert (
-        get_maximum_gold([[1, 0, 7], [2, 0, 6], [3, 4, 5], [0, 3, 0], [9, 0, 20]]) == 28
-    )
+    assert get_maximum_gold([[1, 0, 7], [2, 0, 6], [3, 4, 5], [0, 3, 0], [9, 0, 20]]) == 28
     assert (
         get_maximum_gold(
             [

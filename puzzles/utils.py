@@ -1,7 +1,8 @@
 # https://stackoverflow.com/questions/41135033/type-hinting-within-a-class/52631754#52631754
 from __future__ import annotations
-from dataclasses import dataclass, field
+
 from collections import deque
+from dataclasses import dataclass, field
 from typing import Optional
 
 

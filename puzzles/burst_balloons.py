@@ -15,8 +15,9 @@ Output: 167
 Explanation: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
              coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
 """
-from typing import List
 from functools import lru_cache
+from typing import List
+
 
 # TLE: recursion
 def max_coins(nums: List[int]) -> int:
@@ -48,9 +49,7 @@ def max_coins(nums: List[int]) -> int:
             right = left + gap
             # i is the last ballon to be bursted
             for i in range(left + 1, right):
-                cur = max(
-                    cur, dp[left][i] + dp[i][right] + nums[left] * nums[i] * nums[right]
-                )
+                cur = max(cur, dp[left][i] + dp[i][right] + nums[left] * nums[i] * nums[right])
             dp[left][right] = cur
     return dp[0][n - 1]
 

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.check_if_two_string_arrays_are_equivalent import array_strings_are_equal
 
 

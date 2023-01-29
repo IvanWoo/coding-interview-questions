@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.stamping_the_sequence import moves_to_stamp, overwrite
 
 

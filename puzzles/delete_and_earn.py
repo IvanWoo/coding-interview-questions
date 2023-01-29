@@ -28,8 +28,8 @@ Constraints:
 """
 
 
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def delete_and_earn(nums: List[int]):

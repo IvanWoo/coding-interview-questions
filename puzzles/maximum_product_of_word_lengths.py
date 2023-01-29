@@ -25,6 +25,7 @@ words[i] consists only of lowercase English letters.
 """
 from collections import defaultdict
 
+
 # bit manipulation
 def max_product(words: list[str]) -> int:
     d = defaultdict(int)

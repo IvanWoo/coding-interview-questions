@@ -24,8 +24,9 @@ Constraints:
  
 Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
 """
-from math import inf
 from bisect import bisect_left
+from math import inf
+
 
 # brute force
 def increasing_triplet(nums: list[int]) -> bool:

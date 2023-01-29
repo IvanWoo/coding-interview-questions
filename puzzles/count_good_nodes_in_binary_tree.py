@@ -29,6 +29,7 @@ The number of nodes in the binary tree is in the range [1, 10^5].
 Each node's value is between [-10^4, 10^4].
 """
 from math import inf
+
 from puzzles.utils import TreeNode
 
 
@@ -53,10 +54,6 @@ def good_nodes(root: TreeNode) -> int:
         if not node:
             return 0
         new_max = max(node.val, curr_max)
-        return (
-            int(node.val >= curr_max)
-            + traverse(node.left, new_max)
-            + traverse(node.right, new_max)
-        )
+        return int(node.val >= curr_max) + traverse(node.left, new_max) + traverse(node.right, new_max)
 
     return traverse(root, -inf)

@@ -27,6 +27,7 @@ n == matrix[i].length
 """
 from functools import cache
 
+
 # brute force: TLE
 def longest_increasing_path(matrix: list[list[int]]) -> int:
     ROWS = len(matrix)

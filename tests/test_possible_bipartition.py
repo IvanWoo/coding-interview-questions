@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.possible_bipartition import possible_bipartition
 
 

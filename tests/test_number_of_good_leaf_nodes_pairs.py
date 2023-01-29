@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.number_of_good_leaf_nodes_pairs import count_pairs
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

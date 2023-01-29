@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.detect_capital import detect_capital_use
 
 

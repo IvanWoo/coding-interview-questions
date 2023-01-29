@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.power_of_four import is_power_of_four
 
 

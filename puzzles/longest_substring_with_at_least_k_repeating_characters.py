@@ -19,6 +19,7 @@ s consists of only lowercase English letters.
 """
 from collections import Counter, defaultdict
 
+
 # TLE: O(N^3)
 def longest_substring(s: str, k: int) -> int:
     res = 0

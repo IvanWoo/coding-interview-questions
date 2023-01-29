@@ -39,6 +39,7 @@ All characters of products[i] are lower-case English letters.
 All characters of searchWord are lower-case English letters.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 

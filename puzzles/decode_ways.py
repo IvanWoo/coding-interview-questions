@@ -38,6 +38,7 @@ s contains only digits and may contain leading zero(s).
 """
 from functools import cache
 
+
 # TLE
 def num_decodings(s: str) -> int:
     def backtrack(idx: int):

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.path_with_minimum_effort import minimum_effort_path
 
 

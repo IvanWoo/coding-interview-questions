@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.count_of_smaller_numbers_after_self import count_smaller
 
 

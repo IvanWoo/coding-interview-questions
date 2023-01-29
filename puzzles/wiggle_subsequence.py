@@ -24,6 +24,7 @@ Can you do it in O(n) time?
 """
 from typing import List
 
+
 # brute force: O(2^n), TLE
 def wiggle_max_length(nums: List[int]) -> int:
     if not nums:

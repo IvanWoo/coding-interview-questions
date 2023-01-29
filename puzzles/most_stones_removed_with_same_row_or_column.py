@@ -40,6 +40,7 @@ No two stones are at the same coordinate point.
 """
 from puzzles.union_find import UF
 
+
 # union find
 def remove_stones(stones: list[list[int]]) -> int:
     n = len(stones)

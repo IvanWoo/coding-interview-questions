@@ -34,8 +34,9 @@ Constraints:
 0 <= pairs[i][0], pairs[i][1] < s.length
 s only contains lower case English letters.
 """
-from typing import List
 from collections import defaultdict
+from typing import List
+
 from puzzles.union_find import UF
 
 

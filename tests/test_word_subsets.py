@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.word_subsets import word_subsets
 
 

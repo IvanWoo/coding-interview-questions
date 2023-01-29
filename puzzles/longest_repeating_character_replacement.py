@@ -31,6 +31,7 @@ The substring "BBBB" has the longest repeating letters, which is 4.
 """
 from collections import Counter
 
+
 # sliding window
 def character_replacement(s: str, k: int) -> int:
     n = len(s)

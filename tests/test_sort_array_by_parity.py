@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sort_array_by_parity import sort_array_by_parity
 
 

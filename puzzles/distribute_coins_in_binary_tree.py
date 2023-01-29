@@ -23,6 +23,7 @@ The number of nodes in the tree is n.
 The sum of all Node.val is n.
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

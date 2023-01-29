@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.delete_and_earn import delete_and_earn
 
 

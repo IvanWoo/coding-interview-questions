@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.number_of_matching_subsequences import num_matching_subseq
 
 

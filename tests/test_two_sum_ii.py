@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.two_sum_ii import two_sum
 
 

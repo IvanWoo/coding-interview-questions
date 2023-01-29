@@ -1,7 +1,9 @@
 from gettext import find
+
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.two_sum_iv_input_is_a_bst import find_target
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

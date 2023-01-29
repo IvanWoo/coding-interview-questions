@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.remove_all_adjacent_duplicates_in_string import remove_duplicates
 
 

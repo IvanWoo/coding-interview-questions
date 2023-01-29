@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.binary_tree_right_side_view import right_side_view
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

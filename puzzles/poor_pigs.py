@@ -31,6 +31,4 @@ import math
 
 
 def poor_pigs(buckets: int, minutes_to_die: int, minutes_to_test: int) -> int:
-    return math.ceil(
-        math.log(buckets) / math.log(minutes_to_test // minutes_to_die + 1)
-    )
+    return math.ceil(math.log(buckets) / math.log(minutes_to_test // minutes_to_die + 1))

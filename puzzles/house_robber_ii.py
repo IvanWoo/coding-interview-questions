@@ -25,6 +25,7 @@ Constraints:
 """
 
 from typing import List
+
 from puzzles.house_robber import rob as rob_helper
 
 

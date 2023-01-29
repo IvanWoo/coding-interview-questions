@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.two_sum_5 import find_target
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

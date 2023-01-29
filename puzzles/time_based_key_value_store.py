@@ -33,8 +33,8 @@ key and value consist of lowercase English letters and digits.
 All the timestamps timestamp of set are strictly increasing.
 At most 2 * 105 calls will be made to set and get.
 """
-from collections import defaultdict
 from bisect import bisect_right
+from collections import defaultdict
 
 
 class TimeMap:

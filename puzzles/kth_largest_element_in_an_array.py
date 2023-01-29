@@ -16,7 +16,7 @@ Constraints:
 1 <= k <= nums.length <= 104
 -104 <= nums[i] <= 104
 """
-from heapq import heappush, heappop
+from heapq import heappop, heappush
 
 
 def find_kth_largest(nums: list[int], k: int) -> int:

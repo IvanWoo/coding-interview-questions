@@ -15,8 +15,8 @@ S will have length in range [1, 500].
 S will consist of lowercase English letters ('a' to 'z') only.
 """
 
-from dataclasses import dataclass
 from collections import defaultdict
+from dataclasses import dataclass
 from typing import List
 
 

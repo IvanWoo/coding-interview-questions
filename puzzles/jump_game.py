@@ -21,6 +21,7 @@ Constraints:
 from collections import deque
 from functools import cache
 
+
 # TLE
 def jump_game(nums: list[int]) -> bool:
     n = len(nums)

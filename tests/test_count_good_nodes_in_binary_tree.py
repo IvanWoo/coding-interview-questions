@@ -1,7 +1,9 @@
 from cmath import exp
+
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.count_good_nodes_in_binary_tree import good_nodes
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

@@ -25,6 +25,7 @@ Each element of A is an integer within the range [0, N-1].
 """
 from typing import List
 
+
 # TLE: O(N^2)
 def array_nesting(nums: List[int]) -> int:
     n = len(nums)

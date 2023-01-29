@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.all_nodes_distance_k_in_binary_tree import distance_k
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

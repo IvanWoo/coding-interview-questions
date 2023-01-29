@@ -15,6 +15,7 @@ Explanation: 13 = 4 + 9.
 from collections import deque
 from math import inf
 
+
 # BFS: use too much memory
 def num_squares(n: int) -> int:
     squares = [x**2 for x in range(1, int(n**0.5) + 1)]
@@ -33,9 +34,7 @@ def num_squares(n: int) -> int:
 def num_squares(n: int) -> int:
     dp = [0] + [inf] * n
     for i in range(1, n + 1):
-        dp[i] = (
-            min(dp[i - s] for s in (x**2 for x in range(1, int(i**0.5) + 1))) + 1
-        )
+        dp[i] = min(dp[i - s] for s in (x**2 for x in range(1, int(i**0.5) + 1))) + 1
     return dp[n]
 
 

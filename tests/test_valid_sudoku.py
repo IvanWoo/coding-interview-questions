@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.valid_sudoku import is_valid_sudoku
 
 

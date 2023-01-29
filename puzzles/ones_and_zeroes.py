@@ -27,6 +27,7 @@ strs[i] consists only of digits '0' and '1'.
 from collections import Counter
 from functools import cache
 
+
 # brute force: O(2^n)
 def find_max_form(strs: list[str], m: int, n: int) -> int:
     def helper(path, choices, m, n):

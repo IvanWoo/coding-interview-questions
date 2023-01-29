@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_and_replace_pattern import find_and_replace_pattern
 
 

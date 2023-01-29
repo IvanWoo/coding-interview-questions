@@ -23,7 +23,9 @@ ai != bi
 There are no repeated connections.
 """
 from collections import defaultdict, deque
+
 from puzzles.union_find import UF
+
 
 # brute force: TLE
 # at least O(n^2*log(n))

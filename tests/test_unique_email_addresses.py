@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.unique_email_addresses import num_unique_emails
 
 

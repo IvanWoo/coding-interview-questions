@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.kth_smallest_element_in_a_bst import kth_smallest
+from puzzles.utils import TreeNode
 
 
 @pytest.mark.parametrize(
@@ -12,9 +13,7 @@ from puzzles.kth_smallest_element_in_a_bst import kth_smallest
             1,
         ),
         (
-            TreeNode(
-                5, TreeNode(3, TreeNode(2, TreeNode(1), None), TreeNode(4)), TreeNode(6)
-            ),
+            TreeNode(5, TreeNode(3, TreeNode(2, TreeNode(1), None), TreeNode(4)), TreeNode(6)),
             3,
             3,
         ),

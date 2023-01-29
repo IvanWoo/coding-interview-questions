@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.three_sum_closest import three_sum_closest
 
 

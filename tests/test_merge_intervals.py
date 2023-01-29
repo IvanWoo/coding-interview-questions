@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.merge_intervals import merge
 
 

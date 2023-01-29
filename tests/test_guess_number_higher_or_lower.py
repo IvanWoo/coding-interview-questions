@@ -1,5 +1,7 @@
-import pytest
 from functools import partial
+
+import pytest
+
 from puzzles.guess_number_higher_or_lower import guess_number
 
 

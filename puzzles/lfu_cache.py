@@ -50,10 +50,11 @@ Constraints:
 At most 2 * 105 calls will be made to get and put.
 """
 from collections import Counter, defaultdict
-from time import monotonic_ns
 from math import inf
+from time import monotonic_ns
 
 from puzzles.utils import DoublyLinkedList
+
 
 # TLE
 class LFUCache:

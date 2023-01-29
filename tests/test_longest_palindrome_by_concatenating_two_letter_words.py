@@ -1,7 +1,6 @@
 import pytest
-from puzzles.longest_palindrome_by_concatenating_two_letter_words import (
-    longest_palindrome,
-)
+
+from puzzles.longest_palindrome_by_concatenating_two_letter_words import longest_palindrome
 
 
 @pytest.mark.parametrize(

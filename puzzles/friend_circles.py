@@ -31,6 +31,7 @@ M[i][i] == 1
 M[i][j] == M[j][i]
 """
 from typing import List
+
 from puzzles.union_find import UF
 
 

@@ -9,12 +9,7 @@ def test_replace_words():
         )
         == "the cat was rat by the bat"
     )
-    assert (
-        replace_words(
-            dictionary=["a", "b", "c"], sentence="aadsfasf absbs bbab cadsfafs"
-        )
-        == "a a b c"
-    )
+    assert replace_words(dictionary=["a", "b", "c"], sentence="aadsfasf absbs bbab cadsfafs") == "a a b c"
     assert (
         replace_words(
             dictionary=["a", "aa", "aaa", "aaaa"],

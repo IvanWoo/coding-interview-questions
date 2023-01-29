@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_deletions_to_make_character_frequencies_unique import min_deletions
 
 

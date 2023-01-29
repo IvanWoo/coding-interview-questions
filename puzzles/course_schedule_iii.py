@@ -28,8 +28,8 @@ Constraints:
 1 <= courses.length <= 104
 1 <= durationi, lastDayi <= 104
 """
-from heapq import heappop, heappush
 from functools import cache
+from heapq import heappop, heappush
 
 
 def schedule_course(courses: list[list[int]]) -> int:

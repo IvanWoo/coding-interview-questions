@@ -1,10 +1,9 @@
 # https://techdevguide.withgoogle.com/paths/foundational/hangman-challenge-archetypal/#!
 import random
-from dataclasses import dataclass, field
-from typing import List
-
-from functools import lru_cache
 from collections import Counter
+from dataclasses import dataclass, field
+from functools import lru_cache
+from typing import List
 
 
 def get_look(word: str, guesses: List[str]) -> str:
@@ -32,11 +31,7 @@ def search_word(word_len: int, guesses: list) -> str:
     for c in cs:
         for char in guesses:
             c[char] = 0
-    return (
-        Counter("".join([c.most_common(1)[0][0] for c in cs]))
-        .most_common(1)[0][0]
-        .upper()
-    )
+    return Counter("".join([c.most_common(1)[0][0] for c in cs])).most_common(1)[0][0].upper()
 
 
 @dataclass

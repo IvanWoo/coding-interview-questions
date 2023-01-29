@@ -57,6 +57,7 @@ All (xi, yi) are unique.
 """
 from typing import List
 
+
 # TLE
 def hit_bricks(grid: List[List[int]], hits: List[List[int]]) -> List[int]:
     class UF:

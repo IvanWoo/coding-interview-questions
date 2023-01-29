@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.valid_anagram import is_anagram
 
 

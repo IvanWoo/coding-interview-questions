@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.smallest_string_with_swaps import smallest_string_with_swaps
 
 

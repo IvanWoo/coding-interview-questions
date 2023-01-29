@@ -19,8 +19,9 @@ pre[] and post[] are both permutations of 1, 2, ..., pre.length.
 It is guaranteed an answer exists. If there exists multiple answers, you can return any of them.
 """
 
-from puzzles.utils import TreeNode
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 def construct(pre: List[int], post: List[int]) -> TreeNode:

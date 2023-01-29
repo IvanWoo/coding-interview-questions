@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.check_if_the_sentence_is_pangram import check_if_pangram
 
 

@@ -1,7 +1,9 @@
 from ssl import HAS_ALPN
+
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.path_sum import has_path_sum
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

@@ -28,6 +28,7 @@ All the pairs (ui, vi) are unique. (i.e., no multiple edges.)
 import heapq
 from collections import defaultdict
 
+
 # Dijkstra’s algorithm: shortest path
 # min heap BFS
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:

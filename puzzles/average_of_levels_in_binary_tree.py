@@ -16,8 +16,8 @@ Constraints:
 The number of nodes in the tree is in the range [1, 104].
 -231 <= Node.val <= 231 - 1
 """
-from typing import Optional
 from collections import defaultdict
+from typing import Optional
 
 from puzzles.utils import TreeNode
 

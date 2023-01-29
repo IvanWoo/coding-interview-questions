@@ -20,8 +20,9 @@ Constraints:
 The number of nodes in the tree is in the range [1, 3 * 104].
 -1000 <= Node.val <= 1000
 """
-from typing import Optional
 from math import inf
+from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

@@ -34,6 +34,7 @@ Constraints:
 """
 from math import inf
 
+
 # O(n^2): TLE
 def max_profit(prices: list[int]) -> int:
     def max_profit_one(prices):

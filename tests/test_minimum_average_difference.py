@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_average_difference import minimum_average_difference
 
 

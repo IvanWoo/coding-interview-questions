@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import ListNode
+
 from puzzles.reverse_nodes_in_kgroup import reverse_kgroup
+from puzzles.utils import ListNode
 
 
 @pytest.fixture

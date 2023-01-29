@@ -23,6 +23,7 @@ Constraints:
 """
 from typing import List
 
+
 # O(N)
 def single_non_duplicate(nums: List[int]) -> int:
     res = 0

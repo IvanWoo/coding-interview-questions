@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.jump_game_vi import max_result
 
 

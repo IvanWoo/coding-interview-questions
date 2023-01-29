@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_consecutive_sequence import longest_consecutive
 
 

@@ -38,6 +38,7 @@ If 99% of all integer numbers from the stream are in the range [0, 100], how wou
 """
 import heapq
 from bisect import insort
+
 from sortedcontainers import SortedList
 
 

@@ -19,8 +19,9 @@ The values of preorder are distinct.
 
 """
 
-from puzzles.utils import TreeNode
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 def get_index(preorder, target):

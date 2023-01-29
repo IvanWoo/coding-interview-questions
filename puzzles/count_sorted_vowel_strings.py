@@ -26,6 +26,7 @@ Constraints:
 """
 from functools import lru_cache
 
+
 # backtracking
 def count_vowel_strings(n: int) -> int:
     count = 0

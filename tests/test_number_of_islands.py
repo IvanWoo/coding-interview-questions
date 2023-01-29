@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.number_of_islands import num_islands
 
 

@@ -34,13 +34,11 @@ blue_edges.length <= 400
 red_edges[i].length == blue_edges[i].length == 2
 0 <= red_edges[i][j], blue_edges[i][j] < n
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
-def shortest_alternating_paths(
-    n: int, red_edges: List[List[int]], blue_edges: List[List[int]]
-) -> List[int]:
+def shortest_alternating_paths(n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
     def bfs(start_color):
         ans = [float("inf")] * n
         q = set([(0, 0, start_color)])
@@ -75,6 +73,4 @@ def shortest_alternating_paths(
 
 
 if __name__ == "__main__":
-    shortest_alternating_paths(
-        5, [[0, 1], [1, 2], [2, 3], [3, 4]], [[1, 2], [2, 3], [3, 1]]
-    ) == [0, 1, 2, 3, 7]
+    shortest_alternating_paths(5, [[0, 1], [1, 2], [2, 3], [3, 4]], [[1, 2], [2, 3], [3, 1]]) == [0, 1, 2, 3, 7]

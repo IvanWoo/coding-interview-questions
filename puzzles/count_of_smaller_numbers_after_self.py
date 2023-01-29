@@ -17,10 +17,11 @@ Constraints:
 -10^4 <= nums[i] <= 10^4
 """
 
-from collections import deque
 from bisect import bisect_left
+from collections import deque
 
 from sortedcontainers import SortedList
+
 
 # brute force: O(n^2)
 def count_smaller(nums: list[int]) -> list[int]:

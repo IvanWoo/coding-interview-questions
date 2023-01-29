@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import deep_sort
+
 from puzzles.group_anagrams import group_anagrams
+from puzzles.utils import deep_sort
 
 
 @pytest.mark.parametrize(

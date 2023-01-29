@@ -38,6 +38,7 @@ At most 3 * 104 calls will be made to addNum and getIntervals.
 Follow up: What if there are lots of merges and the number of disjoint intervals is small compared to the size of the data stream?
 """
 from bisect import insort
+
 from sortedcontainers import SortedSet
 
 

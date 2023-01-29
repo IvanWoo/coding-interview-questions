@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.numbers_with_same_consecutive_differences import nums_same_consec_diff
 
 

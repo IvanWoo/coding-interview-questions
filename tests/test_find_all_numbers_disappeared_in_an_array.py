@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_all_numbers_disappeared_in_an_array import find_disappeared_numbers
 
 

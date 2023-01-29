@@ -33,6 +33,7 @@ the gap between the 5th and 6th stone is too large.
 """
 from typing import List
 
+
 # TLE
 def can_cross(stones: List[int]) -> bool:
     n = len(stones)

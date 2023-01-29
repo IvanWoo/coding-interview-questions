@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.split_array_largest_sum import split_array
 
 

@@ -23,6 +23,7 @@ Constraints:
 nums is sorted in a strictly increasing order.
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

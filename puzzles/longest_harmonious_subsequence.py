@@ -23,8 +23,8 @@ Constraints:
 1 <= nums.length <= 2 * 104
 -109 <= nums[i] <= 109
 """
-from typing import List
 from collections import Counter
+from typing import List
 
 
 def find_LHS(nums: List[int]) -> int:

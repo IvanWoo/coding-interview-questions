@@ -36,6 +36,7 @@ Each node's value will be between 0 and 1000.
 """
 
 from collections import defaultdict, deque
+
 from puzzles.utils import TreeNode, make_tree
 
 

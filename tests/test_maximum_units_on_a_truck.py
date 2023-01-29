@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_units_on_a_truck import maximum_units
 
 

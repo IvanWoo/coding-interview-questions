@@ -19,6 +19,7 @@ root is a binary search tree.
 1 <= val <= 107
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

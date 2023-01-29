@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.earliest_possible_day_of_full_bloom import earliest_full_bloom
 
 

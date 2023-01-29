@@ -30,6 +30,7 @@ s contains only lowercase English letters.
 
 from collections import Counter, defaultdict
 
+
 # greedy
 def min_deletions(s: str) -> int:
     counter = Counter(s)

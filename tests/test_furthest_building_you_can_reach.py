@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.furthest_building_you_can_reach import furthest_building
 
 

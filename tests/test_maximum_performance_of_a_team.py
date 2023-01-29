@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_performance_of_a_team import max_performance
 
 

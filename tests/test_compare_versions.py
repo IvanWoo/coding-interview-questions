@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.compare_versions import compare_versions
 
 

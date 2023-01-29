@@ -39,6 +39,7 @@ Follow up:
 Could you implement next() and hasNext() to run in average O(1) time and use O(h) memory, where h is the height of the tree?
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

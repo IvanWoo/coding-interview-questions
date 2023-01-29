@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.critical_connections_in_a_network import critical_connections
 
 

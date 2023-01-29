@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.palindrome_linked_list import is_palindrome
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

@@ -16,6 +16,7 @@ The order of your output does not matter.
 """
 from collections import defaultdict
 
+
 # O(N^2 * logN)
 def group_anagrams(strs: list[str]) -> list[list[str]]:
     ans = defaultdict(list)

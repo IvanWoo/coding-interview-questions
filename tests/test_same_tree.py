@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.same_tree import is_same_tree
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

@@ -29,8 +29,8 @@ n == edges.length
 edges[i] != i
 0 <= node1, node2 < n
 """
-from math import inf
 from collections import deque
+from math import inf
 
 
 def closest_meeting_node(edges: list[int], node1: int, node2: int) -> int:

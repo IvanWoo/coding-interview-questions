@@ -41,8 +41,9 @@ entrance.length == 2
 0 <= entrancecol < n
 entrance will always be an empty cell.
 """
-from math import inf
 from collections import deque
+from math import inf
+
 
 # TLE
 def nearest_exit(maze: list[list[str]], entrance: list[int]) -> int:

@@ -21,7 +21,9 @@ The number of nodes in the linked list is in the range [0, 104].
 -106 <= Node.val <= 106
 """
 from typing import Optional
-from puzzles.utils import ListNode, make_linked_list, linked_list_to_list
+
+from puzzles.utils import ListNode, linked_list_to_list, make_linked_list
+
 
 # cheat
 def odd_even_list(head: Optional[ListNode]) -> Optional[ListNode]:

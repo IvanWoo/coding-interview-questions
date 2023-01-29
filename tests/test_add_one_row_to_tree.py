@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.add_one_row_to_tree import add_one_row
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

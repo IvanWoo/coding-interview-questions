@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.running_sum_of_1d_array import running_sum
 
 

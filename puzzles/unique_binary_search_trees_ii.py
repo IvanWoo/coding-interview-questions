@@ -24,7 +24,9 @@
 # Constraints:
 # 0 <= n <= 8
 from typing import List
+
 from puzzles.utils import TreeNode
+
 
 # top down dp
 def generate_trees(n: int) -> List[TreeNode]:

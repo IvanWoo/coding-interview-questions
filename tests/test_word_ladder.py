@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.word_ladder import ladder_length
 
 

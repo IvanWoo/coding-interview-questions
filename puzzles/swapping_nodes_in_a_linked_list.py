@@ -19,6 +19,7 @@ The number of nodes in the list is n.
 0 <= Node.val <= 100
 """
 from typing import Optional
+
 from puzzles.utils import ListNode
 
 

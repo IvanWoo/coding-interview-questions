@@ -22,9 +22,10 @@ Constraints:
 The number of nodes in the tree is in the range [1, 105].
 1 <= Node.val <= 9
 """
-from functools import cache
 from collections import Counter
+from functools import cache
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

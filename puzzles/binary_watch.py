@@ -22,7 +22,7 @@ from typing import List
 
 def bitmask(l, n):
     ans = []
-    for i in range(2 ** n, 2 ** (n + 1)):
+    for i in range(2**n, 2 ** (n + 1)):
         b = bin(i)[3:]
         if sum([int(x) for x in b]) == l:
             ans.append(bin(i)[3:])

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.missing_number import missing_number
 
 

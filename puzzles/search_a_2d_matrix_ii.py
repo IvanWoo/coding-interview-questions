@@ -25,6 +25,7 @@ All the integers in each column are sorted in ascending order.
 
 from bisect import bisect_left
 
+
 # brute force
 def search_matrix(matrix: list[list[int]], target: int) -> bool:
     rows, cols = len(matrix), len(matrix[0])

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.parallel_courses import parallel_courses
 
 

@@ -24,6 +24,7 @@ arr is sorted in ascending order.
 """
 import heapq
 
+
 # O(NlogN)
 def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
     pq = []

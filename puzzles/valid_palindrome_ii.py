@@ -30,9 +30,7 @@ def valid_palindrome(s: str) -> bool:
             return is_valid(s, left + 1, right - 1, quota)
         if not quota:
             return False
-        return is_valid(s, left + 1, right, quota - 1) or is_valid(
-            s, left, right - 1, quota - 1
-        )
+        return is_valid(s, left + 1, right, quota - 1) or is_valid(s, left, right - 1, quota - 1)
 
     return is_valid(s, 0, len(s) - 1, 1)
 

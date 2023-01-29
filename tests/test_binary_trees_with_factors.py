@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.binary_trees_with_factors import num_factored_binary_trees
 
 

@@ -20,8 +20,8 @@ Constraints:
 1 <= prices.length <= 5000
 0 <= prices[i] <= 1000
 """
-from math import inf
 from functools import cache
+from math import inf
 
 
 # TLE

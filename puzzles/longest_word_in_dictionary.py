@@ -24,7 +24,7 @@ The length of words[i] will be in the range [1, 30].
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Any, List
+from typing import Any, Dict, List, Optional
 
 
 @dataclass
@@ -56,9 +56,7 @@ class WordDictionary:
             return length
         if not node.children[word[index]].isEnd:
             return 0
-        return self.searchHelper(
-            word, index + 1, node.children[word[index]], length + 1
-        )
+        return self.searchHelper(word, index + 1, node.children[word[index]], length + 1)
 
     def search(self, word: str) -> bool:
         return self.searchHelper(word, 0, self.root, 0)

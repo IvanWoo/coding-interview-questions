@@ -15,8 +15,9 @@ Constraints:
 -1000 <= nums[i] <= 1000
 -107 <= k <= 107
 """
-from typing import List
 from collections import defaultdict
+from typing import List
+
 
 # prefix sum
 # O(n^2)

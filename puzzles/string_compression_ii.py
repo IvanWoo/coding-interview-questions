@@ -29,8 +29,8 @@ Constraints:
 0 <= char <= s.length
 s contains only lowercase English letters.
 """
-from math import inf
 from functools import cache
+from math import inf
 
 
 def get_length_of_optimal_compression(s: str, k: int) -> int:

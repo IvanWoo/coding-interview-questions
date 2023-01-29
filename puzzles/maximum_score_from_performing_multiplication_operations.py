@@ -39,6 +39,7 @@ m <= n <= 105
 """
 from functools import cache
 
+
 # brute force
 def maximum_score(nums: list[int], multipliers: list[int]) -> int:
     def helper(lo: int, hi: int, idx: int, score: int):

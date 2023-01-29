@@ -18,7 +18,9 @@ Constraints:
 -109 <= nums[i] <= 109
 """
 from typing import List
+
 from puzzles.union_find import UF
+
 
 # O(nlogn)
 def longest_consecutive(nums: List[int]) -> int:

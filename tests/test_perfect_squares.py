@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.perfect_squares import num_squares
 
 

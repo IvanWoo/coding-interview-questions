@@ -19,6 +19,7 @@ The number of nodes in the list is in the range [1, 105].
 Follow up: Could you do it in O(n) time and O(1) space?
 """
 from typing import Optional
+
 from puzzles.utils import ListNode
 
 

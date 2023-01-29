@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_xor_of_two_numbers_in_an_array import find_maximum_XOR
 
 

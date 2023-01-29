@@ -23,7 +23,7 @@ arr.length is even.
 1 <= arr[i] <= 105
 """
 from collections import Counter, defaultdict
-from heapq import heappush, heappop
+from heapq import heappop, heappush
 
 
 def min_set_size(arr: list[int]) -> int:

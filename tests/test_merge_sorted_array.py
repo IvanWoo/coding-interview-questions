@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.merge_sorted_array import merge
 
 

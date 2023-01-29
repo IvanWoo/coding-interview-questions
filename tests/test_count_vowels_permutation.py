@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.count_vowels_permutation import count_vowel_permutation
 
 

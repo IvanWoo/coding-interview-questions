@@ -30,6 +30,7 @@ At most 1000 calls will be made to book.
 """
 from sortedcontainers import SortedList
 
+
 # brute force: O(N^2)
 class MyCalendar:
     def __init__(self):

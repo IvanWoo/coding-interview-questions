@@ -19,6 +19,7 @@ N is in range [0,50].
 """
 from functools import cache
 
+
 # TLE
 def find_paths(m: int, n: int, N: int, i: int, j: int) -> int:
     def backtrack(x, y, left, path):

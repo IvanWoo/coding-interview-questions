@@ -32,6 +32,7 @@ Constraints:
 from functools import cache
 from math import inf
 
+
 # brute force: MLE
 def max_score(card_points: list[int], k: int) -> int:
     @cache

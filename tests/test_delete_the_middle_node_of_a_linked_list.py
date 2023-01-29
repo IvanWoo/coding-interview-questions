@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.delete_the_middle_node_of_a_linked_list import delete_middle
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

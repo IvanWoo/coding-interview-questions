@@ -31,6 +31,7 @@ Follow up: Could you do this using only O(n) extra space, where n is the total n
 
 from copy import deepcopy
 
+
 # space: O(n!)
 def minimum_total(triangle: list[list[int]]) -> int:
     n = len(triangle)

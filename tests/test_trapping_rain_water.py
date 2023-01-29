@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.trapping_rain_water import trap
 
 

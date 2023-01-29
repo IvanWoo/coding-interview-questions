@@ -74,7 +74,7 @@ def robot_sim(commands: List[int], obstacles: List[List[int]]) -> int:
                     x += v.x
                     y += v.y
                     cmd -= 1
-                    ans = max(ans, x ** 2 + y ** 2)
+                    ans = max(ans, x**2 + y**2)
     return ans
 
 

@@ -27,13 +27,11 @@ Constraints:
 1 <= startTime[i] < endTime[i] <= 109
 1 <= profit[i] <= 104
 """
-from functools import cache
 from bisect import bisect_left
+from functools import cache
 
 
-def job_scheduling(
-    start_time: list[int], end_time: list[int], profit: list[int]
-) -> int:
+def job_scheduling(start_time: list[int], end_time: list[int], profit: list[int]) -> int:
     @cache
     def dp(i):
         if i == n:
@@ -49,9 +47,7 @@ def job_scheduling(
     return dp(0)
 
 
-def job_scheduling(
-    start_time: list[int], end_time: list[int], profit: list[int]
-) -> int:
+def job_scheduling(start_time: list[int], end_time: list[int], profit: list[int]) -> int:
     @cache
     def dp(i):
         if i == n:

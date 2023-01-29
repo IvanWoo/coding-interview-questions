@@ -35,8 +35,9 @@ Constraints:
 0 <= positioni <= positioni+1 < target
 1 <= fueli < 109
 """
+from heapq import heappop, heappush
 from math import inf
-from heapq import heappush, heappop
+
 
 # brute force: TLE
 def min_refuel_stops(target: int, start_fuel: int, stations: list[list[int]]) -> int:

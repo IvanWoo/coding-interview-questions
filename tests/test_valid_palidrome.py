@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.valid_palindrome import valid_palindrome
 
 

@@ -21,7 +21,9 @@ All inputs are consist of lowercase letters a-z.
 The values of words are distinct.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 
 # https://docs.python.org/3/library/dataclasses.html#mutable-default-values
 @dataclass

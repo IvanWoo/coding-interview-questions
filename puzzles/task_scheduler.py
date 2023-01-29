@@ -39,6 +39,7 @@ The integer n is in the range [0, 100].
 from collections import Counter
 from typing import List
 
+
 # simulation: TLE
 def least_interval(tasks: List[str], n: int) -> int:
     if n == 0:

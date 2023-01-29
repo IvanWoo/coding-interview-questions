@@ -34,6 +34,7 @@ trips[i].length == 3
 """
 from typing import List
 
+
 # naive scan
 def car_pooling(trips: List[List[int]], capacity: int) -> bool:
     start = min([x[1] for x in trips])

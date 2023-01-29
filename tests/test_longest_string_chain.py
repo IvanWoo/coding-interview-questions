@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_string_chain import longest_str_chain
 
 

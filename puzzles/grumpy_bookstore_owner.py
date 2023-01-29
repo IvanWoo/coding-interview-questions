@@ -22,6 +22,7 @@ Note:
 """
 from typing import List
 
+
 # TLE: O(n^2)
 def max_satisfied(customers: List[int], grumpy: List[int], X: int) -> int:
     n = len(customers)
@@ -29,9 +30,7 @@ def max_satisfied(customers: List[int], grumpy: List[int], X: int) -> int:
     res = 0
 
     for j in range(n - X + 1):
-        res = max(
-            res, _sum + sum([customers[i] for i in range(j, j + X) if grumpy[i] == 1])
-        )
+        res = max(res, _sum + sum([customers[i] for i in range(j, j + X) if grumpy[i] == 1]))
 
     return res
 

@@ -15,8 +15,9 @@ Note:
 
 The number of given pairs will be in the range [1, 1000].
 """
-from typing import List
 from functools import lru_cache
+from typing import List
+
 
 # TLE
 def find_longest_chain(pairs: List[List[int]]) -> int:

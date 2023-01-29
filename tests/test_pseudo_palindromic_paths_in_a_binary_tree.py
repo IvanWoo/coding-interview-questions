@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.pseudo_palindromic_paths_in_a_binary_tree import pseudo_palindromic_paths
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

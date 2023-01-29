@@ -37,8 +37,8 @@ days is in strictly increasing order.
 costs.length == 3
 1 <= costs[i] <= 1000
 """
-from typing import List
 import bisect
+from typing import List
 
 
 def mincost_tickets(days: List[int], costs: List[int]) -> int:

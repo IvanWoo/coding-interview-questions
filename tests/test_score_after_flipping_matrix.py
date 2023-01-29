@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.score_after_flipping_matrix import matrix_score
 
 

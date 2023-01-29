@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.construct_binary_tree_from_preorder_and_inorder_traversal import build_tree
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

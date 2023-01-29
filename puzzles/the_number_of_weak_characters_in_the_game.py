@@ -29,6 +29,7 @@ properties[i].length == 2
 """
 from math import inf
 
+
 # brute force: O(n^2)
 def number_of_weak_characters(properties: list[list[int]]) -> int:
     def is_weak(i, j):

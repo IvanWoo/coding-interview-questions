@@ -1,8 +1,7 @@
 import pytest
+
+from puzzles.construct_binary_tree_from_inorder_and_postorder_traversal import build_tree
 from puzzles.utils import TreeNode
-from puzzles.construct_binary_tree_from_inorder_and_postorder_traversal import (
-    build_tree,
-)
 
 
 @pytest.fixture

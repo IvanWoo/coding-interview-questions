@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_product_of_word_lengths import max_product
 
 

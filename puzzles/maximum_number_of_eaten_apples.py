@@ -30,8 +30,8 @@ days.length == n
 0 <= apples[i], days[i] <= 2 * 104
 days[i] = 0 if and only if apples[i] = 0.
 """
-from typing import List
 import heapq
+from typing import List
 
 
 def eaten_apples(apples: List[int], days: List[int]) -> int:

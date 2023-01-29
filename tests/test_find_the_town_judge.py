@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_the_town_judge import find_judge
 
 

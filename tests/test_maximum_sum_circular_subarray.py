@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_sum_circular_subarray import max_subarray_sum_circular
 
 

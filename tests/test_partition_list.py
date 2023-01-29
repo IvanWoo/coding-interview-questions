@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.partition_list import partition
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.leaf_similar_trees import leaf_similar
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

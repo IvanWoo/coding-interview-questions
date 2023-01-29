@@ -1,30 +1,21 @@
-import pytest
 import numpy as np
-from puzzles.max_vacation_days import (
-    max_vacation_days,
-    max_vacation_days_dp,
-    get_inputs,
-)
+import pytest
+
+from puzzles.max_vacation_days import get_inputs, max_vacation_days, max_vacation_days_dp
 
 
 def test_max_vacation_days_0():
-    inputs = get_inputs(
-        [[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]]
-    )
+    inputs = get_inputs([[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]])
     assert max_vacation_days(**inputs) == 12
 
 
 def test_max_vacation_days_1():
-    inputs = get_inputs(
-        [[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[7, 0, 0], [0, 7, 0], [0, 0, 7]]
-    )
+    inputs = get_inputs([[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[7, 0, 0], [0, 7, 0], [0, 0, 7]])
     assert max_vacation_days(**inputs) == 21
 
 
 def test_max_vacation_days_stay_in_0():
-    inputs = get_inputs(
-        [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[1, 1, 1], [7, 7, 7], [7, 7, 7]]
-    )
+    inputs = get_inputs([[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[1, 1, 1], [7, 7, 7], [7, 7, 7]])
     assert max_vacation_days(**inputs) == 3
 
 

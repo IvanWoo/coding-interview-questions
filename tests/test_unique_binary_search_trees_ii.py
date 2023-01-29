@@ -1,5 +1,6 @@
-from puzzles.unique_binary_search_trees_ii import generate_trees
 import pytest
+
+from puzzles.unique_binary_search_trees_ii import generate_trees
 from puzzles.utils import TreeNode
 
 
@@ -9,16 +10,12 @@ def results():
         TreeNode(
             val=1,
             left=None,
-            right=TreeNode(
-                val=2, left=None, right=TreeNode(val=3, left=None, right=None)
-            ),
+            right=TreeNode(val=2, left=None, right=TreeNode(val=3, left=None, right=None)),
         ),
         TreeNode(
             val=1,
             left=None,
-            right=TreeNode(
-                val=3, left=TreeNode(val=2, left=None, right=None), right=None
-            ),
+            right=TreeNode(val=3, left=TreeNode(val=2, left=None, right=None), right=None),
         ),
         TreeNode(
             val=2,
@@ -27,16 +24,12 @@ def results():
         ),
         TreeNode(
             val=3,
-            left=TreeNode(
-                val=1, left=None, right=TreeNode(val=2, left=None, right=None)
-            ),
+            left=TreeNode(val=1, left=None, right=TreeNode(val=2, left=None, right=None)),
             right=None,
         ),
         TreeNode(
             val=3,
-            left=TreeNode(
-                val=2, left=TreeNode(val=1, left=None, right=None), right=None
-            ),
+            left=TreeNode(val=2, left=TreeNode(val=1, left=None, right=None), right=None),
             right=None,
         ),
     ]

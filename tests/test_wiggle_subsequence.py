@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.wiggle_subsequence import wiggle_max_length
 
 

@@ -19,6 +19,7 @@ The number of nodes in each tree will be in the range [1, 200].
 Both of the given trees will have values in the range [0, 200].
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

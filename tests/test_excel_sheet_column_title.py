@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.excel_sheet_column_title import convert_to_title
 
 

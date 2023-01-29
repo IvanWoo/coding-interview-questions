@@ -27,7 +27,9 @@ Constraints:
 words[i] consists of only lowercase letters.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 
 # brute force
 def minimum_length_encoding(words: list[str]) -> int:

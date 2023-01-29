@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.toeplitz_matrix import is_toeplitz_matrix
 
 

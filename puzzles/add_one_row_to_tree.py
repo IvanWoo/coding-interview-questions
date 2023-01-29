@@ -28,6 +28,7 @@ The depth of the tree is in the range [1, 104].
 1 <= depth <= the depth of tree + 1
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

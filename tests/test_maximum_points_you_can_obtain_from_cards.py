@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_points_you_can_obtain_from_cards import max_score
 
 

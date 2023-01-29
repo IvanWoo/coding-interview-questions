@@ -1,6 +1,4 @@
-from puzzles.largest_substring_between_two_equal_characters import (
-    max_length_between_equal_characters,
-)
+from puzzles.largest_substring_between_two_equal_characters import max_length_between_equal_characters
 
 
 def test_max_length_between_equal_characters():

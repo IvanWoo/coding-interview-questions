@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.k_inverse_pairs_array import k_inverse_pairs
 
 

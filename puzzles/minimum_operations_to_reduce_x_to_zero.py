@@ -26,6 +26,7 @@ Constraints:
 """
 from functools import cache
 
+
 # brute force: TLE
 def min_operations(nums: list[int], x: int) -> int:
     @cache

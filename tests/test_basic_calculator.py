@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.basic_calculator import calculate
 
 

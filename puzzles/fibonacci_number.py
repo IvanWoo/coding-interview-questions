@@ -26,6 +26,7 @@ Constraints:
 """
 from functools import cache
 
+
 # tail recursion
 def fib(n: int) -> int:
     def helper(a: int, b: int, n: int) -> int:

@@ -53,7 +53,8 @@ You could stay at a city beyond the number of vacation days, but you should work
 If you fly from the city A to the city B and take the vacation on that day, the deduction towards vacation days will count towards the vacation days of city B in that week.
 We don't consider the impact of flight hours towards the calculation of vacation days.
 """
-from typing import List, Dict, Tuple
+from typing import Dict, List, Tuple
+
 import numpy as np
 
 
@@ -64,9 +65,7 @@ def get_inputs(flights, days):
     }
 
 
-def helper(
-    flights: List[List[int]], days: List[List[int]], city: int, week: int, vacation: int
-) -> int:
+def helper(flights: List[List[int]], days: List[List[int]], city: int, week: int, vacation: int) -> int:
     if week == len(days[0]):
         return vacation
 
@@ -75,9 +74,7 @@ def helper(
         if v == 1:
             plans.append(helper(flights, days, k, week + 1, vacation + days[k][week]))
         else:
-            plans.append(
-                helper(flights, days, city, week + 1, vacation + days[city][week])
-            )
+            plans.append(helper(flights, days, city, week + 1, vacation + days[city][week]))
     return max(plans)
 
 
@@ -102,7 +99,5 @@ def max_vacation_days_dp(flights: List[List[int]], days: List[List[int]]) -> int
 
 
 if __name__ == "__main__":
-    inputs = get_inputs(
-        [[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]]
-    )
+    inputs = get_inputs([[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]])
     print(max_vacation_days_dp(**inputs))

@@ -17,7 +17,7 @@ Constraints:
 1 <= nums.length <= 8
 -10 <= nums[i] <= 10
 """
-from collections import deque, Counter
+from collections import Counter, deque
 
 
 def permute_unique(nums: list[int]) -> list[list[int]]:

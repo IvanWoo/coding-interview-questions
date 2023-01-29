@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.word_search import exist
 
 

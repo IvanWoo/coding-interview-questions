@@ -30,6 +30,7 @@ s consists of English letters, digits, symbols and spaces.
 """
 from collections import defaultdict
 
+
 # sliding window: O(n)
 def length_of_longest_substring(s: str) -> int:
     lo, hi = 0, 0

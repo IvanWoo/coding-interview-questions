@@ -20,7 +20,7 @@ You may assume that all words are consist of lowercase letters a-z.
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Any
+from typing import Any, Dict, Optional
 
 
 @dataclass
@@ -52,12 +52,7 @@ class WordDictionary:
         if index == len(word):
             return node.value != None
         if word[index] == ".":
-            return any(
-                [
-                    self.searchHelper(word, index + 1, node.children[child])
-                    for child in node.children
-                ]
-            )
+            return any([self.searchHelper(word, index + 1, node.children[child]) for child in node.children])
         if word[index] not in node.children:
             return False
         return self.searchHelper(word, index + 1, node.children[word[index]])

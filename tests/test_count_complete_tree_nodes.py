@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.count_complete_tree_nodes import count_nodes
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

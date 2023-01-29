@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.n_queens_ii import total_n_queens
 
 

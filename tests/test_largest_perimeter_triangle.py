@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.largest_perimeter_triangle import largest_perimeter
 
 

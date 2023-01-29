@@ -34,6 +34,7 @@ Constraints:
 from dataclasses import dataclass
 from typing import List
 
+
 # O(n^2)
 def find_maximum_XOR(nums: List[int]) -> int:
     n = len(nums)

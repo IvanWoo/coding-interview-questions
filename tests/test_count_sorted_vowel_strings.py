@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.count_sorted_vowel_strings import count_vowel_strings
 
 

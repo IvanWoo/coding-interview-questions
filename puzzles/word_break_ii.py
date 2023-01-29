@@ -36,7 +36,9 @@ Output:
 []
 """
 from typing import List
+
 from puzzles.word_break import word_break as is_breakable
+
 
 # TLE
 def word_break(s: str, wordDict: List[str]) -> List[str]:

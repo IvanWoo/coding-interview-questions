@@ -1,8 +1,7 @@
 import pytest
+
+from puzzles.construct_binary_search_tree_from_preorder_traversal import bst_from_preorder
 from puzzles.utils import TreeNode
-from puzzles.construct_binary_search_tree_from_preorder_traversal import (
-    bst_from_preorder,
-)
 
 
 @pytest.fixture

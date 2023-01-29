@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.short_encoding_of_words import minimum_length_encoding
 
 

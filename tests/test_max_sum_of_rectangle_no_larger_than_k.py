@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.max_sum_of_rectangle_no_larger_than_k import max_sum_submatrix
 
 

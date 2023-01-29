@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_increasing_subsequence import length_of_LIS
 
 

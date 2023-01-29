@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.single_threaded_cpu import get_order
 
 

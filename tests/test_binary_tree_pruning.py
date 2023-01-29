@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.binary_tree_pruning import prune_tree
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

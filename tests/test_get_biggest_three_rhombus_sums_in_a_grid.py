@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.get_biggest_three_rhombus_sums_in_a_grid import get_biggest_three
 
 

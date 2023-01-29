@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.remove_stones_to_minimize_the_total import min_stone_sum
 
 

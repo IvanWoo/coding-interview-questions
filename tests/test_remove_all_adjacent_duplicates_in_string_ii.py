@@ -1,5 +1,7 @@
 import string
+
 import pytest
+
 from puzzles.remove_all_adjacent_duplicates_in_string_ii import remove_duplicates
 
 long_string = string.ascii_lowercase * int(1e3)

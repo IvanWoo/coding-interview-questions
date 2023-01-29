@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.course_schedule_iii import schedule_course
 
 

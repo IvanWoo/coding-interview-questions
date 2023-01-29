@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import ListNode
+
 from puzzles.insertion_sort_list import insertion_sort_list
+from puzzles.utils import ListNode
 
 
 @pytest.fixture

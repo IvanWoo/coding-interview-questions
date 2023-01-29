@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.fibonacci_number import fib
 
 

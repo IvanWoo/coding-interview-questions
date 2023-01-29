@@ -1,6 +1,4 @@
-from puzzles.unique_substrings_in_wraparound_string import (
-    find_substring_in_wrapround_string,
-)
+from puzzles.unique_substrings_in_wraparound_string import find_substring_in_wrapround_string
 
 
 def test_find_substring_in_wrapround_string():

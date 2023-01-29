@@ -1,13 +1,12 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.search_in_a_binary_search_tree import search_BST
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture
 def root():
-    return TreeNode(
-        4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9))
-    )
+    return TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))
 
 
 @pytest.fixture

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree, find_tree
+
 from puzzles.lowest_common_ancestor_of_a_binary_tree import lowest_common_ancestor
+from puzzles.utils import find_tree, make_tree
 
 
 @pytest.mark.parametrize(

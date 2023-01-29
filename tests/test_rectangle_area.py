@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.rectangle_area import compute_area
 
 

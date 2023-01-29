@@ -24,8 +24,8 @@ points[i].length == 2
 -104 <= xi, yi <= 104
 All the points are unique.
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def number_of_boomerangs(points: List[List[int]]) -> int:

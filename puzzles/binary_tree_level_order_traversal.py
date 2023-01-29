@@ -15,8 +15,9 @@
 #   [15,7]
 # ]
 
-from puzzles.utils import TreeNode
 from collections import defaultdict, deque
+
+from puzzles.utils import TreeNode
 
 
 def level_order(root: TreeNode) -> list[list[int]]:

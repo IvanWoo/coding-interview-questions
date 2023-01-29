@@ -15,6 +15,7 @@ Note:
 """
 from math import inf
 
+
 # O(n^2)
 def sum_subarray_mins(A: list[int]) -> int:
     MOD = 10**9 + 7

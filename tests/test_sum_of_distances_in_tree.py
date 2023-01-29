@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sum_of_distances_in_tree import sum_of_distances_in_tree
 
 

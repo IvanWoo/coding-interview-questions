@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.backspace_string_compare import backspace_compare
 
 

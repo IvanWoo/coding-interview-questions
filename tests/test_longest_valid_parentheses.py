@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_valid_parentheses import longest_valid_parentheses
 
 

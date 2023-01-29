@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.break_a_palindrome import break_palindrome
 
 

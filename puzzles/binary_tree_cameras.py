@@ -21,6 +21,7 @@ Node.val == 0
 
 
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

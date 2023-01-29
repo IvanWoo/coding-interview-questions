@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.unique_paths import unique_paths
 
 

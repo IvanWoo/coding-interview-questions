@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.remove_nth_node_from_end_of_list import remove_nth_from_end
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

@@ -33,9 +33,7 @@ def longest_palindrome_subseq(s: str) -> int:
         elif s[start] == s[end]:
             return 2 + palindrome_len(s, start + 1, end - 1)
         else:
-            return max(
-                palindrome_len(s, start + 1, end), palindrome_len(s, start, end - 1)
-            )
+            return max(palindrome_len(s, start + 1, end), palindrome_len(s, start, end - 1))
 
     n = len(s)
     res = 0

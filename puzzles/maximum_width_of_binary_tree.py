@@ -60,8 +60,9 @@
 
 # The given binary tree will have between 1 and 3000 nodes.
 
-from puzzles.utils import TreeNode
 from collections import deque
+
+from puzzles.utils import TreeNode
 
 
 def width_of_binary_tree(root: TreeNode) -> int:

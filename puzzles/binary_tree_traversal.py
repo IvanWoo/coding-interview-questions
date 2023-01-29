@@ -1,6 +1,7 @@
-from puzzles.utils import TreeNode
-from typing import List
 from collections import deque
+from typing import List
+
+from puzzles.utils import TreeNode
 
 
 def inorder_traversal(root: TreeNode) -> List[int]:

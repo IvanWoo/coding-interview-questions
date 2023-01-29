@@ -12,6 +12,7 @@ The second 1's next greater number needs to search circularly, which is also 2.
 
 from typing import List
 
+
 # brute force: O(n^2)
 def next_greater_elements(nums: List[int]) -> List[int]:
     res = [-1] * len(nums)

@@ -24,19 +24,14 @@ All the strings of words are unique.
 """
 from functools import cache
 
+
 # brute force: TLE
 def find_all_concatenated_words_in_a_dict(words: list[str]) -> list[str]:
     @cache
     def is_concatenated(w: str, idx: int) -> bool:
         if not w:
             return True
-        return any(
-            [
-                is_concatenated(w[len(char) :], idx)
-                for char in words[:idx]
-                if w.startswith(char)
-            ]
-        )
+        return any([is_concatenated(w[len(char) :], idx) for char in words[:idx] if w.startswith(char)])
 
     words.sort(key=len)
     ans = []

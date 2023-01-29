@@ -27,6 +27,7 @@ words[i], prefix and suffix consist of lower-case English letters only.
 At most 15000 calls will be made to the function f.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.sum_root_to_leaf_numbers import sum_numbers
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

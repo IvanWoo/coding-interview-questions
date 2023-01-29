@@ -38,6 +38,7 @@ Note:
 """
 from typing import List
 
+
 # O(n^2)
 def max_subarray_sum_circular(A: List[int]) -> int:
     n = len(A)

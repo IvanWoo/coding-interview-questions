@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.candy import candy
 
 

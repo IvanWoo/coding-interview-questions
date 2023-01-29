@@ -1,5 +1,6 @@
 import pytest
 from puzzles.data_stream_as_disjoint_intervals import SummaryRanges
+from tests.utils import assert_obj_outs
 
 
 @pytest.mark.parametrize(
@@ -102,11 +103,6 @@ from puzzles.data_stream_as_disjoint_intervals import SummaryRanges
         ),
     ],
 )
-def test_randomized_set(ops, vals, outs):
+def test_summary_ranges(ops, vals, outs):
     obj = SummaryRanges()
-    for op, val, out in zip(ops, vals, outs):
-        print(f"{op=}, {val=}, {out=}")
-        if val != []:
-            assert getattr(obj, op)(*val) == out
-        else:
-            assert getattr(obj, op)() == out
+    assert_obj_outs(obj, ops, vals, outs)

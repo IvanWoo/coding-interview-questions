@@ -1,9 +1,10 @@
 import pytest
 from puzzles.find_median_from_data_stream import MedianFinder
+from tests.utils import assert_obj_outs
 
 
 @pytest.mark.parametrize(
-    "ops, nums, outs",
+    "ops, vals, outs",
     [
         (
             ["addNum", "addNum", "findMedian", "addNum", "findMedian"],
@@ -12,10 +13,6 @@ from puzzles.find_median_from_data_stream import MedianFinder
         )
     ],
 )
-def test_median_finder(ops, nums, outs):
+def test_median_finder(ops, vals, outs):
     obj = MedianFinder()
-    for op, num, out in zip(ops, nums, outs):
-        print(f"{op=}")
-        print(f"{num=}")
-        print(f"{out=}")
-        assert getattr(obj, op)(*num) == out
+    assert_obj_outs(obj, ops, vals, outs)

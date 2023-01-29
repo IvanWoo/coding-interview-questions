@@ -1,5 +1,7 @@
+import random
 import pytest
 from puzzles.insert_delete_getrandom import RandomizedSet
+from tests.utils import assert_obj_outs
 
 
 @pytest.mark.parametrize(
@@ -22,6 +24,6 @@ from puzzles.insert_delete_getrandom import RandomizedSet
 )
 def test_randomized_set(ops, vals, outs):
     obj = RandomizedSet()
-    for op, val, out in zip(ops, vals, outs):
-        if val != []:
-            assert getattr(obj, op)(*val) == out
+    # need to fix the random seed to have consistent testing results
+    random.seed(11)
+    assert_obj_outs(obj, ops, vals, outs)

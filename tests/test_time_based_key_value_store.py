@@ -1,5 +1,6 @@
 import pytest
 from puzzles.time_based_key_value_store import TimeMap
+from tests.utils import assert_obj_outs
 
 
 @pytest.mark.parametrize(
@@ -35,8 +36,4 @@ from puzzles.time_based_key_value_store import TimeMap
 )
 def test_timemap(ops, vals, outs):
     obj = TimeMap()
-    for op, val, out in zip(ops, vals, outs):
-        print(f"{op=}")
-        print(f"{val=}")
-        print(f"{out=}")
-        assert getattr(obj, op)(*val) == out
+    assert_obj_outs(obj, ops, vals, outs)

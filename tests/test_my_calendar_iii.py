@@ -1,5 +1,6 @@
 import pytest
 from puzzles.my_calendar_iii import MyCalendarThree
+from tests.utils import assert_obj_outs
 
 
 @pytest.mark.parametrize(
@@ -14,8 +15,4 @@ from puzzles.my_calendar_iii import MyCalendarThree
 )
 def test_my_calendar_three(ops, vals, outs):
     obj = MyCalendarThree()
-    for op, val, out in zip(ops, vals, outs):
-        print(f"{op=}")
-        print(f"{val=}")
-        print(f"{out=}")
-        assert getattr(obj, op)(*val) == out
+    assert_obj_outs(obj, ops, vals, outs)

@@ -12,6 +12,52 @@ class ListNode:
 
 
 @dataclass
+class DListNode:
+    """
+    doubly linked list node
+    """
+
+    val: int = 0
+    prev: DListNode = None
+    next: DListNode = None
+
+
+class DoublyLinkedList:
+    def __init__(self) -> None:
+        self.left = DListNode()
+        self.right = DListNode(0, self.left)
+        self.left.next = self.right
+        self.map = {}
+
+    def length(self) -> int:
+        return len(self.map)
+
+    def push_right(self, val: int) -> None:
+        node = DListNode(val, self.right.prev, self.right)
+        self.map[val] = node
+        self.right.prev = node
+        node.prev.next = node
+
+    def pop(self, val) -> None:
+        if val not in self.map:
+            return
+        node = self.map[val]
+        next, prev = node.next, node.prev
+        next.prev = prev
+        prev.next = next
+        del self.map[val]
+
+    def pop_left(self) -> int:
+        res = self.left.next.val
+        self.pop(res)
+        return res
+
+    def update(self, val) -> None:
+        self.pop(val)
+        self.push_right(val)
+
+
+@dataclass
 class TreeNode:
     val: int
     left: TreeNode = None

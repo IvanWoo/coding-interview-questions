@@ -60,13 +60,13 @@ class LFUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.cache = dict()
-        self.freq = Counter()
+        self.count = Counter()
         self.ts = dict()
 
     def get(self, key: int) -> int:
         val = self.cache.get(key, -1)
         if val != -1:
-            self.freq[key] += 1
+            self.count[key] += 1
             self.ts[key] = monotonic_ns()
         return val
 
@@ -76,14 +76,14 @@ class LFUCache:
         if key not in self.cache and len(self.cache) >= self.capacity:
             invalid_key = self._get_invalid_key()
             del self.cache[invalid_key]
-            del self.freq[invalid_key]
+            del self.count[invalid_key]
             del self.ts[invalid_key]
         self.cache[key] = value
-        self.freq[key] += 1
+        self.count[key] += 1
         self.ts[key] = monotonic_ns()
 
     def _get_invalid_key(self) -> int:
-        kvs = self.freq.most_common()
+        kvs = self.count.most_common()
         least_freq = kvs[-1][1]
         candidates = [k for (k, v) in kvs if v == least_freq]
         invalid_key = None

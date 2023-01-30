@@ -32,7 +32,7 @@ def _create_new_test(name):
         return
     print(f"Creating new test: {name}")
     with file_path.open("w") as f:
-        f.write(f"import pytest\nfrom puzzles.{name} import *\n\n")
+        f.write(f"import pytest\n\nfrom puzzles.{name} import *\n\n")
 
 
 def create(name):

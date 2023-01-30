@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.n_th_tribonacci_number import tribonacci
 
 

@@ -8,7 +8,7 @@ If your line go through the edge of a brick, then the brick is not considered as
 
 You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.
 
- 
+
 
 Example:
 

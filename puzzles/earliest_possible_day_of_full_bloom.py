@@ -34,7 +34,7 @@ Input: plantTime = [1], growTime = [1]
 Output: 2
 Explanation: On day 0, plant the 0th seed. The seed grows for 1 full day and blooms on day 2.
 Thus, on day 2, all the seeds are blooming.
- 
+
 Constraints:
 n == plantTime.length == growTime.length
 1 <= n <= 105

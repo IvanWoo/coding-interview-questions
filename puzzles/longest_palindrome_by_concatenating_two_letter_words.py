@@ -26,7 +26,7 @@ Input: words = ["cc","ll","xx"]
 Output: 2
 Explanation: One longest palindrome is "cc", of length 2.
 Note that "ll" is another longest palindrome that can be created, and so is "xx".
- 
+
 
 Constraints:
 1 <= words.length <= 105

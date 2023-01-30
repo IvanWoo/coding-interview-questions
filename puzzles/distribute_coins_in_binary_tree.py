@@ -15,7 +15,7 @@ Example 2:
 Input: root = [0,3,0]
 Output: 3
 Explanation: From the left child of the root, we move two coins to the root [taking two moves]. Then, we move one coin from the root of the tree to the right child.
- 
+
 Constraints:
 The number of nodes in the tree is n.
 1 <= n <= 100

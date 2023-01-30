@@ -15,7 +15,7 @@ Example 2:
 Input: arr = [2,4,5,10]
 Output: 7
 Explanation: We can make these trees: [2], [4], [5], [10], [4, 2, 2], [10, 2, 5], [10, 5, 2].
- 
+
 Constraints:
 1 <= arr.length <= 1000
 2 <= arr[i] <= 109

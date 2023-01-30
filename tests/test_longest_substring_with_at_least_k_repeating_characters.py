@@ -1,4 +1,6 @@
-from puzzles.longest_substring_with_at_least_k_repeating_characters import longest_substring
+from puzzles.longest_substring_with_at_least_k_repeating_characters import (
+    longest_substring,
+)
 
 
 def test_longest_substring():

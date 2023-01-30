@@ -1,6 +1,8 @@
 import pytest
 
-from puzzles.maximum_score_from_performing_multiplication_operations import maximum_score
+from puzzles.maximum_score_from_performing_multiplication_operations import (
+    maximum_score,
+)
 
 
 @pytest.mark.parametrize(

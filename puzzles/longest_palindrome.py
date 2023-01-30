@@ -12,6 +12,7 @@ Input: "cbbd"
 Output: "bb"
 """
 
+
 # brute force O(n^3)
 def longest_palindrome(s: str) -> str:
     n = len(s)

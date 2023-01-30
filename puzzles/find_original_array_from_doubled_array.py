@@ -23,7 +23,7 @@ Example 3:
 Input: changed = [1]
 Output: []
 Explanation: changed is not a doubled array.
- 
+
 
 Constraints:
 1 <= changed.length <= 105

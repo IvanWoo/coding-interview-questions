@@ -27,7 +27,7 @@ Explanation: We have many possible scenarios, and all lead to the same answer. F
 Example 3:
 Input: s = "s"
 Output: "s"
- 
+
 Constraints:
 
 1 <= s.length <= 100

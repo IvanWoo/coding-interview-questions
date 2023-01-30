@@ -29,7 +29,7 @@ Explanation: Play the tokens in this order to get a score of 2:
 2. Play the 3rd token (400) face down, your power becomes 500 and score becomes 0.
 3. Play the 1st token (200) face up, your power becomes 300 and score becomes 1.
 4. Play the 2nd token (300) face up, your power becomes 0 and score becomes 2.
- 
+
 
 Constraints:
 0 <= tokens.length <= 1000

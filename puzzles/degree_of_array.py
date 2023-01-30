@@ -8,7 +8,7 @@ Example 1:
 
 Input: [1, 2, 2, 3, 1]
 Output: 2
-Explanation: 
+Explanation:
 The input array has a degree of 2 because both elements 1 and 2 appear twice.
 Of the subarrays that have the same degree:
 [1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]

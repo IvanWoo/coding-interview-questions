@@ -14,7 +14,7 @@ Explanation: You could delete the character 'c'.
 Example 3:
 Input: s = "abc"
 Output: false
- 
+
 
 Constraints:
 1 <= s.length <= 105

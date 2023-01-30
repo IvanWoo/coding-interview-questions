@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/regular-expression-matching/
 """
-Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*' where: 
+Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*' where:
 
 '.' Matches any single character.​​​​
 '*' Matches zero or more of the preceding element.
@@ -29,7 +29,7 @@ Explanation: c can be repeated 0 times, a can be repeated 1 time. Therefore, it 
 Example 5:
 Input: s = "mississippi", p = "mis*is*p*."
 Output: false
- 
+
 Constraints:
 
 0 <= s.length <= 20

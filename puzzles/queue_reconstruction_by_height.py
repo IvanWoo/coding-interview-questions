@@ -4,7 +4,7 @@ Suppose you have a random list of people standing in a queue. Each person is des
 
 Note:
 The number of people is less than 1,100.
- 
+
 Example
 Input:
 [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]

@@ -9,7 +9,7 @@ Output: true
 Example 2:
 Input: root = [5,3,6,2,4,null,7], k = 28
 Output: false
- 
+
 Constraints:
 The number of nodes in the tree is in the range [1, 104].
 -104 <= Node.val <= 104

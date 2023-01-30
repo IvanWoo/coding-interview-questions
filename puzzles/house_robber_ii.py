@@ -18,7 +18,7 @@ Total amount you can rob = 1 + 3 = 4.
 Example 3:
 Input: nums = [1,2,3]
 Output: 3
- 
+
 Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 1000

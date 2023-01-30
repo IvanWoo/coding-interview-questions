@@ -21,6 +21,7 @@ Constraints:
 s consists of lowercase English letters.
 """
 
+
 # brute force: O(n^3)
 def count_substrings(s: str) -> int:
     def is_palindromic(i, j):

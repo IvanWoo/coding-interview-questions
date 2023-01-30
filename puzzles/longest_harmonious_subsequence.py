@@ -18,7 +18,7 @@ Output: 2
 Example 3:
 Input: nums = [1,1,1,1]
 Output: 0
- 
+
 Constraints:
 1 <= nums.length <= 2 * 104
 -109 <= nums[i] <= 109

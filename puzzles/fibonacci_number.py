@@ -20,7 +20,7 @@ Example 3:
 Input: n = 4
 Output: 3
 Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
- 
+
 Constraints:
 0 <= n <= 30
 """

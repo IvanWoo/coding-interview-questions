@@ -22,7 +22,7 @@ Example 3:
 Input: s = "aaaaaaaaaaa", char = 0
 Output: 3
 Explanation: Since char is zero, we cannot delete anything. The compressed string is "a11" of length 3.
- 
+
 
 Constraints:
 1 <= s.length <= 100

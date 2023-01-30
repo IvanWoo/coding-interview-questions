@@ -21,7 +21,7 @@ Output: [0]
 Example 3:
 Input: n = 2, edges = [[1,0]]
 Output: [1,1]
- 
+
 
 Constraints:
 1 <= n <= 3 * 104

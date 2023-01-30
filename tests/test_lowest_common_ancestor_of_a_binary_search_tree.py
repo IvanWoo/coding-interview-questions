@@ -1,6 +1,8 @@
 import pytest
 
-from puzzles.lowest_common_ancestor_of_a_binary_search_tree import lowest_common_ancestor
+from puzzles.lowest_common_ancestor_of_a_binary_search_tree import (
+    lowest_common_ancestor,
+)
 from puzzles.utils import make_tree
 
 

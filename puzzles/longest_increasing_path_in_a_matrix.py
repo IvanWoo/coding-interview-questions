@@ -17,7 +17,7 @@ Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is n
 Example 3:
 Input: matrix = [[1]]
 Output: 1
- 
+
 
 Constraints:
 m == matrix.length

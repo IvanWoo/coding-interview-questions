@@ -16,7 +16,7 @@ Constraints:
 
 1 <= s.length, t.length <= 105
 s and t consist of English letters.
- 
+
 
 Follow up: Could you find an algorithm that runs in O(n) time?
 """

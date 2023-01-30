@@ -15,6 +15,7 @@ Constraints:
 1 <= nums[i] <= 106
 """
 
+
 # brute force
 def largest_perimeter(nums: list[int]) -> int:
     ans = 0

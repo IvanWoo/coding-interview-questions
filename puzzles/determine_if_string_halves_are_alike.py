@@ -16,7 +16,7 @@ Input: s = "textbook"
 Output: false
 Explanation: a = "text" and b = "book". a has 1 vowel whereas b has 2. Therefore, they are not alike.
 Notice that the vowel o is counted twice.
- 
+
 Constraints:
 2 <= s.length <= 1000
 s.length is even.

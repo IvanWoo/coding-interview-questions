@@ -29,7 +29,7 @@ Example 3:
 Input: maze = [[".","+"]], entrance = [0,0]
 Output: -1
 Explanation: There are no exits in this maze.
- 
+
 
 Constraints:
 maze.length == m

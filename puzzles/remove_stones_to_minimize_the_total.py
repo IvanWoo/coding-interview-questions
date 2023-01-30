@@ -26,7 +26,7 @@ Explanation: Steps of a possible scenario are:
 - Apply the operation on pile 3. The resulting piles are [4,3,3,4].
 - Apply the operation on pile 0. The resulting piles are [2,3,3,4].
 The total number of stones in [2,3,3,4] is 12.
- 
+
 Constraints:
 1 <= piles.length <= 105
 1 <= piles[i] <= 104

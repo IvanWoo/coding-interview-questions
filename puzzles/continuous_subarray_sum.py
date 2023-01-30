@@ -18,13 +18,14 @@ Explanation: [23, 2, 6, 4, 7] is an continuous subarray of size 5 whose elements
 Example 3:
 Input: nums = [23,2,6,4,7], k = 13
 Output: false
- 
+
 Constraints:
 1 <= nums.length <= 105
 0 <= nums[i] <= 109
 0 <= sum(nums[i]) <= 231 - 1
 1 <= k <= 231 - 1
 """
+
 
 # O(n^2): TLE
 def check_subarray_sum(nums: list[int], k: int) -> bool:

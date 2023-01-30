@@ -1,4 +1,6 @@
-from puzzles.minimum_number_of_operations_to_move_all_balls_to_each_box import min_operations
+from puzzles.minimum_number_of_operations_to_move_all_balls_to_each_box import (
+    min_operations,
+)
 
 
 def test_min_operations():

@@ -38,7 +38,7 @@ The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
 Example 3:
 Input: ops = ["1"]
 Output: 1
- 
+
 Constraints:
 1 <= ops.length <= 1000
 ops[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].

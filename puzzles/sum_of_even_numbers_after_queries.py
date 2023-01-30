@@ -27,6 +27,7 @@ Constraints:
 0 <= indexi < nums.length
 """
 
+
 # brute force
 def sum_even_after_queries(nums: list[int], queries: list[list[int]]) -> list[int]:
     def sum_even(nums: list[int]):

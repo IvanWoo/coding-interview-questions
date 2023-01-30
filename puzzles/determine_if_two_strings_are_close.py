@@ -29,7 +29,7 @@ Explanation: You can attain word2 from word1 in 3 operations.
 Apply Operation 1: "cabbba" -> "caabbb"
 Apply Operation 2: "caabbb" -> "baaccc"
 Apply Operation 2: "baaccc" -> "abbccc"
- 
+
 
 Constraints:
 1 <= word1.length, word2.length <= 105

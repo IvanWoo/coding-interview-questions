@@ -8,7 +8,7 @@ Implement the MyCalendarThree class:
 
 MyCalendarThree() Initializes the object.
 int book(int start, int end) Returns an integer k representing the largest integer such that there exists a k-booking in the calendar.
- 
+
 
 Example 1:
 Input
@@ -25,7 +25,7 @@ myCalendarThree.book(10, 40); // return 2, The third event [10, 40) intersects t
 myCalendarThree.book(5, 15); // return 3, The remaining events cause the maximum K-booking to be only a 3-booking.
 myCalendarThree.book(5, 10); // return 3
 myCalendarThree.book(25, 55); // return 3
- 
+
 
 Constraints:
 0 <= start < end <= 109

@@ -13,7 +13,7 @@ Output: true
 Example 2:
 Input: root1 = [1,2,3], root2 = [1,3,2]
 Output: false
- 
+
 Constraints:
 The number of nodes in each tree will be in the range [1, 200].
 Both of the given trees will have values in the range [0, 200].

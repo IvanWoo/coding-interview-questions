@@ -13,6 +13,7 @@ Output: [[1,5]]
 Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 """
 
+from collections import deque
 from typing import List
 
 
@@ -26,9 +27,6 @@ def merge(intervals: List[List[int]]) -> List[List[int]]:
         else:
             ans[-1][1] = max(ans[-1][1], e)
     return ans
-
-
-from collections import deque
 
 
 def merge(intervals: List[List[int]]) -> List[List[int]]:

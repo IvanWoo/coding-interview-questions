@@ -33,7 +33,7 @@ Explanation: data represented the octet sequence: 11101011 10001100 00000100.
 The first 3 bits are all one's and the 4th bit is 0 means it is a 3-bytes character.
 The next byte is a continuation byte which starts with 10 and that's correct.
 But the second continuation byte does not start with 10, so it is invalid.
- 
+
 
 Constraints:
 1 <= data.length <= 2 * 104

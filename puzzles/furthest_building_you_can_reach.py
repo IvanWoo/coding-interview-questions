@@ -28,7 +28,7 @@ Output: 7
 Example 3:
 Input: heights = [14,3,19,3], bricks = 17, ladders = 0
 Output: 3
- 
+
 
 Constraints:
 1 <= heights.length <= 105

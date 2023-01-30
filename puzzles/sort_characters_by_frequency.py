@@ -21,7 +21,7 @@ Input: s = "Aabb"
 Output: "bbAa"
 Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
 Note that 'A' and 'a' are treated as two different characters.
- 
+
 Constraints:
 1 <= s.length <= 5 * 105
 s consists of uppercase and lowercase English letters and digits.

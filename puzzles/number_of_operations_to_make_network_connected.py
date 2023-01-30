@@ -2,7 +2,7 @@
 """
 There are n computers numbered from 0 to n-1 connected by ethernet cables connections forming a network where connections[i] = [a, b] represents a connection between computers a and b. Any computer can reach any other computer directly or indirectly through the network.
 
-Given an initial computer network connections. You can extract certain cables between two directly connected computers, and place them between any pair of disconnected computers to make them directly connected. Return the minimum number of times you need to do this in order to make all the computers connected. If it's not possible, return -1. 
+Given an initial computer network connections. You can extract certain cables between two directly connected computers, and place them between any pair of disconnected computers to make them directly connected. Return the minimum number of times you need to do this in order to make all the computers connected. If it's not possible, return -1.
 
 Example 1:
 Input: n = 4, connections = [[0,1],[0,2],[1,2]]
@@ -21,7 +21,7 @@ Explanation: There are not enough cables.
 Example 4:
 Input: n = 5, connections = [[0,1],[0,2],[3,4],[2,3]]
 Output: 0
- 
+
 
 Constraints:
 1 <= n <= 10^5

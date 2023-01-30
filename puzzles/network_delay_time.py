@@ -15,7 +15,7 @@ Output: 1
 Example 3:
 Input: times = [[1,2,1]], n = 2, k = 2
 Output: -1
- 
+
 Constraints:
 1 <= k <= n <= 100
 1 <= times.length <= 6000

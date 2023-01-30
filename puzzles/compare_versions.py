@@ -11,7 +11,7 @@ For instance, 2.5 is not "two and a half" or "half way to version three", it is 
 
 You may assume the default revision number for each level of a version number to be 0. For example, version number 3.4 has a revision number of 3 and 4 for its first and second level revision number. Its third and fourth level revision number are both 0.
 
- 
+
 
 Example 1:
 
@@ -35,7 +35,7 @@ Example 5:
 Input: version1 = "1.0", version2 = "1.0.0"
 Output: 0
 Explanation: The first version number does not have a third level revision number, which means its third level revision number is default to "0"
- 
+
 
 Note:
 

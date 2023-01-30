@@ -11,13 +11,13 @@ Return the minimum number of semesters needed to study all courses.  If there is
 Example 1:
 Input: N = 3, relations = [[1,3],[2,3]]
 Output: 2
-Explanation: 
+Explanation:
 In the first semester, courses 1 and 2 are studied. In the second semester, course 3 is studied.
 
 Example 2:
 Input: N = 3, relations = [[1,2],[2,3],[3,1]]
 Output: -1
-Explanation: 
+Explanation:
 No course can be studied because they depend on each other.
 
 Note:
@@ -26,6 +26,7 @@ Note:
 relations[i][0] != relations[i][1]
 There are no repeated relations in the input.
 """
+
 
 # backtracking
 def has_cycle(graph, i, visited):

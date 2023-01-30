@@ -25,7 +25,7 @@ Output: false
 Example 5:
 Input: ["c==c","b==d","x!=z"]
 Output: true
- 
+
 
 Note:
 1 <= equations.length <= 500

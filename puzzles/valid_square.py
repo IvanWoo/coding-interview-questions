@@ -17,7 +17,7 @@ Output: false
 Example 3:
 Input: p1 = [1,0], p2 = [-1,0], p3 = [0,1], p4 = [0,-1]
 Output: true
- 
+
 Constraints:
 p1.length == p2.length == p3.length == p4.length == 2
 -104 <= xi, yi <= 104

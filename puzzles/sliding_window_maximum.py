@@ -7,8 +7,8 @@ Could you solve it in linear time?
 
 Example:
 Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3
-Output: [3,3,5,5,6,7] 
-Explanation: 
+Output: [3,3,5,5,6,7]
+Explanation:
 
 Window position                Max
 ---------------               -----
@@ -18,7 +18,7 @@ Window position                Max
  1  3  -1 [-3  5  3] 6  7       5
  1  3  -1  -3 [5  3  6] 7       6
  1  3  -1  -3  5 [3  6  7]      7
- 
+
 Constraints:
 
 1 <= nums.length <= 10^5

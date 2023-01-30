@@ -18,7 +18,7 @@ Output: [4,1,1,2,null,null,6,3,1,5]
 Example 2:
 Input: root = [4,2,null,3,1], val = 1, depth = 3
 Output: [4,2,null,1,1,3,null,null,1]
- 
+
 
 Constraints:
 The number of nodes in the tree is in the range [1, 104].

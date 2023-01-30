@@ -16,7 +16,7 @@ Output: 8
 Example 3:
 Input: n = "27346209830709182346"
 Output: 9
- 
+
 
 Constraints:
 1 <= n.length <= 105

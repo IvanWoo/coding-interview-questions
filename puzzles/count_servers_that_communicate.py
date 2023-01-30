@@ -18,7 +18,7 @@ Example 3:
 Input: grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]
 Output: 4
 Explanation: The two servers in the first row can communicate with each other. The two servers in the third column can communicate with each other. The server at right bottom corner can't communicate with any other server.
- 
+
 
 Constraints:
 m == grid.length

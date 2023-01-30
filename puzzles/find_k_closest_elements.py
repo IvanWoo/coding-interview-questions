@@ -14,7 +14,7 @@ Output: [1,2,3,4]
 Example 2:
 Input: arr = [1,2,3,4,5], k = 4, x = -1
 Output: [1,2,3,4]
- 
+
 
 Constraints:
 1 <= k <= arr.length

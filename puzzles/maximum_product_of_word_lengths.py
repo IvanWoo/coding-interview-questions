@@ -4,19 +4,19 @@ Given a string array words, find the maximum value of length(word[i]) * length(w
 
 Example 1:
 Input: ["abcw","baz","foo","bar","xtfn","abcdef"]
-Output: 16 
+Output: 16
 Explanation: The two words can be "abcw", "xtfn".
 
 Example 2:
 Input: ["a","ab","abc","d","cd","bcd","abcd"]
-Output: 4 
+Output: 4
 Explanation: The two words can be "ab", "cd".
 
 Example 3:
 Input: ["a","aa","aaa","aaaa"]
-Output: 0 
+Output: 0
 Explanation: No such pair of words.
- 
+
 Constraints:
 
 0 <= words.length <= 10^3

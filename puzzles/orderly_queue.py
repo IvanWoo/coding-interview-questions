@@ -7,17 +7,17 @@ Return the lexicographically smallest string you could have after applying the m
 Example 1:
 Input: s = "cba", k = 1
 Output: "acb"
-Explanation: 
+Explanation:
 In the first move, we move the 1st character 'c' to the end, obtaining the string "bac".
 In the second move, we move the 1st character 'b' to the end, obtaining the final result "acb".
 
 Example 2:
 Input: s = "baaca", k = 3
 Output: "aaabc"
-Explanation: 
+Explanation:
 In the first move, we move the 1st character 'b' to the end, obtaining the string "aacab".
 In the second move, we move the 3rd character 'c' to the end, obtaining the final result "aaabc".
- 
+
 Constraints:
 1 <= k <= s.length <= 1000
 s consist of lowercase English letters.

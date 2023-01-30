@@ -20,7 +20,7 @@ Example 3:
 Input: n = 30, k = 30, target = 500
 Output: 222616187
 Explanation: The answer must be returned modulo 109 + 7.
- 
+
 Constraints:
 1 <= n, k <= 30
 1 <= target <= 1000

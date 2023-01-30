@@ -21,7 +21,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 Example 4:
 Input: s = ""
 Output: 0
- 
+
 
 Constraints:
 

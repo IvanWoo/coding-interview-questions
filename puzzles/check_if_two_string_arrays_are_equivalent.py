@@ -19,7 +19,7 @@ Output: false
 Example 3:
 Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
 Output: true
- 
+
 Constraints:
 1 <= word1.length, word2.length <= 103
 1 <= word1[i].length, word2[i].length <= 103

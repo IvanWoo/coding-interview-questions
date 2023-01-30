@@ -5,7 +5,7 @@ Given a string that contains only digits 0-9 and a target value, return all poss
 
 Example 1:
 Input: num = "123", target = 6
-Output: ["1+2+3", "1*2*3"] 
+Output: ["1+2+3", "1*2*3"]
 
 Example 2:
 Input: num = "232", target = 8
@@ -22,7 +22,7 @@ Output: ["0+0", "0-0", "0*0"]
 Example 5:
 Input: num = "3456237490", target = 9191
 Output: []
- 
+
 
 Constraints:
 0 <= num.length <= 10

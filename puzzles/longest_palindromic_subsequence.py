@@ -8,7 +8,7 @@ Input:
 Output:
 4
 One possible longest palindromic subsequence is "bbbb".
- 
+
 
 Example 2:
 Input:
@@ -16,12 +16,13 @@ Input:
 Output:
 2
 One possible longest palindromic subsequence is "bb".
- 
+
 
 Constraints:
 1 <= s.length <= 1000
 s consists only of lowercase English letters.
 """
+
 
 # brute force
 def longest_palindrome_subseq(s: str) -> int:

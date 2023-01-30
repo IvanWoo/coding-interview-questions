@@ -13,7 +13,7 @@ Output: [2,3]
 Example 2:
 Input: nums = [1,1]
 Output: [1,2]
- 
+
 Constraints:
 2 <= nums.length <= 104
 1 <= nums[i] <= 104

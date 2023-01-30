@@ -26,9 +26,9 @@ Explanation: An optimal solution is as follows:
 - Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 - Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 - Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 The total score is 50 + 15 - 9 + 4 + 42 = 102.
- 
+
 
 Constraints:
 n == nums.length

@@ -17,7 +17,7 @@ Custom testing:
 For the input, you should provide the entire linked list head and the node to be given node. node should not be the last node of the list and should be an actual node in the list.
 We will build the linked list and pass the node to your function.
 The output will be the entire list after calling your function.
- 
+
 
 
 Example 1:
@@ -29,7 +29,7 @@ Example 2:
 Input: head = [4,5,1,9], node = 1
 Output: [4,5,9]
 Explanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
- 
+
 
 Constraints:
 The number of the nodes in the given list is in the range [2, 1000].

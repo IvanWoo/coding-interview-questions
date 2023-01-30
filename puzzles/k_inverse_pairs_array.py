@@ -14,12 +14,13 @@ Example 2:
 Input: n = 3, k = 1
 Output: 2
 Explanation: The array [1,3,2] and [2,1,3] have exactly 1 inverse pair.
- 
+
 
 Constraints:
 1 <= n <= 1000
 0 <= k <= 1000
 """
+
 
 # O(n^3)
 def k_inverse_pairs(n: int, k: int) -> int:

@@ -14,7 +14,7 @@ Output: []
 Example 3:
 Input: root = [1]
 Output: [1]
- 
+
 
 Constraints:
 The number of nodes in the tree is in the range [0, 100].

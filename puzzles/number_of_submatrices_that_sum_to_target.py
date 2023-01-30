@@ -20,7 +20,7 @@ Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, plus the 2x2
 Example 3:
 Input: matrix = [[904]], target = 0
 Output: 0
- 
+
 
 Constraints:
 1 <= matrix.length <= 100

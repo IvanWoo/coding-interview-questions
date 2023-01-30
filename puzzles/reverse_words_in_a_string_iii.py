@@ -9,7 +9,7 @@ Output: "s'teL ekat edoCteeL tsetnoc"
 Example 2:
 Input: s = "God Ding"
 Output: "doG gniD"
- 
+
 
 Constraints:
 1 <= s.length <= 5 * 104

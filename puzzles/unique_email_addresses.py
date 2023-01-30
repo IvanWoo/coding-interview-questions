@@ -22,7 +22,7 @@ Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually rec
 Example 2:
 Input: emails = ["a@leetcode.com","b@leetcode.com","c@leetcode.com"]
 Output: 3
- 
+
 
 Constraints:
 1 <= emails.length <= 100

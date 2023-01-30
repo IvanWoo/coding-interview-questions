@@ -11,14 +11,14 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 Write a function to compute the next state (after one update) of the board given its current state. The next state is created by applying the above rules simultaneously to every cell in the current state, where births and deaths occur simultaneously.
 
 Example:
-Input: 
+Input:
 [
   [0,1,0],
   [0,0,1],
   [1,1,1],
   [0,0,0]
 ]
-Output: 
+Output:
 [
   [0,0,0],
   [1,0,1],

@@ -17,7 +17,7 @@ Output: "Qedo1ct-eeLg=ntse-T!"
 Note:
 
 S.length <= 100
-33 <= S[i].ASCIIcode <= 122 
+33 <= S[i].ASCIIcode <= 122
 S doesn't contain '\' or "
 """
 

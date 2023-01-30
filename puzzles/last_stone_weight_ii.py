@@ -26,7 +26,7 @@ Output: 5
 Example 3:
 Input: stones = [1,2]
 Output: 1
- 
+
 Constraints:
 1 <= stones.length <= 30
 1 <= stones[i] <= 100

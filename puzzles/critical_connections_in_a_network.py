@@ -14,7 +14,7 @@ Explanation: [[3,1]] is also accepted.
 Example 2:
 Input: n = 2, connections = [[0,1]]
 Output: [[0,1]]
- 
+
 Constraints:
 2 <= n <= 105
 n - 1 <= connections.length <= 105

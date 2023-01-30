@@ -8,7 +8,7 @@ Return the maximum area of a piece of cake after you cut at each horizontal and 
 
 Example 1:
 Input: h = 5, w = 4, horizontalCuts = [1,2,4], verticalCuts = [1,3]
-Output: 4 
+Output: 4
 Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area.
 
 Example 2:
@@ -19,7 +19,7 @@ Explanation: The figure above represents the given rectangular cake. Red lines a
 Example 3:
 Input: h = 5, w = 4, horizontalCuts = [3], verticalCuts = [3]
 Output: 9
- 
+
 Constraints:
 2 <= h, w <= 109
 1 <= horizontalCuts.length <= min(h - 1, 105)

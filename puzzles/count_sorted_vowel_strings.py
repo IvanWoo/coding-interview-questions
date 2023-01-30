@@ -19,10 +19,10 @@ Note that "ea" is not a valid string since 'e' comes after 'a' in the alphabet.
 Example 3:
 Input: n = 33
 Output: 66045
- 
+
 Constraints:
 
-1 <= n <= 50 
+1 <= n <= 50
 """
 from functools import lru_cache
 

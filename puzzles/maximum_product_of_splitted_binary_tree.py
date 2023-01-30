@@ -16,7 +16,7 @@ Example 2:
 Input: root = [1,null,2,3,4,null,null,5,6]
 Output: 90
 Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.Their product is 90 (15*6)
- 
+
 Constraints:
 The number of nodes in the tree is in the range [2, 5 * 104].
 1 <= Node.val <= 104

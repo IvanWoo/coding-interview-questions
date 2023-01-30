@@ -24,7 +24,7 @@ Constraints:
 triangle[0].length == 1
 triangle[i].length == triangle[i - 1].length + 1
 -104 <= triangle[i][j] <= 104
- 
+
 
 Follow up: Could you do this using only O(n) extra space, where n is the total number of rows in the triangle?
 """

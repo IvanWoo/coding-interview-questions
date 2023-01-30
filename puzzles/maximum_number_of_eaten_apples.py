@@ -22,7 +22,7 @@ Explanation: You can eat 5 apples:
 - On the first to the third day you eat apples that grew on the first day.
 - Do nothing on the fourth and fifth days.
 - On the sixth and seventh days you eat apples that grew on the sixth day.
- 
+
 Constraints:
 apples.length == n
 days.length == n

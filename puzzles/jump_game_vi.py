@@ -21,7 +21,7 @@ Explanation: You can choose your jumps forming the subsequence [10,4,3] (underli
 Example 3:
 Input: nums = [1,-5,-20,4,-1,3,-6,-3], k = 2
 Output: 0
- 
+
 
 Constraints:
 1 <= nums.length, k <= 105

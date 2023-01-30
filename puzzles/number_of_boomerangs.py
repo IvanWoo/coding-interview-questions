@@ -16,7 +16,7 @@ Output: 2
 Example 3:
 Input: points = [[1,1]]
 Output: 0
- 
+
 Constraints:
 n == points.length
 1 <= n <= 500

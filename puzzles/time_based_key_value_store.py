@@ -7,7 +7,7 @@ Implement the TimeMap class:
 TimeMap() Initializes the object of the data structure.
 void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
 String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev <= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns "".
- 
+
 
 Example 1:
 Input
@@ -24,7 +24,7 @@ timeMap.get("foo", 3);         // return "bar", since there is no value correspo
 timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
 timeMap.get("foo", 4);         // return "bar2"
 timeMap.get("foo", 5);         // return "bar2"
- 
+
 
 Constraints:
 1 <= key.length, value.length <= 100

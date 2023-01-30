@@ -14,7 +14,7 @@ Explanation: There are three strings in words that are a subsequence of s: "a", 
 Example 2:
 Input: s = "dsahjpjauf", words = ["ahjpjau","ja","ahbwzgqnuk","tnmlanowax"]
 Output: 2
- 
+
 Constraints:
 1 <= s.length <= 5 * 104
 1 <= words.length <= 5000

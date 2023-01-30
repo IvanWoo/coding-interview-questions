@@ -9,7 +9,7 @@ Output: [[1,2,3],[8,9,4],[7,6,5]]
 Example 2:
 Input: n = 1
 Output: [[1]]
- 
+
 Constraints:
 1 <= n <= 20
 """

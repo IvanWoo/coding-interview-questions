@@ -1,6 +1,8 @@
 import pytest
 
-from puzzles.longest_substring_without_repeating_characters import length_of_longest_substring
+from puzzles.longest_substring_without_repeating_characters import (
+    length_of_longest_substring,
+)
 
 
 @pytest.mark.parametrize(

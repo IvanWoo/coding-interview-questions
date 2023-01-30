@@ -14,7 +14,7 @@ Explanation: There's nothing to delete.
 Example 2:
 Input: s = "deeedbbcccbdaa", k = 3
 Output: "aa"
-Explanation: 
+Explanation:
 First delete "eee" and "ccc", get "ddbbbdaa"
 Then delete "bbb", get "dddaa"
 Finally delete "ddd", get "aa"
@@ -22,7 +22,7 @@ Finally delete "ddd", get "aa"
 Example 3:
 Input: s = "pbbcggttciiippooaais", k = 2
 Output: "ps"
- 
+
 
 Constraints:
 1 <= s.length <= 105

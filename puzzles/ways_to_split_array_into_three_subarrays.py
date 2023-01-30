@@ -23,7 +23,7 @@ Example 3:
 Input: nums = [3,2,1]
 Output: 0
 Explanation: There is no good way to split nums.
- 
+
 
 Constraints:
 

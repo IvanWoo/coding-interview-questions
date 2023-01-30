@@ -7,7 +7,7 @@ Input:
 A: [1,2,3,2,1]
 B: [3,2,1,4,7]
 Output: 3
-Explanation: 
+Explanation:
 The repeated subarray with maximum length is [3, 2, 1].
 
 Note:

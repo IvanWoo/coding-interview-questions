@@ -19,7 +19,7 @@ Example 2:
 Input: words = ["t"]
 Output: 2
 Explanation: A valid encoding would be s = "t#" and indices = [0].
- 
+
 
 Constraints:
 1 <= words.length <= 2000

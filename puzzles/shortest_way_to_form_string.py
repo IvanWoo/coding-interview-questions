@@ -18,7 +18,7 @@ Example 3:
 Input: source = "xyz", target = "xzyxz"
 Output: 3
 Explanation: The target string can be constructed as follows "xz" + "y" + "xz".
- 
+
 
 Constraints:
 Both the source and target strings consist of only lowercase English letters from "a"-"z".

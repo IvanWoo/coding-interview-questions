@@ -22,7 +22,7 @@ Output: 2
 Example 3:
 Input: buckets = 4, minutesToDie = 15, minutesToTest = 30
 Output: 2
- 
+
 Constraints:
 1 <= buckets <= 1000
 1 <= minutesToDie <= minutesToTest <= 100

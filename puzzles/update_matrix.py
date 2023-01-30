@@ -26,7 +26,7 @@ Output:
 [[0,0,0],
  [0,1,0],
  [1,2,1]]
- 
+
 
 Note:
 The number of elements of the given matrix will not exceed 10,000.

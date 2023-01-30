@@ -19,7 +19,7 @@ Return the least number of moves required to reach the square n2. If it is not p
 Example 1:
 Input: board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]
 Output: 4
-Explanation: 
+Explanation:
 In the beginning, you start at square 1 (at row 5, column 0).
 You decide to move to square 2 and must take the ladder to square 15.
 You then decide to move to square 17 and must take the snake to square 13.
@@ -30,7 +30,7 @@ This is the lowest possible number of moves to reach the last square, so return 
 Example 2:
 Input: board = [[-1,-1],[-1,3]]
 Output: 1
- 
+
 
 Constraints:
 n == board.length == board[i].length

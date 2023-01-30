@@ -54,6 +54,10 @@ def good_nodes(root: TreeNode) -> int:
         if not node:
             return 0
         new_max = max(node.val, curr_max)
-        return int(node.val >= curr_max) + traverse(node.left, new_max) + traverse(node.right, new_max)
+        return (
+            int(node.val >= curr_max)
+            + traverse(node.left, new_max)
+            + traverse(node.right, new_max)
+        )
 
     return traverse(root, -inf)

@@ -44,9 +44,13 @@ from math import inf
 
 
 # bottom up
-def min_cost(houses: list[int], cost: list[list[int]], m: int, n: int, target: int) -> int:
+def min_cost(
+    houses: list[int], cost: list[list[int]], m: int, n: int, target: int
+) -> int:
     # dp[k][i][c] := min cost to form k groups with first i houses and last house paint with c
-    dp = [[[inf for _ in range(n + 1)] for _ in range(m + 1)] for _ in range(target + 1)]
+    dp = [
+        [[inf for _ in range(n + 1)] for _ in range(m + 1)] for _ in range(target + 1)
+    ]
 
     # init values: 0 groups with first 0 houses is dummy
     for c in range(n + 1):
@@ -63,14 +67,18 @@ def min_cost(houses: list[int], cost: list[list[int]], m: int, n: int, target: i
                 for cj in range(sj, ej + 1):
                     # when ci == cj: same group
                     # when ci != cj: form new group
-                    dp[k][i][ci] = min(dp[k][i][ci], dp[k - int(ci != cj)][i - 1][cj] + v)
+                    dp[k][i][ci] = min(
+                        dp[k][i][ci], dp[k - int(ci != cj)][i - 1][cj] + v
+                    )
 
     ans = min(dp[target][m])
     return -1 if ans == inf else ans
 
 
 # top down
-def min_cost(houses: list[int], cost: list[list[int]], m: int, n: int, target: int) -> int:
+def min_cost(
+    houses: list[int], cost: list[list[int]], m: int, n: int, target: int
+) -> int:
     @cache
     def dp(i: int, p: int, h: int) -> int:
         """

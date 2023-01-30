@@ -6,7 +6,10 @@ from puzzles.utils import TreeNode
 
 @pytest.fixture
 def tree():
-    ts = {k: TreeNode(v) for k, v in [(1, 1), ("41", 4), ("42", 4), ("43", 4), ("51", 5), ("52", 5)]}
+    ts = {
+        k: TreeNode(v)
+        for k, v in [(1, 1), ("41", 4), ("42", 4), ("43", 4), ("51", 5), ("52", 5)]
+    }
     ts[1].left = ts["41"]
     ts[1].right = ts["51"]
     ts["41"].left = ts["42"]

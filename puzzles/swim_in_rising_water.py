@@ -88,7 +88,11 @@ def swim_in_water(grid: List[List[int]]) -> int:
                     continue
                 for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                     new_r, new_c = r + i, c + j
-                    if 0 <= new_r < row and 0 <= new_c < col and grid[new_r][new_c] <= t:
+                    if (
+                        0 <= new_r < row
+                        and 0 <= new_c < col
+                        and grid[new_r][new_c] <= t
+                    ):
                         uf.union((r, c), (new_r, new_c))
 
 
@@ -107,7 +111,11 @@ def swim_in_water(grid: List[List[int]]) -> int:
                     continue
                 for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                     new_r, new_c = r + i, c + j
-                    if 0 <= new_r < row and 0 <= new_c < col and grid[new_r][new_c] <= t:
+                    if (
+                        0 <= new_r < row
+                        and 0 <= new_c < col
+                        and grid[new_r][new_c] <= t
+                    ):
                         uf.union((r, c), (new_r, new_c))
                         if uf.is_connected((0, 0), (row - 1, col - 1)):
                             return True

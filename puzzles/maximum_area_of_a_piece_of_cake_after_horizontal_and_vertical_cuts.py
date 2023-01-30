@@ -31,7 +31,9 @@ All the elements in verticalCuts are distinct.
 """
 
 
-def max_area(h: int, w: int, horizontal_cuts: list[int], vertical_cuts: list[int]) -> int:
+def max_area(
+    h: int, w: int, horizontal_cuts: list[int], vertical_cuts: list[int]
+) -> int:
     def max_dist(cuts: list[int]):
         prev_cut = 0
         ans = 0

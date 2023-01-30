@@ -68,7 +68,9 @@ def is_interleave(s1: str, s2: str, s3: str) -> bool:
 
     for r in range(1, n2 + 1):
         for c in range(1, n1 + 1):
-            dp[r][c] = (s3[r + c - 1] == s1[c - 1] and dp[r][c - 1]) or (s3[r + c - 1] == s2[r - 1] and dp[r - 1][c])
+            dp[r][c] = (s3[r + c - 1] == s1[c - 1] and dp[r][c - 1]) or (
+                s3[r + c - 1] == s2[r - 1] and dp[r - 1][c]
+            )
 
     return dp[-1][-1]
 
@@ -91,7 +93,9 @@ def is_interleave(s1: str, s2: str, s3: str) -> bool:
             if c == 0:
                 dp[c] = dp[c] and s3[r + c - 1] == s2[r - 1]
             else:
-                dp[c] = (s3[r + c - 1] == s1[c - 1] and dp[c - 1]) or (s3[r + c - 1] == s2[r - 1] and dp[c])
+                dp[c] = (s3[r + c - 1] == s1[c - 1] and dp[c - 1]) or (
+                    s3[r + c - 1] == s2[r - 1] and dp[c]
+                )
 
     return dp[-1]
 

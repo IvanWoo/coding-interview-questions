@@ -15,4 +15,7 @@ from puzzles.utils import make_tree
     ],
 )
 def test_lowest_common_ancestor(root, p, q, expected):
-    assert lowest_common_ancestor(make_tree(root), make_tree([p]), make_tree([q])).val == expected
+    assert (
+        lowest_common_ancestor(make_tree(root), make_tree([p]), make_tree([q])).val
+        == expected
+    )

@@ -6,7 +6,9 @@ from puzzles.utils import TreeNode
 
 @pytest.fixture
 def root():
-    return TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))
+    return TreeNode(
+        4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9))
+    )
 
 
 @pytest.fixture

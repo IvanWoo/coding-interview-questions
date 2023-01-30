@@ -40,7 +40,9 @@ from math import inf
 
 
 # TLE
-def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[list[str]]:
+def find_ladders(
+    begin_word: str, end_word: str, word_list: list[str]
+) -> list[list[str]]:
     if end_word not in word_list:
         return []
     word_set = set(word_list + [begin_word])

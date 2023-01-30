@@ -10,12 +10,16 @@ def results():
         TreeNode(
             val=1,
             left=None,
-            right=TreeNode(val=2, left=None, right=TreeNode(val=3, left=None, right=None)),
+            right=TreeNode(
+                val=2, left=None, right=TreeNode(val=3, left=None, right=None)
+            ),
         ),
         TreeNode(
             val=1,
             left=None,
-            right=TreeNode(val=3, left=TreeNode(val=2, left=None, right=None), right=None),
+            right=TreeNode(
+                val=3, left=TreeNode(val=2, left=None, right=None), right=None
+            ),
         ),
         TreeNode(
             val=2,
@@ -24,12 +28,16 @@ def results():
         ),
         TreeNode(
             val=3,
-            left=TreeNode(val=1, left=None, right=TreeNode(val=2, left=None, right=None)),
+            left=TreeNode(
+                val=1, left=None, right=TreeNode(val=2, left=None, right=None)
+            ),
             right=None,
         ),
         TreeNode(
             val=3,
-            left=TreeNode(val=2, left=TreeNode(val=1, left=None, right=None), right=None),
+            left=TreeNode(
+                val=2, left=TreeNode(val=1, left=None, right=None), right=None
+            ),
             right=None,
         ),
     ]

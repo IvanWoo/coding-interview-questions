@@ -35,7 +35,12 @@ def rotate(matrix: list[list[int]]) -> None:
                 (n - layer - 1 - step, layer),
             )
             # print(e0, e1, e2, e3)
-            (matrix[e0[0]][e0[1]], matrix[e1[0]][e1[1]], matrix[e2[0]][e2[1]], matrix[e3[0]][e3[1]],) = (
+            (
+                matrix[e0[0]][e0[1]],
+                matrix[e1[0]][e1[1]],
+                matrix[e2[0]][e2[1]],
+                matrix[e3[0]][e3[1]],
+            ) = (
                 matrix[e3[0]][e3[1]],
                 matrix[e0[0]][e0[1]],
                 matrix[e1[0]][e1[1]],

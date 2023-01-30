@@ -27,7 +27,9 @@ def find_max_length(nums: List[int]) -> int:
     res = 0
     for i in range(n, 0, -1):
         for j in range(i):
-            if (prefix_sum[i][0] - prefix_sum[j][0]) == (prefix_sum[i][1] - prefix_sum[j][1]):
+            if (prefix_sum[i][0] - prefix_sum[j][0]) == (
+                prefix_sum[i][1] - prefix_sum[j][1]
+            ):
                 res = max(res, i - j)
     return res
 

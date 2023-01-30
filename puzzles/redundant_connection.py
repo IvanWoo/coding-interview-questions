@@ -32,7 +32,9 @@ from typing import Dict, List, Set
 def find(start: int, target: int, prev: int, graph: Dict[int, List[int]]) -> bool:
     if start == target:
         return True
-    return any(find(child, target, start, graph) for child in graph.get(start) if child != prev)
+    return any(
+        find(child, target, start, graph) for child in graph.get(start) if child != prev
+    )
 
 
 def find_redundant_connection(edges: List[List[int]]) -> List[int]:

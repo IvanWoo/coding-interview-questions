@@ -57,7 +57,11 @@ def get_target_copy(original: TreeNode, cloned: TreeNode, target: TreeNode) -> T
             return True
         if not n1 or not n2:
             return False
-        return n1.val == n2.val and is_same(n1.left, n2.left) and is_same(n1.right, n2.right)
+        return (
+            n1.val == n2.val
+            and is_same(n1.left, n2.left)
+            and is_same(n1.right, n2.right)
+        )
 
     def traverse(node):
         nonlocal res

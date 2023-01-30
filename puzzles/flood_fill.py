@@ -29,7 +29,9 @@ The value of each color in image[i][j] and newColor will be an integer in [0, 65
 from typing import List
 
 
-def flood_fill(image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
+def flood_fill(
+    image: List[List[int]], sr: int, sc: int, newColor: int
+) -> List[List[int]]:
     rows, cols = len(image), len(image[0])
     oldColor = image[sr][sc]
     if oldColor == newColor:

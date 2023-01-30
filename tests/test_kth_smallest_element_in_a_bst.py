@@ -13,7 +13,9 @@ from puzzles.utils import TreeNode
             1,
         ),
         (
-            TreeNode(5, TreeNode(3, TreeNode(2, TreeNode(1), None), TreeNode(4)), TreeNode(6)),
+            TreeNode(
+                5, TreeNode(3, TreeNode(2, TreeNode(1), None), TreeNode(4)), TreeNode(6)
+            ),
             3,
             3,
         ),

@@ -40,7 +40,13 @@ def valid_square(p1: List[int], p2: List[int], p3: List[int], p4: List[int]) -> 
         d = distance(p1, p2)
         v1 = vector(p1, p2)
         v2 = vector(p2, p3)
-        return d > 0 and distance(p2, p3) == d and distance(p3, p4) == d and distance(p4, p1) == d and dot(v1, v2) == 0
+        return (
+            d > 0
+            and distance(p2, p3) == d
+            and distance(p3, p4) == d
+            and distance(p4, p1) == d
+            and dot(v1, v2) == 0
+        )
 
     if p1 != p2 != p3 != p4:
         for p in itertools.permutations([p1, p2, p3, p4]):

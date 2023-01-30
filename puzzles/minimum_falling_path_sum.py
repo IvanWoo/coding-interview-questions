@@ -59,7 +59,9 @@ def min_falling_path_sum(A: list[list[int]]) -> int:
             elif c == col - 1:
                 dp[r][c] = min(dp[r - 1][c - 1], dp[r - 1][c]) + A[r][c]
             else:
-                dp[r][c] = min(dp[r - 1][c - 1], dp[r - 1][c], dp[r - 1][c + 1]) + A[r][c]
+                dp[r][c] = (
+                    min(dp[r - 1][c - 1], dp[r - 1][c], dp[r - 1][c + 1]) + A[r][c]
+                )
 
     return min(dp[row - 1])
 
@@ -73,7 +75,9 @@ def min_falling_path_sum(matrix: list[list[int]]) -> int:
 
     for r in range(1, rows):
         for c in range(cols):
-            dp[(r, c)] = matrix[r][c] + min([dp[(r - 1, c - 1)], dp[(r - 1, c)], dp[(r - 1, c + 1)]])
+            dp[(r, c)] = matrix[r][c] + min(
+                [dp[(r - 1, c - 1)], dp[(r - 1, c)], dp[(r - 1, c + 1)]]
+            )
 
     return min([dp[(rows - 1, c)] for c in range(cols)])
 

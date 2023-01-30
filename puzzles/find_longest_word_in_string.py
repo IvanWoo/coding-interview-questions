@@ -58,4 +58,8 @@ def find_longest_word_in_string(letters: str, words: Set[str]) -> Optional[str]:
 
 
 if __name__ == "__main__":
-    print(find_longest_word_in_string("abppplee", {"able", "ale", "apple", "bale", "kangaroo"}))
+    print(
+        find_longest_word_in_string(
+            "abppplee", {"able", "ale", "apple", "bale", "kangaroo"}
+        )
+    )

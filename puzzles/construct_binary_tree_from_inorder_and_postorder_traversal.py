@@ -30,7 +30,9 @@ def build_tree(inorder: List[int], postorder: List[int]) -> TreeNode:
             return
         root = TreeNode(postorder[post_end])
         ind = inorder.index(postorder[post_end])
-        root.left = helper(inorder, postorder, in_st, ind - 1, post_end - 1 - (in_end - ind))
+        root.left = helper(
+            inorder, postorder, in_st, ind - 1, post_end - 1 - (in_end - ind)
+        )
         root.right = helper(inorder, postorder, ind + 1, in_end, post_end - 1)
         return root
 

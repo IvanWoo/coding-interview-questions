@@ -36,7 +36,9 @@ from math import inf
 
 
 # bfs: TLE
-def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k: int) -> int:
+def find_cheapest_price(
+    n: int, flights: list[list[int]], src: int, dst: int, k: int
+) -> int:
     graph = [[inf] * n for _ in range(n)]
     for u, v, d in flights:
         graph[u][v] = d
@@ -63,7 +65,9 @@ def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k:
 
 
 # priority queue
-def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k: int) -> int:
+def find_cheapest_price(
+    n: int, flights: list[list[int]], src: int, dst: int, k: int
+) -> int:
     graph = [[inf] * n for _ in range(n)]
     for u, v, d in flights:
         graph[u][v] = d

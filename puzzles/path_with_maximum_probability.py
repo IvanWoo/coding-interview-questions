@@ -35,7 +35,9 @@ from collections import defaultdict
 from typing import List
 
 
-def max_probability(n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
+def max_probability(
+    n: int, edges: List[List[int]], succProb: List[float], start: int, end: int
+) -> float:
     graph = defaultdict(dict)
     for i in range(len(edges)):
         frm, to = edges[i]

@@ -53,7 +53,12 @@ def num_submatrix_sum_target(matrix: list[list[int]], target: int) -> int:
     prefix = defaultdict(int)
     for r in range(rows):
         for c in range(cols):
-            prefix[r, c] = prefix[r - 1, c] + prefix[r, c - 1] - prefix[r - 1, c - 1] + matrix[r][c]
+            prefix[r, c] = (
+                prefix[r - 1, c]
+                + prefix[r, c - 1]
+                - prefix[r - 1, c - 1]
+                + matrix[r][c]
+            )
 
     ans = 0
     for r1 in range(-1, rows):

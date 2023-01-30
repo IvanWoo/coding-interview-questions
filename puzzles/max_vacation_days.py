@@ -65,7 +65,9 @@ def get_inputs(flights, days):
     }
 
 
-def helper(flights: List[List[int]], days: List[List[int]], city: int, week: int, vacation: int) -> int:
+def helper(
+    flights: List[List[int]], days: List[List[int]], city: int, week: int, vacation: int
+) -> int:
     if week == len(days[0]):
         return vacation
 
@@ -74,7 +76,9 @@ def helper(flights: List[List[int]], days: List[List[int]], city: int, week: int
         if v == 1:
             plans.append(helper(flights, days, k, week + 1, vacation + days[k][week]))
         else:
-            plans.append(helper(flights, days, city, week + 1, vacation + days[city][week]))
+            plans.append(
+                helper(flights, days, city, week + 1, vacation + days[city][week])
+            )
     return max(plans)
 
 
@@ -99,5 +103,7 @@ def max_vacation_days_dp(flights: List[List[int]], days: List[List[int]]) -> int
 
 
 if __name__ == "__main__":
-    inputs = get_inputs([[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]])
+    inputs = get_inputs(
+        [[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]]
+    )
     print(max_vacation_days_dp(**inputs))

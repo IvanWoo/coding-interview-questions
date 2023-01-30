@@ -27,7 +27,9 @@ import heapq
 from typing import List
 
 
-def find_maximized_capital(k: int, W: int, Profits: List[int], Capital: List[int]) -> int:
+def find_maximized_capital(
+    k: int, W: int, Profits: List[int], Capital: List[int]
+) -> int:
     n = len(Profits)
     cp = sorted([(c, p) for c, p in zip(Capital, Profits)])
     pq = []

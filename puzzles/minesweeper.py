@@ -101,7 +101,11 @@ def update_board(board: List[List[str]], click: List[int]) -> List[List[str]]:
                 board[r][c] = "B"
                 for i, j in DIRS:
                     new_r, new_c = r + i, c + j
-                    if 0 <= new_r < row and 0 <= new_c < col and board[new_r][new_c] == "E":
+                    if (
+                        0 <= new_r < row
+                        and 0 <= new_c < col
+                        and board[new_r][new_c] == "E"
+                    ):
                         new_q.append((new_r, new_c))
             else:
                 board[r][c] = str(num)
@@ -119,7 +123,11 @@ def update_board(board: List[List[str]], click: List[int]) -> List[List[str]]:
         if B[i][j] == "M":
             B[i][j] = "X"
         elif B[i][j] == "E":
-            mine = sum(B[i + x][j + y] == "M" for x, y in d if 0 <= i + x < m and 0 <= j + y < n)
+            mine = sum(
+                B[i + x][j + y] == "M"
+                for x, y in d
+                if 0 <= i + x < m and 0 <= j + y < n
+            )
             B[i][j] = mine and str(mine) or "B"
             for x, y in d * (not mine):
                 dfs(B, i + x, j + y)

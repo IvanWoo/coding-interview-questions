@@ -51,7 +51,12 @@ def get_maximum_gold(grid: List[List[int]]) -> int:
 
         for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
             new_r, new_c = r + i, c + j
-            if 0 <= new_r < row and 0 <= new_c < col and grid[new_r][new_c] > 0 and not visited[new_r][new_c]:
+            if (
+                0 <= new_r < row
+                and 0 <= new_c < col
+                and grid[new_r][new_c] > 0
+                and not visited[new_r][new_c]
+            ):
                 visited[new_r][new_c] = True
                 backtrack(new_r, new_c, total + grid[new_r][new_c])
                 visited[new_r][new_c] = False

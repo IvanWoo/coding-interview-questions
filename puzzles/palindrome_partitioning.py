@@ -39,7 +39,9 @@ def partition(s: str) -> list[list[str]]:
         for i in range(build_pointer, len(s)):
             snippet = s[build_pointer : i + 1]
             if is_palindrome(snippet):
-                decomp_string(s, i + 1, decomp_in_progress + [snippet], valid_decompositions)
+                decomp_string(
+                    s, i + 1, decomp_in_progress + [snippet], valid_decompositions
+                )
 
     valid_decompositions: list[list[str]] = []
     decomp_in_progress: list[str] = []

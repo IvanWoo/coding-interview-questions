@@ -49,7 +49,9 @@ def max_coins(nums: List[int]) -> int:
             right = left + gap
             # i is the last ballon to be bursted
             for i in range(left + 1, right):
-                cur = max(cur, dp[left][i] + dp[i][right] + nums[left] * nums[i] * nums[right])
+                cur = max(
+                    cur, dp[left][i] + dp[i][right] + nums[left] * nums[i] * nums[right]
+                )
             dp[left][right] = cur
     return dp[0][n - 1]
 

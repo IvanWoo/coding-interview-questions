@@ -40,7 +40,9 @@ from collections import defaultdict, deque
 
 
 # union find
-def calc_equation(equations: list[list[str]], values: list[float], queries: list[list[str]]) -> list[float]:
+def calc_equation(
+    equations: list[list[str]], values: list[float], queries: list[list[str]]
+) -> list[float]:
     root = {}
 
     # xr = x/parent(x), pr = parent(x)/root(x), update xr to xr*pr = x/root(x)
@@ -66,7 +68,9 @@ def calc_equation(equations: list[list[str]], values: list[float], queries: list
 
 
 # bfs
-def calc_equation(equations: list[list[str]], values: list[float], queries: list[list[str]]) -> list[float]:
+def calc_equation(
+    equations: list[list[str]], values: list[float], queries: list[list[str]]
+) -> list[float]:
     graph = defaultdict(dict)
     for (x, y), v in zip(equations, values):
         graph[x][y] = v

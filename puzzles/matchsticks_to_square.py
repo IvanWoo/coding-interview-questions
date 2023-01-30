@@ -61,7 +61,11 @@ def makesquare(nums: list[int]) -> bool:
             return True
         visited = set()
         for j in range(4):
-            if lens[j] == target_len or (lens[j] + nums[i] > target_len) or lens[j] in visited:
+            if (
+                lens[j] == target_len
+                or (lens[j] + nums[i] > target_len)
+                or lens[j] in visited
+            ):
                 continue
             lens[j] += nums[i]
             if helper(i + 1, lens):

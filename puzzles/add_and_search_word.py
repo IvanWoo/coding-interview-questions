@@ -52,7 +52,12 @@ class WordDictionary:
         if index == len(word):
             return node.value != None
         if word[index] == ".":
-            return any([self.searchHelper(word, index + 1, node.children[child]) for child in node.children])
+            return any(
+                [
+                    self.searchHelper(word, index + 1, node.children[child])
+                    for child in node.children
+                ]
+            )
         if word[index] not in node.children:
             return False
         return self.searchHelper(word, index + 1, node.children[word[index]])

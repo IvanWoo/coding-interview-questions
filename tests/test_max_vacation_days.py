@@ -9,17 +9,23 @@ from puzzles.max_vacation_days import (
 
 
 def test_max_vacation_days_0():
-    inputs = get_inputs([[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]])
+    inputs = get_inputs(
+        [[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[1, 3, 1], [6, 0, 3], [3, 3, 3]]
+    )
     assert max_vacation_days(**inputs) == 12
 
 
 def test_max_vacation_days_1():
-    inputs = get_inputs([[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[7, 0, 0], [0, 7, 0], [0, 0, 7]])
+    inputs = get_inputs(
+        [[0, 1, 1], [1, 0, 1], [1, 1, 0]], [[7, 0, 0], [0, 7, 0], [0, 0, 7]]
+    )
     assert max_vacation_days(**inputs) == 21
 
 
 def test_max_vacation_days_stay_in_0():
-    inputs = get_inputs([[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[1, 1, 1], [7, 7, 7], [7, 7, 7]])
+    inputs = get_inputs(
+        [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[1, 1, 1], [7, 7, 7], [7, 7, 7]]
+    )
     assert max_vacation_days(**inputs) == 3
 
 

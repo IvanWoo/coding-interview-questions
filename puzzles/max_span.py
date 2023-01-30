@@ -15,4 +15,7 @@ def max_span(nums: List[str]) -> int:
     num_positions = collections.defaultdict(list)
     for index, num in enumerate(nums):
         num_positions[num].append(index)
-    return num_positions[max(num_positions.keys())][-1] - num_positions[min(num_positions.keys())][0]
+    return (
+        num_positions[max(num_positions.keys())][-1]
+        - num_positions[min(num_positions.keys())][0]
+    )

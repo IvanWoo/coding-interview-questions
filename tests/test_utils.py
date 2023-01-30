@@ -28,7 +28,9 @@ def test_make_tree(vals: list[Optional[int]], expected: TreeNode):
     [
         (
             [1, None, 3, 2, 4, None, 5, 6],
-            NaryNode(1, [NaryNode(3, [NaryNode(5), NaryNode(6)]), NaryNode(2), NaryNode(4)]),
+            NaryNode(
+                1, [NaryNode(3, [NaryNode(5), NaryNode(6)]), NaryNode(2), NaryNode(4)]
+            ),
         )
     ],
 )

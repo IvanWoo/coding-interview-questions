@@ -1,3 +1,10 @@
+## setup
+
+```sh
+pipenv install --dev
+pipenv run pre-commit install
+```
+
 ## tasks
 
 ### create a new puzzle

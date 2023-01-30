@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.range_sum_of_bst import range_sum_BST
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_operations_to_reduce_x_to_zero import min_operations
 
 

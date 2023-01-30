@@ -24,7 +24,7 @@ Output: 1
 Example 3:
 Input: n = 2, pick = 1
 Output: 1
- 
+
 Constraints:
 1 <= n <= 231 - 1
 1 <= pick <= n

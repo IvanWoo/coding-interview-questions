@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.convert_bst_to_greater_tree import convert_BST
+from puzzles.utils import TreeNode
 
 
 @pytest.mark.parametrize(

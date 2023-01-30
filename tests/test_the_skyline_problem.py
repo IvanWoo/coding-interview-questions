@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.the_skyline_problem import get_skyline
 
 

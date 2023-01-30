@@ -14,6 +14,7 @@
 #   5     4       <---
 
 from collections import defaultdict
+
 from puzzles.utils import TreeNode
 
 

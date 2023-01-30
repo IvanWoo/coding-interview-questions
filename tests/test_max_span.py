@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.max_span import max_span
 
 

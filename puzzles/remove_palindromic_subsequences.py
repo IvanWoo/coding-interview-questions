@@ -16,15 +16,15 @@ Explanation: s is already a palindrome, so its entirety can be removed in a sing
 Example 2:
 Input: s = "abb"
 Output: 2
-Explanation: "abb" -> "bb" -> "". 
+Explanation: "abb" -> "bb" -> "".
 Remove palindromic subsequence "a" then "bb".
 
 Example 3:
 Input: s = "baabb"
 Output: 2
-Explanation: "baabb" -> "b" -> "". 
+Explanation: "baabb" -> "b" -> "".
 Remove palindromic subsequence "baab" then "b".
- 
+
 
 Constraints:
 1 <= s.length <= 1000

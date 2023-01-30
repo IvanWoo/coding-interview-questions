@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.image_overlap import largest_overlap
 
 

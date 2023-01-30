@@ -10,7 +10,7 @@ Example 1:
 
 Input: ["StockSpanner","next","next","next","next","next","next","next"], [[],[100],[80],[60],[70],[60],[75],[85]]
 Output: [null,1,1,1,2,1,4,6]
-Explanation: 
+Explanation:
 First, S = StockSpanner() is initialized.  Then:
 S.next(100) is called and returns 1,
 S.next(80) is called and returns 1,
@@ -23,6 +23,7 @@ S.next(85) is called and returns 6.
 Note that (for example) S.next(75) returned 4, because the last 4 prices
 (including today's price of 75) were less than or equal to today's price.
 """
+
 
 # monotonic stack: increasing
 class StockSpanner:

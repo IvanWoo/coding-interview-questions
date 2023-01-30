@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.surrounded_regions import solve
 
 

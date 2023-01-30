@@ -17,7 +17,7 @@ Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is n
 Example 3:
 Input: matrix = [[1]]
 Output: 1
- 
+
 
 Constraints:
 m == matrix.length
@@ -26,6 +26,7 @@ n == matrix[i].length
 0 <= matrix[i][j] <= 231 - 1
 """
 from functools import cache
+
 
 # brute force: TLE
 def longest_increasing_path(matrix: list[list[int]]) -> int:

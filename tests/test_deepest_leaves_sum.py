@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.deepest_leaves_sum import deepest_leaves_sum
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

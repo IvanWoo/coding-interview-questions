@@ -28,8 +28,9 @@ columns == heights[i].length
 1 <= rows, columns <= 100
 1 <= heights[i][j] <= 106
 """
-from typing import List
 import heapq
+from typing import List
+
 
 # https://bradfieldcs.com/algos/graphs/dijkstras-algorithm/
 # Dijkstra’s algorithm

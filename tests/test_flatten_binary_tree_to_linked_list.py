@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.flatten_binary_tree_to_linked_list import flatten
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

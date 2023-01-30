@@ -18,15 +18,15 @@ Example 3:
 Input: source = "xyz", target = "xzyxz"
 Output: 3
 Explanation: The target string can be constructed as follows "xz" + "y" + "xz".
- 
+
 
 Constraints:
 Both the source and target strings consist of only lowercase English letters from "a"-"z".
 The lengths of source and target string are between 1 and 1000.
 """
 
-from collections import defaultdict
 from bisect import bisect_left
+from collections import defaultdict
 
 
 def shortest_way_to_form_string(source: str, target: str) -> int:

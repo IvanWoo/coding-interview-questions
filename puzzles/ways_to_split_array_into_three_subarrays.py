@@ -23,19 +23,19 @@ Example 3:
 Input: nums = [3,2,1]
 Output: 0
 Explanation: There is no good way to split nums.
- 
+
 
 Constraints:
 
 3 <= nums.length <= 105
 0 <= nums[i] <= 104
 """
-from typing import List
 from bisect import bisect_left, bisect_right
+from typing import List
 
 
 def ways_to_split(nums: List[int]) -> int:
-    MOD = 10 ** 9 + 7
+    MOD = 10**9 + 7
     n = len(nums)
 
     prefix_sum = nums[:]

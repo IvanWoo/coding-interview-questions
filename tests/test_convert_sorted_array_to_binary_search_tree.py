@@ -1,7 +1,7 @@
 import pytest
 
-from puzzles.utils import make_tree, TreeNode
 from puzzles.convert_sorted_array_to_binary_search_tree import sorted_array_to_bst
+from puzzles.utils import TreeNode, make_tree
 
 
 @pytest.mark.parametrize(

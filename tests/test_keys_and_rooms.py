@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.keys_and_rooms import can_visit_all_rooms
 
 

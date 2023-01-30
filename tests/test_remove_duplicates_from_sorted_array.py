@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.remove_duplicates_from_sorted_array import remove_duplicates
 
 

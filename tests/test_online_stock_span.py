@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.online_stock_span import StockSpanner
 
 

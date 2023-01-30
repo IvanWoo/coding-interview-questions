@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_width_of_binary_tree import width_of_binary_tree
 from puzzles.utils import TreeNode
 

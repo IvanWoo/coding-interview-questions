@@ -23,7 +23,7 @@ Input: colors = "aabaa", neededTime = [1,2,3,4,1]
 Output: 2
 Explanation: Bob will remove the ballons at indices 0 and 4. Each ballon takes 1 second to remove.
 There are no longer two consecutive balloons of the same color. Total time = 1 + 1 = 2.
- 
+
 
 Constraints:
 n == colors.length == neededTime.length
@@ -31,6 +31,7 @@ n == colors.length == neededTime.length
 1 <= neededTime[i] <= 104
 colors contains only lowercase English letters.
 """
+
 
 # greedy
 def min_cost(colors: str, needed_time: list[int]) -> int:

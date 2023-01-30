@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.reordered_power_of_2 import reordered_power_of_2
 
 

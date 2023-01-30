@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_time_to_collect_all_apples_in_a_tree import min_time
 
 

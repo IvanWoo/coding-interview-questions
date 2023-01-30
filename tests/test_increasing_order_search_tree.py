@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.increasing_order_search_tree import increasing_BST
+from puzzles.utils import TreeNode
 
 
 @pytest.mark.parametrize(

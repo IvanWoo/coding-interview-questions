@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.increasing_triplet_subsequence import increasing_triplet
 
 

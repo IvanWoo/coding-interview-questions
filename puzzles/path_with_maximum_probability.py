@@ -30,9 +30,9 @@ a != b
 0 <= succProb[i] <= 1
 There is at most one edge between every two nodes.
 """
-from typing import List
-from collections import defaultdict
 import heapq
+from collections import defaultdict
+from typing import List
 
 
 def max_probability(

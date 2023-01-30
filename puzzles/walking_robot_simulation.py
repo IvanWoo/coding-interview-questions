@@ -5,7 +5,7 @@ A robot on an infinite grid starts at point (0, 0) and faces north.  The robot c
 -2: turn left 90 degrees
 -1: turn right 90 degrees
 1 <= x <= 9: move forward x units
-Some of the grid squares are obstacles. 
+Some of the grid squares are obstacles.
 
 The i-th obstacle is at grid point (obstacles[i][0], obstacles[i][1])
 
@@ -74,7 +74,7 @@ def robot_sim(commands: List[int], obstacles: List[List[int]]) -> int:
                     x += v.x
                     y += v.y
                     cmd -= 1
-                    ans = max(ans, x ** 2 + y ** 2)
+                    ans = max(ans, x**2 + y**2)
     return ans
 
 

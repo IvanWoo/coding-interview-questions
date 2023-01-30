@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.shift_2d_grid import shift_grid
 
 

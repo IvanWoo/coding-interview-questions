@@ -24,6 +24,7 @@ n == nums.length
 """
 from math import inf
 
+
 # brute force: TLE
 def min_moves_2(nums: list[int]) -> int:
     ans = inf

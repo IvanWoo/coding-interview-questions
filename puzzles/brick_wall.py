@@ -8,7 +8,7 @@ If your line go through the edge of a brick, then the brick is not considered as
 
 You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.
 
- 
+
 
 Example:
 
@@ -25,8 +25,8 @@ Note:
 The width sum of bricks in different rows are the same and won't exceed INT_MAX.
 The number of bricks in each row is in range [1,10,000]. The height of wall is in range [1,10,000]. Total number of bricks of the wall won't exceed 20,000.
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def least_bricks(wall: List[List[int]]) -> int:

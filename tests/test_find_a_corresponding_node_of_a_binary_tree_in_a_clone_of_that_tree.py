@@ -1,9 +1,11 @@
 from copy import deepcopy
+
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.find_a_corresponding_node_of_a_binary_tree_in_a_clone_of_that_tree import (
     get_target_copy,
 )
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

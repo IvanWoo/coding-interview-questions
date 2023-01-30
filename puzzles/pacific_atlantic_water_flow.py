@@ -10,13 +10,13 @@ Note:
 
 The order of returned grid coordinates does not matter.
 Both m and n are less than 150.
- 
+
 
 Example:
 
 Given the following 5x5 heights:
 
-  Pacific ~   ~   ~   ~   ~ 
+  Pacific ~   ~   ~   ~   ~
        ~  1   2   2   3  (5) *
        ~  3   2   3  (4) (4) *
        ~  2   4  (5)  3   1  *

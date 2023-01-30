@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.string_compression_ii import get_length_of_optimal_compression
 
 

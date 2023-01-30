@@ -12,19 +12,20 @@ Explanation: Because the sum of the blue rectangle [[0, 1], [-2, 3]] is 2, and 2
 Example 2:
 Input: matrix = [[2,2,-1]], k = 3
 Output: 3
- 
+
 Constraints:
 m == matrix.length
 n == matrix[i].length
 1 <= m, n <= 100
 -100 <= matrix[i][j] <= 100
 -105 <= k <= 105
- 
+
 Follow up: What if the number of rows is much larger than the number of columns?
 """
 import bisect
 from copy import deepcopy
 from math import inf
+
 
 # prefix sum: TLE
 # O(m^2*n^2)

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.binary_tree_maximum_path_sum import max_path_sum
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

@@ -21,7 +21,7 @@ Output: [0]
 Example 3:
 Input: n = 2, edges = [[1,0]]
 Output: [1,1]
- 
+
 
 Constraints:
 1 <= n <= 3 * 104
@@ -33,6 +33,7 @@ The given input represents a valid tree.
 """
 from collections import defaultdict, deque
 from functools import cache
+
 
 # TLE: O(n^2)
 def sum_of_distances_in_tree(n: int, edges: list[list[int]]) -> list[int]:

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.evaluate_division import calc_equation
 
 

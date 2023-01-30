@@ -4,7 +4,7 @@ Given the root of a binary tree and an integer targetSum, return true if the tre
 
 A leaf is a node with no children.
 
- 
+
 
 
 Example 1:
@@ -24,7 +24,7 @@ Example 3:
 Input: root = [], targetSum = 0
 Output: false
 Explanation: Since the tree is empty, there are no root-to-leaf paths.
- 
+
 
 Constraints:
 The number of nodes in the tree is in the range [0, 5000].
@@ -32,6 +32,7 @@ The number of nodes in the tree is in the range [0, 5000].
 -1000 <= targetSum <= 1000
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

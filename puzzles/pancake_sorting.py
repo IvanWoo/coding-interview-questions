@@ -13,7 +13,7 @@ Return the k-values corresponding to a sequence of pancake flips that sort arr. 
 Example 1:
 Input: arr = [3,2,4,1]
 Output: [4,2,4,3]
-Explanation: 
+Explanation:
 We perform 4 pancake flips, with k values 4, 2, 4, and 3.
 Starting state: arr = [3, 2, 4, 1]
 After 1st flip (k = 4): arr = [1, 4, 2, 3]

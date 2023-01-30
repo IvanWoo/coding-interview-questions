@@ -28,7 +28,7 @@ Input: nums = [1,2,3]
 Output: -1
 Explanation:
 There is no index that satisfies the conditions in the problem statement.
- 
+
 
 Constraints:
 

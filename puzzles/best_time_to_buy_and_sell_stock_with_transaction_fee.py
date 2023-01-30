@@ -19,7 +19,7 @@ The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
 Example 2:
 Input: prices = [1,3,7,5,10,3], fee = 3
 Output: 6
- 
+
 Constraints:
 1 <= prices.length <= 5 * 104
 1 <= prices[i] < 5 * 104

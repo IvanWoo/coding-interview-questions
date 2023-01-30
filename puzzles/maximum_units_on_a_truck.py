@@ -22,7 +22,7 @@ The total number of units will be = (1 * 3) + (2 * 2) + (1 * 1) = 8.
 Example 2:
 Input: boxTypes = [[5,10],[2,5],[4,7],[3,9]], truckSize = 10
 Output: 91
- 
+
 Constraints:
 1 <= boxTypes.length <= 1000
 1 <= numberOfBoxesi, numberOfUnitsPerBoxi <= 1000

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.delete_leaves_with_a_given_value import remove_leaf_nodes
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

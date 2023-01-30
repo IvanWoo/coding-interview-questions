@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.split_array_into_consecutive_subsequences import is_possible
 
 

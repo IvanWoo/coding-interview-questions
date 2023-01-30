@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_number_of_refueling_stops import min_refuel_stops
 
 

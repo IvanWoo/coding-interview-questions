@@ -15,6 +15,7 @@ Explanation: The longest valid parentheses substring is "()()"
 
 from collections import deque
 
+
 # stack
 def longest_valid_parentheses(s: str) -> int:
     stack = deque()

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.concatenated_words import find_all_concatenated_words_in_a_dict
 
 

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sum_of_subarray_minimums import sum_subarray_mins
 
 

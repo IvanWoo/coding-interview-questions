@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.utf_8_validation import valid_utf8
 
 

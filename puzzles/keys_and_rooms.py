@@ -9,7 +9,7 @@ Given an array rooms where rooms[i] is the set of keys that you can obtain if yo
 Example 1:
 Input: rooms = [[1],[2],[3],[]]
 Output: true
-Explanation: 
+Explanation:
 We visit room 0 and pick up key 1.
 We then visit room 1 and pick up key 2.
 We then visit room 2 and pick up key 3.
@@ -20,7 +20,7 @@ Example 2:
 Input: rooms = [[1,3],[3,0,1],[2],[0]]
 Output: false
 Explanation: We can not enter room number 2 since the only key that unlocks it is in that room.
- 
+
 Constraints:
 n == rooms.length
 2 <= n <= 1000

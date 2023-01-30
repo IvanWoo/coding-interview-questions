@@ -20,7 +20,7 @@ You may assume that all words are consist of lowercase letters a-z.
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Any
+from typing import Any, Dict, Optional
 
 
 @dataclass

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.bst_find_modes import FindModes
+from puzzles.utils import TreeNode
 
 
 def test_find_modes():

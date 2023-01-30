@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.snakes_and_ladders import snakes_and_ladders
 
 

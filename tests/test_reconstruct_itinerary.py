@@ -4,10 +4,23 @@ from puzzles.reconstruct_itinerary import find_itinerary
 def test_find_itinerary():
     assert find_itinerary(
         [["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], ["ATL", "JFK"], ["ATL", "SFO"]]
-    ) == ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]
+    ) == [
+        "JFK",
+        "ATL",
+        "JFK",
+        "SFO",
+        "ATL",
+        "SFO",
+    ]
     assert find_itinerary(
         [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
-    ) == ["JFK", "MUC", "LHR", "SFO", "SJC"]
+    ) == [
+        "JFK",
+        "MUC",
+        "LHR",
+        "SFO",
+        "SJC",
+    ]
     assert find_itinerary(
         [
             ["AXA", "EZE"],

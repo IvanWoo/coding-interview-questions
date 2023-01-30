@@ -24,6 +24,7 @@ s will only consist of "0" or "1" characters.
 """
 from functools import lru_cache
 
+
 # TLE: O(N^2)
 def count_binary_substrings(s: str) -> int:
     @lru_cache(None)

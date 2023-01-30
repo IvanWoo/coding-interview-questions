@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_original_array_from_doubled_array import find_original_array
 
 

@@ -7,7 +7,7 @@ Assume a BST is defined as follows:
 The left subtree of a node contains only nodes with keys less than or equal to the node's key.
 The right subtree of a node contains only nodes with keys greater than or equal to the node's key.
 Both the left and right subtrees must also be binary search trees.
- 
+
 
 For example:
 Given BST [1,null,2,2],
@@ -17,7 +17,7 @@ Given BST [1,null,2,2],
      2
     /
    2
- 
+
 
 return [2].
 
@@ -27,8 +27,9 @@ Follow up: Could you do that without using any extra space? (Assume that the imp
 
 """
 
-from puzzles.utils import TreeNode
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 class FindModes:

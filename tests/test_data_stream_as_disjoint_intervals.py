@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.data_stream_as_disjoint_intervals import SummaryRanges
 from tests.utils import assert_obj_outs
 

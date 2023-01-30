@@ -23,6 +23,7 @@ The number of nodes in the tree is in the range [1, 104].
 """
 from math import inf
 from typing import Optional
+
 from puzzles.utils import TreeNode, make_tree
 
 

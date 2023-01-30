@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_falling_path_sum import min_falling_path_sum
 
 

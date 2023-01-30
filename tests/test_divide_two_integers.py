@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.divide_two_integers import divide
 
 

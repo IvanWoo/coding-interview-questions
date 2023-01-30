@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.utils import make_tree
 from puzzles.validate_binary_search_tree import is_valid_bst
 

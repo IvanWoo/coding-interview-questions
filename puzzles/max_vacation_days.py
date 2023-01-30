@@ -15,23 +15,23 @@ Example 1:
 
 Input:flights = [[0,1,1],[1,0,1],[1,1,0]], days = [[1,3,1],[6,0,3],[3,3,3]]
 Output: 12
-Explanation: 
-Ans = 6 + 3 + 3 = 12. 
+Explanation:
+Ans = 6 + 3 + 3 = 12.
 
 One of the best strategies is:
-1st week : fly from city 0 to city 1 on Monday, and play 6 days and work 1 day. 
-(Although you start at city 0, we could also fly to and start at other cities since it is Monday.) 
+1st week : fly from city 0 to city 1 on Monday, and play 6 days and work 1 day.
+(Although you start at city 0, we could also fly to and start at other cities since it is Monday.)
 2nd week : fly from city 1 to city 2 on Monday, and play 3 days and work 4 days.
 3rd week : stay at city 2, and play 3 days and work 4 days.
 Example 2:
 
 Input:flights = [[0,0,0],[0,0,0],[0,0,0]], days = [[1,1,1],[7,7,7],[7,7,7]]
 Output: 3
-Explanation: 
-Ans = 1 + 1 + 1 = 3. 
+Explanation:
+Ans = 1 + 1 + 1 = 3.
 
-Since there is no flights enable you to move to another city, you have to stay at city 0 for the whole 3 weeks. 
-For each week, you only have one day to play and six days to work. 
+Since there is no flights enable you to move to another city, you have to stay at city 0 for the whole 3 weeks.
+For each week, you only have one day to play and six days to work.
 So the maximum number of vacation days is 3.
 Example 3:
 
@@ -41,7 +41,7 @@ Explanation:
 Ans = 7 + 7 + 7 = 21
 
 One of the best strategies is:
-1st week : stay at city 0, and play 7 days. 
+1st week : stay at city 0, and play 7 days.
 2nd week : fly from city 0 to city 1 on Monday, and play 7 days.
 3rd week : fly from city 1 to city 2 on Monday, and play 7 days.
 Note:
@@ -53,7 +53,8 @@ You could stay at a city beyond the number of vacation days, but you should work
 If you fly from the city A to the city B and take the vacation on that day, the deduction towards vacation days will count towards the vacation days of city B in that week.
 We don't consider the impact of flight hours towards the calculation of vacation days.
 """
-from typing import List, Dict, Tuple
+from typing import Dict, List, Tuple
+
 import numpy as np
 
 

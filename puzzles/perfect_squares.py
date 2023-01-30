@@ -4,7 +4,7 @@ Given a positive integer n, find the least number of perfect square numbers (for
 
 Example 1:
 Input: n = 12
-Output: 3 
+Output: 3
 Explanation: 12 = 4 + 4 + 4.
 
 Example 2:
@@ -14,6 +14,7 @@ Explanation: 13 = 4 + 9.
 """
 from collections import deque
 from math import inf
+
 
 # BFS: use too much memory
 def num_squares(n: int) -> int:

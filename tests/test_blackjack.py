@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.blackjack import blackjack
 
 

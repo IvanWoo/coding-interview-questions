@@ -22,7 +22,7 @@ Example 3:
 Input: cardPoints = [9,7,7,9,7,7,9], k = 7
 Output: 55
 Explanation: You have to take all the cards. Your score is the sum of points of all cards.
- 
+
 
 Constraints:
 1 <= cardPoints.length <= 105
@@ -31,6 +31,7 @@ Constraints:
 """
 from functools import cache
 from math import inf
+
 
 # brute force: MLE
 def max_score(card_points: list[int], k: int) -> int:

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.reduce_array_size_to_the_half import min_set_size
 
 

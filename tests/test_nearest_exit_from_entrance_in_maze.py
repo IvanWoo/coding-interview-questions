@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.nearest_exit_from_entrance_in_maze import nearest_exit
 
 

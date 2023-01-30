@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.word_pattern import word_pattern
 
 

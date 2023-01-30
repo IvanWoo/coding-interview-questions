@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_closest_node_to_given_two_nodes import closest_meeting_node
 
 

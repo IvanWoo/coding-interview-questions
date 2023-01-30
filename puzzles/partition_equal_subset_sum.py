@@ -12,12 +12,13 @@ Example 2:
 Input: nums = [1,2,3,5]
 Output: false
 Explanation: The array cannot be partitioned into equal sum subsets.
- 
+
 Constraints:
 1 <= nums.length <= 200
 1 <= nums[i] <= 100
 """
 from typing import List
+
 
 # brute force: O(2^n)
 def can_partition(nums: List[int]) -> bool:

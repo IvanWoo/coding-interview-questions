@@ -27,7 +27,7 @@ Input: k = 4, n = 1
 Output: []
 Explanation: There are no valid combinations.
 Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 > 1, there are no valid combination.
- 
+
 
 Constraints:
 2 <= k <= 9

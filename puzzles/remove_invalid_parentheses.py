@@ -16,8 +16,8 @@ Example 3:
 Input: ")("
 Output: [""]
 """
-from typing import List
 from functools import lru_cache
+from typing import List
 
 
 def remove_invalid_parentheses(s: str) -> List[str]:

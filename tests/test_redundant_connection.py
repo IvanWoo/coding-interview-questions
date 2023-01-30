@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.redundant_connection import find_redundant_connection
 
 

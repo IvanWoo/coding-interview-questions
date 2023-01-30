@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.flip_binary_tree_to_match_preorder_traversal import flip_match_voyage
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

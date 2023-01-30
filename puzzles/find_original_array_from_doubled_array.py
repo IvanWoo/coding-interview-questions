@@ -23,13 +23,13 @@ Example 3:
 Input: changed = [1]
 Output: []
 Explanation: changed is not a doubled array.
- 
+
 
 Constraints:
 1 <= changed.length <= 105
 0 <= changed[i] <= 105
 """
-from collections import defaultdict, deque, Counter
+from collections import Counter, defaultdict, deque
 
 
 def find_original_array(changed: list[int]) -> list[int]:

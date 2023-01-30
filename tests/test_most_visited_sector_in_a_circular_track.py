@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.most_visited_sector_in_a_circular_track import most_visited
 
 

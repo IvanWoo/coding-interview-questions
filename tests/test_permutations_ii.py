@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.permutations_ii import permute_unique
 
 

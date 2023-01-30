@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.three_sum import three_sum
 
 

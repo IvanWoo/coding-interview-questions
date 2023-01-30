@@ -1,4 +1,4 @@
-name: Unit Test
+name: Tests
 
 on:
   push:
@@ -7,8 +7,26 @@ on:
       - master
 
 jobs:
-  deploy:
-    name: Deploy
+  Linting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "pipenv"
+
+      - name: Install pipenv
+        run: pipx install pipenv
+
+      - name: Install dependencies
+        run: pipenv install --dev
+
+      - name: Linting
+        run: pipenv run lint
+
+  Testing:
     runs-on: ubuntu-latest
 
     steps:

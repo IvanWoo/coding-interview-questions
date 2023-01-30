@@ -13,9 +13,9 @@ Example 1:
 Input: n = 10
 Output: 4
 Explanation: You have 10 oranges.
-Day 1: Eat 1 orange,  10 - 1 = 9.  
+Day 1: Eat 1 orange,  10 - 1 = 9.
 Day 2: Eat 6 oranges, 9 - 2*(9/3) = 9 - 6 = 3. (Since 9 is divisible by 3)
-Day 3: Eat 2 oranges, 3 - 2*(3/3) = 3 - 2 = 1. 
+Day 3: Eat 2 oranges, 3 - 2*(3/3) = 3 - 2 = 1.
 Day 4: Eat the last orange  1 - 1  = 0.
 You need at least 4 days to eat the 10 oranges.
 
@@ -35,11 +35,13 @@ Example 4:
 
 Input: n = 56
 Output: 6
- 
+
 Constraints:
 
 1 <= n <= 2*10^9
 """
+from functools import lru_cache
+
 
 # bfs
 def min_days(n: int) -> int:
@@ -62,8 +64,6 @@ def min_days(n: int) -> int:
         days += 1
         queue = temp
 
-
-from functools import lru_cache
 
 # dp
 def min_days(n: int) -> int:

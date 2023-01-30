@@ -34,8 +34,8 @@ Note:
 2 <= N <= 50.
 grid[i][j] is a permutation of [0, ..., N*N - 1].
 """
-from typing import List
 import heapq
+from typing import List
 
 
 class UF:

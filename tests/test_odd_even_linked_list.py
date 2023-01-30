@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.odd_even_linked_list import odd_even_list
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

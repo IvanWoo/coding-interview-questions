@@ -15,6 +15,7 @@ Constraints:
 s consists of lowercase English letters only.
 """
 
+
 # TLE
 def shortest_palindrome(s: str) -> str:
     def expand(s, left, right):

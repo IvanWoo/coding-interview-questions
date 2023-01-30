@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.where_will_the_ball_fall import find_ball
 
 

@@ -17,7 +17,7 @@ Example 2:
 Input: dividend = 7, divisor = -3
 Output: -2
 Explanation: 7/-3 = -2.33333.. which is truncated to -2.
- 
+
 Constraints:
 
 -231 <= dividend, divisor <= 231 - 1

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.longest_univalue_path import longest_univalue_path
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

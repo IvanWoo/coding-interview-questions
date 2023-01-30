@@ -10,7 +10,7 @@ Explanation: The binary codes of length 2 are "00", "01", "10" and "11". They ca
 Example 2:
 Input: s = "0110", k = 1
 Output: true
-Explanation: The binary codes of length 1 are "0" and "1", it is clear that both exist as a substring. 
+Explanation: The binary codes of length 1 are "0" and "1", it is clear that both exist as a substring.
 
 Example 3:
 Input: s = "0110", k = 2

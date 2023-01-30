@@ -8,10 +8,8 @@ Example:
 
 Input: 1->2->3->4->5->NULL, m = 2, n = 4
 Output: 1->4->3->2->5->NULL
-"""
-from puzzles.utils import ListNode
 
-"""
+
 1->2->3->4->5->NULL
 
 1<->2<-3<-4  5->NULL
@@ -21,6 +19,7 @@ from puzzles.utils import ListNode
 1  2<-3<-4  5->NULL
    |________|
 """
+from puzzles.utils import ListNode
 
 
 def reverse_between(head: ListNode, m: int, n: int) -> ListNode:

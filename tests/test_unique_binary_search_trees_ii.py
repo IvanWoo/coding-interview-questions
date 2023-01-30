@@ -1,5 +1,6 @@
-from puzzles.unique_binary_search_trees_ii import generate_trees
 import pytest
+
+from puzzles.unique_binary_search_trees_ii import generate_trees
 from puzzles.utils import TreeNode
 
 

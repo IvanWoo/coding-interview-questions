@@ -29,6 +29,7 @@ m == queries.length
 from bisect import bisect_right
 from itertools import accumulate
 
+
 # brute force: TLE
 def answer_queries(nums: list[int], queries: list[int]) -> list[int]:
     def backtrack(idx, target, length):

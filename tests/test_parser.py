@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.parser import parser
 
 

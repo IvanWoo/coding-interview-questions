@@ -2,7 +2,7 @@
 """
 Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
 
-Follow up: Could you implement the O(n) solution? 
+Follow up: Could you implement the O(n) solution?
 
 Example 1:
 Input: nums = [100,4,200,1,3,2]
@@ -18,7 +18,9 @@ Constraints:
 -109 <= nums[i] <= 109
 """
 from typing import List
+
 from puzzles.union_find import UF
+
 
 # O(nlogn)
 def longest_consecutive(nums: List[int]) -> int:

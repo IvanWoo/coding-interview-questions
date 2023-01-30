@@ -16,7 +16,7 @@ Explanation: The ray meets receptor 2 the first time it gets reflected back to t
 Example 2:
 Input: p = 3, q = 1
 Output: 1
- 
+
 Constraints:
 1 <= q <= p <= 1000
 """

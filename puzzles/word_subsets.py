@@ -26,6 +26,7 @@ All the strings of words1 are unique.
 from collections import Counter, defaultdict
 from functools import reduce
 
+
 # brute force: O(MN)
 def word_subsets(words1: list[str], words2: list[str]) -> list[str]:
     w2_counters = [Counter(w2) for w2 in set(words2)]

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.erect_the_fence import outer_trees
 
 

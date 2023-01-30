@@ -1,9 +1,10 @@
 import pytest
+
 from puzzles.binary_tree_traversal import (
     inorder_traversal,
-    preorder_traversal,
-    postorder_traversal,
     is_same_tree,
+    postorder_traversal,
+    preorder_traversal,
 )
 from puzzles.utils import TreeNode
 

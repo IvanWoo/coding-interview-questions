@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import ListNode
+
 from puzzles.swapping_nodes_in_a_linked_list import swap_nodes
+from puzzles.utils import ListNode
 
 
 @pytest.fixture

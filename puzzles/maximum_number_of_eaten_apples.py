@@ -22,7 +22,7 @@ Explanation: You can eat 5 apples:
 - On the first to the third day you eat apples that grew on the first day.
 - Do nothing on the fourth and fifth days.
 - On the sixth and seventh days you eat apples that grew on the sixth day.
- 
+
 Constraints:
 apples.length == n
 days.length == n
@@ -30,8 +30,8 @@ days.length == n
 0 <= apples[i], days[i] <= 2 * 104
 days[i] = 0 if and only if apples[i] = 0.
 """
-from typing import List
 import heapq
+from typing import List
 
 
 def eaten_apples(apples: List[int], days: List[int]) -> int:

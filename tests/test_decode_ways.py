@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.decode_ways import num_decodings
 
 

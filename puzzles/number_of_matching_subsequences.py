@@ -14,16 +14,17 @@ Explanation: There are three strings in words that are a subsequence of s: "a", 
 Example 2:
 Input: s = "dsahjpjauf", words = ["ahjpjau","ja","ahbwzgqnuk","tnmlanowax"]
 Output: 2
- 
+
 Constraints:
 1 <= s.length <= 5 * 104
 1 <= words.length <= 5000
 1 <= words[i].length <= 50
 s and words[i] consist of only lowercase English letters.
 """
-from functools import cache
-from collections import defaultdict
 from bisect import bisect_left
+from collections import defaultdict
+from functools import cache
+
 
 # brute force
 def num_matching_subseq(s: str, words: list[str]) -> int:

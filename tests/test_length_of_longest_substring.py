@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.length_of_longest_substring import length_of_longest_substring
 
 

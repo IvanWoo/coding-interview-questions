@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.last_stone_weight import last_stone_weight
 
 

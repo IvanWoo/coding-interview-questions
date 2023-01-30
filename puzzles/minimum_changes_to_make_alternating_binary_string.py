@@ -6,7 +6,7 @@ The string is called alternating if no two adjacent characters are equal. For ex
 
 Return the minimum number of operations needed to make s alternating.
 
- 
+
 
 Example 1:
 
@@ -23,7 +23,7 @@ Example 3:
 Input: s = "1111"
 Output: 2
 Explanation: You need two operations to reach "0101" or "1010".
- 
+
 
 Constraints:
 

@@ -21,13 +21,14 @@ n == matrix.length == matrix[i].length
 -109 <= matrix[i][j] <= 109
 All the rows and columns of matrix are guaranteed to be sorted in non-decreasing order.
 1 <= k <= n2
- 
+
 
 Follow up:
 Could you solve the problem with a constant memory (i.e., O(1) memory complexity)?
 Could you solve the problem in O(n) time complexity? The solution may be too advanced for an interview but you may find reading this paper fun.
 """
-from heapq import heappush, heappop, heappushpop
+from heapq import heappop, heappush, heappushpop
+
 
 # brute force
 def kth_smallest(matrix: list[list[int]], k: int) -> int:

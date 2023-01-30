@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find132pattern import find132pattern
 
 

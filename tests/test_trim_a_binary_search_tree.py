@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.trim_a_binary_search_tree import trim_BST
+from puzzles.utils import TreeNode
 
 
 @pytest.mark.parametrize(

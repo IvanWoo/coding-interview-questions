@@ -42,7 +42,7 @@ Next, we erase the underlined brick at (1,0), resulting in the grid:
  [0,0,0,0]]
 Once again, all remaining bricks are still stable, so no bricks fall.
 Hence the result is [0,0].
- 
+
 
 Constraints:
 m == grid.length
@@ -56,6 +56,7 @@ hits[i].length == 2
 All (xi, yi) are unique.
 """
 from typing import List
+
 
 # TLE
 def hit_bricks(grid: List[List[int]], hits: List[List[int]]) -> List[int]:

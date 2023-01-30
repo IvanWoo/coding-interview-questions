@@ -13,7 +13,7 @@ Output: [[1,1],[2,0],[3,3],[2,4],[4,2]]
 Example 2:
 Input: points = [[1,2],[2,2],[4,2]]
 Output: [[4,2],[2,2],[1,2]]
- 
+
 Constraints:
 1 <= points.length <= 3000
 points[i].length == 2

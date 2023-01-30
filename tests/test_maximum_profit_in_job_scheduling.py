@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_profit_in_job_scheduling import job_scheduling
 
 

@@ -23,6 +23,7 @@ Output: 6
 Explanation: There are six substrings "z", "a", "b", "za", "ab", "zab" of string "zab" in the string s.
 """
 
+
 # TLE
 def find_substring_in_wrapround_string(p: str) -> int:
     def add(sub_string):

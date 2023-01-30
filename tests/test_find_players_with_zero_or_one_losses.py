@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_players_with_zero_or_one_losses import find_winners
 
 

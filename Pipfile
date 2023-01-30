@@ -9,6 +9,7 @@ black = "*"
 ipython = "*"
 coding-interview-questions = {editable = true, path = "."}
 pytest-randomly = "*"
+pre-commit = "*"
 
 [packages]
 numpy = "*"
@@ -25,3 +26,4 @@ test = "pytest"
 new = "python scripts/new.py"
 count = "./scripts/count.sh"
 commit = "./scripts/commit.sh"
+lint = "pre-commit run --all-files"

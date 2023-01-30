@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.make_the_string_great import make_good
 
 

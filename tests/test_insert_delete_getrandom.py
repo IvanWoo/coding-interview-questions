@@ -1,5 +1,7 @@
 import random
+
 import pytest
+
 from puzzles.insert_delete_getrandom import RandomizedSet
 from tests.utils import assert_obj_outs
 

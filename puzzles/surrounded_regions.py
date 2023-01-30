@@ -23,6 +23,7 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on the
 
 from collections import deque
 from typing import List
+
 from puzzles.union_find import UF
 
 

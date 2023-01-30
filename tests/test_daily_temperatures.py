@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.daily_temperatures import daily_temperatures
 
 

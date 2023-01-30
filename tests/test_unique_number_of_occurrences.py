@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.unique_number_of_occurrences import unique_occurrences
 
 

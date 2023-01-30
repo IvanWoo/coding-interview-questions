@@ -1,20 +1,18 @@
-"""
-252.Meeting Rooms
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
-
-Example 1:
-Input: [[0,30],[5,10],[15,20]]
-Output: false
-
-Example 2:
-Input: [[7,10],[2,4]]
-Output: true
-"""
-
 from typing import List
 
 
 def can_attend(intervals: List[List[int]]) -> bool:
+    """
+    252.Meeting Rooms
+    Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+
+    Example 1:
+    Input: [[0,30],[5,10],[15,20]]
+    Output: false
+
+    Example 2:
+    Input: [[7,10],[2,4]]
+    Output: true"""
     starts = sorted([x[0] for x in intervals])
     ends = sorted([x[1] for x in intervals])
     for i in range(len(intervals) - 1):
@@ -23,22 +21,19 @@ def can_attend(intervals: List[List[int]]) -> bool:
     return True
 
 
-"""
-253.Meeting Rooms II
-Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
-
-Example 1:
-
-Input: [[0, 30],[5, 10],[15, 20]]
-Output: 2
-
-Example 2:
-Input: [[7,10],[2,4]]
-Output: 1
-"""
-
-
 def minimum_rooms(intervals: List[List[int]]) -> int:
+    """
+    253.Meeting Rooms II
+    Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+
+    Example 1:
+
+    Input: [[0, 30],[5, 10],[15, 20]]
+    Output: 2
+
+    Example 2:
+    Input: [[7,10],[2,4]]
+    Output: 1"""
     if not intervals or not intervals[0]:
         return 0
     starts = sorted([x[0] for x in intervals])

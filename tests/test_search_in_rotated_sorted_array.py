@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.search_in_rotated_sorted_array import search
 
 

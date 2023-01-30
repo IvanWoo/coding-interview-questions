@@ -31,12 +31,13 @@ Example 5:
 Input: [-2,-3,-1]
 Output: -1
 Explanation: Subarray [-1] has maximum sum -1
- 
+
 Note:
 -30000 <= A[i] <= 30000
 1 <= A.length <= 30000
 """
 from typing import List
+
 
 # O(n^2)
 def max_subarray_sum_circular(A: List[int]) -> int:

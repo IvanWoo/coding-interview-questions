@@ -23,7 +23,7 @@ Figure B shows the skyline formed by those buildings. The red points in figure B
 Example 2:
 Input: buildings = [[0,2,3],[2,5,3]]
 Output: [[0,3],[5,0]]
- 
+
 
 Constraints:
 1 <= buildings.length <= 104

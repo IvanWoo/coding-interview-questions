@@ -1,5 +1,7 @@
 from pickletools import pyset
+
 import pytest
+
 from puzzles.number_of_1_bits import hamming_weight
 
 

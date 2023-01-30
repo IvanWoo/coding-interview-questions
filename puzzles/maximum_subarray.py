@@ -16,11 +16,11 @@ Output: 1
 Example 3:
 Input: nums = [5,4,-1,7,8]
 Output: 23
- 
+
 Constraints:
 1 <= nums.length <= 105
 -104 <= nums[i] <= 104
- 
+
 
 Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 """

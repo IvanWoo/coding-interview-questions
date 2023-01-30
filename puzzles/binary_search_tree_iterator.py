@@ -27,18 +27,19 @@ bSTIterator.next();    // return 15
 bSTIterator.hasNext(); // return True
 bSTIterator.next();    // return 20
 bSTIterator.hasNext(); // return False
- 
+
 
 Constraints:
 The number of nodes in the tree is in the range [1, 105].
 0 <= Node.val <= 106
 At most 105 calls will be made to hasNext, and next.
- 
+
 
 Follow up:
 Could you implement next() and hasNext() to run in average O(1) time and use O(h) memory, where h is the height of the tree?
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

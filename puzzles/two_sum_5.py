@@ -28,9 +28,10 @@
 
 # Output: False
 
-from puzzles.utils import TreeNode
 from collections import deque
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 def find_target(root: TreeNode, k: int) -> bool:

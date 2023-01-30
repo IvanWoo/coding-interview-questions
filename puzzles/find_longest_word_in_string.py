@@ -14,7 +14,7 @@ For example, given the input of S = "abppplee" and D = {"able", "ale", "apple", 
 """
 
 import collections
-from typing import Set, Optional
+from typing import Optional, Set
 
 
 def find_longest_word_in_string(letters: str, words: Set[str]) -> Optional[str]:

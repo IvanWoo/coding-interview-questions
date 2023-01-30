@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.maximum_difference_between_node_and_ancestor import max_ancestor_diff
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

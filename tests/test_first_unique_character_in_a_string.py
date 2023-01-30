@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.first_unique_character_in_a_string import first_uniq_char
 
 

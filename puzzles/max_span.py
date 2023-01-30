@@ -7,8 +7,8 @@ maxSpan([1, 2, 1, 1, 3]) → 4
 maxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
 maxSpan([1, 4, 2, 1, 4, 4, 4]) → 6
 """
-from typing import List
 import collections
+from typing import List
 
 
 def max_span(nums: List[str]) -> int:

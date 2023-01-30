@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_subarray import maximum_subarray
 
 

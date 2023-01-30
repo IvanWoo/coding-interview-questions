@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_69_number import maximum_69_number
 
 

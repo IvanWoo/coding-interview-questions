@@ -21,7 +21,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 Example 4:
 Input: s = ""
 Output: 0
- 
+
 
 Constraints:
 
@@ -29,6 +29,7 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
 """
 from collections import defaultdict
+
 
 # sliding window: O(n)
 def length_of_longest_substring(s: str) -> int:

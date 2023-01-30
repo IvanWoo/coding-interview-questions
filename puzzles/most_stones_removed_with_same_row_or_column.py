@@ -31,7 +31,7 @@ Example 3:
 Input: stones = [[0,0]]
 Output: 0
 Explanation: [0,0] is the only stone on the plane, so you cannot remove it.
- 
+
 
 Constraints:
 1 <= stones.length <= 1000
@@ -39,6 +39,7 @@ Constraints:
 No two stones are at the same coordinate point.
 """
 from puzzles.union_find import UF
+
 
 # union find
 def remove_stones(stones: list[list[int]]) -> int:

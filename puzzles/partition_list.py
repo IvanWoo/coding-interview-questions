@@ -20,6 +20,7 @@ The number of nodes in the list is in the range [0, 200].
 
 
 from typing import Optional
+
 from puzzles.utils import ListNode, make_linked_list
 
 

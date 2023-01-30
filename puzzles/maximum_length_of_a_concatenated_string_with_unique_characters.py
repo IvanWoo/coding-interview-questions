@@ -27,12 +27,13 @@ Example 3:
 Input: arr = ["abcdefghijklmnopqrstuvwxyz"]
 Output: 26
 Explanation: The only string in arr has all 26 characters.
- 
+
 Constraints:
 1 <= arr.length <= 16
 1 <= arr[i].length <= 26
 arr[i] contains only lowercase English letters.
 """
+
 
 # brute force: O(2^n)
 def max_length(arr: list[str]) -> int:

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.sum_of_left_leaves import sum_of_left_leaves
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

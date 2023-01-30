@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.middle_of_the_linked_list import middle_node
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

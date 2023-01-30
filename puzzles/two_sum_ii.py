@@ -22,7 +22,7 @@ Example 3:
 Input: numbers = [-1,0], target = -1
 Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
- 
+
 
 Constraints:
 2 <= numbers.length <= 3 * 104
@@ -33,6 +33,7 @@ The tests are generated such that there is exactly one solution.
 """
 
 from typing import Optional
+
 
 # brute force
 def two_sum(numbers: list[int], target: int) -> list[int]:

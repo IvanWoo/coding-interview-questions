@@ -18,7 +18,7 @@ Example 3:
 Input: s = "a#c", t = "b"
 Output: false
 Explanation: s becomes "c" while t becomes "b".
- 
+
 
 Constraints:
 1 <= s.length, t.length <= 200

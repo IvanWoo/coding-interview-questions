@@ -16,16 +16,17 @@ Example 3:
 Input: nums = [2,1,5,0,4,6]
 Output: true
 Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 < nums[5] == 6.
- 
+
 
 Constraints:
 1 <= nums.length <= 5 * 105
 -231 <= nums[i] <= 231 - 1
- 
+
 Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
 """
-from math import inf
 from bisect import bisect_left
+from math import inf
+
 
 # brute force
 def increasing_triplet(nums: list[int]) -> bool:

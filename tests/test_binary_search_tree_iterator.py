@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.binary_search_tree_iterator import BSTIterator
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

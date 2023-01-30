@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.unique_morse_code_words import unique_morse_representations
 
 

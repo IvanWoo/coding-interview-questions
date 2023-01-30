@@ -10,11 +10,11 @@ If a mine ('M') is revealed, then the game is over - change it to 'X'.
 If an empty square ('E') with no adjacent mines is revealed, then change it to revealed blank ('B') and all of its adjacent unrevealed squares should be revealed recursively.
 If an empty square ('E') with at least one adjacent mine is revealed, then change it to a digit ('1' to '8') representing the number of adjacent mines.
 Return the board when no more squares will be revealed.
- 
+
 
 Example 1:
 
-Input: 
+Input:
 
 [['E', 'E', 'E', 'E', 'E'],
  ['E', 'E', 'M', 'E', 'E'],
@@ -23,7 +23,7 @@ Input:
 
 Click : [3,0]
 
-Output: 
+Output:
 
 [['B', '1', 'E', '1', 'B'],
  ['B', '1', 'M', '1', 'B'],
@@ -34,7 +34,7 @@ Explanation:
 
 Example 2:
 
-Input: 
+Input:
 
 [['B', '1', 'E', '1', 'B'],
  ['B', '1', 'M', '1', 'B'],
@@ -43,7 +43,7 @@ Input:
 
 Click : [1,2]
 
-Output: 
+Output:
 
 [['B', '1', 'E', '1', 'B'],
  ['B', '1', 'X', '1', 'B'],
@@ -52,7 +52,7 @@ Output:
 
 Explanation:
 
- 
+
 
 Note:
 
@@ -62,6 +62,7 @@ The input board won't be a stage when game is over (some mines have been reveale
 For simplicity, not mentioned rules should be ignored in this problem. For example, you don't need to reveal all the unrevealed mines when the game is over, consider any cases that you will win the game or flag any squares.
 """
 from typing import List
+
 
 # TLE
 def update_board(board: List[List[str]], click: List[int]) -> List[List[str]]:

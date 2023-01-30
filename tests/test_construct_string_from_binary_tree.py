@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.construct_string_from_binary_tree import tree2str
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

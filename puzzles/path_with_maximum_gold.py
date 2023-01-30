@@ -30,7 +30,7 @@ Explanation:
  [0,3,0],
  [9,0,20]]
 Path to get the maximum gold, 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7.
- 
+
 Constraints:
 
 1 <= grid.length, grid[i].length <= 15

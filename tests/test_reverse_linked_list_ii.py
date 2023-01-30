@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_linked_list
+
 from puzzles.reverse_linked_list_ii import reverse_between
+from puzzles.utils import make_linked_list
 
 
 @pytest.mark.parametrize(

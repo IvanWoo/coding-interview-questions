@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sort_characters_by_frequency import frequency_sort
 
 

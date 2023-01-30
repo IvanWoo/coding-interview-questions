@@ -20,10 +20,10 @@ Input: n = 2
 Output: 10
 Explanation: All possible strings are: "ae", "ea", "ei", "ia", "ie", "io", "iu", "oi", "ou" and "ua".
 
-Example 3: 
+Example 3:
 Input: n = 5
 Output: 68
- 
+
 
 Constraints:
 1 <= n <= 2 * 10^4

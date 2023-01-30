@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.game_of_life import game_of_life
 
 

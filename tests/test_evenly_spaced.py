@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.evenly_spaced import evenly_spaced
 
 

@@ -9,6 +9,7 @@ Given an array of positive integers representing 2-D bar heights, design an algo
 Example: Given [1,3,2,4,1,3,1,4,5,2,2,1,4,2,2], return 15 (3 bodies of water with volumes of 1,7,7 yields total volume of 15)
 """
 
+
 # brute force
 def trap(height: list[int]) -> int:
     ans = 0

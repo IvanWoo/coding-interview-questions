@@ -1,5 +1,7 @@
 from tabnanny import check
+
 import pytest
+
 from puzzles.continuous_subarray_sum import check_subarray_sum
 
 

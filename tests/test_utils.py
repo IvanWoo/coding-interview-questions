@@ -1,7 +1,8 @@
 from typing import Optional
+
 import pytest
-from puzzles.utils import TreeNode, make_tree
-from puzzles.utils import NaryNode, make_nary_node
+
+from puzzles.utils import NaryNode, TreeNode, make_nary_node, make_tree
 
 
 @pytest.mark.parametrize(

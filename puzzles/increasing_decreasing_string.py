@@ -38,7 +38,7 @@ Output: "ggggggg"
 Example 5:
 Input: s = "spo"
 Output: "ops"
- 
+
 
 Constraints:
 

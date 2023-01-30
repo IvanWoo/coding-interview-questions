@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_erasure_value import maximum_unique_subarray
 
 

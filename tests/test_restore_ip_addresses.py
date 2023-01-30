@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.restore_ip_addresses import restore_ip_addresses
 
 

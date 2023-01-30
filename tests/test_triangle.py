@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.triangle import minimum_total
 
 

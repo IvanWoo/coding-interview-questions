@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_subsequence_with_limited_sum import answer_queries
 
 

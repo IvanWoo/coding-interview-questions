@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.without_string import without_string
 
 

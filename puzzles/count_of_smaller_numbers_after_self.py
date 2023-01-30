@@ -10,17 +10,18 @@ To the right of 5 there are 2 smaller elements (2 and 1).
 To the right of 2 there is only 1 smaller element (1).
 To the right of 6 there is 1 smaller element (1).
 To the right of 1 there is 0 smaller element.
- 
+
 Constraints:
 
 0 <= nums.length <= 10^5
 -10^4 <= nums[i] <= 10^4
 """
 
-from collections import deque
 from bisect import bisect_left
+from collections import deque
 
 from sortedcontainers import SortedList
+
 
 # brute force: O(n^2)
 def count_smaller(nums: list[int]) -> list[int]:

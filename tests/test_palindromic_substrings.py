@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.palindromic_substrings import count_substrings
 
 

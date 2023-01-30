@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.palindrome_pairs import palindrome_pairs
 
 

@@ -11,8 +11,8 @@ Input:
 ]
 Output:  [1,2,4,7,5,3,6,8,9]
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def find_diagonal_order(matrix: List[List[int]]) -> List[int]:

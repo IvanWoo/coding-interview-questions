@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.ugly_number import is_ugly
 
 

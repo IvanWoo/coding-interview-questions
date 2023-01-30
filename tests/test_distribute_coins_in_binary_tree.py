@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.distribute_coins_in_binary_tree import distribute_coins
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

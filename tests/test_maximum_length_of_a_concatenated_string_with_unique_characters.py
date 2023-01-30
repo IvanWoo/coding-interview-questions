@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.maximum_length_of_a_concatenated_string_with_unique_characters import (
     max_length,
 )

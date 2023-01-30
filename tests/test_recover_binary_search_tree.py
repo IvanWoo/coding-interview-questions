@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.recover_binary_search_tree import recover_tree
+from puzzles.utils import TreeNode
 
 
 @pytest.mark.parametrize(

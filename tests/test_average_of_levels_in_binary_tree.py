@@ -1,7 +1,9 @@
 from cmath import exp
+
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.average_of_levels_in_binary_tree import average_of_levels
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

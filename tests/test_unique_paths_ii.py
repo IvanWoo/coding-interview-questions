@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.unique_paths_ii import unique_paths_with_obstacles
 
 

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.jump_game_ii import jump_game
 
 

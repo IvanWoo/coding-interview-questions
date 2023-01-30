@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.tree2str import tree2str
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

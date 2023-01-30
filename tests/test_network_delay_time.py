@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.network_delay_time import network_delay_time
 
 

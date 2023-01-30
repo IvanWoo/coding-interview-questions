@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode, make_tree
+
 from puzzles.binary_tree_cameras import min_camera_cover
+from puzzles.utils import TreeNode, make_tree
 
 
 @pytest.mark.parametrize(

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_difficulty_of_a_job_schedule import min_difficulty
 
 

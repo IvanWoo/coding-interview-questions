@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.lfu_cache import LFUCache
 from tests.utils import assert_obj_outs
 

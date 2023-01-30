@@ -19,8 +19,8 @@ Note:
 0 <= A.length <= 40000
 0 <= A[i] < 40000
 """
-from typing import List
 from collections import Counter
+from typing import List
 
 
 def min_increment_for_unique(A: List[int]) -> int:

@@ -10,7 +10,7 @@ Implement the MyCalendar class:
 
 MyCalendar() Initializes the calendar object.
 boolean book(int start, int end) Returns true if the event can be added to the calendar successfully without causing a double booking. Otherwise, return false and do not add the event to the calendar.
- 
+
 
 Example 1:
 Input
@@ -29,6 +29,7 @@ Constraints:
 At most 1000 calls will be made to book.
 """
 from sortedcontainers import SortedList
+
 
 # brute force: O(N^2)
 class MyCalendar:

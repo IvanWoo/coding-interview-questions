@@ -1,5 +1,6 @@
 import pytest
-from puzzles.merge_sort import sort, merge_sort
+
+from puzzles.merge_sort import merge_sort, sort
 
 
 def test_sort():

@@ -10,12 +10,13 @@ Explanation: "aba" is also a valid answer.
 Example 2:
 Input: s = "cbbd"
 Output: "bb"
- 
+
 Constraints:
 1 <= s.length <= 1000
 s consist of only digits and English letters.
 """
 from functools import cache
+
 
 # brute force: O(n^3)
 def longest_palindrome(s: str) -> str:

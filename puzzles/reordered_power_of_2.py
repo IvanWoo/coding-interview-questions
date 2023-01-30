@@ -15,9 +15,9 @@ Output: false
 Constraints:
 1 <= n <= 109
 """
-from itertools import permutations
-from math import floor, log, ceil
 from collections import Counter
+from itertools import permutations
+from math import ceil, floor, log
 
 
 def reordered_power_of_2(n: int) -> bool:

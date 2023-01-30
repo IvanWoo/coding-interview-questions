@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.sort_the_matrix_diagonally import diagonal_sort
 
 

@@ -36,6 +36,7 @@ Constraints:
 """
 from math import inf
 
+
 # TLE
 def minimum_average_difference(nums: list[int]) -> int:
     def avg(ns: list[int]) -> int:

@@ -13,7 +13,7 @@ Output: true
 Example 3:
 Input: nums = [1,2,3,1,2,3], k = 2
 Output: false
- 
+
 
 Constraints:
 1 <= nums.length <= 105
@@ -21,6 +21,7 @@ Constraints:
 0 <= k <= 105
 """
 from collections import deque
+
 
 # TLE: O(nk)
 def contains_nearby_duplicate(nums: list[int], k: int) -> bool:

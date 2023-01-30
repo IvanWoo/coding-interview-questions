@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.next_permutation import next_permutation
 
 

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.max_number_of_k_sum_pairs import max_operations
 
 

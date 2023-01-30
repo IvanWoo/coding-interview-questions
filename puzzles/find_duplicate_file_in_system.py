@@ -20,7 +20,7 @@ Output: [["root/a/2.txt","root/c/d/4.txt","root/4.txt"],["root/a/1.txt","root/c/
 Example 2:
 Input: paths = ["root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)"]
 Output: [["root/a/2.txt","root/c/d/4.txt"],["root/a/1.txt","root/c/3.txt"]]
- 
+
 
 Constraints:
 1 <= paths.length <= 2 * 104
@@ -29,7 +29,7 @@ Constraints:
 paths[i] consist of English letters, digits, '/', '.', '(', ')', and ' '.
 You may assume no files or directories share the same name in the same directory.
 You may assume each given directory info represents a unique directory. A single blank space separates the directory path and file info.
- 
+
 
 Follow up:
 Imagine you are given a real file system, how will you search files? DFS or BFS?

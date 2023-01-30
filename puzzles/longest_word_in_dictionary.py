@@ -4,17 +4,17 @@ Given a list of strings words representing an English Dictionary, find the longe
 
 If there is no answer, return the empty string.
 Example 1:
-Input: 
+Input:
 words = ["w","wo","wor","worl", "world"]
 Output: "world"
-Explanation: 
+Explanation:
 The word "world" can be built one character at a time by "w", "wo", "wor", and "worl".
 
 Example 2:
-Input: 
+Input:
 words = ["a", "banana", "app", "appl", "ap", "apply", "apple"]
 Output: "apple"
-Explanation: 
+Explanation:
 Both "apply" and "apple" can be built from other words in the dictionary. However, "apple" is lexicographically smaller than "apply".
 
 Note:
@@ -24,7 +24,7 @@ The length of words[i] will be in the range [1, 30].
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Any, List
+from typing import Any, Dict, List, Optional
 
 
 @dataclass

@@ -1,10 +1,9 @@
 # https://techdevguide.withgoogle.com/paths/foundational/hangman-challenge-archetypal/#!
 import random
-from dataclasses import dataclass, field
-from typing import List
-
-from functools import lru_cache
 from collections import Counter
+from dataclasses import dataclass, field
+from functools import lru_cache
+from typing import List
 
 
 def get_look(word: str, guesses: List[str]) -> str:

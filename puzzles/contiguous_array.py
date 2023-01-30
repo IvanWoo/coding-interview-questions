@@ -15,6 +15,7 @@ Note: The length of the given binary array will not exceed 50,000.
 """
 from typing import List
 
+
 # O(n^2)
 def find_max_length(nums: List[int]) -> int:
     n = len(nums)

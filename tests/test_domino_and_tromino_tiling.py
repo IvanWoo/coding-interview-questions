@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.domino_and_tromino_tiling import num_tilings
 
 

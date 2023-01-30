@@ -19,7 +19,7 @@ Example 2:
 Input: words = ["t"]
 Output: 2
 Explanation: A valid encoding would be s = "t#" and indices = [0].
- 
+
 
 Constraints:
 1 <= words.length <= 2000
@@ -27,7 +27,9 @@ Constraints:
 words[i] consists of only lowercase letters.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 
 # brute force
 def minimum_length_encoding(words: list[str]) -> int:

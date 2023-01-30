@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_k_closest_elements import find_closest_elements
 
 

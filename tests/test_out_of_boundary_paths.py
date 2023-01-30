@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.out_of_boundary_paths import find_paths
 
 

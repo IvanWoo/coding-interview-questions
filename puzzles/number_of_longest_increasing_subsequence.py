@@ -18,8 +18,8 @@ Constraints:
 1 <= nums.length <= 2000
 -106 <= nums[i] <= 106
 """
-from typing import List
 from collections import Counter
+from typing import List
 
 
 def find_number_of_LIS(nums: List[int]) -> int:

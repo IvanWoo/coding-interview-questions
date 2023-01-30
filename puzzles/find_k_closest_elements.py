@@ -14,7 +14,7 @@ Output: [1,2,3,4]
 Example 2:
 Input: arr = [1,2,3,4,5], k = 4, x = -1
 Output: [1,2,3,4]
- 
+
 
 Constraints:
 1 <= k <= arr.length
@@ -23,6 +23,7 @@ arr is sorted in ascending order.
 -104 <= arr[i], x <= 104
 """
 import heapq
+
 
 # O(NlogN)
 def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:

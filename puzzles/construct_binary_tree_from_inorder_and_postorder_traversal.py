@@ -17,6 +17,7 @@
 #    15   7
 
 from typing import List
+
 from puzzles.utils import TreeNode
 
 

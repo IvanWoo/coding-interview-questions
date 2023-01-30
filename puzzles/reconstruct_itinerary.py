@@ -19,8 +19,9 @@ Output: ["JFK","ATL","JFK","SFO","ATL","SFO"]
 Explanation: Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"].
              But it is larger in lexical order.
 """
+from collections import defaultdict, deque
 from typing import List
-from collections import deque, defaultdict
+
 
 # Euler Circuits
 def find_itinerary(tickets: List[List[str]]) -> List[str]:

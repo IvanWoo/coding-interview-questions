@@ -26,7 +26,7 @@ There are 2 different transformations: "--...-." and "--...--.".
 Example 2:
 Input: words = ["a"]
 Output: 1
- 
+
 Constraints:
 1 <= words.length <= 100
 1 <= words[i].length <= 12

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_median_from_data_stream import MedianFinder
 from tests.utils import assert_obj_outs
 

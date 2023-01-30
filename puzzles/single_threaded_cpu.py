@@ -14,7 +14,7 @@ Return the order in which the CPU will process the tasks.
 Example 1:
 Input: tasks = [[1,2],[2,4],[3,2],[4,1]]
 Output: [0,2,3,1]
-Explanation: The events go as follows: 
+Explanation: The events go as follows:
 - At time = 1, task 0 is available to process. Available tasks = {0}.
 - Also at time = 1, the idle CPU starts processing task 0. Available tasks = {}.
 - At time = 2, task 1 is available to process. Available tasks = {1}.
@@ -36,7 +36,7 @@ Explanation: The events go as follows:
 - At time = 18, the CPU finishes task 2 and starts processing task 0. Available tasks = {1}.
 - At time = 28, the CPU finishes task 0 and starts processing task 1. Available tasks = {}.
 - At time = 40, the CPU finishes task 1 and becomes idle.
- 
+
 
 Constraints:
 tasks.length == n

@@ -11,7 +11,7 @@ Output: [1,null,2]
 Example 2:
 Input: root = [3,0,4,null,2,null,null,1], low = 1, high = 3
 Output: [3,2,null,1]
- 
+
 Constraints:
 The number of nodes in the tree in the range [1, 104].
 0 <= Node.val <= 104
@@ -20,6 +20,7 @@ root is guaranteed to be a valid binary search tree.
 0 <= low <= high <= 104
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

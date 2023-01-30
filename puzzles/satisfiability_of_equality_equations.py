@@ -25,7 +25,7 @@ Output: false
 Example 5:
 Input: ["c==c","b==d","x!=z"]
 Output: true
- 
+
 
 Note:
 1 <= equations.length <= 500
@@ -35,6 +35,7 @@ equations[i][1] is either '=' or '!'
 equations[i][2] is '='
 """
 from typing import List
+
 from puzzles.union_find import UF
 
 

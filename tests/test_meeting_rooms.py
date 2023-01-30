@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.meeting_rooms import can_attend, minimum_rooms
 
 

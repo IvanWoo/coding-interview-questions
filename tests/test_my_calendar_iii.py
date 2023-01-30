@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.my_calendar_iii import MyCalendarThree
 from tests.utils import assert_obj_outs
 

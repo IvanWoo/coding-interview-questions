@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.minimum_cost_for_tickets import mincost_tickets
 
 

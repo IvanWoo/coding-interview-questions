@@ -31,8 +31,9 @@ Note:
 1 <= N <= 100
 """
 
-from puzzles.utils import TreeNode
 from typing import List
+
+from puzzles.utils import TreeNode
 
 
 def flip_match_voyage(root: TreeNode, voyage: List[int]) -> List[int]:

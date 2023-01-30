@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.check_if_a_string_contains_all_binary_codes_of_size_k import has_all_codes
 
 

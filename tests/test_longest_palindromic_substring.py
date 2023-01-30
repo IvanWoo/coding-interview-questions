@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_palindromic_substring import longest_palindrome
 
 

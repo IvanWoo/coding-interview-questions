@@ -24,7 +24,7 @@ Output: 10
 Example 5:
 Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70]
 Output: 127
- 
+
 Constraints:
 
 1 <= nums.length <= 2 * 104
@@ -33,6 +33,7 @@ Constraints:
 
 from dataclasses import dataclass
 from typing import List
+
 
 # O(n^2)
 def find_maximum_XOR(nums: List[int]) -> int:

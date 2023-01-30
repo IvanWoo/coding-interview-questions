@@ -20,7 +20,7 @@ Example 3:
 Input: properties = [[1,5],[10,4],[4,3]]
 Output: 1
 Explanation: The third character is weak because the second character has a strictly greater attack and defense.
- 
+
 
 Constraints:
 2 <= properties.length <= 105
@@ -28,6 +28,7 @@ properties[i].length == 2
 1 <= attacki, defensei <= 105
 """
 from math import inf
+
 
 # brute force: O(n^2)
 def number_of_weak_characters(properties: list[list[int]]) -> int:

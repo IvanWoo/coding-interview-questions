@@ -17,7 +17,7 @@ Output:
 
 Explanation:
 Replace the two 'A's with two 'B's or vice versa.
- 
+
 
 Example 2:
 Input:
@@ -30,6 +30,7 @@ Replace the one 'A' in the middle with 'B' and form "AABBBBA".
 The substring "BBBB" has the longest repeating letters, which is 4.
 """
 from collections import Counter
+
 
 # sliding window
 def character_replacement(s: str, k: int) -> int:

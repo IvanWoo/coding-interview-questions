@@ -8,7 +8,7 @@ A naive algorithm of O(n2) is trivial. You MUST do better than that.
 
 Example:
 Input: nums = [-2,5,-1], lower = -2, upper = 2,
-Output: 3 
+Output: 3
 Explanation: The three ranges are : [0,0], [2,2], [0,2] and their respective sums are: -2, -1, 2.
 
 Constraints:
@@ -16,6 +16,7 @@ Constraints:
 """
 from collections import deque
 from typing import List
+
 
 # TLE: O(n^2)
 def count_range_sum(nums: List[int], lower: int, upper: int) -> int:

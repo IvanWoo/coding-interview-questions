@@ -22,7 +22,7 @@ Example 3:
 Input: n = 8, roads = [[0,1],[1,2],[2,3],[2,4],[5,6],[5,7]]
 Output: 5
 Explanation: The network rank of 2 and 5 is 5. Notice that all the cities do not have to be connected.
- 
+
 
 Constraints
 2 <= n <= 100
@@ -32,8 +32,8 @@ roads[i].length == 2
 ai != bi
 Each pair of cities has at most one road connecting them.
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def maximal_network_rank(n: int, roads: List[List[int]]) -> int:

@@ -17,7 +17,7 @@ Example 3:
 Input: nums = [3,2,20,1,1,3], x = 10
 Output: 5
 Explanation: The optimal solution is to remove the last three elements and the first two elements (5 operations in total) to reduce x to zero.
- 
+
 
 Constraints:
 1 <= nums.length <= 105
@@ -25,6 +25,7 @@ Constraints:
 1 <= x <= 109
 """
 from functools import cache
+
 
 # brute force: TLE
 def min_operations(nums: list[int], x: int) -> int:

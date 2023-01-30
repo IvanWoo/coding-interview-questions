@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.delete_operation_for_two_strings import min_distance
 
 

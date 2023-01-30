@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.spiral_matrix import spiral_order
 
 

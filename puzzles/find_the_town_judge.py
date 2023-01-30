@@ -22,7 +22,7 @@ Output: 3
 Example 3:
 Input: n = 3, trust = [[1,3],[2,3],[3,1]]
 Output: -1
- 
+
 
 Constraints:
 1 <= n <= 1000

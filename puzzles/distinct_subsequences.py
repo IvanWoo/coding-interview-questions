@@ -25,7 +25,7 @@ babgbag
 babgbag
 babgbag
 babgbag
- 
+
 Constraints:
 
 0 <= s.length, t.length <= 1000

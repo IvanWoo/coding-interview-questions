@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.utils import make_tree
 from puzzles.vertical_order_traversal_of_a_binary_tree import vertical_traversal
 

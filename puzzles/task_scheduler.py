@@ -9,7 +9,7 @@ Return the least number of units of times that the CPU will take to finish all t
 Example 1:
 Input: tasks = ["A","A","A","B","B","B"], n = 2
 Output: 8
-Explanation: 
+Explanation:
 A -> B -> idle -> A -> B -> idle -> A -> B
 There is at least 2 units of time between any two same tasks.
 
@@ -26,7 +26,7 @@ And so on.
 Example 3:
 Input: tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2
 Output: 16
-Explanation: 
+Explanation:
 One possible solution is
 A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> idle -> A
 
@@ -38,6 +38,7 @@ The integer n is in the range [0, 100].
 """
 from collections import Counter
 from typing import List
+
 
 # simulation: TLE
 def least_interval(tasks: List[str], n: int) -> int:

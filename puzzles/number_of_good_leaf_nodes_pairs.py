@@ -26,7 +26,7 @@ Output: 0
 Example 5:
 Input: root = [1,1,1], distance = 2
 Output: 1
- 
+
 
 Constraints:
 

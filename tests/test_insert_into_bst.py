@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import TreeNode
+
 from puzzles.insert_into_bst import insert_into_bst
+from puzzles.utils import TreeNode
 
 
 @pytest.fixture

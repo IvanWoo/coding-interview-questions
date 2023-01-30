@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.max_area_of_island import max_area_of_island
 
 

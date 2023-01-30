@@ -18,7 +18,7 @@ Example 3:
 Input: A = [3,3,6,5,-2,2,5,1,-9,4]
 Output: true
 Explanation: 3 + 3 = 6 = 5 - 2 + 2 + 5 + 1 - 9 + 4
- 
+
 Constraints:
 
 3 <= A.length <= 50000

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_nary_node
+
 from puzzles.n_ary_tree_level_order_traversal import level_order
+from puzzles.utils import make_nary_node
 
 
 @pytest.mark.parametrize(

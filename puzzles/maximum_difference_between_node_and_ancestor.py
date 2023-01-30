@@ -8,14 +8,14 @@ Example 1:
 Input: [8,3,10,1,6,14,4,7,13]
 Output: 7
 
-Explanation: 
+Explanation:
 We have various ancestor-node differences, some of which are given below :
 |8 - 3| = 5
 |3 - 7| = 4
 |8 - 1| = 7
 |10 - 13| = 3
 Among all possible differences, the maximum value of 7 is obtained by |8 - 1| = 7.
- 
+
 Note:
 The number of nodes in the tree is between 2 and 5000.
 Each node will have value between 0 and 100000.

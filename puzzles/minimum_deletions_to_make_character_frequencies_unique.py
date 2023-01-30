@@ -22,13 +22,14 @@ Input: s = "ceabaacb"
 Output: 2
 Explanation: You can delete both 'c's resulting in the good string "eabaab".
 Note that we only care about characters that are still in the string at the end (i.e. frequency of 0 is ignored).
- 
+
 Constraints:
 1 <= s.length <= 105
 s contains only lowercase English letters.
 """
 
 from collections import Counter, defaultdict
+
 
 # greedy
 def min_deletions(s: str) -> int:

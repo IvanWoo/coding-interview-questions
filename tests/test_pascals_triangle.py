@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.pascals_triangle import generate
 
 

@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import make_tree
+
 from puzzles.maximum_product_of_splitted_binary_tree import max_product
+from puzzles.utils import make_tree
 
 
 @pytest.mark.parametrize(

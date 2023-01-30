@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.is_graph_bipartite import is_bipartite
 
 

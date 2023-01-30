@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.longest_palindrome import longest_palindrome
 
 

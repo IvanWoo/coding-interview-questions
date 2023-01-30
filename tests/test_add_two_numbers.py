@@ -1,6 +1,7 @@
 import pytest
-from puzzles.utils import ListNode
+
 from puzzles.add_two_numbers import add_two_numbers
+from puzzles.utils import ListNode
 
 
 @pytest.fixture

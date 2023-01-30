@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.find_longest_word_in_string import find_longest_word_in_string
 
 

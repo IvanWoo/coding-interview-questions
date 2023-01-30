@@ -24,7 +24,7 @@ Output: 1
 Example 3:
 Input: img1 = [[0]], img2 = [[0]]
 Output: 0
- 
+
 
 Constraints:
 n == img1.length == img1[i].length

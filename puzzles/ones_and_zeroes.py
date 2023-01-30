@@ -17,7 +17,7 @@ Example 2:
 Input: strs = ["10","0","1"], m = 1, n = 1
 Output: 2
 Explanation: The largest subset is {"0", "1"}, so the answer is 2.
- 
+
 Constraints:
 1 <= strs.length <= 600
 1 <= strs[i].length <= 100
@@ -26,6 +26,7 @@ strs[i] consists only of digits '0' and '1'.
 """
 from collections import Counter
 from functools import cache
+
 
 # brute force: O(2^n)
 def find_max_form(strs: list[str], m: int, n: int) -> int:

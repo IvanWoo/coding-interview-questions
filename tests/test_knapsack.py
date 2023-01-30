@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.knapsack import max_value
 
 

@@ -34,8 +34,8 @@ blue_edges.length <= 400
 red_edges[i].length == blue_edges[i].length == 2
 0 <= red_edges[i][j], blue_edges[i][j] < n
 """
-from typing import List
 from collections import defaultdict
+from typing import List
 
 
 def shortest_alternating_paths(

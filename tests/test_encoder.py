@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.encoder import encoder
 
 

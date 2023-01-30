@@ -10,7 +10,7 @@ Given an integer n, return the number of the beautiful arrangements that you can
 Example 1:
 Input: n = 2
 Output: 2
-Explanation: 
+Explanation:
 The first beautiful arrangement is [1,2]:
     - perm[1] = 1 is divisible by i = 1
     - perm[2] = 2 is divisible by i = 2
@@ -21,7 +21,7 @@ The second beautiful arrangement is [2,1]:
 Example 2:
 Input: n = 1
 Output: 1
- 
+
 
 Constraints:
 1 <= n <= 15

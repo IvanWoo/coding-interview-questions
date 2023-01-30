@@ -23,6 +23,7 @@ Output: false
 """
 from typing import List
 
+
 # TLE
 def word_break(s: str, wordDict: List[str]) -> bool:
     word_set = set(wordDict)

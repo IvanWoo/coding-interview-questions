@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.poor_pigs import poor_pigs
 
 

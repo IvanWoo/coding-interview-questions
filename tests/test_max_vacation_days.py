@@ -1,9 +1,10 @@
-import pytest
 import numpy as np
+import pytest
+
 from puzzles.max_vacation_days import (
+    get_inputs,
     max_vacation_days,
     max_vacation_days_dp,
-    get_inputs,
 )
 
 

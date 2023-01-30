@@ -34,6 +34,7 @@ from collections import defaultdict
 from functools import cache
 from math import inf
 
+
 # TLE
 def longest_str_chain(words: list[str]) -> int:
     @cache

@@ -16,7 +16,7 @@ Explanation: The five different ways are show above.
 Example 2:
 Input: n = 1
 Output: 1
- 
+
 Constraints:
 1 <= n <= 1000
 """

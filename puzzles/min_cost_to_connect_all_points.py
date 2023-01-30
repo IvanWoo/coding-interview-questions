@@ -34,9 +34,11 @@ Constraints:
 -106 <= xi, yi <= 106
 All pairs (xi, yi) are distinct.
 """
-from typing import List
 import heapq
+from typing import List
+
 from puzzles.union_find import UF
+
 
 # TLE: O(n ^ 3)
 def min_cost_connect_points(points: List[List[int]]) -> int:

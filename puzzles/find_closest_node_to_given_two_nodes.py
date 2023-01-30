@@ -21,7 +21,7 @@ Input: edges = [1,2,-1], node1 = 0, node2 = 2
 Output: 2
 Explanation: The distance from node 0 to node 2 is 2, and the distance from node 2 to itself is 0.
 The maximum of those two distances is 2. It can be proven that we cannot get a node with a smaller maximum distance than 2, so we return node 2.
- 
+
 Constraints:
 n == edges.length
 2 <= n <= 105
@@ -29,8 +29,8 @@ n == edges.length
 edges[i] != i
 0 <= node1, node2 < n
 """
-from math import inf
 from collections import deque
+from math import inf
 
 
 def closest_meeting_node(edges: list[int], node1: int, node2: int) -> int:

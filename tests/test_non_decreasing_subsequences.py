@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.non_decreasing_subsequences import find_subsequences
 
 

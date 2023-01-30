@@ -20,7 +20,7 @@ trie.insert("apple");
 trie.search("apple");   // returns true
 trie.search("app");     // returns false
 trie.startsWith("app"); // returns true
-trie.insert("app");   
+trie.insert("app");
 trie.search("app");     // returns true
 Note:
 
@@ -28,8 +28,10 @@ You may assume that all inputs are consist of lowercase letters a-z.
 All inputs are guaranteed to be non-empty strings.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Any
+from typing import Any, Dict, Optional
+
 
 # https://docs.python.org/3/library/dataclasses.html#mutable-default-values
 @dataclass

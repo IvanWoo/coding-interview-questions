@@ -23,6 +23,7 @@ All the values in the tree are unique.
 root is guaranteed to be a valid binary search tree.
 """
 from typing import Optional
+
 from puzzles.utils import TreeNode
 
 

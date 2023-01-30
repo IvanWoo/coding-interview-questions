@@ -20,7 +20,7 @@ Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, plus the 2x2
 Example 3:
 Input: matrix = [[904]], target = 0
 Output: 0
- 
+
 
 Constraints:
 1 <= matrix.length <= 100
@@ -29,6 +29,7 @@ Constraints:
 -10^8 <= target <= 10^8
 """
 from collections import defaultdict
+
 
 # brute force: O(n^6)
 def num_submatrix_sum_target(matrix: list[list[int]], target: int) -> int:

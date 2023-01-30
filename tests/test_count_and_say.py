@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.count_and_say import count_and_say
 
 

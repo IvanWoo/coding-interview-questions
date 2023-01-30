@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.orderly_queue import orderly_queue
 
 

@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.all_paths_from_source_to_target import all_paths_source_target
 
 

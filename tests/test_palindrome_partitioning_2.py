@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.palindrome_partitioning_2 import min_cut
 
 

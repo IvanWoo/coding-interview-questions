@@ -15,7 +15,7 @@ Explanation: The palindromes are ["battab","tabbat"]
 Example 3:
 Input: words = ["a",""]
 Output: [[0,1],[1,0]]
- 
+
 Constraints:
 1 <= words.length <= 5000
 0 <= words[i].length <= 300
@@ -23,6 +23,7 @@ words[i] consists of lower-case English letters.
 """
 
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 

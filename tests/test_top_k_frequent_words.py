@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.top_k_frequent_words import top_k_frequent
 
 

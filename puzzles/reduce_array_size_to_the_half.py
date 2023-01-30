@@ -15,7 +15,7 @@ Example 2:
 Input: arr = [7,7,7,7,7,7]
 Output: 1
 Explanation: The only possible set you can choose is {7}. This will make the new array empty.
- 
+
 
 Constraints:
 2 <= arr.length <= 105
@@ -23,7 +23,7 @@ arr.length is even.
 1 <= arr[i] <= 105
 """
 from collections import Counter, defaultdict
-from heapq import heappush, heappop
+from heapq import heappop, heappush
 
 
 def min_set_size(arr: list[int]) -> int:

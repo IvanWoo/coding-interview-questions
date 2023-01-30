@@ -1,4 +1,5 @@
 import pytest
+
 from puzzles.rotate_image import rotate
 
 

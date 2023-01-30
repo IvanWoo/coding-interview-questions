@@ -2,7 +2,7 @@
 """
 Given an array of strings products and a string searchWord. We want to design a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with the searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products.
 
-Return list of lists of the suggested products after each character of searchWord is typed. 
+Return list of lists of the suggested products after each character of searchWord is typed.
 
 Example 1:
 Input: products = ["mobile","mouse","moneypot","monitor","mousepad"], searchWord = "mouse"
@@ -28,7 +28,7 @@ Output: [["baggage","bags","banner"],["baggage","bags","banner"],["baggage","bag
 Example 4:
 Input: products = ["havana"], searchWord = "tatiana"
 Output: [[],[],[],[],[],[],[]]
- 
+
 Constraints:
 
 1 <= products.length <= 1000
@@ -39,6 +39,8 @@ All characters of products[i] are lower-case English letters.
 All characters of searchWord are lower-case English letters.
 """
 from __future__ import annotations
+
+from bisect import bisect_left
 from dataclasses import dataclass, field
 
 
@@ -81,9 +83,6 @@ def suggested_products(products: list[str], searchWord: str) -> list[list[str]]:
     for i in range(1, n + 1):
         ans.append(pd.search(searchWord[:i]))
     return ans
-
-
-from bisect import bisect_left
 
 
 def suggested_products(products: list[str], searchWord: str) -> list[list[str]]:

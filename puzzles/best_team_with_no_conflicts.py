@@ -74,3 +74,16 @@ def best_team_score(scores: list[int], ages: list[int]) -> int:
     for score, age in score_age:
         dp[age] = score + max(dp[: age + 1])
     return max(dp)
+
+
+def best_team_score(scores: list[int], ages: list[int]) -> int:
+    age_score = sorted(zip(ages, scores))
+    n = len(scores)
+    dp = [0] * n
+    for i in range(n):
+        cur_score = age_score[i][1]
+        dp[i] = cur_score
+        for j in range(i):
+            if age_score[j][1] <= cur_score:
+                dp[i] = max(dp[i], dp[j] + cur_score)
+    return max(dp)

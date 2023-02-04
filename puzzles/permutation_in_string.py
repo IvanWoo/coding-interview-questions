@@ -46,5 +46,14 @@ def check_inclusion(s1: str, s2: str) -> bool:
     return False
 
 
-if __name__ == "__main__":
-    check_inclusion(s1="abc", s2="bbbca")
+def check_inclusion(s1: str, s2: str) -> bool:
+    n1, n2 = len(s1), len(s2)
+    if n1 > n2:
+        return False
+
+    c1 = Counter(s1)
+    for i in range(n2 - n1 + 1):
+        c2 = Counter(s2[i : i + n1])
+        if c1 == c2:
+            return True
+    return False

@@ -31,10 +31,19 @@ The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 """
 from collections import Counter, defaultdict
-from typing import List
 
 
-def find_anagrams(s: str, p: str) -> List[int]:
+def find_anagrams(s: str, p: str) -> list[int]:
+    target = Counter(p)
+    n = len(p)
+    ans = []
+    for i in range(len(s) - n + 1):
+        if Counter(s[i : i + n]) == target:
+            ans.append(i)
+    return ans
+
+
+def find_anagrams(s: str, p: str) -> list[int]:
     needs = Counter(p)
     window = defaultdict(int)
     res = []
@@ -59,7 +68,3 @@ def find_anagrams(s: str, p: str) -> List[int]:
                     match -= 1
             lo += 1
     return res
-
-
-if __name__ == "__main__":
-    find_anagrams("baa", "aa")

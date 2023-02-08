@@ -19,11 +19,23 @@ Constraints:
 1 <= nums.length <= 104
 0 <= nums[i] <= 1000
 """
+from math import inf
 
-from typing import List
+
+def jump_game(nums: list[int]) -> bool:
+    n = len(nums)
+    dp = [inf] * n
+    dp[0] = 0
+    for i, max_l in enumerate(nums):
+        for j in range(1, max_l + 1):
+            if i + j >= n:
+                break
+            dp[i + j] = min(dp[i + j], dp[i] + 1)
+
+    return dp[-1]
 
 
-def jump_game(nums: List[int]) -> bool:
+def jump_game(nums: list[int]) -> bool:
     n = len(nums)
     jumps, cur_max, next_max = 0, 0, 0
     for i in range(n - 1):

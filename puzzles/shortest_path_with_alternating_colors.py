@@ -34,13 +34,13 @@ blue_edges.length <= 400
 red_edges[i].length == blue_edges[i].length == 2
 0 <= red_edges[i][j], blue_edges[i][j] < n
 """
-from collections import defaultdict
-from typing import List
+from collections import defaultdict, deque
+from math import inf
 
 
 def shortest_alternating_paths(
-    n: int, red_edges: List[List[int]], blue_edges: List[List[int]]
-) -> List[int]:
+    n: int, red_edges: list[list[int]], blue_edges: list[list[int]]
+) -> list[int]:
     def bfs(start_color):
         ans = [float("inf")] * n
         q = set([(0, 0, start_color)])
@@ -74,7 +74,27 @@ def shortest_alternating_paths(
     return ans
 
 
-if __name__ == "__main__":
-    shortest_alternating_paths(
-        5, [[0, 1], [1, 2], [2, 3], [3, 4]], [[1, 2], [2, 3], [3, 1]]
-    ) == [0, 1, 2, 3, 7]
+def shortest_alternating_paths(
+    n: int, red_edges: list[list[int]], blue_edges: list[list[int]]
+) -> list[int]:
+    red = defaultdict(list)
+    blue = defaultdict(list)
+    for u, v in red_edges:
+        red[u].append(v)
+    for u, v in blue_edges:
+        blue[u].append(v)
+    choices = [red, blue]
+    ans = [inf] * n
+
+    for flag in [0, 1]:
+        visited = set()
+        q = deque([(0, 0, flag)])
+        while q:
+            cur, steps, flag = q.popleft()
+            if (cur, flag) in visited:
+                continue
+            visited.add((cur, flag))
+            ans[cur] = min(ans[cur], steps)
+            for nxt in choices[flag][cur]:
+                q.append((nxt, steps + 1, flag ^ 1))
+    return [x if x != inf else -1 for x in ans]

@@ -21,8 +21,10 @@ from puzzles.utils import TreeNode
 
 
 def invert_tree(root: TreeNode) -> TreeNode:
-    if not root:
-        return
+    def helper(node):
+        if not node:
+            return
+        node.left, node.right = helper(node.right), helper(node.left)
+        return node
 
-    root.left, root.right = invert_tree(root.right), invert_tree(root.left)
-    return root
+    return helper(root)

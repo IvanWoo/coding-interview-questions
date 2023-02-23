@@ -24,27 +24,26 @@ The length of Profits array and Capital array will not exceed 50,000.
 The answer is guaranteed to fit in a 32-bit signed integer.
 """
 import heapq
-from typing import List
 
 
 def find_maximized_capital(
-    k: int, W: int, Profits: List[int], Capital: List[int]
+    k: int, w: int, profits: list[int], capital: list[int]
 ) -> int:
-    n = len(Profits)
-    cp = sorted([(c, p) for c, p in zip(Capital, Profits)])
+    n = len(profits)
+    cp = sorted(zip(capital, profits))
     pq = []
     i = 0
 
     while k > 0:
-        while i < n and cp[i][0] <= W:
+        while i < n and cp[i][0] <= w:
             heapq.heappush(pq, -cp[i][1])
             i += 1
         if not pq:
             break
-        W -= heapq.heappop(pq)
+        w -= heapq.heappop(pq)
         k -= 1
-    return W
+    return w
 
 
 if __name__ == "__main__":
-    find_maximized_capital(k=2, W=0, Profits=[1, 2, 3], Capital=[0, 1, 1])
+    find_maximized_capital(k=2, w=0, profits=[1, 2, 3], capital=[0, 1, 1])

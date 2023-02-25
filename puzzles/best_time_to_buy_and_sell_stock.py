@@ -41,7 +41,7 @@ from math import inf
 
 def max_profit(prices: list[int]) -> int:
     profit = 0
-    min_p = prices[0]
+    min_p = inf
     for p in prices:
         min_p = min(min_p, p)
         profit = max(profit, p - min_p)

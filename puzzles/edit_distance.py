@@ -26,12 +26,12 @@ enention -> exention (replace 'n' with 'x')
 exention -> exection (replace 'n' with 'c')
 exection -> execution (insert 'u')
 """
-from functools import lru_cache
+from functools import cache
 
 
 # recursion
 def min_distance(word1: str, word2: str) -> int:
-    @lru_cache(None)
+    @cache
     def helper(w1, w2):
         n1, n2 = len(w1), len(w2)
         if n1 == 0 or n2 == 0:
@@ -64,7 +64,3 @@ def min_distance(word1: str, word2: str) -> int:
             )
 
     return dp[-1][-1]
-
-
-if __name__ == "__main__":
-    min_distance("sea", "eat")

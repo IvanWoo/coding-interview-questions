@@ -122,6 +122,20 @@ def make_linked_list(vals: list[Optional[int]]) -> ListNode:
     return head
 
 
+def connect_linked_list(head: ListNode, start: int, end: int) -> ListNode:
+    start_node = None
+    end_node = None
+    cur = head
+    while cur:
+        if cur.val == start:
+            start_node = cur
+        if cur.val == end:
+            end_node = cur
+        cur = cur.next
+    start_node.next = end_node
+    return end_node
+
+
 def linked_list_to_list(head: ListNode) -> list[int]:
     vals = []
     while head:

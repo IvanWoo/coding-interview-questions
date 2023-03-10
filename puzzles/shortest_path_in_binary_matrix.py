@@ -31,7 +31,7 @@ from collections import deque
 
 def shortest_path_binary_matrix(grid: list[list[int]]) -> int:
     def neighbors(r, c):
-        for (dr, dc) in [
+        for dr, dc in [
             (-1, 0),
             (0, -1),
             (0, 1),

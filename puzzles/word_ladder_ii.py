@@ -83,7 +83,11 @@ def find_ladders(
 
 
 if __name__ == "__main__":
-    find_ladders("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"],) == [
+    find_ladders(
+        "hit",
+        "cog",
+        ["hot", "dot", "dog", "lot", "log", "cog"],
+    ) == [
         ["hit", "hot", "dot", "dog", "cog"],
         ["hit", "hot", "lot", "log", "cog"],
     ]

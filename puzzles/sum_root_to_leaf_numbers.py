@@ -55,3 +55,21 @@ def sum_numbers(root: TreeNode) -> int:
 
     dfs(root, 0)
     return ans[0]
+
+
+def sum_numbers(root: TreeNode) -> int:
+    def traverse(node, s):
+        nonlocal ret
+        val = node.val
+        new_s = s * 10 + val
+        if not node.left and not node.right:
+            ret += new_s
+            return
+        if node.left:
+            traverse(node.left, new_s)
+        if node.right:
+            traverse(node.right, new_s)
+
+    ret = 0
+    traverse(root, 0)
+    return ret

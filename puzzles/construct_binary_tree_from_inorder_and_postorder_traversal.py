@@ -16,24 +16,21 @@
 #     /  \
 #    15   7
 
-from typing import List
 
 from puzzles.utils import TreeNode
 
 
-def build_tree(inorder: List[int], postorder: List[int]) -> TreeNode:
-    if (not inorder) or (not postorder) or (len(inorder) != len(postorder)):
+def build_tree(inorder: list[int], postorder: list[int]) -> TreeNode:
+    if not inorder or not postorder or len(inorder) != len(postorder):
         return
 
-    def helper(inorder, postorder, in_st, in_end, post_end):
-        if in_st > in_end or post_end < 0:
+    def helper(in_start, in_end, post_end):
+        if in_start > in_end or post_end < 0:
             return
-        root = TreeNode(postorder[post_end])
-        ind = inorder.index(postorder[post_end])
-        root.left = helper(
-            inorder, postorder, in_st, ind - 1, post_end - 1 - (in_end - ind)
-        )
-        root.right = helper(inorder, postorder, ind + 1, in_end, post_end - 1)
-        return root
+        val = postorder[post_end]
+        idx = inorder.index(val)
+        left = helper(in_start, idx - 1, post_end - 1 - (in_end - idx))
+        right = helper(idx + 1, in_end, post_end - 1)
+        return TreeNode(val, left, right)
 
-    return helper(inorder, postorder, 0, len(inorder) - 1, len(postorder) - 1)
+    return helper(0, len(inorder) - 1, len(postorder) - 1)

@@ -72,20 +72,11 @@ class Trie:
         Returns if the word is in the trie.
         """
         node = self.searchPrefix(word)
-        return node != None and node.value == word
+        return node is not None and node.value == word
 
     def startsWith(self, prefix: str) -> bool:
         """
         Returns if there is any word in the trie that starts with the given prefix.
         """
         node = self.searchPrefix(prefix)
-        return node != None
-
-
-if __name__ == "__main__":
-    obj = Trie()
-    word = "hello"
-    prefix = "hey"
-    obj.insert(word)
-    print(f"{obj.search(word)=}")
-    print(f"{obj.startsWith(prefix)=}")
+        return node is not None

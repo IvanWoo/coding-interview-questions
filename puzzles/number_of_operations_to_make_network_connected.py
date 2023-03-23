@@ -32,10 +32,9 @@ connections[i][0] != connections[i][1]
 There are no repeated connections.
 No two computers are connected by more than one cable.
 """
-from typing import List
 
 
-def make_connected(n: int, connections: List[List[int]]) -> int:
+def make_connected(n: int, connections: list[list[int]]) -> int:
     class UF:
         def __init__(self, n) -> None:
             self.root = list(range(n))
@@ -54,12 +53,14 @@ def make_connected(n: int, connections: List[List[int]]) -> int:
             if root_u == root_v:
                 self.redundant += 1
                 return
-            if self.size[root_u] > self.size[root_v]:
-                self.root[root_v] = root_u
-                self.size[root_u] += self.size[root_v]
-            else:
+
+            size_u, size_v = self.size[root_u], self.size[root_v]
+            if size_u < size_v:
                 self.root[root_u] = root_v
-                self.size[root_v] += self.size[root_u]
+                self.size[root_v] += size_u
+            else:
+                self.root[root_v] = root_u
+                self.size[root_u] += size_v
             self.count -= 1
 
     uf = UF(n)

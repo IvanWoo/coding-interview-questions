@@ -38,24 +38,22 @@ costs.length == 3
 1 <= costs[i] <= 1000
 """
 import bisect
-from typing import List
+from functools import cache
+from math import inf
 
 
-def mincost_tickets(days: List[int], costs: List[int]) -> int:
-    memo = dict()
+def mincost_tickets(days: list[int], costs: list[int]) -> int:
     durations = [1, 7, 30]
 
+    @cache
     def dp(n):
-        if n in memo:
-            return memo[n]
         if n == len(days):
             return 0
 
-        res = float("inf")
-        for i, c in enumerate(costs):
-            sub = dp(bisect.bisect_left(days, days[n] + durations[i]))
+        res = inf
+        for d, c in zip(durations, costs):
+            sub = dp(bisect.bisect_left(days, days[n] + d))
             res = min(res, sub + c)
-        memo[n] = res
-        return memo[n]
+        return res
 
     return dp(0)

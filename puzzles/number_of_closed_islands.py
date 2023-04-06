@@ -24,10 +24,9 @@ Input: grid = [[1,1,1,1,1,1,1],
                [1,1,1,1,1,1,1]]
 Output: 2
 """
-from typing import List
 
 
-def closed_island(grid: List[List[int]]) -> int:
+def closed_island(grid: list[list[int]]) -> int:
     row, col = len(grid), len(grid[0])
     visited = [[False] * col for _ in range(row)]
     res = 0
@@ -60,13 +59,49 @@ def closed_island(grid: List[List[int]]) -> int:
     return res
 
 
-if __name__ == "__main__":
-    closed_island(
-        [
-            [1, 1, 1, 1, 1, 1, 1, 0],
-            [1, 0, 0, 0, 0, 1, 1, 0],
-            [1, 0, 1, 0, 1, 1, 1, 0],
-            [1, 0, 0, 0, 0, 1, 0, 1],
-            [1, 1, 1, 1, 1, 1, 1, 0],
-        ]
-    )
+def closed_island(grid: list[list[int]]) -> int:
+    def dfs(r, c):
+        grid[r][c] = -1
+        is_close = []
+        for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nr, nc = r + dr, c + dc
+            if 0 <= nr < rows and 0 <= nc < cols and grid[nr][nc] == 0:
+                is_close.append(dfs(nr, nc))
+
+        return (r not in (0, rows - 1) and c not in (0, cols - 1)) and all(is_close)
+
+    ret = 0
+    rows, cols = len(grid), len(grid[0])
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] == 0 and dfs(r, c):
+                ret += 1
+    return ret
+
+
+def closed_island(grid: list[list[int]]) -> int:
+    def dfs(r, c):
+        if (r, c) in visited:
+            return False
+        visited.add((r, c))
+        is_close = []
+        for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nr, nc = r + dr, c + dc
+            if (
+                0 <= nr < rows
+                and 0 <= nc < cols
+                and grid[nr][nc] == 0
+                and (nr, nc) not in visited
+            ):
+                is_close.append(dfs(nr, nc))
+
+        return (r not in (0, rows - 1) and c not in (0, cols - 1)) and all(is_close)
+
+    ret = 0
+    visited = set()
+    rows, cols = len(grid), len(grid[0])
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] == 0 and dfs(r, c):
+                ret += 1
+    return ret

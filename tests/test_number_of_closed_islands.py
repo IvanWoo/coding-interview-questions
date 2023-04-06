@@ -1,22 +1,23 @@
+import pytest
+
 from puzzles.number_of_closed_islands import closed_island
 
 
-def test_closed_island():
-    assert (
-        closed_island(
+@pytest.mark.parametrize(
+    "grid, expected",
+    [
+        (
             [
                 [1, 1, 1, 1, 1, 1, 1, 0],
                 [1, 0, 0, 0, 0, 1, 1, 0],
                 [1, 0, 1, 0, 1, 1, 1, 0],
                 [1, 0, 0, 0, 0, 1, 0, 1],
                 [1, 1, 1, 1, 1, 1, 1, 0],
-            ]
-        )
-        == 2
-    )
-    assert closed_island([[0, 0, 1, 0, 0], [0, 1, 0, 1, 0], [0, 1, 1, 1, 0]]) == 1
-    assert (
-        closed_island(
+            ],
+            2,
+        ),
+        ([[0, 0, 1, 0, 0], [0, 1, 0, 1, 0], [0, 1, 1, 1, 0]], 1),
+        (
             [
                 [1, 1, 1, 1, 1, 1, 1],
                 [1, 0, 0, 0, 0, 0, 1],
@@ -25,7 +26,10 @@ def test_closed_island():
                 [1, 0, 1, 1, 1, 0, 1],
                 [1, 0, 0, 0, 0, 0, 1],
                 [1, 1, 1, 1, 1, 1, 1],
-            ]
-        )
-        == 2
-    )
+            ],
+            2,
+        ),
+    ],
+)
+def test_closed_island(grid, expected):
+    assert closed_island(grid) == expected

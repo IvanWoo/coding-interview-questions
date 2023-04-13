@@ -22,21 +22,16 @@ Constraints:
 pushed is a permutation of popped.
 pushed and popped have distinct values.
 """
-from typing import List
 
 
-def validate_stack_sequences(pushed: List[int], popped: List[int]) -> bool:
+def validate_stack_sequences(pushed: list[int], popped: list[int]) -> bool:
     n = len(pushed)
-    j = 0
+    i = 0
     stack = []
 
     for x in pushed:
         stack.append(x)
-        while stack and j < n and stack[-1] == popped[j]:
+        while stack and i < n and stack[-1] == popped[i]:
             stack.pop()
-            j += 1
-    return j == n
-
-
-if __name__ == "__main__":
-    validate_stack_sequences([2, 1, 0], [1, 2, 0])
+            i += 1
+    return i == n

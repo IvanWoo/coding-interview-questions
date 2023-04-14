@@ -63,7 +63,3 @@ def longest_palindrome_subseq(s: str) -> int:
                 dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])
 
     return dp[0][-1]
-
-
-if __name__ == "__main__":
-    longest_palindrome_subseq("bbbab")

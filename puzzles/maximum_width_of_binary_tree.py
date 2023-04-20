@@ -60,9 +60,12 @@
 
 # The given binary tree will have between 1 and 3000 nodes.
 
-from collections import deque
+import sys
+from collections import defaultdict, deque
 
 from puzzles.utils import TreeNode
+
+INT_INF = sys.maxsize
 
 
 def width_of_binary_tree(root: TreeNode) -> int:
@@ -70,7 +73,7 @@ def width_of_binary_tree(root: TreeNode) -> int:
     stack = deque([(1, root)])
     while stack:
         temp = deque()
-        width = {"left": float("inf"), "right": float("-inf")}
+        width = {"left": INT_INF, "right": -INT_INF}
         while stack:
             x_axis, cur = stack.popleft()
             if not cur:
@@ -81,3 +84,18 @@ def width_of_binary_tree(root: TreeNode) -> int:
         ans = max(ans, (width["right"] - width["left"] + 1))
         stack = temp
     return ans
+
+
+def width_of_binary_tree(root: TreeNode) -> int:
+    def traverse(node, lvl, idx):
+        nonlocal bucket
+        if not node:
+            return
+        bucket[lvl].add(idx)
+        traverse(node.left, lvl + 1, idx * 2)
+        traverse(node.right, lvl + 1, idx * 2 + 1)
+
+    bucket = defaultdict(set)
+    traverse(root, 0, 0)
+    ret = max([max(v) - min(v) + 1 for _, v in bucket.items()])
+    return ret

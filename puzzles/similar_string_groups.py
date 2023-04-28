@@ -23,34 +23,12 @@ sum(strs[i].length) <= 2 * 104
 strs[i] consists of lowercase letters only.
 All words in strs have the same length and are anagrams of each other.
 """
-from typing import List
+from puzzles.union_find import UF
 
 
-def num_similar_groups(strs: List[str]) -> int:
-    class UF:
-        def __init__(self, n) -> None:
-            self.parent = list(range(n))
-            self.count = n
-
-        def find(self, x):
-            while self.parent[x] != x:
-                self.parent[x] = self.parent[self.parent[x]]
-                x = self.parent[x]
-            return x
-
-        def union(self, u, v):
-            root_u, root_v = self.find(u), self.find(v)
-            if root_u == root_v:
-                return
-            self.parent[root_u] = root_v
-            self.count -= 1
-
+def num_similar_groups(strs: list[str]) -> int:
     def is_similar(s1, s2):
-        n = len(s1)
-        diff = 0
-        for i in range(n):
-            if s1[i] != s2[i]:
-                diff += 1
+        diff = sum([int(c1 != c2) for c1, c2 in zip(s1, s2)])
         return diff <= 2
 
     n = len(strs)
@@ -60,7 +38,3 @@ def num_similar_groups(strs: List[str]) -> int:
             if is_similar(strs[i], strs[j]):
                 uf.union(i, j)
     return uf.count
-
-
-if __name__ == "__main__":
-    num_similar_groups(["tars", "rats", "arts", "star"])

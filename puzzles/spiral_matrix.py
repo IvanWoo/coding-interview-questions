@@ -21,10 +21,8 @@ Input:
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 """
 
-from typing import List
 
-
-def spiral_order(matrix: List[List[int]]) -> List[int]:
+def spiral_order(matrix: list[list[int]]) -> list[int]:
     if not matrix:
         return []
     row, col = len(matrix), len(matrix[0])

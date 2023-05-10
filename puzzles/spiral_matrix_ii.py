@@ -40,3 +40,21 @@ def generate_matrix(n: int) -> list[list[int]]:
             dir_vec = rotate(dir_vec)
         i, j = nxt(i, j, dir_vec)
     return matrix
+
+
+def generate_matrix(n: int) -> list[list[int]]:
+    ret = [[0] * n for _ in range(n)]
+    dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    d = 0
+    r, c = 0, 0
+    for idx in range(n * n):
+        ret[r][c] = idx + 1
+        dr, dc = dirs[d]
+        nr, nc = r + dr, c + dc
+        if 0 <= nr < n and 0 <= nc < n and ret[nr][nc] == 0:
+            r, c = nr, nc
+        else:
+            d = (d + 1) % 4
+            dr, dc = dirs[d]
+            r, c = r + dr, c + dc
+    return ret

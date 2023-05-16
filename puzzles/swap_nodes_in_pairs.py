@@ -22,19 +22,25 @@ def swap_pairs(head: ListNode) -> ListNode:
 
 
 def swap_pairs(head: ListNode) -> ListNode:
-    if not head or not head.next:
-        return head
-    dummy = ListNode()
-    pre, cur, nxt = None, head, head.next
-    dummy.next = nxt
-    while cur and nxt:
-        if pre:
-            pre.next = nxt
-        cur.next, nxt.next = nxt.next, cur
+    dummy = ListNode(0)
+    dummy.next = head
+    curr = dummy
 
-        if cur.next:
-            pre, cur, nxt = cur, cur.next, cur.next.next
-        else:
-            break
+    while curr.next and curr.next.next:
+        node1 = curr.next
+        node2 = curr.next.next
+        curr.next = node2
+        node1.next = node2.next
+        node2.next = node1
+        curr = node1
 
     return dummy.next
+
+
+def swap_pairs(head: ListNode) -> ListNode:
+    if not head or not head.next:
+        return head
+    second = head.next
+    head.next = swap_pairs(second.next)
+    second.next = head
+    return second

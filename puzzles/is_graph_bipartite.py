@@ -39,21 +39,20 @@ def is_bipartite(graph: list[list[int]]) -> bool:
     1 => blue
     -1 => red
     """
+    n = len(graph)
+    color = [0] * n
 
-    def valid_color(graph, color, c, node):
-        if color[node] != 0:
-            return color[node] == c
-
+    def dfs(c, node):
         color[node] = c
         for nxt in graph[node]:
-            if not valid_color(graph, color, -c, nxt):
+            if color[nxt] == c:
+                return False
+            if color[nxt] == 0 and not dfs(-c, nxt):
                 return False
         return True
 
-    n = len(graph)
-    color = [0] * n
     for i in range(n):
-        if color[i] == 0 and not valid_color(graph, color, 1, i):
+        if color[i] == 0 and not dfs(1, i):
             return False
     return True
 

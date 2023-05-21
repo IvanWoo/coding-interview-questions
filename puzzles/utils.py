@@ -168,6 +168,11 @@ def deep_sort(x: list[list[str]]) -> list[list[str]]:
     return sorted(sorted(x) for x in x)
 
 
+def print_matrix(mat):
+    for r in range(len(mat)):
+        print(mat[r])
+
+
 if __name__ == "__main__":
     tns = {}
     for i in range(3):

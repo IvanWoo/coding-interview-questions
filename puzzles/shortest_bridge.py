@@ -22,54 +22,62 @@ Constraints:
 2 <= A.length == A[0].length <= 100
 A[i][j] == 0 or A[i][j] == 1
 """
-from typing import List
+from collections import deque
 
 
-def print_matrix(mat):
-    for r in range(len(mat)):
-        print(mat[r])
+def shortest_bridge(grid: list[list[int]]) -> int:
+    def dis(p1, p2):
+        x1, y1 = p1
+        x2, y2 = p2
+        return abs(x1 - x2) + abs(y1 - y2) - 1
 
+    def neighbors(x, y):
+        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nx, ny = dx + x, dy + y
+            if 0 <= nx < n and 0 <= ny < n:
+                yield nx, ny
 
-def shortest_bridge(A: List[List[int]]) -> int:
-    def paint(A, r, c):
-        row, col = len(A), len(A[0])
-        A[r][c] = 2
-        for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-            new_r, new_c = r + i, c + j
-            if 0 <= new_r < row and 0 <= new_c < col and A[new_r][new_c] == 1:
-                paint(A, new_r, new_c)
+    def on_boundary(x, y):
+        for nx, ny in neighbors(x, y):
+            if grid[nx][ny] == 0:
+                return True
+        return False
 
-    row, col = len(A), len(A[0])
-    done = False
-    for r in range(row):
-        for c in range(col):
-            if A[r][c]:
-                paint(A, r, c)
-                done = True
-                break
-        if done:
-            break
+    def get_labeled_island(label: int, visited):
+        return [
+            (r, c)
+            for r in range(n)
+            for c in range(n)
+            if visited[r][c] == label and on_boundary(r, c)
+        ]
 
-    # can generate q while paining, but don't like it
-    q = []
-    for r in range(row):
-        for c in range(col):
-            if A[r][c] == 2:
-                q.append((r, c))
-    while q:
-        new_q = []
-        while q:
-            cur_r, cur_c = q.pop()
-            for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                new_r, new_c = cur_r + i, cur_c + j
-                if 0 <= new_r < row and 0 <= new_c < col:
-                    if A[new_r][new_c] == 0:
-                        A[new_r][new_c] = A[cur_r][cur_c] + 1
-                        new_q.append((new_r, new_c))
-                    elif A[new_r][new_c] == 1:
-                        return A[cur_r][cur_c] - 2
-        q = new_q
+    def label_island(n):
+        visited = [[0] * n for _ in range(n)]
+        counter = 1
+        for i in range(n):
+            for j in range(n):
+                if grid[i][j] == 0 or visited[i][j]:
+                    continue
+                q = deque([(i, j)])
+                while q:
+                    x, y = q.popleft()
+                    if visited[x][y]:
+                        continue
+                    visited[x][y] = counter
+                    for nx, ny in neighbors(x, y):
+                        if grid[nx][ny]:
+                            q.append((nx, ny))
+                counter += 1
+        return visited
 
+    n = len(grid)
+    visited = label_island(n)
 
-if __name__ == "__main__":
-    shortest_bridge([[1, 0], [0, 1]])
+    island1 = get_labeled_island(1, visited)
+    island2 = get_labeled_island(2, visited)
+
+    ret = n * n
+    for i1 in island1:
+        for i2 in island2:
+            ret = min(ret, dis(i1, i2))
+    return ret

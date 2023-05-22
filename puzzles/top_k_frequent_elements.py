@@ -19,6 +19,7 @@ It is guaranteed that the answer is unique.
 
 Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 """
+import heapq
 from collections import Counter, defaultdict
 
 
@@ -34,3 +35,12 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
     counter = Counter(nums)
     return [key for key, _ in counter.most_common(k)]
+
+
+# https://github.com/python/cpython/blob/4b107d86f38f6778562d4fe5e1d881b52c9d9d6c/Lib/collections/__init__.py#L625-L630
+def top_k_frequent(nums: list[int], k: int) -> list[int]:
+    if k == len(nums):
+        return nums
+
+    c = Counter(nums)
+    return heapq.nlargest(k, c.keys(), key=c.get)

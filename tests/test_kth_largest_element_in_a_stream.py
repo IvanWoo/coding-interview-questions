@@ -20,6 +20,6 @@ from tests.utils import assert_obj_outs
         )
     ],
 )
-def test_randomized_set(ops, vals, outs):
+def test_kth_largest(ops, vals, outs):
     obj = KthLargest(3, [4, 5, 8, 2])
     assert_obj_outs(obj, ops, vals, outs)

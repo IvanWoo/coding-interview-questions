@@ -27,6 +27,7 @@ n == grid[i].length
 grid[i][j] is 0 or 1
 """
 from collections import deque
+from math import inf
 
 
 def shortest_path_binary_matrix(grid: list[list[int]]) -> int:
@@ -61,5 +62,32 @@ def shortest_path_binary_matrix(grid: list[list[int]]) -> int:
     return -1
 
 
-if __name__ == "__main__":
-    shortest_path_binary_matrix([[1, 0, 0], [1, 1, 0], [1, 1, 0]])
+def shortest_path_binary_matrix(grid: list[list[int]]) -> int:
+    n = len(grid)
+    if grid[0][0] != 0:
+        return -1
+
+    dp = [[inf] * n for _ in range(n)]
+    q = deque([(0, 0, 1)])
+    while q:
+        r, c, steps = q.popleft()
+        if steps >= dp[r][c]:
+            continue
+
+        dp[r][c] = min(dp[r][c], steps)
+        if r == c == n - 1:
+            continue
+        for dr in [-1, 0, 1]:
+            for dc in [-1, 0, 1]:
+                if dr == dc == 0:
+                    continue
+                nr, nc = r + dr, c + dc
+                if (
+                    0 <= nr < n
+                    and 0 <= nc < n
+                    and grid[nr][nc] == 0
+                    and dp[nr][nc] == inf
+                ):
+                    q.append((nr, nc, steps + 1))
+
+    return dp[-1][-1] if dp[-1][-1] != inf else -1

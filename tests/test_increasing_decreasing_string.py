@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.increasing_decreasing_string import sort_string
 
 

@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.bst_find_modes import FindModes
 from puzzles.utils import TreeNode
 

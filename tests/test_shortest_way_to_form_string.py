@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.shortest_way_to_form_string import shortest_way_to_form_string
 
 

@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.hamming_distance import hamming_distance
 
 

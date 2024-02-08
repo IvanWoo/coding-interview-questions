@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.walking_robot_simulation import robot_sim
 
 

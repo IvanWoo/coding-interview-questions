@@ -26,7 +26,7 @@
 # Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.
 
 from collections import defaultdict
-from typing import Dict, List, Set
+from typing import Dict, List
 
 
 def find(start: int, target: int, prev: int, graph: Dict[int, List[int]]) -> bool:

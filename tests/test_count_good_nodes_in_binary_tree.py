@@ -1,5 +1,3 @@
-from cmath import exp
-
 import pytest
 
 from puzzles.count_good_nodes_in_binary_tree import good_nodes

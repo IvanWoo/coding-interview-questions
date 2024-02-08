@@ -1,5 +1,3 @@
-from cmath import exp
-
 import pytest
 
 from puzzles.ransom_note import can_construct

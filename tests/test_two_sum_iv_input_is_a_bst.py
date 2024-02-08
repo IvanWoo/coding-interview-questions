@@ -1,5 +1,3 @@
-from gettext import find
-
 import pytest
 
 from puzzles.two_sum_iv_input_is_a_bst import find_target

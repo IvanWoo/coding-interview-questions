@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.merge_sort import merge_sort, sort
 
 

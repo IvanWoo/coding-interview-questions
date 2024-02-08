@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.sum_numbers import sum_numbers
 
 

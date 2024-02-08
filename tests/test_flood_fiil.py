@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.flood_fill import flood_fill
 
 

@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.binary_watch import read_binary_watch
 
 

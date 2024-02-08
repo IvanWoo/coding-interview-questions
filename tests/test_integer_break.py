@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.integer_break import integer_break
 
 

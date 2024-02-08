@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.can_balance import can_balance
 
 

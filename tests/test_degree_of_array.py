@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.degree_of_array import find_shortest_sub_array
 
 

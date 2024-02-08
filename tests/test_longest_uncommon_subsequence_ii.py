@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.longest_uncommon_subsequence_ii import find_LUS_length
 
 

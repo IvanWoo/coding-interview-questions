@@ -30,7 +30,6 @@ Constraints:
 0 <= k <= n <= 104
 1 <= max_pts <= 104
 """
-from functools import cache
 from random import randint
 
 

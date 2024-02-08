@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.odd_cells import odd_cells
 
 

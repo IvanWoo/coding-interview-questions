@@ -1,5 +1,4 @@
 import numpy as np
-import pytest
 
 from puzzles.max_vacation_days import (
     get_inputs,

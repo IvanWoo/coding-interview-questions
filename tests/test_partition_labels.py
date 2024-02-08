@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.partition_labels import partition_labels
 
 

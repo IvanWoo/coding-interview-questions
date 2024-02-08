@@ -24,7 +24,7 @@ The length of words[i] will be in the range [1, 30].
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Dict, List
 
 
 @dataclass

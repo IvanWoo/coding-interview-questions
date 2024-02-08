@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.count_number_of_teams import num_teams
 
 

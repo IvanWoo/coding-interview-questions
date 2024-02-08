@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.matrix_reshape import matrix_reshape, matrix_reshape_2
 
 

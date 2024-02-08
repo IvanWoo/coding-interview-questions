@@ -22,7 +22,7 @@ The number of nodes in the linked list is in the range [0, 104].
 """
 from typing import Optional
 
-from puzzles.utils import ListNode, linked_list_to_list, make_linked_list
+from puzzles.utils import ListNode, make_linked_list
 
 
 # cheat

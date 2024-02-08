@@ -17,7 +17,7 @@ Constraints:
 s consists of only lowercase English letters.
 1 <= k <= 105
 """
-from collections import Counter, defaultdict
+from collections import Counter
 
 
 # TLE: O(N^3)

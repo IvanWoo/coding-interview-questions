@@ -29,7 +29,6 @@
 # Output: False
 
 from collections import deque
-from typing import List
 
 from puzzles.utils import TreeNode
 

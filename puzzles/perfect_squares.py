@@ -34,9 +34,7 @@ def num_squares(n: int) -> int:
 def num_squares(n: int) -> int:
     dp = [0] + [inf] * n
     for i in range(1, n + 1):
-        dp[i] = (
-            min(dp[i - s] for s in (x**2 for x in range(1, int(i**0.5) + 1))) + 1
-        )
+        dp[i] = min(dp[i - s] for s in (x**2 for x in range(1, int(i**0.5) + 1))) + 1
     return dp[n]
 
 

@@ -1,5 +1,3 @@
-from cmath import exp
-
 import pytest
 
 from puzzles.average_of_levels_in_binary_tree import average_of_levels

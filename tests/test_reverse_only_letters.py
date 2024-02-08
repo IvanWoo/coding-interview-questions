@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.reverse_only_letters import reverse_only_letters
 
 

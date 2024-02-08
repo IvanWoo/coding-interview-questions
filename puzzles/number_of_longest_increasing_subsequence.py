@@ -18,7 +18,6 @@ Constraints:
 1 <= nums.length <= 2000
 -106 <= nums[i] <= 106
 """
-from collections import Counter
 from typing import List
 
 

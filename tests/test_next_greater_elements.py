@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.next_greater_elements import next_greater_elements
 
 

@@ -1,0 +1,42 @@
+[project]
+name = "coding-interview-questions"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [{ name = "Yifan Wu", email = "tyivanwu@gmail.com" }]
+dependencies = ["numpy", "sortedcontainers", "dacite"]
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+
+
+[tool.pdm]
+allow_prereleases = true
+distribution = false
+
+[[tool.pdm.source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest",
+    "ipython",
+    "-e file:///${PROJECT_ROOT}/#egg=coding-interview-questions",
+    "pytest-randomly",
+    "pre-commit",
+]
+
+[tool.pdm.scripts]
+test = "pytest tests"
+new = "python scripts/new.py"
+count = "./scripts/count.sh"
+commit = "./scripts/commit.sh"
+lint = "pre-commit run --all-files"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = ["E711", "E712", "E741", "F811", "F841"]

@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.heaters import find_radius
 
 

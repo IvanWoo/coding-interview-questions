@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.palindrome_permutation import palindrome_permutation
 
 

@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.combinations import combine
 
 

@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.climb_stairs import climb_stairs
 
 

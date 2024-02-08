@@ -1,5 +1,3 @@
-from ssl import HAS_ALPN
-
 import pytest
 
 from puzzles.path_sum import has_path_sum

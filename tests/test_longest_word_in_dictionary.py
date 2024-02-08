@@ -1,5 +1,3 @@
-import pytest
-
 from puzzles.longest_word_in_dictionary import longest_word
 
 

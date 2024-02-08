@@ -1,8 +1,8 @@
 ## setup
 
 ```sh
-pipenv install --dev
-pipenv run pre-commit install
+pdm install
+pdm run pre-commit install
 ```
 
 ## tasks
@@ -10,13 +10,13 @@ pipenv run pre-commit install
 ### create a new puzzle
 
 ```sh
-pipenv run new <puzzle name>
+pdm run new <puzzle name>
 ```
 
 ### count puzzles
 
 ```sh
-pipenv run count
+pdm run count
 ```
 
 ## References

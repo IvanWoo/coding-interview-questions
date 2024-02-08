@@ -12,36 +12,31 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Set up PDM
+        uses: pdm-project/setup-pdm@v3
         with:
-          python-version: "3.10"
-          cache: "pipenv"
-
-      - name: Install pipenv
-        run: pipx install pipenv
+          python-version: "3.11"
+          cache: true
 
       - name: Install dependencies
-        run: pipenv install --dev
+        run: pdm install
 
       - name: Linting
-        run: pipenv run lint
+        run: pdm run lint
 
   Testing:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
-      - uses: actions/setup-python@v4
+      - name: Set up PDM
+        uses: pdm-project/setup-pdm@v3
         with:
-          python-version: "3.10"
-          cache: "pipenv"
-
-      - name: Install pipenv
-        run: pipx install pipenv
+          python-version: "3.11"
+          cache: true
 
       - name: Install dependencies
-        run: pipenv install --dev
+        run: pdm install
 
       - name: Python test
-        run: pipenv run test
+        run: pdm run test

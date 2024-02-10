@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:2000efd1071c21778891797ab935006d6659b20045e8a32cd3f800975e5bf5df"
+content_hash = "sha256:4b2c5157cf926ef3ca08b5c60d8109579f07acbc1efd818ea430a427b42703fa"
 
 [[package]]
 name = "asttokens"
@@ -32,20 +32,6 @@ files = [
 ]
 
 [[package]]
-name = "coding-interview-questions"
-version = "0.1.0"
-requires_python = ">=3.11"
-editable = true
-path = "./."
-summary = "Default template for PDM package"
-groups = ["dev"]
-dependencies = [
-    "dacite",
-    "numpy",
-    "sortedcontainers",
-]
-
-[[package]]
 name = "colorama"
 version = "0.4.6"
 requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
@@ -62,7 +48,7 @@ name = "dacite"
 version = "1.8.1"
 requires_python = ">=3.6"
 summary = "Simple creation of data classes from dictionaries."
-groups = ["default", "dev"]
+groups = ["default"]
 files = [
     {file = "dacite-1.8.1-py3-none-any.whl", hash = "sha256:cc31ad6fdea1f49962ea42db9421772afe01ac5442380d9a99fcf3d188c61afe"},
 ]
@@ -201,7 +187,7 @@ name = "numpy"
 version = "1.26.4"
 requires_python = ">=3.9"
 summary = "Fundamental package for array computing in Python"
-groups = ["default", "dev"]
+groups = ["default"]
 files = [
     {file = "numpy-1.26.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:9ff0f4f29c51e2803569d7a51c2304de5554655a60c5d776e35b4a41413830d0"},
     {file = "numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:2e4ee3380d6de9c9ec04745830fd9e2eccb3e6cf790d39d7b98ffd19b0dd754a"},
@@ -445,7 +431,7 @@ files = [
 name = "sortedcontainers"
 version = "2.4.0"
 summary = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
-groups = ["default", "dev"]
+groups = ["default"]
 files = [
     {file = "sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"},
     {file = "sortedcontainers-2.4.0.tar.gz", hash = "sha256:25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"},
